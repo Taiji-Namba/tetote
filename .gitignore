@@ -1,0 +1,6 @@
+**/.DS_Store
+**/.vscode
+**/.hintrc
+**/.ssh
+/logs/
+/app/sql
