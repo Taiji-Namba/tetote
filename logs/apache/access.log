@@ -1,0 +1,15 @@
+127.0.0.1 - - [14/May/2024:14:52:02 +0900] "POST /wp-cron.php?doing_wp_cron=1715665922.8401629924774169921875 HTTP/1.0" 200 -
+127.0.0.1 - - [14/May/2024:14:52:04 +0900] "POST /wp-cron.php?doing_wp_cron=1715665924.6211280822753906250000 HTTP/1.0" 200 -
+127.0.0.1 - - [14/May/2024:14:52:18 +0900] "GET / HTTP/1.0" 200 84663
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-includes/blocks/image/style.min.css?ver=6.5.3 HTTP/1.0" 200 7049
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-content/themes/twentytwentyfour/assets/images/building-exterior.webp HTTP/1.0" 200 199724
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-includes/blocks/navigation/view.min.js?ver=6.5.3 HTTP/1.0" 200 3300
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-includes/js/dist/interactivity.min.js?ver=6.5.3 HTTP/1.0" 200 35085
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-includes/blocks/navigation/style.min.css?ver=6.5.3 HTTP/1.0" 200 16484
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-content/themes/twentytwentyfour/assets/images/tourist-and-building.webp HTTP/1.0" 200 66482
+127.0.0.1 - - [14/May/2024:14:52:19 +0900] "GET /wp-content/themes/twentytwentyfour/assets/images/windows.webp HTTP/1.0" 200 126244
+127.0.0.1 - - [14/May/2024:14:52:20 +0900] "GET /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2 HTTP/1.0" 200 146060
+127.0.0.1 - - [14/May/2024:14:52:20 +0900] "GET /wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2 HTTP/1.0" 200 326628
+127.0.0.1 - - [14/May/2024:14:52:20 +0900] "GET /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2 HTTP/1.0" 200 105184
+127.0.0.1 - - [14/May/2024:14:52:20 +0900] "GET /favicon.ico HTTP/1.0" 302 -
+127.0.0.1 - - [14/May/2024:14:52:21 +0900] "GET /wp-includes/images/w-logo-blue-white-bg.png HTTP/1.0" 200 4119
