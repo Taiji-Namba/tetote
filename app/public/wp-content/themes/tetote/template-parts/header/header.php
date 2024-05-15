@@ -97,6 +97,7 @@
     ></script>
 
     <meta name="robots" content="noindex" />
+    <?php wp_head(); ?>
   </head>
 
   <body class="top-page">
