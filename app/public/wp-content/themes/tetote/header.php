@@ -3,11 +3,6 @@
   <head prefix="og: https://ogp.me/ns#">
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>採用特設サイト | 株式会社TETOTE</title>
-    <meta
-      name="description"
-      content="テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。"
-    />
 
     <meta
       property="og:url"
