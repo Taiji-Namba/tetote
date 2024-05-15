@@ -96,6 +96,7 @@
   </head>
 
   <body class="top-page">
+    <?php wp_body_open(); ?>
     <header class="header top-page-header">
       <div class="header__inner">
         <a href="#" class="logo header__logo"><img src="./images/logo-black.svg" alt="「TETOTE」のロゴ" class="logo-img"></a>
