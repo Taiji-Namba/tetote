@@ -13,7 +13,7 @@ const compileStyleSass = () => {
       }).on("error", sass.logError)
     ) // コンパイルエラー時に、watchタスクを止めずにエラー内容を詳細に表示する
     .pipe(postcss([autoprefixer({ grid: true })])) // autoprefix処理(IEでもgrid対応)
-    .pipe(dest("css", { sourcemaps: "." }));
+    .pipe(dest("./assets/css", { sourcemaps: "." }));
 };
 
 // front-page.scssをコンパイル
@@ -25,7 +25,7 @@ const compileFrontPageSass = () => {
       }).on("error", sass.logError)
     )
     .pipe(postcss([autoprefixer({ grid: true })]))
-    .pipe(dest("css", { sourcemaps: "." }));
+    .pipe(dest("./assets/css", { sourcemaps: "." }));
 };
 
 // Sassファイルを監視
