@@ -95,13 +95,18 @@
               </li>
               <li class="gnav__item">
                 <button
-          type="button"
-          class="burger-button"
-          id="burger-button"
-          aria-controls="burger-nav"
-          aria-expanded="false"
-          aria-label="メニューを開く"
-        ><span class="burger-button__line"></span><span class="burger-button__line"></span><span class="burger-button__line"></span><span class="burger-menu__label" id="burger-menu-label" aria-hidden="true">MENU</span></button>
+                  type="button"
+                  class="burger-button"
+                  id="burger-button"
+                  aria-controls="burger-nav"
+                  aria-expanded="false"
+                  aria-label="メニューを開く"
+                >
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__label" id="burger-menu-label" aria-hidden="true">MENU</span>
+                </button>
               </li>
             </ul>
           </div>
