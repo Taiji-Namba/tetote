@@ -79,7 +79,7 @@
     <?php wp_body_open(); ?>
     <header class="header top-page-header">
       <div class="header__inner">
-        <a href="#" class="logo header__logo"><img src="./images/logo-black.svg" alt="「TETOTE」のロゴ" class="logo-img"></a>
+        <a href="#" class="logo header__logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-black.svg" alt="「TETOTE」のロゴ" class="logo-img"></a>
         <nav class="gnav">
           <div class="gnav__inner">
             <ul class="gnav__list">
