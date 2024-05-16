@@ -85,6 +85,7 @@ tbody {
 
 .button--gold {
   background-color: #afa86f;
+  font-family: Viga, "Noto Sans JP", sans-serif;
 }
 
 .footer {
@@ -257,6 +258,7 @@ tbody {
 
 .burger-button__label {
   display: inline-block;
+  font-family: Viga, "Noto Sans JP", sans-serif;
   font-size: 1.2rem;
   margin-top: 1rem;
   color: #fff;
