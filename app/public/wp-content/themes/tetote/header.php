@@ -71,26 +71,6 @@
     <meta name="msapplication-config" content="/icons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/destyle.css@4.0.1/destyle.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/front-page.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- 全ページで使用するフォント -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap" rel="stylesheet">
-    <!-- トップページ限定で使用するフォント -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter:wght@700&display=swap" rel="stylesheet">
-
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-
     <meta name="robots" content="noindex" />
     <?php wp_head(); ?>
   </head>
