@@ -105,7 +105,7 @@
                   <span class="burger-button__line"></span>
                   <span class="burger-button__line"></span>
                   <span class="burger-button__line"></span>
-                  <span class="burger-button__label" id="burger-menu-label" aria-hidden="true">MENU</span>
+                  <span class="burger-button__label" id="burger-button-label" aria-hidden="true">MENU</span>
                 </button>
               </li>
             </ul>

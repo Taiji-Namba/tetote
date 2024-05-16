@@ -30,7 +30,7 @@ jQuery(function ($) {
   // バーガーボタンの開・閉かかわらず同じ位置に設定
   let initialTopPosition;
   let initialRightPosition;
-  const burgerLabel = document.getElementById("burger-menu-label");
+  const burgerLabel = document.getElementById("burger-button-label");
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
     if (!$(this).hasClass("open")) {
