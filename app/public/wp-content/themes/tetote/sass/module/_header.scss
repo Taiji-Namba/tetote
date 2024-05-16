@@ -7,11 +7,7 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  background-color: transparent;
-
-  @include mixin.mq(tab) {
-    background-color: #fff;
-  }
+  background-color: setting.$bg-sub-color; // FV画像設定するまでの間のみ適用
 }
 
 .sub-page-header {
@@ -21,18 +17,17 @@
 
 .header__inner {
   margin: 0 auto;
-  width: 100%;
-  max-width: mixin.$layout-width-inner;
-  padding: 2.5rem 2rem;
+  width: min(100%, mixin.$layout-width-inner);
+  padding: 2.6rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @include mixin.mq(tab) {
-    padding-inline: 1.8rem;
+    padding: 1.6rem 2rem;
   }
   @include mixin.mq(sp) {
-    padding-inline: 1.6rem;
+    padding: 0.8rem 1.2rem;
   }
 }
 
@@ -58,9 +53,13 @@
   }
 }
 
-.gnav {
+.header__logo {
   @include mixin.mq(tab) {
-    display: none;
+    width: 20rem;
+  }
+
+  @include mixin.mq(sp) {
+    width: 15.1rem;
   }
 }
 
@@ -71,38 +70,100 @@
 
 .gnav__item {
   text-align: center;
-  margin-right: 2.9rem;
-
-  &:nth-of-type(4) {
-    margin-right: 1.2rem;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }
 }
 
-.gnav__anchor {
-  font-size: 1.3rem;
+.gnav__item:first-of-type {
+  margin-right: 2.2rem;
 }
 
-.top-page-header .gnav__anchor:not(.button) {
-  color: #fff;
+.gnav__item:nth-of-type(2) {
+  margin-right: 4rem;
+}
+
+.gnav__button {
+  @include mixin.mq(sp) {
+    display: none;
+  }
 }
 
 .burger-button {
-  width: 2rem;
-  height: 2rem;
-  border: 0;
-  background-image: url(/tetote/ssi/header/img/burger-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 5.2rem;
+  height: 5.2rem;
   cursor: pointer;
   z-index: 1000;
-  display: none;
 
   @include mixin.mq(tab) {
-    display: block;
+    width: 4rem;
   }
+
+  @include mixin.mq(sp) {
+    width: 3.2rem;
+  }
+}
+
+.burger-button__icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+.burger-button__line {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 0.2rem;
+  transition: all 0.4s;
+}
+
+.burger-button__line:nth-of-type(1) {
+  top: 0;
+  transform: translateY(-50%);
+}
+.burger-button__line:nth-of-type(2) {
+  top: 1.5rem;
+  transform: translateY(-50%);
+}
+.burger-button__line:nth-of-type(3) {
+  top: 3rem;
+  transform: translateY(-50%);
+}
+
+.burger-button__label {
+  display: inline-block;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #fff;
+  transition: all 0.4s;
+
+  @include mixin.mq(tab) {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  @include mixin.mq(sp) {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+  }
+}
+
+.burger-button.open .burger-button__line:nth-of-type(1) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.burger-button.open .burger-button__line:nth-of-type(2) {
+  opacity: 0;
+}
+.burger-button.open .burger-button__line:nth-of-type(3) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.burger-button.open .burger-button__label {
+  visibility: hidden;
 }
 
 .burger-menu {
@@ -117,12 +178,6 @@
   opacity: 0;
   transition: opacity 0.3s linear;
   text-align: center;
-}
-
-.burger-button.open {
-  background-image: url(/tetote/ssi/header/img/close.svg);
-  position: fixed;
-  right: 1.6rem;
 }
 
 .burger-menu.open {
