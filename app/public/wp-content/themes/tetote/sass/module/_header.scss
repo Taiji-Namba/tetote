@@ -99,6 +99,14 @@
   height: 5.2rem;
   cursor: pointer;
   z-index: 1000;
+
+  @include mixin.mq(tab) {
+    width: 4rem;
+  }
+
+  @include mixin.mq(sp) {
+    width: 3.2rem;
+  }
 }
 
 .burger-button__icon {
@@ -137,6 +145,16 @@
   margin-top: 1rem;
   color: #fff;
   transition: all 0.4s;
+
+  @include mixin.mq(tab) {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  @include mixin.mq(sp) {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+  }
 }
 
 .burger-button.open .burger-button__line:nth-of-type(1) {
