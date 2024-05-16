@@ -53,6 +53,16 @@
   }
 }
 
+.header__logo {
+  @include mixin.mq(tab) {
+    width: 20rem;
+  }
+
+  @include mixin.mq(sp) {
+    width: 15.1rem;
+  }
+}
+
 .gnav {
   @include mixin.mq(tab) {
     display: none;
