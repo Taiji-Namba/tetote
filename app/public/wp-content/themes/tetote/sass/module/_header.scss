@@ -17,18 +17,17 @@
 
 .header__inner {
   margin: 0 auto;
-  width: 100%;
-  max-width: mixin.$layout-width-inner;
-  padding: 2.5rem 2rem;
+  width: min(100%, mixin.$layout-width-inner);
+  padding: 2.6rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @include mixin.mq(tab) {
-    padding-inline: 1.8rem;
+    padding: 1.6rem 2rem;
   }
   @include mixin.mq(sp) {
-    padding-inline: 1.6rem;
+    padding: 0.8rem 1.2rem;
   }
 }
 

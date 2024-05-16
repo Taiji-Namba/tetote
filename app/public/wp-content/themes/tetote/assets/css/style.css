@@ -134,21 +134,20 @@ tbody {
 
 .header__inner {
   margin: 0 auto;
-  width: 100%;
-  max-width: 1440px;
-  padding: 2.5rem 2rem;
+  width: min(100%, 1440px);
+  padding: 2.6rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 1439px) {
   .header__inner {
-    padding-inline: 1.8rem;
+    padding: 1.6rem 2rem;
   }
 }
 @media screen and (max-width: 767px) {
   .header__inner {
-    padding-inline: 1.6rem;
+    padding: 0.8rem 1.2rem;
   }
 }
 
