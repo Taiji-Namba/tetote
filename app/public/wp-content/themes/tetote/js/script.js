@@ -1,5 +1,5 @@
 "use strict";
-$(function () {
+jQuery(function ($) {
   // ヘッダーをスクロールに合わせてにゅっと追従
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
