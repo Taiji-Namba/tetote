@@ -84,12 +84,12 @@
           <div class="gnav__inner">
             <ul class="gnav__list">
               <li class="gnav__item">
-                <a href="./details/" class="gnav__anchor button button--black"
+                <a href="./details/" class="gnav__anchor button button--black gnav__button"
                   >募集要項</a
                 >
               </li>
               <li class="gnav__item">
-                <a href="./entry/" class="gnav__anchor button button--gold"
+                <a href="./entry/" class="gnav__anchor button button--gold gnav__button"
                   >ENTRY</a
                 >
               </li>
