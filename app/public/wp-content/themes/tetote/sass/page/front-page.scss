@@ -2,3 +2,65 @@
 @use "../mixin";
 @use "../setting";
 @use "../module";
+
+.fv {
+  width: 100svw;
+  height: 100svh;
+}
+
+.fv__slide-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.fv-slide__picture {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fv-slider 12s linear infinite;
+
+  &:nth-child(1) {
+    background-image: url(../images/fv01.jpg);
+    animation-delay: -2s;
+
+    @include mixin.mq(twice) {
+      background-image: url(../images/fv01@2x.jpg);
+    }
+  }
+  &:nth-child(2) {
+    background-image: url(../images/fv02.jpg);
+    animation-delay: 4s;
+
+    @include mixin.mq(twice) {
+      background-image: url(../images/fv02@2x.jpg);
+    }
+  }
+}
+
+// 2枚のスライドが交互にふわっと入れ替わる
+// 全体で12秒の場合、それぞれ6秒ずつ。それぞれのフェードアウトとフェードインを1秒重ねる。
+@keyframes fv-slider {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
