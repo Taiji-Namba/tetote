@@ -4,12 +4,8 @@
   <div class="main__inner">
     <div class="fv">
       <div class="fv__slide-container fv-slide">
-        <div class="fv-slide__picture">
-          <div class="semi-transparent"></div>
-        </div>
-        <div class="fv-slide__picture">
-          <div class="semi-transparent"></div>
-        </div>
+        <div class="fv-slide__picture"></div>
+        <div class="fv-slide__picture"></div>
       </div>
       <h2 class="fv__heading">革新で繋げ<br />人と街</h2>
       <p class="fv__text">君の挑戦が、意思が、未来を変える</p>
