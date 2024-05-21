@@ -36,7 +36,7 @@
   <header class="header top-page-header">
     <div class="header__inner">
       <a href="#" class="logo header__logo">
-        <?php if (is_front_page()): ?>
+        <?php if (is_front_page()) : ?>
           <img class="logo__img logo__img--white" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.svg" alt="「TETOTE」のロゴ" class="logo-img">
         <?php endif; ?>
         <img class="logo__img logo__img--black" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-black.svg" alt="「TETOTE」のロゴ" class="logo-img">
@@ -49,7 +49,7 @@
               <a href="./details/" class="gnav__anchor button button--black gnav__button">募集要項</a>
             </li>
             <li class="gnav__item">
-              <a href="./entry/" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
+              <a hrew="./entry/" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
             </li>
             <li class="gnav__item">
               <button type="button" class="burger-button" id="burger-button" aria-controls="burger-nav" aria-expanded="false" aria-label="メニューを開く">

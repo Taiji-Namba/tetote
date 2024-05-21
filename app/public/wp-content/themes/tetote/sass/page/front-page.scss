@@ -6,6 +6,7 @@
 .fv {
   width: 100svw;
   height: 100svh;
+  position: relative;
 }
 
 .fv__slide-container {
@@ -63,4 +64,19 @@
   100% {
     opacity: 0;
   }
+}
+
+.fv__heading{
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: 9.6rem;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(#000, 0.25);
+  line-height: 1.2;
+  position: absolute;
+  left: calc(66 / 1440 * 100%);
+  top: calc(286 / 823 * 100%);
+  
+  @include mixin.mq(pc) {
+    left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100%);
+}
 }

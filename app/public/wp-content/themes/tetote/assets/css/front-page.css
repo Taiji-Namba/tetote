@@ -370,6 +370,7 @@ tbody {
 .fv {
   width: 100svw;
   height: 100svh;
+  position: relative;
 }
 
 .fv__slide-container {
@@ -425,6 +426,21 @@ tbody {
   }
   100% {
     opacity: 0;
+  }
+}
+.fv__heading {
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: 9.6rem;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 1.2;
+  position: absolute;
+  left: 4.5833333333%;
+  top: 34.7509113001%;
+}
+@media screen and (min-width: 1440px) {
+  .fv__heading {
+    left: calc((100svw - 1440px) / 2 + 4.5833333333%);
   }
 }
 /*# sourceMappingURL=front-page.css.map */
