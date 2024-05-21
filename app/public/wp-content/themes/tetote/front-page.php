@@ -7,7 +7,7 @@
         <div class="fv-slide__picture"></div>
         <div class="fv-slide__picture"></div>
       </div>
-      <h2 class="fv__heading">革新で繋げ<br />人と街</h2>
+      <h2 class="fv__heading">BECOME A CHALLENGER.</h2>
       <p class="fv__text">君の挑戦が、意思が、未来を変える</p>
       <div class="news fv__news">
         <h3 class="news__heading">NEWS</h3>
