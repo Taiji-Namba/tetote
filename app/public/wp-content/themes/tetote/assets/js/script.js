@@ -1,25 +1,47 @@
 "use strict";
 jQuery(function ($) {
-  // ヘッダーをスクロールに合わせてにゅっと追従
+
+  // トップページと下層ページでヘッダー要素の色を分ける
+  $(document).ready(function() {
+    const topPage = document.querySelector("body.top-page");
+    if (topPage !== null) {
+      $(".burger-button__line").addClass("burger-button__line--white");
+      $(".burger-button__label").addClass("burger-button__label--white");
+    } else {
+      $(".burger-button__line").addClass("burger-button__line--black");
+      $(".burger-button__label").addClass("burger-button__label--black");
+    }
+
+  });
+  // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     const headerHeight = header.offsetHeight; // ヘッダーの高さを取得
     const scrollY = window.scrollY;
     const subPage = document.querySelector("body.sub-page"); // sub-pageクラスを持つbodyを取得
 
+    // スクロール位置がヘッダーを超えたとき
     if (scrollY >= headerHeight) {
-      header.classList.add("header--sticky");
-      $(".gnav__anchor:not(.button)").css("color", "#333");
-      //下層ページのとき
-      if (subPage !== null) {
-        subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定
+      $(header).addClass("header--sticky");
+      
+      if (subPage !== null) { //下層ページのとき
+        subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定 (トップページのヘッダーはページ表示時にabsoluteで、下層ページのヘッダーはページ表示時にstaticなことに由来する余白調整)
+      } else { // トップページのとき
+        $(".logo__img--white").addClass("none").removeClass("block");
+        $(".logo__img--black").addClass("block").removeClass("none");
+        $(".burger-button__line").removeClass("burger-button__line--white").addClass("burger-button__line--black");
+        $(".burger-button__label").removeClass("burger-button__label--white").addClass("burger-button__label--black");
       }
-    } else {
-      header.classList.remove("header--sticky");
+      
+    } else { // スクロール位置がヘッダー未満のとき
+      $(header).removeClass("header--sticky");
       if (subPage !== null) {
         subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       } else {
-        $(".gnav__anchor:not(.button)").css("color", "#fff");
+        $(".logo__img--white").addClass("block").removeClass("none");
+        $(".logo__img--black").addClass("none").removeClass("block");
+        $(".burger-button__line").addClass("burger-button__line--white").removeClass("burger-button__line--black");
+        $(".burger-button__label").addClass("burger-button__label--white").removeClass("burger-button__label--black");
       }
     }
   });

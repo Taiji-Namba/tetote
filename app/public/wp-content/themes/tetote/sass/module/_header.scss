@@ -7,7 +7,12 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  background-color: setting.$bg-sub-color; // FV画像設定するまでの間のみ適用
+}
+
+.top-page-header{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .sub-page-header {
@@ -42,6 +47,7 @@
   width: 100%;
   animation: slideDown 0.3s ease-in-out;
   background-color: #fff;
+  transition: background-color 0.3s ease-in-out, visibility 0.3s ease-in-out; // スクロール後、一番上に戻した際にヘッダー下部に白線がちらつくことの防止。
 }
 
 @keyframes slideDown {
@@ -61,6 +67,18 @@
   @include mixin.mq(sp) {
     width: 15.1rem;
   }
+}
+
+.logo__img--black{
+  display: none;
+}
+
+.none{
+  display:none;
+}
+
+.block{
+  display: block;
 }
 
 .gnav__list {
@@ -113,9 +131,16 @@
   position: absolute;
   left: 0;
   width: 100%;
-  background: #fff;
   height: 0.2rem;
   transition: all 0.4s;
+}
+
+.burger-button__line--black{
+  background: setting.$txt-color;
+}
+
+.burger-button__line--white{
+  background: #fff;
 }
 
 .burger-button__line:nth-of-type(1) {
@@ -136,18 +161,26 @@
   font-family: Viga, "Noto Sans JP", sans-serif;
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: #fff;
   transition: all 0.4s;
-
+  
   @include mixin.mq(tab) {
     margin-top: 0.8rem;
     font-size: 1.1rem;
   }
-
+  
   @include mixin.mq(sp) {
     margin-top: 0.6rem;
     font-size: 1rem;
   }
+}
+
+.burger-button__label--black{
+  color: setting.$txt-color;
+  
+}
+
+.burger-button__label--white{
+  color: #fff;
 }
 
 .burger-button.open .burger-button__line:nth-of-type(1) {

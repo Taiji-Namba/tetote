@@ -125,7 +125,12 @@ tbody {
   left: 0;
   z-index: 100;
   width: 100%;
-  background-color: #faf7f1;
+}
+
+.top-page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .sub-page-header {
@@ -163,6 +168,7 @@ tbody {
   width: 100%;
   animation: slideDown 0.3s ease-in-out;
   background-color: #fff;
+  transition: background-color 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 @keyframes slideDown {
@@ -182,6 +188,18 @@ tbody {
   .header__logo {
     width: 15.1rem;
   }
+}
+
+.logo__img--black {
+  display: none;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }
 
 .gnav__list {
@@ -236,9 +254,16 @@ tbody {
   position: absolute;
   left: 0;
   width: 100%;
-  background: #fff;
   height: 0.2rem;
   transition: all 0.4s;
+}
+
+.burger-button__line--black {
+  background: #222222;
+}
+
+.burger-button__line--white {
+  background: #fff;
 }
 
 .burger-button__line:nth-of-type(1) {
@@ -261,7 +286,6 @@ tbody {
   font-family: Viga, "Noto Sans JP", sans-serif;
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: #fff;
   transition: all 0.4s;
 }
 @media screen and (max-width: 1439px) {
@@ -275,6 +299,14 @@ tbody {
     margin-top: 0.6rem;
     font-size: 1rem;
   }
+}
+
+.burger-button__label--black {
+  color: #222222;
+}
+
+.burger-button__label--white {
+  color: #fff;
 }
 
 .burger-button.open .burger-button__line:nth-of-type(1) {
