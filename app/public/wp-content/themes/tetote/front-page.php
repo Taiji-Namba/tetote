@@ -13,7 +13,7 @@
         <h3 class="news__heading">NEWS</h3>
         <div class="news__text">
           <p class="news__title">2024年度働きやすさランキング一位を取得しました！！</p>
-          <a href="./blog/" class="news__cta">
+          <a href="<?php echo esc_url(home_url() . '/blog/') ?>" class="news__cta">
             VIEW MORE
             <img class="news__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/news-arrow.svg'); ?>"  alt="">
           </a>
