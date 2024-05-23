@@ -31,16 +31,24 @@
   <?php wp_head(); ?>
 </head>
 
-<body class="top-page">
+<body
+  <?php if (is_front_page()) : ?>
+    class ="top-page" <?php else :?> class="sub-page"
+  <?php endif; ?>
+>
   <?php wp_body_open(); ?>
-  <header class="header top-page-header">
+  <header 
+  <?php if (is_front_page()) : ?>
+    class="header top-page-header" <?php else :?> class="header sub-page-header";
+  <?php endif; ?>>
     <div class="header__inner">
       <a href="#" class="logo header__logo">
+        <img class="logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
         <?php if (is_front_page()) : ?>
-          <img class="logo__img logo__img--white" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.svg" alt="「TETOTE」のロゴ" class="logo-img">
-        <?php endif; ?>
-        <img class="logo__img logo__img--black" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-black.svg" alt="「TETOTE」のロゴ" class="logo-img">
-      </a>
+          <img class="logo__img logo__img--white" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-white.svg'); ?>" alt="「TETOTE」のロゴ">
+          <?php else: ?>
+          <?php endif; ?>
+        </a>
 
       <nav class="gnav">
         <div class="gnav__inner">
@@ -58,7 +66,7 @@
                   <span class="burger-button__line"></span>
                   <span class="burger-button__line"></span>
                 </span>
-                <span class="burger-button__label burger-button__label--white" id="burger-button-label" aria-hidden="true">MENU</span>
+                <span class="burger-button__label" id="burger-button-label" aria-hidden="true">MENU</span>
               </button>
             </li>
           </ul>
