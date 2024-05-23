@@ -79,5 +79,27 @@
   
   @include mixin.mq(pc) {
     left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100%);
+  }
+}
+
+.fv__text{
+  position: absolute;
+  left: 0;
+  bottom: calc(163 / 823 * 100%);
+  background-color: setting.$txt-color;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-wrap: nowrap;
+  color: #fff;
+  text-align: center;
+  padding-block: 1.7rem;
+  width: min(51.5rem, 80%);
+  clip-path:polygon(0 0, 100% 0, calc(485 / 515 * 100%) 100%, 0 100%);
+  
+  @include mixin.mq(sp) {
+    bottom: calc(89 / 667 * 100%);
+    font-size: 1.2rem;
+    width: 22.8rem;
+    padding-block: 0.9rem;
 }
 }
