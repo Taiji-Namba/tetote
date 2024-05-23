@@ -430,7 +430,7 @@ tbody {
 }
 .fv__heading {
   font-family: Viga, "Noto Sans JP", sans-serif;
-  font-size: clamp(3.2rem, 0.9464788732rem + 6.0093896714vw, 9.6rem);
+  font-size: clamp(4.8rem, 3.1098591549rem + 4.5070422535vw, 9.6rem);
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 1.2;
@@ -443,13 +443,29 @@ tbody {
     left: calc((100svw - 1440px) / 2 + 4.5833333333%);
   }
 }
+@media screen and (max-width: 1439px) {
+  .fv__heading {
+    top: 44.7509113001%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fv__heading {
+    left: 1.2rem;
+    top: 62.0689655172%;
+  }
+}
+@media screen and (max-width: 374px) {
+  .fv__heading {
+    font-size: 4.4rem;
+  }
+}
 
 .fv__text {
   position: absolute;
   left: 0;
   bottom: 19.8055893074%;
   background-color: #222222;
-  font-size: 2.4rem;
+  font-size: clamp(1.2rem, 0.7774647887rem + 1.1267605634vw, 2.4rem);
   font-weight: bold;
   text-wrap: nowrap;
   color: #fff;
@@ -484,6 +500,11 @@ tbody {
 @media screen and (min-width: 1440px) {
   .fv__news {
     left: calc((100svw - 1440px) / 2 + 4.5833333333% + 0.5rem);
+  }
+}
+@media screen and (max-width: 767px) {
+  .fv__news {
+    bottom: 1rem;
   }
 }
 

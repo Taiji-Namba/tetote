@@ -69,7 +69,7 @@
 
 .fv__heading {
   font-family: Viga, "Noto Sans JP", sans-serif;
-  font-size: function.rclamp(32, 96, 375, 1440);
+  font-size: function.rclamp(48, 96, 375, 1440);
   color: #fff;
   text-shadow: 0px 4px 4px rgba(#000, 0.25);
   line-height: 1.2;
@@ -80,6 +80,19 @@
   @include mixin.mq(pc) {
     left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100%);
   }
+
+  @include mixin.mq(tab) {
+    top: calc(286 / 823 * 100% + 10%);
+  }
+
+  @include mixin.mq(sp) {
+    left: 1.2rem;
+    top: calc(414 / 667 * 100%);
+  }
+
+  @include mixin.mq(sp-ms) {
+    font-size: 4.4rem;
+  }
 }
 
 .fv__text {
@@ -87,7 +100,7 @@
   left: 0;
   bottom: calc(163 / 823 * 100%);
   background-color: setting.$txt-color;
-  font-size: 2.4rem;
+  font-size: function.rclamp(12, 24, 375, 1440);
   font-weight: bold;
   text-wrap: nowrap;
   color: #fff;
@@ -118,6 +131,10 @@
 
   @include mixin.mq(pc) {
     left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% + 0.5rem);
+  }
+
+  @include mixin.mq(sp) {
+    bottom: 1rem;
   }
 }
 
