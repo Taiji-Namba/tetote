@@ -162,7 +162,8 @@
   top: 50%;
   transform: translateY(-50%);
   right: calc(47 / (1263 - 187) * 100%);
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: function.rclamp(12, 14, 375, 1439);
   font-weight: bold;
   font-family: Viga, "Noto Sans JP", sans-serif;
 
