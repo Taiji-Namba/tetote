@@ -1,8 +1,0 @@
-**/.DS_Store
-**/.vscode
-**/.hintrc
-**/.ssh
-/logs/
-/app/sql
-/conf/nginx
-/conf/apache
