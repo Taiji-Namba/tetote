@@ -404,6 +404,7 @@ tbody {
 @media screen and (max-width: 767px) {
   .fv-slide__picture:nth-child(1) {
     background-position: 70% center;
+    animation-delay: 4s;
   }
 }
 .fv-slide__picture:nth-child(2) {
@@ -413,6 +414,11 @@ tbody {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
   .fv-slide__picture:nth-child(2) {
     background-image: url(../images/fv02@2x.jpg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .fv-slide__picture:nth-child(2) {
+    animation-delay: -2s;
   }
 }
 

@@ -39,6 +39,7 @@
 
     @include mixin.mq(sp) {
       background-position: 70% center;
+      animation-delay: 4s;
     }
   }
   &:nth-child(2) {
@@ -47,6 +48,10 @@
 
     @include mixin.mq(twice) {
       background-image: url(../images/fv02@2x.jpg);
+    }
+
+    @include mixin.mq(sp) {
+      animation-delay: -2s;
     }
   }
 }
