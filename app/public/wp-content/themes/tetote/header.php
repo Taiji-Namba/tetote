@@ -54,7 +54,7 @@
         <div class="gnav__inner">
           <ul class="gnav__list">
             <li class="gnav__item">
-              <a href="./details/" class="gnav__anchor button button--black gnav__button">募集要項</a>
+              <a href="<?php echo esc_url(home_url()) . '/details/'; ?>" class="gnav__anchor button button--black gnav__button">募集要項</a>
             </li>
             <li class="gnav__item">
               <a hrew="./entry/" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
