@@ -459,6 +459,11 @@ tbody {
   -webkit-clip-path: polygon(0 0, 100% 0, 94.1747572816% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 94.1747572816% 100%, 0 100%);
 }
+@media screen and (min-width: 1440px) {
+  .fv__text {
+    left: calc((100svw - 1440px) / 2 + 4.5833333333% - 6.6rem);
+  }
+}
 @media screen and (max-width: 767px) {
   .fv__text {
     bottom: 13.3433283358%;

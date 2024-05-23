@@ -96,6 +96,10 @@
   width: min(51.5rem, 80%);
   clip-path: polygon(0 0, 100% 0, calc(485 / 515 * 100%) 100%, 0 100%);
 
+  @include mixin.mq(pc) {
+    left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% - 6.6rem);
+  }
+
   @include mixin.mq(sp) {
     bottom: calc(89 / 667 * 100%);
     font-size: 1.2rem;
