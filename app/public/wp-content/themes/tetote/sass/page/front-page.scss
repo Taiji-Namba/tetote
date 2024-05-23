@@ -112,7 +112,7 @@
   position: absolute;
   left: calc(66 / 1440 * 100% + 0.5rem);
   bottom: calc(38 / 823 * 100%);
-  width: 126.3rem;
+  width: min(126.3rem, 90%);
   height: 6.2rem;
   display: flex;
 
@@ -125,7 +125,7 @@
   color: #fff;
   background-color: setting.$txt-color;
   font-family: Viga, "Noto Sans JP", sans-serif;
-  font-size: 2.4rem;
+  font-size: function.rclamp(12, 24, 375, 1439);
   width: 14.8%;
   height: 100%;
   border: 0.1rem solid setting.$txt-color;
@@ -144,13 +144,17 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding-left: calc(90 / (1263 - 187) * 100%);
+
+  @include mixin.mq(sp) {
+    padding: 1rem;
+  }
 }
 
 .news__title {
   color: setting.$txt-color;
-  background-color: #fff;
-  font-size: 1.6rem;
-  margin-left: calc(90 / (1263 - 187) * 100%);
+  font-size: function.rclamp(12, 16, 375, 1439);
+  line-height: 1.2;
 }
 
 .news__cta {
@@ -161,6 +165,10 @@
   font-size: 1.4rem;
   font-weight: bold;
   font-family: Viga, "Noto Sans JP", sans-serif;
+
+  @include mixin.mq(sp) {
+    display: none;
+  }
 }
 
 .news__arrow {
