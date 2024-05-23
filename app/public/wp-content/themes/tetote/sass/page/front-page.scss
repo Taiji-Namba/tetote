@@ -67,7 +67,7 @@
   }
 }
 
-.fv__heading{
+.fv__heading {
   font-family: Viga, "Noto Sans JP", sans-serif;
   font-size: function.rclamp(32, 96, 375, 1440);
   color: #fff;
@@ -76,13 +76,13 @@
   position: absolute;
   left: calc(66 / 1440 * 100%);
   top: calc(286 / 823 * 100%);
-  
+
   @include mixin.mq(pc) {
     left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100%);
   }
 }
 
-.fv__text{
+.fv__text {
   position: absolute;
   left: 0;
   bottom: calc(163 / 823 * 100%);
@@ -94,12 +94,72 @@
   text-align: center;
   padding-block: 1.7rem;
   width: min(51.5rem, 80%);
-  clip-path:polygon(0 0, 100% 0, calc(485 / 515 * 100%) 100%, 0 100%);
-  
+  clip-path: polygon(0 0, 100% 0, calc(485 / 515 * 100%) 100%, 0 100%);
+
   @include mixin.mq(sp) {
     bottom: calc(89 / 667 * 100%);
     font-size: 1.2rem;
     width: 22.8rem;
     padding-block: 0.9rem;
+  }
 }
+
+.fv__news {
+  position: absolute;
+  left: calc(66 / 1440 * 100% + 0.5rem);
+  bottom: calc(38 / 823 * 100%);
+  width: 126.3rem;
+  height: 6.2rem;
+  display: flex;
+
+  @include mixin.mq(pc) {
+    left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% + 0.5rem);
+  }
+}
+
+.news__heading {
+  color: #fff;
+  background-color: setting.$txt-color;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  width: 14.8%;
+  height: 100%;
+  border: 0.1rem solid setting.$txt-color;
+  border-radius: 5rem 0 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news__text {
+  background-color: #fff;
+  width: 85.2%;
+  height: 100%;
+  border: 0.1rem solid setting.$txt-color;
+  border-radius: 0 5rem 5rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.news__title {
+  color: setting.$txt-color;
+  background-color: #fff;
+  font-size: 1.6rem;
+  margin-left: calc(90 / (1263 - 187) * 100%);
+}
+
+.news__cta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(47 / (1263 - 187) * 100%);
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+}
+
+.news__arrow {
+  vertical-align: middle;
+  margin-left: 0.6rem;
 }

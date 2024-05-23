@@ -467,4 +467,65 @@ tbody {
     padding-block: 0.9rem;
   }
 }
+
+.fv__news {
+  position: absolute;
+  left: calc(4.5833333333% + 0.5rem);
+  bottom: 4.617253949%;
+  width: 126.3rem;
+  height: 6.2rem;
+  display: flex;
+}
+@media screen and (min-width: 1440px) {
+  .fv__news {
+    left: calc((100svw - 1440px) / 2 + 4.5833333333% + 0.5rem);
+  }
+}
+
+.news__heading {
+  color: #fff;
+  background-color: #222222;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  width: 14.8%;
+  height: 100%;
+  border: 0.1rem solid #222222;
+  border-radius: 5rem 0 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news__text {
+  background-color: #fff;
+  width: 85.2%;
+  height: 100%;
+  border: 0.1rem solid #222222;
+  border-radius: 0 5rem 5rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.news__title {
+  color: #222222;
+  background-color: #fff;
+  font-size: 1.6rem;
+  margin-left: 8.3643122677%;
+}
+
+.news__cta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4.3680297398%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+}
+
+.news__arrow {
+  vertical-align: middle;
+  margin-left: 0.6rem;
+}
 /*# sourceMappingURL=front-page.css.map */
