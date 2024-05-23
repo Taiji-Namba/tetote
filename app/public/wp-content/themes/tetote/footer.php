@@ -1,8 +1,8 @@
     <div class="cta">
       <div class="cta__image"></div>
         <div class="cta__container">
-          <p class="cta__text">わたしたちと一緒に働く仲間を募集中です。少数精鋭のチームで、あなたも会社も一緒に成長していきましょう。</p>
-          <a class="button cta__button button--gold" href="">ENTRY</a>
+          <p class="cta__text">わたしたちと一緒に働く仲間を募集中です。<br>少数精鋭のチームで、<br>あなたも会社も一緒に成長していきましょう。</p>
+          <a class="button cta__button button--gold" href="">ENTRY<img class="arrow cta__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/news-arrow.svg'); ?>" alt=""></a>
         </div>
       </div>
     </div>
