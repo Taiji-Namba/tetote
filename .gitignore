@@ -4,5 +4,4 @@
 **/.ssh
 /logs/
 /app/sql
-/conf/nginx
-/conf/apache
+/conf/
