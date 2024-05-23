@@ -12,15 +12,15 @@
         <div class="footer__main-menu">
           <a href="" class="footer__logo"><img class="logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
           <ul class="footer__list">
-            <li class="footer__item">ホーム</li>
-            <li class="footer__item">TETOTEについて</li>
-            <li class="footer__item">人を知る</li>
-            <li class="footer__item">研修制度とキャリアパス</li>
-            <li class="footer__item">福利厚生</li>
-            <li class="footer__item">採用ブログ</li>
-            <li class="footer__item">募集要項</li>
-            <li class="footer__item">よくある質問</li>
-            <li class="footer__item">会社概要</li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/#'); ?>" class="footer__anchor">ホーム</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/about-us/'); ?>" class="footer__anchor">TETOTEについて</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/staff/'); ?>" class="footer__anchor">人を知る</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/career/'); ?>" class="footer__anchor">研修制度とキャリアパス</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/benefits/'); ?>" class="footer__anchor">福利厚生</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/blog/'); ?>" class="footer__anchor">採用ブログ</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/details/'); ?>" class="footer__anchor">募集要項</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/faq/'); ?>" class="footer__anchor">よくある質問</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/#company'); ?>" class="footer__anchor">会社概要</a></li>
           </ul>
         </div>
         <div class="footer__sub-menu"></div>
