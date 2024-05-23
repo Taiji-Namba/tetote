@@ -36,6 +36,10 @@
     @include mixin.mq(twice) {
       background-image: url(../images/fv01@2x.jpg);
     }
+
+    @include mixin.mq(sp) {
+      background-position: 70% center;
+    }
   }
   &:nth-child(2) {
     background-image: url(../images/fv02.jpg);
