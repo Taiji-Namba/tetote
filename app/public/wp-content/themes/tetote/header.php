@@ -57,7 +57,7 @@
               <a href="<?php echo esc_url(home_url()) . '/details/'; ?>" class="gnav__anchor button button--black gnav__button">募集要項</a>
             </li>
             <li class="gnav__item">
-              <a hrew="./entry/" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
+              <a href="<?php echo esc_url(home_url()) . '/entry/'; ?>" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
             </li>
             <li class="gnav__item">
               <button type="button" class="burger-button" id="burger-button" aria-controls="burger-nav" aria-expanded="false" aria-label="メニューを開く">
