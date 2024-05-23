@@ -42,7 +42,7 @@
     class="header top-page-header" <?php else :?> class="header sub-page-header";
   <?php endif; ?>>
     <div class="header__inner">
-      <a href="#" class="logo header__logo">
+      <a href="<?php echo esc_url(home_url()); ?>" class="logo header__logo">
         <img class="logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
         <?php if (is_front_page()) : ?>
           <img class="logo__img logo__img--white" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-white.svg'); ?>" alt="「TETOTE」のロゴ">
