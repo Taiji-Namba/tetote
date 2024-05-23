@@ -31,33 +31,25 @@
   <?php wp_head(); ?>
 </head>
 
-<body
-  <?php if (is_front_page()) : ?>
-    class ="top-page" <?php else :?> class="sub-page"
-  <?php endif; ?>
->
+<body class="top-page">
   <?php wp_body_open(); ?>
-  <header 
-  <?php if (is_front_page()) : ?>
-    class="header top-page-header" <?php else :?> class="header sub-page-header";
-  <?php endif; ?>>
+  <header class="header top-page-header">
     <div class="header__inner">
-      <a href="<?php echo esc_url(home_url()); ?>" class="logo header__logo">
-        <img class="logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
+      <a href="#" class="logo header__logo">
         <?php if (is_front_page()) : ?>
-          <img class="logo__img logo__img--white" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-white.svg'); ?>" alt="「TETOTE」のロゴ">
-          <?php else: ?>
-          <?php endif; ?>
-        </a>
+          <img class="logo__img logo__img--white" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.svg" alt="「TETOTE」のロゴ" class="logo-img">
+        <?php endif; ?>
+        <img class="logo__img logo__img--black" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-black.svg" alt="「TETOTE」のロゴ" class="logo-img">
+      </a>
 
       <nav class="gnav">
         <div class="gnav__inner">
           <ul class="gnav__list">
             <li class="gnav__item">
-              <a href="<?php echo esc_url(home_url()) . '/details/'; ?>" class="gnav__anchor button button--black gnav__button">募集要項</a>
+              <a href="./details/" class="gnav__anchor button button--black gnav__button">募集要項</a>
             </li>
             <li class="gnav__item">
-              <a href="<?php echo esc_url(home_url()) . '/entry/'; ?>" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
+              <a hrew="./entry/" class="gnav__anchor button button--gold gnav__button">ENTRY</a>
             </li>
             <li class="gnav__item">
               <button type="button" class="burger-button" id="burger-button" aria-controls="burger-nav" aria-expanded="false" aria-label="メニューを開く">
@@ -66,7 +58,7 @@
                   <span class="burger-button__line"></span>
                   <span class="burger-button__line"></span>
                 </span>
-                <span class="burger-button__label" id="burger-button-label" aria-hidden="true">MENU</span>
+                <span class="burger-button__label burger-button__label--white" id="burger-button-label" aria-hidden="true">MENU</span>
               </button>
             </li>
           </ul>

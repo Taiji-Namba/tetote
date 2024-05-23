@@ -1,7 +1,8 @@
 "use strict";
 jQuery(function ($) {
+
   // トップページと下層ページでヘッダー要素の色を分ける
-  $(document).ready(function () {
+  $(document).ready(function() {
     const topPage = document.querySelector("body.top-page");
     if (topPage !== null) {
       $(".burger-button__line").addClass("burger-button__line--white");
@@ -9,9 +10,8 @@ jQuery(function ($) {
     } else {
       $(".burger-button__line").addClass("burger-button__line--black");
       $(".burger-button__label").addClass("burger-button__label--black");
-      $(".logo__img--white").addClass("none");
-      $(".logo__img--black").addClass("block");
     }
+
   });
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
@@ -23,35 +23,25 @@ jQuery(function ($) {
     // スクロール位置がヘッダーを超えたとき
     if (scrollY >= headerHeight) {
       $(header).addClass("header--sticky");
-
-      if (subPage !== null) {
-        //下層ページのとき
+      
+      if (subPage !== null) { //下層ページのとき
         subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定 (トップページのヘッダーはページ表示時にabsoluteで、下層ページのヘッダーはページ表示時にstaticなことに由来する余白調整)
-      } else {
-        // トップページのとき
+      } else { // トップページのとき
         $(".logo__img--white").addClass("none").removeClass("block");
         $(".logo__img--black").addClass("block").removeClass("none");
-        $(".burger-button__line")
-          .removeClass("burger-button__line--white")
-          .addClass("burger-button__line--black");
-        $(".burger-button__label")
-          .removeClass("burger-button__label--white")
-          .addClass("burger-button__label--black");
+        $(".burger-button__line").removeClass("burger-button__line--white").addClass("burger-button__line--black");
+        $(".burger-button__label").removeClass("burger-button__label--white").addClass("burger-button__label--black");
       }
-    } else {
-      // スクロール位置がヘッダー未満のとき
+      
+    } else { // スクロール位置がヘッダー未満のとき
       $(header).removeClass("header--sticky");
       if (subPage !== null) {
         subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       } else {
         $(".logo__img--white").addClass("block").removeClass("none");
         $(".logo__img--black").addClass("none").removeClass("block");
-        $(".burger-button__line")
-          .addClass("burger-button__line--white")
-          .removeClass("burger-button__line--black");
-        $(".burger-button__label")
-          .addClass("burger-button__label--white")
-          .removeClass("burger-button__label--black");
+        $(".burger-button__line").addClass("burger-button__line--white").removeClass("burger-button__line--black");
+        $(".burger-button__label").addClass("burger-button__label--white").removeClass("burger-button__label--black");
       }
     }
   });
