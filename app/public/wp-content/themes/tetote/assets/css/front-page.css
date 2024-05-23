@@ -491,7 +491,7 @@ tbody {
   color: #fff;
   background-color: #222222;
   font-family: Viga, "Noto Sans JP", sans-serif;
-  font-size: clamp(1.2rem, 0.7770676692rem + 1.1278195489vw, 2.4rem);
+  font-size: clamp(1.2rem, 0.7774647887rem + 1.1267605634vw, 2.4rem);
   width: 14.8%;
   height: 100%;
   border: 0.1rem solid #222222;
@@ -520,7 +520,7 @@ tbody {
 
 .news__title {
   color: #222222;
-  font-size: clamp(1.2rem, 1.0590225564rem + 0.3759398496vw, 1.6rem);
+  font-size: clamp(1.2rem, 1.0591549296rem + 0.3755868545vw, 1.6rem);
   line-height: 1.2;
 }
 
@@ -529,7 +529,7 @@ tbody {
   top: 50%;
   transform: translateY(-50%);
   right: 4.3680297398%;
-  font-size: clamp(1.2rem, 1.1295112782rem + 0.1879699248vw, 1.4rem);
+  font-size: clamp(1.2rem, 1.1295774648rem + 0.1877934272vw, 1.4rem);
   font-weight: bold;
   font-family: Viga, "Noto Sans JP", sans-serif;
 }
