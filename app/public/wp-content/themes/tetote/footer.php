@@ -1,12 +1,10 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__image"></div>
-    <!-- <div class="cta footer__cta"> -->
       <div class="cta footer__cta">
         <p class="cta__text">わたしたちと一緒に働く仲間を募集中です。<br>少数精鋭のチームで、<br>あなたも会社も一緒に成長していきましょう。</p>
         <a class="button cta__button button--gold" href="<?php echo esc_url(home_url() . '/entry/'); ?>">ENTRY<img class="arrow cta__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/news-arrow.svg'); ?>" alt=""></a>
       </div>
-    <!-- </div> -->
 
       <div class="footer__menus">
         <div class="footer__main-menu">
