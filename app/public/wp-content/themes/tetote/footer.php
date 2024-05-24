@@ -8,6 +8,7 @@
         </div>
       </div>
 
+      <div class="footer__menus">
         <div class="footer__main-menu">
           <a href="" class="footer__logo"><img class="logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
           <ul class="footer__list">
@@ -29,6 +30,7 @@
           <li class="sns-icons__item"><a href="" class="sns-icons__anchor"><img class="sns-icons__img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/twitter.svg'); ?>" alt="Twitterのリンク"></a></li>
           <li class="sns-icons__item"><a href="" class="sns-icons__anchor"><img class="sns-icons__img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/youtube.svg'); ?>" alt="YouTubeのリンク"></a></li>
         </ul>
+        </div>
       </div>
     </footer>
 
