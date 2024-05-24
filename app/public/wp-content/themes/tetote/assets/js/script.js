@@ -245,7 +245,7 @@ jQuery(function ($) {
     } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
       itemsWidth = $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth() + $(".footer__item").eq(6).outerWidth();
     } else {
-      return; // タブレットやPCの範囲外の場合は何もしない
+      $(".footer__list").width("100%");
     }
     additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
     
