@@ -4,14 +4,16 @@ jQuery(function ($) {
     // ページ読み込み時
   $(document).ready(function () {
     switchHeaderColor();
-    footerPosition();
+    setFooterInnerHeight();
     setFooterListWidth();
+    setFooterHeight();
   });
 
   // ウィンドウリサイズ時の処理
   $(window).resize(function () {
-    footerPosition();
+    setFooterInnerHeight();
     setFooterListWidth();
+    setFooterHeight();
   });
 
   // トップページと下層ページでヘッダー要素の色を分ける
@@ -229,11 +231,22 @@ jQuery(function ($) {
     });
   });
 
-  // フッターの高さ設定
-  function footerPosition() {
+  // フッターインナーの高さ設定(フッターの要素を重ね合わせを実現するため)
+  function setFooterInnerHeight() {
     let footerImageHeight = $(".footer__image").height();
     $(".footer__inner").height(footerImageHeight);
   };
+  
+  //フッターの高さ設定(フッター下の余白をつけるため)
+  function setFooterHeight(){
+    let footerWrapperHeight = $(".footer__image").outerHeight() + $(".footer__menu-wrapper").outerHeight();
+    let footerHeight = footerWrapperHeight + $(".footer__wrapper").css("padding-bottom");
+    $(".footer__wrapper").height(footerHeight);
+    $(".footer").height(footerHeight);
+    console.log("フッターラッパーハイト: " + footerWrapperHeight);
+    console.log("フッターハイト: " + footerHeight);
+    console.log("padding-bottom: " + $(".footer__wrapper").css("padding-bottom"));
+  }
 
   // フッターのメインメニューの横幅設定
   function setFooterListWidth() {
