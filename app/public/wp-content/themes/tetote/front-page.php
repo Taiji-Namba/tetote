@@ -20,5 +20,8 @@
         </div>
       </a>
     </div>
+        </div>
+  </main>
+
 
 <?php get_footer(); ?>
