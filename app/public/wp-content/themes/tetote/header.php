@@ -18,14 +18,6 @@
   <meta property="twitter:description" content="テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。" />
   <meta property="twitter:image" content="https://the-connect-web.com/tetote/img/ogp-image.jpg" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/tetote/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/tetote/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/tetote/icons/favicon-16x16.png" />
-  <link rel="mask-icon" href="/tetote/icons/safari-pinned-tab.svg" color="#5bbad5" />
-  <link rel="shortcut icon" href="/tetote/icons/favicon.ico" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="msapplication-config" content="/icons/browserconfig.xml" />
-  <meta name="theme-color" content="#ffffff" />
 
   <meta name="robots" content="noindex" />
   <?php wp_head(); ?>
