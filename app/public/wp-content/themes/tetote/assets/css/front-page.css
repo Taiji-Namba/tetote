@@ -213,12 +213,32 @@ tbody {
   padding-top: 20.05rem;
   padding-bottom: 6.1rem;
 }
+@media screen and (max-width: 1439px) {
+  .footer__menu-wrapper {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__menu-wrapper {
+    padding-inline: 1.6rem;
+  }
+}
 
 .footer__menus {
   position: relative;
   margin-inline: auto;
-  width: min(95.6rem, 100% - 3.2rem);
+  width: min(95.6rem, 100%);
   height: 18.05rem;
+}
+@media screen and (max-width: 1439px) {
+  .footer__menus {
+    height: 38rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__menus {
+    height: 51.6rem;
+  }
 }
 
 .footer__logo {
@@ -228,10 +248,19 @@ tbody {
   left: 0;
   top: 0;
 }
+@media screen and (max-width: 1439px) {
+  .footer__logo {
+    left: 50%;
+    transform: translateX(-50%);
+    top: unset;
+    bottom: 6.6rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .footer__logo {
     width: 25.1rem;
     height: 6.6rem;
+    bottom: 5.6rem;
   }
 }
 
@@ -246,7 +275,28 @@ tbody {
   -moz-column-gap: 2.2rem;
        column-gap: 2.2rem;
   row-gap: 4.1rem;
-  max-width: 57.1rem;
+  line-height: 1;
+}
+@media screen and (max-width: 1439px) {
+  .footer__list {
+    font-size: 1.5rem;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__list {
+    font-size: 1.4rem;
+    width: 18rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    -moz-column-gap: unset;
+         column-gap: unset;
+  }
 }
 
 .copy-right {
@@ -255,8 +305,15 @@ tbody {
   position: absolute;
   left: 0;
   bottom: 0.6rem;
+  text-wrap: nowrap;
 }
-
+@media screen and (max-width: 1439px) {
+  .copy-right {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+}
 .footer__sns-list {
   position: absolute;
   right: 0;
@@ -264,6 +321,18 @@ tbody {
   display: flex;
   -moz-column-gap: 1.6rem;
        column-gap: 1.6rem;
+}
+@media screen and (max-width: 1439px) {
+  .footer__sns-list {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 17.1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__sns-list {
+    bottom: 15.1rem;
+  }
 }
 
 .header {
