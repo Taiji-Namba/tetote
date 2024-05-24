@@ -8,7 +8,7 @@
 
     <div class="footer__menu-wrapper">
       <div class="footer__menus">
-        <a href="" class="footer__logo"><img class="logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+        <a href="" class="footer__logo"><img class="footer__img logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
         <ul class="footer__list">
           <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/#'); ?>" class="footer__anchor">ホーム</a></li>
           <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/about-us/'); ?>" class="footer__anchor">TETOTEについて</a></li>

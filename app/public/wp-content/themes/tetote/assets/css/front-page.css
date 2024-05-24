@@ -258,6 +258,11 @@ tbody {
   }
 }
 
+.footer__img {
+  width: 100%;
+  height: 100%;
+}
+
 .footer__list {
   position: absolute;
   right: 3.2rem;
