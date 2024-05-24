@@ -6,6 +6,7 @@
         </div>
       </div>
     </div>
+  </main>
 
     <footer class="footer">
       <div class="footer__inner">
