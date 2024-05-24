@@ -119,7 +119,6 @@ tbody {
   border: none;
   border-radius: 2rem;
   width: min(95.6rem, 100% - 3.2rem);
-  height: 27.3rem;
   position: absolute;
   left: 50%;
   top: 100%;
@@ -135,12 +134,10 @@ tbody {
   .footer__cta {
     padding-top: 3.6rem;
     padding-bottom: 3.8rem;
-    height: 25.4rem;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__cta {
-    height: 23.6rem;
     padding-top: 2.4rem;
     padding-bottom: 2.9rem;
   }

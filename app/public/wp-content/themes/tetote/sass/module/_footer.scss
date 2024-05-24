@@ -31,7 +31,6 @@
   border: none;
   border-radius: 2rem;
   width: min(95.6rem, calc(100% - 1.6rem * 2));
-  height: 27.3rem;
   position: absolute;
   left: 50%;
   top: 100%;
@@ -46,11 +45,9 @@
   @include mixin.mq(tab) {
     padding-top: 3.6rem;
     padding-bottom: 3.8rem;
-    height: 25.4rem;
   }
 
   @include mixin.mq(sp) {
-    height: 23.6rem;
     padding-top: 2.4rem;
     padding-bottom: 2.9rem;
   }
