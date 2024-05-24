@@ -7,10 +7,6 @@
   padding-bottom: 6.4rem;
 
   @include mixin.mq(tab) {
-    padding-bottom: 3.6rem;
-  }
-
-  @include mixin.mq(sp) {
     padding-bottom: 0;
   }
 }
@@ -43,7 +39,7 @@
   background-color: #fff;
   border: none;
   border-radius: 2rem;
-  width: min(95.6rem, calc(100% - 1.6rem * 2));
+  width: 95.6rem;
   position: absolute;
   left: 50%;
   top: 100%;
@@ -58,11 +54,13 @@
   @include mixin.mq(tab) {
     padding-top: 3.6rem;
     padding-bottom: 3.8rem;
+    width: min(95.6rem, calc(100% - 2rem * 2));
   }
-
+  
   @include mixin.mq(sp) {
     padding-top: 2.4rem;
     padding-bottom: 2.9rem;
+    width: calc(100% - 1.6rem * 2);
   }
 }
 
