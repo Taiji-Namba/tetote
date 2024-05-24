@@ -239,4 +239,19 @@ jQuery(function ($) {
     ).on("input change", checkFormValidity);
     $("#entry-form #privacy-check").on("change", checkFormValidity);
   });
+
+  // フッターの高さ設定
+  $(document).ready(function () {
+    // ページ読み込み時の処理
+    footerPosition();
+  });
+
+  $(window).resize(function () {
+    // ウィンドウリサイズ時の処理
+    footerPosition();
+  });
+
+  function footerPosition() {}
+  let footerImageHeight = $(".footer__image").height();
+  $(".footer__inner").height(footerImageHeight);
 });
