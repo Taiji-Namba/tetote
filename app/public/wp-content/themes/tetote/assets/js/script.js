@@ -1,7 +1,21 @@
 "use strict";
 jQuery(function ($) {
-  // トップページと下層ページでヘッダー要素の色を分ける
+
+    // ページ読み込み時
   $(document).ready(function () {
+    switchHeaderColor();
+    footerPosition();
+    setFooterListWidth();
+  });
+
+  // ウィンドウリサイズ時の処理
+  $(window).resize(function () {
+    footerPosition();
+    setFooterListWidth();
+  });
+
+  // トップページと下層ページでヘッダー要素の色を分ける
+  function switchHeaderColor(){
     const topPage = document.querySelector("body.top-page");
     if (topPage !== null) {
       $(".burger-button__line").addClass("burger-button__line--white");
@@ -12,7 +26,8 @@ jQuery(function ($) {
       $(".logo__img--white").addClass("none");
       $(".logo__img--black").addClass("block");
     }
-  });
+  };
+
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
@@ -214,44 +229,29 @@ jQuery(function ($) {
     });
   });
 
-  // フォームの必須項目を全て入力しないと送信ボタンを非活性
-  $(document).ready(function () {
-    const $submitBtn = $("#entry-submit");
-
-    function checkFormValidity() {
-      if (
-        $('#entry-form input[id="name"]').val() !== "" &&
-        $('#entry-form input[id="age"]').val() !== "" &&
-        $('#entry-form input[id="email"]').val() !== "" &&
-        $('#entry-form input[name="応募職種"]:checked').length > 0 &&
-        $('#entry-form textarea[id="academic-background"]').val() !== "" &&
-        $('#entry-form textarea[id="about-myself"]').val() !== "" &&
-        $("#entry-form #privacy-check").prop("checked") === true
-      ) {
-        $submitBtn.prop("disabled", false);
-      } else {
-        $submitBtn.prop("disabled", true);
-      }
-    }
-
-    $(
-      "#entry-form input, #entry-form textarea, #entry-form input[name='応募職種']"
-    ).on("input change", checkFormValidity);
-    $("#entry-form #privacy-check").on("change", checkFormValidity);
-  });
-
   // フッターの高さ設定
-  $(document).ready(function () {
-    // ページ読み込み時の処理
-    footerPosition();
-  });
+  function footerPosition() {
+    let footerImageHeight = $(".footer__image").height();
+    $(".footer__inner").height(footerImageHeight);
+  };
 
-  $(window).resize(function () {
-    // ウィンドウリサイズ時の処理
-    footerPosition();
-  });
-
-  function footerPosition() {}
-  let footerImageHeight = $(".footer__image").height();
-  $(".footer__inner").height(footerImageHeight);
+  // フッターのメインメニューの横幅設定
+  function setFooterListWidth() {
+    var itemsWidth, additionalWidth;
+    var windowWidth = $(window).width();
+    
+    if (windowWidth >= 1440) { // PCの場合
+      itemsWidth = $(".footer__item").eq(0).outerWidth() + $(".footer__item").eq(1).outerWidth() + $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth();
+    } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
+      itemsWidth = $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth() + $(".footer__item").eq(6).outerWidth();
+    } else {
+      return; // タブレットやPCの範囲外の場合は何もしない
+    }
+    additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
+    
+    var listWidth = itemsWidth + additionalWidth;
+    $(".footer__list").width(listWidth);
+    console.log("幅:" + listWidth);
+    console.log("ウインドウ幅:" + windowWidth);
+  };
 });
