@@ -74,29 +74,37 @@ jQuery(function ($) {
   });
 
   //ハンバーガーメニューの実装
+  // バーガーメニューを開く
+  function openBurgerMenu(){
+    $(".burger-button").addClass("open");
+    $(".burger-menu").addClass("open");
+    $(".burger-menu a").addClass("burger-menu__anchor");
+    $(".burger-button").attr("aria-expanded", "true");
+    $(".burger-button").attr("aria-label", "メニューを開く");
+    $("#burger-button-label").textContent = "MENU";
+  };
+  // バーガーメニューを閉じる
+  function closeBurgerMenu(){
+    $(".burger-button").removeClass("open");
+    $(".burger-menu").removeClass("open");
+    $(".burger-button").attr("aria-expanded", "false");
+    $(".burger-button").attr("aria-label", "メニューを開く");
+    $("#burger-button-label").textContent = "MENU";
+  };
+
+  // バーガーメニュー展開時のスクロール禁止
   let scrollpos;
-  const burgerLabel = document.getElementById("burger-button-label");
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
-    if (!$(this).hasClass("open")) { // 閉→開
-      $(".burger-button").addClass("open");
-      $(".burger-menu").addClass("open");
-      $(".burger-menu a").addClass("burger-menu__anchor");
-      $(".burger-button").attr("aria-expanded", "true");
-      $(".burger-button").attr("aria-label", "メニューを開く");
-      burgerLabel.textContent = "MENU";
+    if (!$(this).hasClass("open")) {
+      openBurgerMenu();
 
       // スクロール位置を保持 & メニューopen時はスクロールできないように
       scrollpos = $(window).scrollTop();
       $("body").addClass("fixed").css({ top: -scrollpos });
       // Y位置と右端からのX位置を固定
-    } else { // 開→閉
-      $(".burger-button").removeClass("open");
-      $(".burger-menu").removeClass("open");
-      $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "";
-
+    } else {
+      closeBurgerMenu();
       // メニューを閉じる時はfixを解除して元のスクロール位置に戻る
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
@@ -115,12 +123,7 @@ jQuery(function ($) {
   // ハンバーガーメニュー表示時にメニュー以外をクリックしたらスクロール位置を保持したまま閉じる
   $(".burger-menu").on("click", function (event) {
     if (!$(event.target).is("a, button")) {
-      $(".burger-button").removeClass("open");
-      $(".burger-menu").removeClass("open");
-      $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "メニューを開く");
-      burgerLabel.textContent = "MENU";
-
+      closeBurgerMenu();
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
         top: scrollpos,
@@ -138,11 +141,7 @@ jQuery(function ($) {
         $(".burger-button").hasClass("open") &&
         $("#login-modal-burger.modal-open").length === 0
       ) {
-        $(".burger-button").removeClass("open");
-        $(".burger-button").attr("aria-expanded", "false");
-        $(".burger-button").attr("aria-label", "メニューを開く");
-      burgerLabel.textContent = "MENU";
-        $(".burger-menu").removeClass("open");
+        closeBurgerMenu();
 
         // スクロール位置を保持しながら解除
         $("body").removeClass("fixed").css({ top: 0 });
@@ -175,12 +174,7 @@ jQuery(function ($) {
   // スムーススクロール(ハンバーガメニューを押したときも動作)
   $('a[href^="#"]').click(function () {
     if ($(this).hasClass("burger-menu__anchor")) {
-      $(".burger-button").removeClass("open");
-      $(".burger-menu").removeClass("open");
-      $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "メニューを開く");
-      burgerLabel.textContent = "MENU";
-
+      closeBurgerMenu();
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
         top: scrollpos,
