@@ -19,7 +19,7 @@
             <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/blog/'); ?>" class="footer__anchor">採用ブログ</a></li>
             <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/details/'); ?>" class="footer__anchor">募集要項</a></li>
             <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/faq/'); ?>" class="footer__anchor">よくある質問</a></li>
-            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/about-us/'); ?>" class="footer__anchor">会社概要</a></li>
+            <li class="footer__item"><a href="<?php echo esc_url(home_url() . '/#company'); ?>" class="footer__anchor">会社概要</a></li>
           </ul>
           <p class="copy-right">© 2024 TETOTE All Right Reserved.</p>
           <ul class="footer__sns-list sns-icons">
