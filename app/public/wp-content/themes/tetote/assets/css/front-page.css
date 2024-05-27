@@ -556,7 +556,7 @@ tbody {
 .burger-menu {
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   position: fixed;
   left: 0;
   top: 0;
@@ -572,25 +572,82 @@ tbody {
   opacity: 1;
 }
 
-.burger-menu__list {
-  margin-top: 20%;
+.burger-menu__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92.7rem, 100%);
+  padding-inline: 1.2rem;
   display: flex;
-  flex-direction: column;
-  row-gap: 5rem;
+  flex-wrap: wrap;
 }
 
-.burger-menu__item {
-  font-size: 1.3rem;
+.burger-menu__logo-list {
+  display: flex;
+  align-items: center;
+  padding-right: 6.3rem;
+  border-right: 0.05rem solid #afa86f;
+}
+
+.burger-menu__item-list {
+  margin-left: 6.3rem;
+  width: min(52.6rem, 100%);
 }
 
 .burger-menu__anchor {
   display: inline-block;
 }
 
-.burger-menu .button {
-  width: 20rem;
-  line-height: 6.9rem;
-  border-radius: 6rem;
+.burger-menu__logo {
+  display: block;
+}
+
+.burger-menu__text-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  width: 100%;
+}
+
+.burger-menu__text-item {
+  text-align: left;
+  padding-block: 2.3rem;
+  border-top: 0.1rem solid #afa86f;
+  width: calc((100% - 3rem) / 2);
+}
+
+.burger-menu__text-item:nth-of-type(3), .burger-menu__text-item:last-child {
+  border-bottom: 0.1rem solid #afa86f;
+}
+
+.burger-menu__title {
+  font-size: 3.2rem;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  line-height: 1;
+}
+
+.burger-menu__sub-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 1.1rem;
+}
+
+.burger-menu__button-item-wrapper {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger-menu__button {
+  width: 24.8rem;
+  height: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fv {
