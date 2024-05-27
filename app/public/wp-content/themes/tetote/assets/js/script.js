@@ -78,8 +78,8 @@ jQuery(function ($) {
   //ハンバーガーメニューの実装
   // バーガーメニューを開く
   function openBurgerMenu(){
-    $(".burger-button").addClass("open");
-    $(".burger-menu").addClass("open");
+    $(".burger-button").addClass("is-burger-open");
+    $(".burger-menu").addClass("is-burger-open");
     $(".burger-menu a").addClass("burger-menu__anchor");
     $(".burger-button").attr("aria-expanded", "true");
     $(".burger-button").attr("aria-label", "メニューを開く");
@@ -87,8 +87,8 @@ jQuery(function ($) {
   };
   // バーガーメニューを閉じる
   function closeBurgerMenu(){
-    $(".burger-button").removeClass("open");
-    $(".burger-menu").removeClass("open");
+    $(".burger-button").removeClass("is-burger-open");
+    $(".burger-menu").removeClass("is-burger-open");
     $(".burger-button").attr("aria-expanded", "false");
     $(".burger-button").attr("aria-label", "メニューを開く");
     $("#burger-button-label").textContent = "MENU";
@@ -98,7 +98,7 @@ jQuery(function ($) {
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
-    if (!$(this).hasClass("open")) {
+    if (!$(this).hasClass("is-burger-open")) {
       openBurgerMenu();
 
       // スクロール位置を保持 & メニューopen時はスクロールできないように
@@ -140,7 +140,7 @@ jQuery(function ($) {
     if (event.key === "Escape" || event.keyCode === 27) {
       // バーガーメニューが開いていて、かつモーダルが開いていない場合
       if (
-        $(".burger-button").hasClass("open") &&
+        $(".burger-button").hasClass("is-burger-open") &&
         $("#login-modal-burger.modal-open").length === 0
       ) {
         closeBurgerMenu();
