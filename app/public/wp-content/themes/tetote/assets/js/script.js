@@ -121,7 +121,8 @@ jQuery(function ($) {
   // バーガーメニューを閉じたときのヘッダー色の設定
   function setHeaderColor() {
     const headerHeight = $(".header").outerHeight(); // ヘッダーの高さを取得
-    if (parseInt($("body").css("top")) >= -headerHeight){
+    const topPage = document.querySelector("body.top-page");
+    if (parseInt($("body").css("top")) >= -headerHeight && topPage !== null){
       displayWhiteHeader();
     } else {
       displayBlackHeader();
