@@ -220,8 +220,8 @@
 .burger-menu__inner {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(406 / 1440 * 100% - 1.2rem);
+  transform: translateY(-50%);
   width: min(calc(90.3rem + 2.4rem), 100%);
   padding-inline: 1.2rem;
   display: flex;
