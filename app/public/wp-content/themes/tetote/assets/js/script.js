@@ -78,7 +78,7 @@ jQuery(function ($) {
   const burgerLabel = document.getElementById("burger-button-label");
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
-    if (!$(this).hasClass("open")) {
+    if (!$(this).hasClass("open")) { // 閉→開
       $(".burger-button").addClass("open");
       $(".burger-menu").addClass("open");
       $(".burger-menu a").addClass("burger-menu__anchor");
@@ -90,12 +90,12 @@ jQuery(function ($) {
       scrollpos = $(window).scrollTop();
       $("body").addClass("fixed").css({ top: -scrollpos });
       // Y位置と右端からのX位置を固定
-    } else {
+    } else { // 開→閉
       $(".burger-button").removeClass("open");
       $(".burger-menu").removeClass("open");
       $(".burger-button").attr("aria-expanded", "false");
       $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "MENU";
+      burgerLabel.textContent = "";
 
       // メニューを閉じる時はfixを解除して元のスクロール位置に戻る
       $("body").removeClass("fixed").css({ top: 0 });
@@ -118,8 +118,8 @@ jQuery(function ($) {
       $(".burger-button").removeClass("open");
       $(".burger-menu").removeClass("open");
       $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "";
+      $(".burger-button").attr("aria-label", "メニューを開く");
+      burgerLabel.textContent = "MENU";
 
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
@@ -140,8 +140,8 @@ jQuery(function ($) {
       ) {
         $(".burger-button").removeClass("open");
         $(".burger-button").attr("aria-expanded", "false");
-        $(".burger-button").attr("aria-label", "閉じる");
-        burgerLabel.textContent = "";
+        $(".burger-button").attr("aria-label", "メニューを開く");
+      burgerLabel.textContent = "MENU";
         $(".burger-menu").removeClass("open");
 
         // スクロール位置を保持しながら解除
@@ -178,8 +178,8 @@ jQuery(function ($) {
       $(".burger-button").removeClass("open");
       $(".burger-menu").removeClass("open");
       $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "";
+      $(".burger-button").attr("aria-label", "メニューを開く");
+      burgerLabel.textContent = "MENU";
 
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
