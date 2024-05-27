@@ -42,7 +42,7 @@ jQuery(function ($) {
     $(".burger-button__label")
       .addClass("burger-button__label--white")
       .removeClass("burger-button__label--black");
-  }
+  };
 
 
   // 黒のヘッダーを表示する
@@ -55,7 +55,7 @@ jQuery(function ($) {
     $(".burger-button__label")
       .removeClass("burger-button__label--white")
       .addClass("burger-button__label--black");
-  }
+  };
 
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
