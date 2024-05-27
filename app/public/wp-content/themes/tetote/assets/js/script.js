@@ -133,8 +133,7 @@ jQuery(function ($) {
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
     controlScrolling();
-    // バーガーメニューが閉じているとき
-    if (!$(this).hasClass("is-burger-open")) {
+    if (!$(this).hasClass("is-burger-open")) { // バーガーメニューが閉じているとき
       openBurgerMenu();
       displayBlackHeader();
       // スクロール位置を保持
