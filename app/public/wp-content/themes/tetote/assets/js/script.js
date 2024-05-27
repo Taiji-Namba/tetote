@@ -96,12 +96,24 @@ jQuery(function ($) {
     $(".header__inner").removeClass("is-burger-open");
   };
 
-  // バーガーメニュー展開時のスクロール禁止&スムースクロール
+// バーガーメニュー展開時のスクロール禁止
+function controlScrolling(){
+  if ($("body").css("overflow") === "hidden") {
+    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+    $("body").css({ height: "", overflow: "" });
+  } else {
+    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+    $("body").css({ height: "100%", overflow: "hidden" });
+  }
+};
+
+  //スムースクロール
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
     if (!$(this).hasClass("is-burger-open")) {
       openBurgerMenu();
+      controlScrolling();
 
       // スクロール位置を保持 & メニューopen時はスクロールできないように
       scrollpos = $(window).scrollTop();
