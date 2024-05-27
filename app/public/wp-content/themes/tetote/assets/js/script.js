@@ -32,6 +32,31 @@ jQuery(function ($) {
     }
   };
 
+  // 白のヘッダーを表示する
+  function displayWhiteHeader(){
+    $(".logo__img--white").addClass("block").removeClass("none");
+    $(".logo__img--black").addClass("none").removeClass("block");
+    $(".burger-button__line")
+      .addClass("burger-button__line--white")
+      .removeClass("burger-button__line--black");
+    $(".burger-button__label")
+      .addClass("burger-button__label--white")
+      .removeClass("burger-button__label--black");
+  }
+
+
+  // 黒のヘッダーを表示する
+  function displayBlackHeader(){
+    $(".logo__img--white").addClass("none").removeClass("block");
+    $(".logo__img--black").addClass("block").removeClass("none");
+    $(".burger-button__line")
+      .removeClass("burger-button__line--white")
+      .addClass("burger-button__line--black");
+    $(".burger-button__label")
+      .removeClass("burger-button__label--white")
+      .addClass("burger-button__label--black");
+  }
+
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
@@ -48,14 +73,7 @@ jQuery(function ($) {
         subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定 (トップページのヘッダーはページ表示時にabsoluteで、下層ページのヘッダーはページ表示時にstaticなことに由来する余白調整)
       } else {
         // トップページのとき
-        $(".logo__img--white").addClass("none").removeClass("block");
-        $(".logo__img--black").addClass("block").removeClass("none");
-        $(".burger-button__line")
-          .removeClass("burger-button__line--white")
-          .addClass("burger-button__line--black");
-        $(".burger-button__label")
-          .removeClass("burger-button__label--white")
-          .addClass("burger-button__label--black");
+        displayBlackHeader();
       }
     } else {
       // スクロール位置がヘッダー未満のとき
@@ -63,14 +81,7 @@ jQuery(function ($) {
       if (subPage !== null) {
         subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       } else {
-        $(".logo__img--white").addClass("block").removeClass("none");
-        $(".logo__img--black").addClass("none").removeClass("block");
-        $(".burger-button__line")
-          .addClass("burger-button__line--white")
-          .removeClass("burger-button__line--black");
-        $(".burger-button__label")
-          .addClass("burger-button__label--white")
-          .removeClass("burger-button__label--black");
+        displayWhiteHeader();
       }
     }
   });
@@ -106,17 +117,31 @@ jQuery(function ($) {
       $("body").css({ height: "100%", overflow: "hidden" });
     }
   };
+
+  // バーガーメニューを閉じたときのヘッダー色の設定
+  function setHeaderColor() {
+    const headerHeight = $(".header").outerHeight(); // ヘッダーの高さを取得
+    if (parseInt($("body").css("top")) >= -headerHeight){
+      displayWhiteHeader();
+    } else {
+      displayBlackHeader();
+    }
+  };
+
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
     controlScrolling();
+    // バーガーメニューが閉じているとき
     if (!$(this).hasClass("is-burger-open")) {
       openBurgerMenu();
+      displayBlackHeader();
       // スクロール位置を保持
       scrollpos = $(window).scrollTop();
       $("body").addClass("fixed").css({ top: -scrollpos });
-    } else {
+    } else { // バーガーメニューが開いているとき
       closeBurgerMenu();
+      setHeaderColor();
       // メニューを閉じる時はfixを解除して元のスクロール位置に戻る
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
@@ -134,9 +159,10 @@ jQuery(function ($) {
 
   // ハンバーガーメニュー表示時にメニュー以外をクリックしたらスクロール位置を保持したまま閉じる
   $(".burger-menu").on("click", function (event) {
-    controlScrolling();
     if (!$(event.target).is("a, button")) {
+      controlScrolling();
       closeBurgerMenu();
+      setHeaderColor();
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
         top: scrollpos,
@@ -156,6 +182,7 @@ jQuery(function ($) {
       ) {
         closeBurgerMenu();
         controlScrolling();
+        setHeaderColor();
         // スクロール位置を保持しながら解除
         $("body").removeClass("fixed").css({ top: 0 });
         window.scroll({
@@ -189,6 +216,7 @@ jQuery(function ($) {
     if ($(this).hasClass("burger-menu__anchor")) {
       closeBurgerMenu();
       controlScrolling();
+      setHeaderColor();
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
         top: scrollpos,
