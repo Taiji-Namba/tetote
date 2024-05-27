@@ -63,7 +63,7 @@
     <nav class="burger-menu" id="burger-nav">
       <ul class="burger-menu__inner">
         <li class="burger-menu__logo-list">
-          <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/'); ?>"><img class="burger-menu__logo logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+          <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="burger-menu__logo logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
         </li>
         <li class="burger-menu__item-list">
           <ul class="burger-menu__text-item-wrapper">
