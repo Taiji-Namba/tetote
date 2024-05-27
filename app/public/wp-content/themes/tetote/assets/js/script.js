@@ -271,7 +271,7 @@ jQuery(function ($) {
   // バーガーメニューレイアウト設定
   function setBurgerMenuTextItemWrapper() {
     var windowWidth = $(window).width();
-    if (windowWidth >= 1440) { // PCの場合
+    if (windowWidth >= 768) { // PCの場合
       let halfHeight = $(".burger-menu__text-item").eq(0).outerHeight(true) + $(".burger-menu__text-item").eq(1).outerHeight(true) + $(".burger-menu__text-item").eq(2).outerHeight(true) + 1; // 最後の1はborderの分
       $(".burger-menu__text-item-wrapper").height(halfHeight);
     } else {

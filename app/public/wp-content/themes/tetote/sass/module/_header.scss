@@ -234,6 +234,12 @@
   padding-inline: 1.2rem;
   display: flex;
   flex-wrap: wrap;
+
+  @include mixin.mq(tab) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
 }
 
 .burger-menu__logo-list{
@@ -241,11 +247,19 @@
   align-items: center;
   padding-right: 6.3rem;
   border-right: 0.05rem solid setting.$accent-color-2;
+
+  @include mixin.mq(tab) {
+    display: none;
+  }
 }
 
 .burger-menu__item-list{
   margin-left: 6.3rem;
   width: min(52.6rem, 100%);
+
+  @include mixin.mq(tab) {
+    margin-left: 0;
+  }
 }
 
 .burger-menu__anchor {
@@ -262,6 +276,9 @@
   flex-direction: column;
   column-gap: 3rem;
   width: 100%;
+
+  @include mixin.mq(tab) {
+  }
 }
 
 .burger-menu__text-item {
