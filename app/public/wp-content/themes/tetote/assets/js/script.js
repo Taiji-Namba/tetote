@@ -101,20 +101,20 @@ function controlScrolling(){
   if ($("body").css("overflow") === "hidden") {
     // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
     $("body").css({ height: "", overflow: "" });
+    console.log("hidden解除");
   } else {
     // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
     $("body").css({ height: "100%", overflow: "hidden" });
+    console.log("hidden実行");
   }
 };
-
   //スムースクロール
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
+    controlScrolling();
     if (!$(this).hasClass("is-burger-open")) {
       openBurgerMenu();
-      controlScrolling();
-
       // スクロール位置を保持 & メニューopen時はスクロールできないように
       scrollpos = $(window).scrollTop();
       $("body").addClass("fixed").css({ top: -scrollpos });
@@ -137,6 +137,7 @@ function controlScrolling(){
 
   // ハンバーガーメニュー表示時にメニュー以外をクリックしたらスクロール位置を保持したまま閉じる
   $(".burger-menu").on("click", function (event) {
+    controlScrolling();
     if (!$(event.target).is("a, button")) {
       closeBurgerMenu();
       $("body").removeClass("fixed").css({ top: 0 });
@@ -157,7 +158,7 @@ function controlScrolling(){
         $("#login-modal-burger.modal-open").length === 0
       ) {
         closeBurgerMenu();
-
+        controlScrolling();
         // スクロール位置を保持しながら解除
         $("body").removeClass("fixed").css({ top: 0 });
         window.scroll({
@@ -190,6 +191,7 @@ function controlScrolling(){
   $('a[href^="#"]').click(function () {
     if ($(this).hasClass("burger-menu__anchor")) {
       closeBurgerMenu();
+      controlScrolling();
       $("body").removeClass("fixed").css({ top: 0 });
       window.scroll({
         top: scrollpos,
