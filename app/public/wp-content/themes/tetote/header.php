@@ -18,14 +18,6 @@
   <meta property="twitter:description" content="テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。" />
   <meta property="twitter:image" content="https://the-connect-web.com/tetote/img/ogp-image.jpg" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/tetote/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/tetote/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/tetote/icons/favicon-16x16.png" />
-  <link rel="mask-icon" href="/tetote/icons/safari-pinned-tab.svg" color="#5bbad5" />
-  <link rel="shortcut icon" href="/tetote/icons/favicon.ico" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="msapplication-config" content="/icons/browserconfig.xml" />
-  <meta name="theme-color" content="#ffffff" />
 
   <meta name="robots" content="noindex" />
   <?php wp_head(); ?>
@@ -65,6 +57,63 @@
           </ul>
         </div>
       </nav>
-
     </div>
+
+
+    <nav class="burger-menu" id="burger-nav">
+      <ul class="burger-menu__inner">
+        <li class="burger-menu__logo-list">
+          <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="burger-menu__logo logo__img logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+        </li>
+        <li class="burger-menu__item-list">
+          <ul class="burger-menu__text-item-wrapper">
+            <li class="burger-menu__text-item">
+              <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/about-us/'); ?>">
+                <p class="burger-menu__title">ABOUT US</p>
+                <p class="burger-menu__sub-title">TETOTEについて</p>
+              </a>
+            </li>
+            <li class="burger-menu__text-item">
+              <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
+                <p class="burger-menu__title">STAFF</p>
+                <p class="burger-menu__sub-title">社員について</p>
+              </a>
+            </li>
+            <li class="burger-menu__text-item">
+              <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
+                <p class="burger-menu__title">BLOG</p>
+                <p class="burger-menu__sub-title">採用ブログ</p>
+              </a>
+            </li>
+            <li class="burger-menu__text-item">
+              <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/benefits/'); ?>">
+                <p class="burger-menu__title">BENEFITS</p>
+                <p class="burger-menu__sub-title">福利厚生について</p>
+              </a>
+            </li>
+            <li class="burger-menu__text-item">
+              <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/career/'); ?>">
+                <p class="burger-menu__title">CAREER</p>
+                <p class="burger-menu__sub-title">研修制度とキャリアパス</p>
+              </a>
+            </li>
+            <li class="burger-menu__text-item">
+              <a class="burger-menu__anchor" href="<?php echo esc_url(home_url() . '/faq/'); ?>">
+                <p class="burger-menu__title">FAQ</p>
+                <p class="burger-menu__sub-title">よくある質問</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="burger-menu__button-item-wrapper">
+            <li class="burger-menu__button-item">
+              <a href="<?php echo esc_url(home_url()) . '/details/'; ?>" class="button button--black burger-menu__button">募集要項</a>
+            </li>
+            <li class="burger-menu__button-item">
+              <a class="button button--gold burger-menu__button" href="<?php echo esc_url(home_url() . '/entry/'); ?>">ENTRY</a>
+            </li>
+          </ul>
+        </li>
+
+        <div id="js-focus-trap" tabindex="0"></div>
+    </nav>
   </header>

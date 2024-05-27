@@ -7,6 +7,7 @@ jQuery(function ($) {
     setFooterInnerHeight();
     setFooterListWidth();
     setFooterHeight();
+    setBurgerMenuTextItemWrapper();
   });
 
   // ウィンドウリサイズ時の処理
@@ -14,6 +15,7 @@ jQuery(function ($) {
     setFooterInnerHeight();
     setFooterListWidth();
     setFooterHeight();
+    setBurgerMenuTextItemWrapper();
   });
 
   // トップページと下層ページでヘッダー要素の色を分ける
@@ -28,6 +30,31 @@ jQuery(function ($) {
       $(".logo__img--white").addClass("none");
       $(".logo__img--black").addClass("block");
     }
+  };
+
+  // 白のヘッダーを表示する
+  function displayWhiteHeader(){
+    $(".logo__img--white").addClass("block").removeClass("none");
+    $(".logo__img--black").addClass("none").removeClass("block");
+    $(".burger-button__line")
+      .addClass("burger-button__line--white")
+      .removeClass("burger-button__line--black");
+    $(".burger-button__label")
+      .addClass("burger-button__label--white")
+      .removeClass("burger-button__label--black");
+  };
+
+
+  // 黒のヘッダーを表示する
+  function displayBlackHeader(){
+    $(".logo__img--white").addClass("none").removeClass("block");
+    $(".logo__img--black").addClass("block").removeClass("none");
+    $(".burger-button__line")
+      .removeClass("burger-button__line--white")
+      .addClass("burger-button__line--black");
+    $(".burger-button__label")
+      .removeClass("burger-button__label--white")
+      .addClass("burger-button__label--black");
   };
 
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
@@ -46,14 +73,7 @@ jQuery(function ($) {
         subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定 (トップページのヘッダーはページ表示時にabsoluteで、下層ページのヘッダーはページ表示時にstaticなことに由来する余白調整)
       } else {
         // トップページのとき
-        $(".logo__img--white").addClass("none").removeClass("block");
-        $(".logo__img--black").addClass("block").removeClass("none");
-        $(".burger-button__line")
-          .removeClass("burger-button__line--white")
-          .addClass("burger-button__line--black");
-        $(".burger-button__label")
-          .removeClass("burger-button__label--white")
-          .addClass("burger-button__label--black");
+        displayBlackHeader();
       }
     } else {
       // スクロール位置がヘッダー未満のとき
@@ -61,72 +81,92 @@ jQuery(function ($) {
       if (subPage !== null) {
         subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       } else {
-        $(".logo__img--white").addClass("block").removeClass("none");
-        $(".logo__img--black").addClass("none").removeClass("block");
-        $(".burger-button__line")
-          .addClass("burger-button__line--white")
-          .removeClass("burger-button__line--black");
-        $(".burger-button__label")
-          .addClass("burger-button__label--white")
-          .removeClass("burger-button__label--black");
+        displayWhiteHeader();
       }
     }
   });
 
   //ハンバーガーメニューの実装
+  // バーガーメニューを開く
+  function openBurgerMenu(){
+    $(".burger-button").addClass("is-burger-open");
+    $(".burger-menu").addClass("is-burger-open");
+    $(".burger-menu a").addClass("burger-menu__anchor");
+    $(".burger-button").attr("aria-expanded", "true");
+    $(".burger-button").attr("aria-label", "メニューを開く");
+    $("#burger-button-label").textContent = "MENU";
+    $(".header__inner").addClass("is-burger-open");
+  };
+  // バーガーメニューを閉じる
+  function closeBurgerMenu(){
+    $(".burger-button").removeClass("is-burger-open");
+    $(".burger-menu").removeClass("is-burger-open");
+    $(".burger-button").attr("aria-expanded", "false");
+    $(".burger-button").attr("aria-label", "メニューを開く");
+    $("#burger-button-label").textContent = "MENU";
+    $(".header__inner").removeClass("is-burger-open");
+  };
+
+  // バーガーメニュー展開時のスクロール禁止
+  function controlScrolling(){
+    if ($("body").css("overflow") === "hidden") {
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+    } else {
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+    }
+  };
+
+  // バーガーメニューを閉じたときにヘッダー色を戻す
+  function setHeaderColor() {
+    const headerHeight = $(".header").outerHeight(); // ヘッダーの高さを取得
+    const topPage = document.querySelector("body.top-page");
+    if (parseInt($("body").css("top")) >= -headerHeight && topPage !== null){
+      displayWhiteHeader();
+    } else {
+      displayBlackHeader();
+    }
+  };
+
+  // バーガーメニューを開く時に、スクロール位置を保持
   let scrollpos;
-  const burgerLabel = document.getElementById("burger-button-label");
+  function holdScrollPosition(){
+    scrollpos = $(window).scrollTop();
+    $("body").addClass("fixed").css({ top: -scrollpos });
+  };
+
+  // バーガーメニューを閉じる時に、fixedを解除して元のスクロール位置に戻る
+  function setHoldenScrollPosition(){
+    $("body").removeClass("fixed").css({ top: 0 });
+    window.scroll({
+      top: scrollpos,
+      left: 0,
+      behavior: "instant",
+    });
+  };
+
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
-    if (!$(this).hasClass("open")) {
-      $(".burger-button").addClass("open");
-      $(".burger-menu").addClass("open");
-      $(".burger-menu a").addClass("burger-menu__anchor");
-      $(".burger-button").attr("aria-expanded", "true");
-      $(".burger-button").attr("aria-label", "メニューを開く");
-      burgerLabel.textContent = "MENU";
-
-      // スクロール位置を保持 & メニューopen時はスクロールできないように
-      scrollpos = $(window).scrollTop();
-      $("body").addClass("fixed").css({ top: -scrollpos });
-      // Y位置と右端からのX位置を固定
-    } else {
-      $(".burger-button").removeClass("open");
-      $(".burger-menu").removeClass("open");
-      $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "MENU";
-
-      // メニューを閉じる時はfixを解除して元のスクロール位置に戻る
-      $("body").removeClass("fixed").css({ top: 0 });
-      window.scroll({
-        top: scrollpos,
-        left: 0,
-        behavior: "instant",
-      });
-      // Y位置と右端からのX位置の固定を解除
-      $(this).css({
-        top: "",
-        right: "",
-      });
+    controlScrolling();
+    if (!$(this).hasClass("is-burger-open")) { // バーガーメニューを開く時
+      openBurgerMenu();
+      displayBlackHeader();
+      holdScrollPosition();
+    } else { // バーガーメニューを閉じる時
+      closeBurgerMenu();
+      setHeaderColor();
+      setHoldenScrollPosition();
     }
   });
 
   // ハンバーガーメニュー表示時にメニュー以外をクリックしたらスクロール位置を保持したまま閉じる
   $(".burger-menu").on("click", function (event) {
     if (!$(event.target).is("a, button")) {
-      $(".burger-button").removeClass("open");
-      $(".burger-menu").removeClass("open");
-      $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "";
-
-      $("body").removeClass("fixed").css({ top: 0 });
-      window.scroll({
-        top: scrollpos,
-        left: 0,
-        behavior: "instant",
-      });
+      controlScrolling();
+      closeBurgerMenu();
+      setHeaderColor();
+      setHoldenScrollPosition();
     }
   });
 
@@ -135,22 +175,13 @@ jQuery(function ($) {
     if (event.key === "Escape" || event.keyCode === 27) {
       // バーガーメニューが開いていて、かつモーダルが開いていない場合
       if (
-        $(".burger-button").hasClass("open") &&
+        $(".burger-button").hasClass("is-burger-open") &&
         $("#login-modal-burger.modal-open").length === 0
       ) {
-        $(".burger-button").removeClass("open");
-        $(".burger-button").attr("aria-expanded", "false");
-        $(".burger-button").attr("aria-label", "閉じる");
-        burgerLabel.textContent = "";
-        $(".burger-menu").removeClass("open");
-
-        // スクロール位置を保持しながら解除
-        $("body").removeClass("fixed").css({ top: 0 });
-        window.scroll({
-          top: scrollpos,
-          left: 0,
-          behavior: "instant",
-        });
+        closeBurgerMenu();
+        controlScrolling();
+        setHeaderColor();
+        setHoldenScrollPosition();
         // バーガー展開時にモーダルを閉じる際、バーガーは閉じない
       } else if ($(".modal.modal-open").length > 0) {
         {
@@ -175,18 +206,10 @@ jQuery(function ($) {
   // スムーススクロール(ハンバーガメニューを押したときも動作)
   $('a[href^="#"]').click(function () {
     if ($(this).hasClass("burger-menu__anchor")) {
-      $(".burger-button").removeClass("open");
-      $(".burger-menu").removeClass("open");
-      $(".burger-button").attr("aria-expanded", "false");
-      $(".burger-button").attr("aria-label", "閉じる");
-      burgerLabel.textContent = "";
-
-      $("body").removeClass("fixed").css({ top: 0 });
-      window.scroll({
-        top: scrollpos,
-        left: 0,
-        behavior: "instant",
-      });
+      closeBurgerMenu();
+      controlScrolling();
+      setHeaderColor();
+      setHoldenScrollPosition();
     }
 
     let adjust = $(".gnav").outerHeight(true);
@@ -231,28 +254,36 @@ jQuery(function ($) {
     });
   });
 
+  // バーガーメニューレイアウト設定
+  function setBurgerMenuTextItemWrapper() {
+    var windowWidth = $(window).width();
+    if (windowWidth >= 768) { // PCの場合
+      let halfHeight = $(".burger-menu__text-item").eq(0).outerHeight(true) + $(".burger-menu__text-item").eq(1).outerHeight(true) + $(".burger-menu__text-item").eq(2).outerHeight(true) + 1; // 最後の1はborderの分
+      $(".burger-menu__text-item-wrapper").height(halfHeight);
+    } else {
+      $(".burger-menu__text-item-wrapper").height("unset");
+    }
+  };
+
   // フッターインナーの高さ設定(フッターの要素を重ね合わせを実現するため)
   function setFooterInnerHeight() {
     let footerImageHeight = $(".footer__image").height();
     $(".footer__inner").height(footerImageHeight);
   };
-  
+
   //フッターの高さ設定(フッター下の余白をつけるため)
   function setFooterHeight(){
     let footerWrapperHeight = $(".footer__image").outerHeight() + $(".footer__menu-wrapper").outerHeight();
     let footerHeight = footerWrapperHeight + $(".footer__wrapper").css("padding-bottom");
     $(".footer__wrapper").height(footerHeight);
     $(".footer").height(footerHeight);
-    console.log("フッターラッパーハイト: " + footerWrapperHeight);
-    console.log("フッターハイト: " + footerHeight);
-    console.log("padding-bottom: " + $(".footer__wrapper").css("padding-bottom"));
   }
 
   // フッターのメインメニューの横幅設定
   function setFooterListWidth() {
     var itemsWidth, additionalWidth;
     var windowWidth = $(window).width();
-    
+
     if (windowWidth >= 1440) { // PCの場合
       itemsWidth = $(".footer__item").eq(0).outerWidth() + $(".footer__item").eq(1).outerWidth() + $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth();
     } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
@@ -261,10 +292,8 @@ jQuery(function ($) {
       $(".footer__list").width("100%");
     }
     additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
-    
+
     var listWidth = itemsWidth + additionalWidth;
     $(".footer__list").width(listWidth);
-    console.log("幅:" + listWidth);
-    console.log("ウインドウ幅:" + windowWidth);
   };
 });
