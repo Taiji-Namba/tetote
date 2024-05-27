@@ -96,18 +96,18 @@ jQuery(function ($) {
     $(".header__inner").removeClass("is-burger-open");
   };
 
-// バーガーメニュー展開時のスクロール禁止
-function controlScrolling(){
-  if ($("body").css("overflow") === "hidden") {
-    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
-    $("body").css({ height: "", overflow: "" });
-    console.log("hidden解除");
-  } else {
-    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
-    $("body").css({ height: "100%", overflow: "hidden" });
-    console.log("hidden実行");
-  }
-};
+  // バーガーメニュー展開時のスクロール禁止
+  function controlScrolling(){
+    if ($("body").css("overflow") === "hidden") {
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+      console.log("hidden解除");
+    } else {
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+      console.log("hidden実行");
+    }
+  };
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
@@ -258,7 +258,7 @@ function controlScrolling(){
     let footerImageHeight = $(".footer__image").height();
     $(".footer__inner").height(footerImageHeight);
   };
-  
+
   //フッターの高さ設定(フッター下の余白をつけるため)
   function setFooterHeight(){
     let footerWrapperHeight = $(".footer__image").outerHeight() + $(".footer__menu-wrapper").outerHeight();
@@ -274,7 +274,7 @@ function controlScrolling(){
   function setFooterListWidth() {
     var itemsWidth, additionalWidth;
     var windowWidth = $(window).width();
-    
+
     if (windowWidth >= 1440) { // PCの場合
       itemsWidth = $(".footer__item").eq(0).outerWidth() + $(".footer__item").eq(1).outerWidth() + $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth();
     } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
@@ -283,7 +283,7 @@ function controlScrolling(){
       $(".footer__list").width("100%");
     }
     additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
-    
+
     var listWidth = itemsWidth + additionalWidth;
     $(".footer__list").width(listWidth);
     console.log("幅:" + listWidth);
