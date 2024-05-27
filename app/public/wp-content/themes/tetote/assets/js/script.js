@@ -108,14 +108,13 @@ function controlScrolling(){
     console.log("hidden実行");
   }
 };
-  //スムースクロール
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
     controlScrolling();
     if (!$(this).hasClass("is-burger-open")) {
       openBurgerMenu();
-      // スクロール位置を保持 & メニューopen時はスクロールできないように
+      // スクロール位置を保持
       scrollpos = $(window).scrollTop();
       $("body").addClass("fixed").css({ top: -scrollpos });
     } else {
