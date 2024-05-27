@@ -84,6 +84,7 @@ jQuery(function ($) {
     $(".burger-button").attr("aria-expanded", "true");
     $(".burger-button").attr("aria-label", "メニューを開く");
     $("#burger-button-label").textContent = "MENU";
+    $(".header__inner").addClass("is-burger-open");
   };
   // バーガーメニューを閉じる
   function closeBurgerMenu(){
@@ -92,9 +93,10 @@ jQuery(function ($) {
     $(".burger-button").attr("aria-expanded", "false");
     $(".burger-button").attr("aria-label", "メニューを開く");
     $("#burger-button-label").textContent = "MENU";
+    $(".header__inner").removeClass("is-burger-open");
   };
 
-  // バーガーメニュー展開時のスクロール禁止
+  // バーガーメニュー展開時のスクロール禁止&スムースクロール
   let scrollpos;
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
@@ -104,7 +106,6 @@ jQuery(function ($) {
       // スクロール位置を保持 & メニューopen時はスクロールできないように
       scrollpos = $(window).scrollTop();
       $("body").addClass("fixed").css({ top: -scrollpos });
-      // Y位置と右端からのX位置を固定
     } else {
       closeBurgerMenu();
       // メニューを閉じる時はfixを解除して元のスクロール位置に戻る
