@@ -7,6 +7,7 @@ jQuery(function ($) {
     setFooterInnerHeight();
     setFooterListWidth();
     setFooterHeight();
+    setBurgerMenuTextItemWrapper();
   });
 
   // ウィンドウリサイズ時の処理
@@ -14,6 +15,7 @@ jQuery(function ($) {
     setFooterInnerHeight();
     setFooterListWidth();
     setFooterHeight();
+    setBurgerMenuTextItemWrapper();
   });
 
   // トップページと下層ページでヘッダー要素の色を分ける
@@ -224,6 +226,18 @@ jQuery(function ($) {
       }
     });
   });
+
+  // バーガーメニューレイアウト設定
+  function setBurgerMenuTextItemWrapper() {
+    var windowWidth = $(window).width();
+    if (windowWidth >= 1440) { // PCの場合
+      let halfHeight = $(".burger-menu__text-item").eq(0).outerHeight(true) + $(".burger-menu__text-item").eq(1).outerHeight(true) + $(".burger-menu__text-item").eq(2).outerHeight(true) + 1; // 最後の1はborderの分
+      $(".burger-menu__text-item-wrapper").height(halfHeight);
+    } else {
+      $(".burger-menu__text-item-wrapper").height("unset");
+    }
+    console.log("バーガーアイテム" + halfHeight);
+  };
 
   // フッターインナーの高さ設定(フッターの要素を重ね合わせを実現するため)
   function setFooterInnerHeight() {
