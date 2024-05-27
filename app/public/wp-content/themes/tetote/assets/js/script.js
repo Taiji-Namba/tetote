@@ -101,11 +101,9 @@ jQuery(function ($) {
     if ($("body").css("overflow") === "hidden") {
       // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
       $("body").css({ height: "", overflow: "" });
-      console.log("hidden解除");
     } else {
       // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
       $("body").css({ height: "100%", overflow: "hidden" });
-      console.log("hidden実行");
     }
   };
   let scrollpos;
@@ -250,7 +248,6 @@ jQuery(function ($) {
     } else {
       $(".burger-menu__text-item-wrapper").height("unset");
     }
-    console.log("バーガーアイテム" + halfHeight);
   };
 
   // フッターインナーの高さ設定(フッターの要素を重ね合わせを実現するため)
@@ -265,9 +262,6 @@ jQuery(function ($) {
     let footerHeight = footerWrapperHeight + $(".footer__wrapper").css("padding-bottom");
     $(".footer__wrapper").height(footerHeight);
     $(".footer").height(footerHeight);
-    console.log("フッターラッパーハイト: " + footerWrapperHeight);
-    console.log("フッターハイト: " + footerHeight);
-    console.log("padding-bottom: " + $(".footer__wrapper").css("padding-bottom"));
   }
 
   // フッターのメインメニューの横幅設定
@@ -286,7 +280,5 @@ jQuery(function ($) {
 
     var listWidth = itemsWidth + additionalWidth;
     $(".footer__list").width(listWidth);
-    console.log("幅:" + listWidth);
-    console.log("ウインドウ幅:" + windowWidth);
   };
 });
