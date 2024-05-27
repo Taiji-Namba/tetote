@@ -129,31 +129,34 @@ jQuery(function ($) {
     }
   };
 
+  // バーガーメニューを開く時に、スクロール位置を保持
   let scrollpos;
+  function holdScrollPosition(){
+    scrollpos = $(window).scrollTop();
+    $("body").addClass("fixed").css({ top: -scrollpos });
+  };
+
+  // バーガーメニューを閉じる時に、fixedを解除して元のスクロール位置に戻る
+  function setHoldenScrollPosition(){
+    $("body").removeClass("fixed").css({ top: 0 });
+    window.scroll({
+      top: scrollpos,
+      left: 0,
+      behavior: "instant",
+    });
+  };
+
   //バーガーボタンを押したとき
   $(".burger-button").on("click", function () {
     controlScrolling();
-    if (!$(this).hasClass("is-burger-open")) { // バーガーメニューが閉じているとき
+    if (!$(this).hasClass("is-burger-open")) { // バーガーメニューを開く時
       openBurgerMenu();
       displayBlackHeader();
-      // スクロール位置を保持
-      scrollpos = $(window).scrollTop();
-      $("body").addClass("fixed").css({ top: -scrollpos });
-    } else { // バーガーメニューが開いているとき
+      holdScrollPosition();
+    } else { // バーガーメニューを閉じる時
       closeBurgerMenu();
       setHeaderColor();
-      // メニューを閉じる時はfixを解除して元のスクロール位置に戻る
-      $("body").removeClass("fixed").css({ top: 0 });
-      window.scroll({
-        top: scrollpos,
-        left: 0,
-        behavior: "instant",
-      });
-      // Y位置と右端からのX位置の固定を解除
-      $(this).css({
-        top: "",
-        right: "",
-      });
+      setHoldenScrollPosition();
     }
   });
 
@@ -163,12 +166,7 @@ jQuery(function ($) {
       controlScrolling();
       closeBurgerMenu();
       setHeaderColor();
-      $("body").removeClass("fixed").css({ top: 0 });
-      window.scroll({
-        top: scrollpos,
-        left: 0,
-        behavior: "instant",
-      });
+      setHoldenScrollPosition();
     }
   });
 
@@ -183,13 +181,7 @@ jQuery(function ($) {
         closeBurgerMenu();
         controlScrolling();
         setHeaderColor();
-        // スクロール位置を保持しながら解除
-        $("body").removeClass("fixed").css({ top: 0 });
-        window.scroll({
-          top: scrollpos,
-          left: 0,
-          behavior: "instant",
-        });
+        setHoldenScrollPosition();
         // バーガー展開時にモーダルを閉じる際、バーガーは閉じない
       } else if ($(".modal.modal-open").length > 0) {
         {
@@ -217,12 +209,7 @@ jQuery(function ($) {
       closeBurgerMenu();
       controlScrolling();
       setHeaderColor();
-      $("body").removeClass("fixed").css({ top: 0 });
-      window.scroll({
-        top: scrollpos,
-        left: 0,
-        behavior: "instant",
-      });
+      setHoldenScrollPosition();
     }
 
     let adjust = $(".gnav").outerHeight(true);
