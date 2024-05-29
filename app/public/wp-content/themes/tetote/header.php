@@ -21,7 +21,7 @@
 
   <meta name="robots" content="noindex" />
   <?php wp_head(); ?>
-</head>
+</head> 
 
 <body <?php if (is_front_page()) : ?> class="top-page" <?php else : ?> class="sub-page" <?php endif; ?>>
   <?php wp_body_open(); ?>
