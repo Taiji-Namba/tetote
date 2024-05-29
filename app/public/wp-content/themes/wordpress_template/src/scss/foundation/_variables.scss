@@ -4,21 +4,43 @@
 // ＊＊＊＊＊SP・PCファーストについて、この設定を変更します＊＊＊＊＊
 $break-flg: 1 !default; //0:SPファースト、1：PCファースト
 
+
+// レイアウト幅
+$layout-width-inner: 1440px;
+
+// ブレークポイント
 $breakpoints: null;
 @if $break-flg == 0 {
   $breakpoints: (
-    "sm": "screen and (min-width: 400px)",
+    // ディスプレイ幅
+    "sm": "screen and (min-width: 375px)",
+    "sp": "screen and (min-width: 414px)",
     "md": "screen and (min-width: 768px)",
-    "lg": "screen and (min-width: 1000px)",
-    "xl": "screen and (min-width: 1200px)",
+    "lg": "screen and (min-width: 820px)",
+    "tab": "screen and (min-width: 1024px)",
+    "pc": "screen and (min-width: #{layout-width-inner})",
+    // 解像度
+    "twice": "screen and (-webkit-min-device-pixel-ratio: 1.5)",
+    "three-times": "screen and (-webkit-min-device-pixel-ratio: 2.5)",
+    // 解像度andディスプレイ幅
+    "wide":
+      "screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1)"
   );
 } @else {
-  // ブレイクポイントの設定
   $breakpoints: (
-    "sm": "screen and (max-width: 399px)",
-    "md": "screen and (max-width: 767px)",
-    "lg": "screen and (max-width: 999px)",
-    "xl": "screen and (max-width: 1199px)",
+    // ディスプレイ幅
+    "xsm": "screen and (max-width: 374px)",
+    "sm": "screen and (max-width: 413px)",
+    "sp": "screen and (max-width: 767px)",
+    "md": "screen and (max-width: 819px)",
+    "lg": "screen and (max-width: 1023px)",
+    "tab": "screen and (max-width: #{layout-width-inner - 1px})",
+    // 解像度
+    "twice": "screen and (-webkit-min-device-pixel-ratio: 1.5)",
+    "three-times": "screen and (-webkit-min-device-pixel-ratio: 2.5)",
+    // 解像度andディスプレイ幅
+    "wide":
+      "screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1)"
   );
 }
 
