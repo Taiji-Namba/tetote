@@ -14,11 +14,11 @@ html {
 
     // 768px〜inner
     @include mq("md") {
-      font-size: vw(strip-unit($inner), strip-unit($base-font-size));
+      font-size: vw(strip-unit($layout-width-inner), strip-unit($base-font-size));
     }
 
     //inner以上
-    @media (min-width: $inner) {
+    @media (min-width: $layout-width-inner) {
       font-size: $base-font-size;
     }
   }@else{
@@ -26,8 +26,8 @@ html {
     font-size: $base-font-size;
 
     // 768px〜inner
-    @media (max-width: $inner) {
-      font-size: vw(strip-unit($inner), strip-unit($base-font-size));
+    @media (max-width: $layout-width-inner) {
+      font-size: vw(strip-unit($layout-width-inner), strip-unit($base-font-size));
     }
 
     // 375px〜767px

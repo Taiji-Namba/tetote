@@ -5,7 +5,7 @@
 $break-flg: 1 !default; //0:SPファースト、1：PCファースト
 
 
-// レイアウト幅
+// インナー幅
 $layout-width-inner: 1440px;
 
 // ブレークポイント
@@ -43,9 +43,6 @@ $breakpoints: null;
       "screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1)"
   );
 }
-
-// inner
-$inner: 1200px;
 
 // 余白
 $padding-pc: 25px; // PC用余白設定

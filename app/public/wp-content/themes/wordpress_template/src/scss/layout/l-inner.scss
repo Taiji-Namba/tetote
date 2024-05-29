@@ -10,6 +10,6 @@
   @include mq('md') {
     padding-right: $padding-pc;
     padding-left: $padding-pc;
-    max-width: $inner + strip-unit($padding-pc) * 2;
+    max-width: $layout-width-inner + strip-unit($padding-pc) * 2;
   }
 }
