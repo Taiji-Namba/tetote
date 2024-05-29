@@ -45,8 +45,9 @@ $breakpoints: null;
 }
 
 // 余白
-$padding-pc: 25px; // PC用余白設定
-$padding-sp: 20px; // スマホ用余白設定
+$padding-pc: 2rem; // PC用余白設定
+$padding-tab: 1.6rem; // タブレット用余白設定
+$padding-sp: 1.2rem; // スマホ用余白設定
 
 // フォント
 $font-family-base: 'Noto Sans JP', sans-serif; // ベースフォント設定
