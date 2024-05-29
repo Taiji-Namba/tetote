@@ -19,9 +19,9 @@
 html {
   font-size: 16px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   html {
-    font-size: 1.3333333333vw;
+    font-size: 1.1111111111vw;
   }
 }
 @media screen and (max-width: 819px) {
@@ -145,16 +145,16 @@ li {
 }
 .l-inner {
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (max-width: 819px) {
   .l-inner {
-    padding-right: 25px;
-    padding-left: 25px;
-    max-width: 1250px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    max-width: 1444px;
   }
 }
 
@@ -644,7 +644,7 @@ li {
   .p-post-list__button {
     margin: 1.75rem auto 0;
     width: 100%;
-    max-width: calc(61.25rem + 50px);
+    max-width: 65.25rem;
     padding: 0 0.625rem;
   }
 }
