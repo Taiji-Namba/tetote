@@ -2,10 +2,19 @@
 @use 'mixin' as *;
 @use 'functions' as *;
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
+  font-size: 62.5%;
+
   @if $break-flg == 0 {
     // 375px以下
-    @media (max-width: 375px) {
+    @include mq(xs) {
       font-size: vw(375, strip-unit($base-font-size));
     }
 
@@ -13,7 +22,7 @@ html {
     font-size: $base-font-size;
 
     // 768px〜inner
-    @include mq("md") {
+    @include mq(sm) {
       font-size: vw(strip-unit($layout-width-inner), strip-unit($base-font-size));
     }
 
@@ -26,17 +35,16 @@ html {
     font-size: $base-font-size;
 
     // 768px〜inner
-    @media (max-width: $layout-width-inner) {
+    @include mq(tab) {
       font-size: vw(strip-unit($layout-width-inner), strip-unit($base-font-size));
     }
-
     // 375px〜767px
-    @include mq("md") {
+    @include mq(sp) {
     font-size: $base-font-size;
     }
 
     // 375px以下
-    @media (max-width: 375px) {
+    @include mq(xxs) {
       font-size: vw(375, strip-unit($base-font-size));
     }
   }
@@ -44,26 +52,58 @@ html {
 
 body {
   font-family: $font-family-base;
+  font-size: $base-font-size;
   font-weight: $regular;
-  color: $color-black;
+  color: $txt-color;
+  width: 100%;
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 a {
   text-decoration: none;
+  display: inline-block;
   color: inherit;
   transition: opacity 0.3s;
 }
 
 a:hover {
-  @if $break-flg ==0 {
-    @include mq("md") {
+  @if $break-flg == 0 {
+    @include mq(sm) {
       opacity: 0.8;
     }
   }
   @else {
     opacity: 0.8;
-    @include mq("md") {
+    @include mq(sp) {
       opacity: 1;
     }
   }
+}
+
+ul {
+  list-style: none;
+  padding-inline: 0;
+  margin-block: 0;
+  font-size: $base-font-size;
+}
+
+th,
+td {
+  padding: 0;
+  font-size: $base-font-size;
+}
+
+textarea {
+  display: block; // textareaの下の謎の余白を消す
+  font-size: $base-font-size;
+}
+
+tbody {
+  width: 100%;
 }
