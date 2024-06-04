@@ -20,7 +20,7 @@
  * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
 ******************************************/
 @function prem($pixels) {
-  @return math.div($pixels, strip-unit($base-font-size)) * 1rem;
+  @return math.div($pixels, strip-unit($pixel-base-font-size)) * 1rem;
 }
 
 /*****************************************
