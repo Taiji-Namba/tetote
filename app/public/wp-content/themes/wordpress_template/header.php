@@ -16,7 +16,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(is_front_page() ? 'top-page' : 'sub-page'); ?>>
   <?php wp_body_open(); ?>
   <div id="page" class="l-site">
     <header <?php if (is_front_page()) : ?> class="l-header p-header top-page-header" <?php else : ?> class="l-header p-header sub-page-header" ; <?php endif; ?>>

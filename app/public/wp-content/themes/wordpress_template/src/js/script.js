@@ -328,6 +328,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (topPage !== null) {
       $(".p-burger-button__line").addClass("p-burger-button__line--white");
       $(".p-burger-button__label").addClass("p-burger-button__label--white");
+      $(".p-logo__img--white").addClass("u-block");
+      $(".p-logo__img--black").addClass("u-none");
     } else {
       $(".p-burger-button__line").addClass("p-burger-button__line--black");
       $(".p-burger-button__label").addClass("p-burger-button__label--black");
