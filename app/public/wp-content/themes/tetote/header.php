@@ -21,9 +21,9 @@
 
   <meta name="robots" content="noindex" />
   <?php wp_head(); ?>
-</head> 
+</head>
 
-<body <?php if (is_front_page()) : ?> class="top-page" <?php else : ?> class="sub-page" <?php endif; ?>>
+<body <?php body_class(is_front_page() ? 'top-page' : 'sub-page'); ?>>
   <?php wp_body_open(); ?>
   <header <?php if (is_front_page()) : ?> class="header top-page-header" <?php else : ?> class="header sub-page-header" ; <?php endif; ?>>
     <div class="header__inner">
