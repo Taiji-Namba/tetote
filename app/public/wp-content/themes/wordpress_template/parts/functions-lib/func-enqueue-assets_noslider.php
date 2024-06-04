@@ -10,7 +10,7 @@
 function my_script_init()
 {
   // フォントの設定
-  wp_enqueue_style('front-page-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap', array('global-font'));
+  wp_enqueue_style('global-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap', array());
 
   // WordPressがデフォルトで提供するjQueryは使用しない
   // wp_deregister_script('jquery');
