@@ -13,7 +13,7 @@
 
 .nav-links ul li a,
 .nav-links ul li span{
-  color: $color-theme;
+  color: $accent-color-1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .nav-links ul li span.current{
-  color: $color-black;
+  color: $txt-color;
 }
 
 .nav-links ul li{
@@ -56,8 +56,8 @@
 //   position: absolute;
 //   top: 50%;
 //   left: 50%;
-//   border-right: 1px solid $color-theme;
-//   border-top: 1px solid $color-theme;
+//   border-right: 1px solid $accent-color-1;
+//   border-top: 1px solid $accent-color-1;
 //   width: prem(20);
 //   height: prem(20);
 // }

@@ -23,8 +23,8 @@
 
 .p-post-card__category li {
   padding: prem(5);
-  color: $color-theme;
-  border: 1px solid $color-theme;
+  color: $accent-color-1;
+  border: 1px solid $accent-color-1;
 }
 
 .p-post-card__new {
@@ -32,7 +32,7 @@
   top:0;
   left: 0;
   background-color: $color-white;
-  color: $color-theme;
+  color: $accent-color-1;
   padding: prem(5) prem(10);
-  border: 1px solid $color-theme;
+  border: 1px solid $accent-color-1;
 }
