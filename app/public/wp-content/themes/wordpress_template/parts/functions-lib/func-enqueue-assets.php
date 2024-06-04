@@ -15,8 +15,8 @@ function my_script_init()
   wp_enqueue_style('NotoSansJP', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap', array(), null);
 
   // WordPressがデフォルトで提供するjQueryは使用しない
-  wp_deregister_script('jquery');
-  wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.1.min.js', array(), '3.6.1');
+  // wp_deregister_script('jquery');
+  // wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.1.min.js', array(), '3.6.1');
 
 
   // スライダーライブラリに基づいて適切なスクリプトとスタイルシートを読み込みます
@@ -25,7 +25,6 @@ function my_script_init()
     wp_enqueue_script('slider-script', '//unpkg.com/swiper@8/swiper-bundle.min.js', array(), '', true);
     // CSS
     wp_enqueue_style('slider-style', '//unpkg.com/swiper@8/swiper-bundle.min.css', array(), '', 'all');
-
   } elseif ($slider_library === 'slick') {
     // JavaScript
     wp_enqueue_script('slider-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
@@ -51,6 +50,5 @@ function my_script_init()
   );
   // JavaScriptで$slider_settingsを使用するための処理
   wp_add_inline_script('my-script', 'var sliderSettings = ' . json_encode($slider_settings) . ';', 'before');
-
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
