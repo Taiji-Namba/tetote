@@ -22,9 +22,9 @@
     <header <?php if (is_front_page()) : ?> class="l-header p-header top-page-header" <?php else : ?> class="l-header p-header sub-page-header" ; <?php endif; ?>>
       <div class="p-header__inner">
         <a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-logo p-header__logo">
-          <img class="p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
+          <img class="p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
           <?php if (is_front_page()) : ?>
-            <img class="p-logo__img p-logo__img--white" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-white.svg'); ?>" alt="「TETOTE」のロゴ">
+            <img class="p-logo__img p-logo__img--white" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-white.svg'); ?>" alt="「TETOTE」のロゴ">
           <?php else : ?>
           <?php endif; ?>
         </a>
@@ -57,7 +57,7 @@
       <nav class="c-burger-menu p-burger-menu" id="burger-nav">
         <ul class="p-burger-menu__inner">
           <li class="p-burger-menu__logo-list">
-            <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="p-burger-menu__logo p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+            <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="p-burger-menu__logo p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
           </li>
           <li class="p-burger-menu__item-list">
             <ul class="p-burger-menu__text-item-wrapper">

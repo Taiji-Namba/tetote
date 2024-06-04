@@ -710,14 +710,14 @@ tbody {
 .p-footer__image {
   width: 100%;
   height: 48.832rem;
-  background-image: url(../images/cta.jpg);
+  background-image: url(../images/parts/footer/cta.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
   .p-footer__image {
-    background-image: url(../images/cta@2x.jpg);
+    background-image: url(../images/parts/footer/cta@2x.jpg);
   }
 }
 @media screen and (max-width: 767px) {
