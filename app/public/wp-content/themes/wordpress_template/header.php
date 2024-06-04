@@ -40,7 +40,7 @@
               </li>
               <li class="c-gnav__item p-gnav__item">
                 <button type="button" class="c-burger-button p-burger-button" id="burger-button" aria-controls="burger-nav" aria-expanded="false" aria-label="メニューを開く">
-                  <span class="c-burger-button__icon .p-burger-button__icon">
+                  <span class="c-burger-button__icon p-burger-button__icon">
                     <span class="c-burger-button__line p-burger-button__line"></span>
                     <span class="c-burger-button__line p-burger-button__line"></span>
                     <span class="c-burger-button__line p-burger-button__line"></span>
