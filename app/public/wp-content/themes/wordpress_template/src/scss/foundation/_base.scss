@@ -50,6 +50,10 @@ html {
   }
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-family-base;
   font-size: $base-font-size;
@@ -106,4 +110,19 @@ textarea {
 
 tbody {
   width: 100%;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
