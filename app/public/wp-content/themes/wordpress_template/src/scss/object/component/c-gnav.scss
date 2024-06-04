@@ -1,0 +1,16 @@
+@use 'foundation' as *;
+
+.c-gnav__list {
+  display: flex;
+  align-items: center;
+}
+
+.c-gnav__item {
+  text-align: center;
+}
+
+.c-gnav__button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
