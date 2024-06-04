@@ -571,16 +571,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // フッターインナーの高さ設定(フッターの要素を重ね合わせを実現するため)
   function setFooterInnerHeight() {
-    let footerImageHeight = $(".footer__image").height();
-    $(".footer__inner").height(footerImageHeight);
+    let footerImageHeight = $(".p-footer__image").height();
+    $(".p-footer__inner").height(footerImageHeight);
   };
 
   //フッターの高さ設定(フッター下の余白をつけるため)
   function setFooterHeight(){
-    let footerWrapperHeight = $(".footer__image").outerHeight() + $(".footer__menu-wrapper").outerHeight();
-    let footerHeight = footerWrapperHeight + $(".footer__wrapper").css("padding-bottom");
-    $(".footer__wrapper").height(footerHeight);
-    $(".footer").height(footerHeight);
+    let footerWrapperHeight = $(".p-footer__image").outerHeight() + $(".p-footer__menu-wrapper").outerHeight();
+    let footerHeight = footerWrapperHeight + $(".p-footer__wrapper").css("padding-bottom");
+    $(".p-footer__wrapper").height(footerHeight);
+    $(".p-footer").height(footerHeight);
   }
 
   // フッターのメインメニューの横幅設定
@@ -589,15 +589,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var windowWidth = $(window).width();
 
     if (windowWidth >= 1440) { // PCの場合
-      itemsWidth = $(".footer__item").eq(0).outerWidth() + $(".footer__item").eq(1).outerWidth() + $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth();
+      itemsWidth = $(".p-footer__item").eq(0).outerWidth() + $(".p-footer__item").eq(1).outerWidth() + $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth();
     } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
-      itemsWidth = $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth() + $(".footer__item").eq(6).outerWidth();
+      itemsWidth = $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth() + $(".p-footer__item").eq(6).outerWidth();
     } else {
-      $(".footer__list").width("100%");
+      $(".p-footer__list").width("100%");
     }
     additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
 
     var listWidth = itemsWidth + additionalWidth;
-    $(".footer__list").width(listWidth);
+    $(".p-footer__list").width(listWidth);
   };
 });
