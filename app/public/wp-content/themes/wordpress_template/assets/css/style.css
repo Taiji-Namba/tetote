@@ -16,20 +16,27 @@
  * https://webdou.net/sass-vw/
  * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
 ******************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
+  font-size: 62.5%;
   font-size: 16px;
 }
-@media (max-width: 1440px) {
+@media screen and (max-width: layout-width-inner-1px) {
   html {
     font-size: 1.1111111111vw;
   }
 }
-@media screen and (max-width: 819px) {
+@media screen and (max-width: 767px) {
   html {
     font-size: 16px;
   }
 }
-@media (max-width: 375px) {
+@media screen and (max-width: 374px) {
   html {
     font-size: 4.2666666667vw;
   }
@@ -37,12 +44,22 @@ html {
 
 body {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: #222222;
+  width: 100%;
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 a {
   text-decoration: none;
+  display: inline-block;
   color: inherit;
   transition: opacity 0.3s;
 }
@@ -50,10 +67,32 @@ a {
 a:hover {
   opacity: 0.8;
 }
-@media screen and (max-width: 819px) {
+@media screen and (max-width: 767px) {
   a:hover {
     opacity: 1;
   }
+}
+
+ul {
+  list-style: none;
+  padding-inline: 0;
+  margin-block: 0;
+  font-size: 16px;
+}
+
+th,
+td {
+  padding: 0;
+  font-size: 16px;
+}
+
+textarea {
+  display: block;
+  font-size: 16px;
+}
+
+tbody {
+  width: 100%;
 }
 
 /*
@@ -171,7 +210,7 @@ li {
 }
 
 .c-breadcrumb a {
-  color: #2589d0;
+  color: #988c2c;
 }
 
 .p-404__title {
@@ -415,8 +454,8 @@ li {
 .p-pager-list__button a {
   display: inline-block;
   padding: 10px 20px;
-  color: #2589d0;
-  border: 1px solid #2589d0;
+  color: #988c2c;
+  border: 1px solid #988c2c;
 }
 
 .p-post-article__inner.l-inner {
@@ -425,7 +464,7 @@ li {
 
 .p-post-article__title {
   font-size: 3rem;
-  color: #2589d0;
+  color: #988c2c;
 }
 
 .p-post-article__info {
@@ -443,8 +482,8 @@ li {
 
 .p-post-article__category li {
   padding: 0.3125rem;
-  color: #2589d0;
-  border: 1px solid #2589d0;
+  color: #988c2c;
+  border: 1px solid #988c2c;
 }
 
 .p-post-article__box {
@@ -493,16 +532,16 @@ li {
   margin: 1.875rem 0 0.9375rem;
   padding: 0.3125rem 1.25rem;
   color: #fff;
-  background-color: #2589d0;
+  background-color: #988c2c;
   font-size: 1.75rem;
 }
 
 .p-post-article__contents h3 {
   margin: 1.875rem 0 0.9375rem;
   padding-left: 0.625rem;
-  color: #2589d0;
+  color: #988c2c;
   font-size: 1.75rem;
-  border-left: 0.5em solid #2589d0;
+  border-left: 0.5em solid #988c2c;
 }
 
 .p-post-article__contents h4 {
@@ -514,10 +553,10 @@ li {
   margin: 0.625rem 0;
   padding: 0.125rem 0.78125rem;
   display: inline-block;
-  color: #2589d0;
+  color: #988c2c;
   font-size: 1.25rem;
-  border-top: 2px solid #2589d0;
-  border-bottom: 2px solid #2589d0;
+  border-top: 2px solid #988c2c;
+  border-bottom: 2px solid #988c2c;
 }
 
 .p-post-article__contents p {
@@ -525,7 +564,7 @@ li {
 }
 
 .p-post-article__contents a {
-  color: #2589d0;
+  color: #988c2c;
   text-decoration: underline;
 }
 
@@ -567,8 +606,8 @@ li {
 
 .p-post-card__category li {
   padding: 0.3125rem;
-  color: #2589d0;
-  border: 1px solid #2589d0;
+  color: #988c2c;
+  border: 1px solid #988c2c;
 }
 
 .p-post-card__new {
@@ -576,14 +615,14 @@ li {
   top: 0;
   left: 0;
   background-color: #fff;
-  color: #2589d0;
+  color: #988c2c;
   padding: 0.3125rem 0.625rem;
-  border: 1px solid #2589d0;
+  border: 1px solid #988c2c;
 }
 
 .p-post-connect__title {
   font-size: 1.5rem;
-  color: #2589d0;
+  color: #988c2c;
 }
 
 .p-post-connect__items {
@@ -610,7 +649,7 @@ li {
 
 .p-post-list__title {
   font-size: 3rem;
-  color: #2589d0;
+  color: #988c2c;
 }
 
 .p-post-list__items {
@@ -980,7 +1019,7 @@ li {
 
 .nav-links ul li a,
 .nav-links ul li span {
-  color: #2589d0;
+  color: #988c2c;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -994,7 +1033,7 @@ li {
 }
 
 .nav-links ul li span.current {
-  color: #333;
+  color: #222222;
 }
 
 .nav-links ul li {
