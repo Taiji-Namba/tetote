@@ -11,43 +11,6 @@
 
 html {
   font-size: 62.5%;
-
-  @if $break-flg == 0 {
-    // 375px以下
-    @include mq(xs) {
-      font-size: vw(375, strip-unit($base-font-size));
-    }
-
-    // 375px〜767px
-    font-size: $base-font-size;
-
-    // 768px〜inner
-    @include mq(sm) {
-      font-size: vw(strip-unit($layout-width-inner), strip-unit($base-font-size));
-    }
-
-    //inner以上
-    @media (min-width: $layout-width-inner) {
-      font-size: $base-font-size;
-    }
-  }@else{
-    //inner以上
-    font-size: $base-font-size;
-
-    // 768px〜inner
-    @include mq(tab) {
-      font-size: vw(strip-unit($layout-width-inner), strip-unit($base-font-size));
-    }
-    // 375px〜767px
-    @include mq(sp) {
-    font-size: $base-font-size;
-    }
-
-    // 375px以下
-    @include mq(xxs) {
-      font-size: vw(375, strip-unit($base-font-size));
-    }
-  }
 }
 
 html:focus-within {
