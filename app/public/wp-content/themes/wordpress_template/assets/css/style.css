@@ -45,6 +45,10 @@ html {
   }
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1rem;
@@ -98,6 +102,20 @@ tbody {
   width: 100%;
 }
 
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /*
  * 参考
  * https: //github.com/Andy-set-studio/modern-css-reset/blob/master/src/reset.css
