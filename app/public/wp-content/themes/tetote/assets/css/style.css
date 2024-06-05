@@ -416,8 +416,10 @@ tbody {
   border-bottom: 0.1rem solid #afa86f;
 }
 
-.p-burger-menu__text-item:nth-of-type(3) {
-  border-bottom: none;
+@media screen and (max-width: 767px) {
+  .p-burger-menu__text-item:nth-of-type(3) {
+    border-bottom: none;
+  }
 }
 
 .p-burger-menu__title {
