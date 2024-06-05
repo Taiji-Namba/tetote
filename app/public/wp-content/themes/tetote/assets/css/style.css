@@ -1489,6 +1489,12 @@ tbody {
   }
 }
 
+.p-top-about-us__inner {
+  width: min(1440px, 100%);
+  margin-inline: auto;
+  padding-top: 10.1rem;
+}
+
 .p-top-gallery__inner {
   margin: 5% 5% 0 5%;
 }
@@ -1590,13 +1596,27 @@ tbody {
 }
 
 .p-top-mv-splide__inner {
-  margin: 5% 5% 0 5%;
+  position: relative;
+}
+
+.p-top-mv-splide .splide__list {
+  height: 42.9rem;
 }
 
 .p-top-mv-splide .splide__slide {
   display: block;
-  width: 100%;
-  aspect-ratio: 600/300;
+  aspect-ratio: 506/393;
+  width: 50.6rem;
+  overflow: hidden;
+  border: none;
+  border-radius: 6rem;
+  transform: translateY(0);
+  transition: transform 3s;
+}
+
+.p-top-mv-splide .splide__slide.is-active {
+  transform: translateY(3.6rem);
+  transition: transform 3s;
 }
 
 .p-top-mv-splide .splide__slide picture {
@@ -1610,6 +1630,10 @@ tbody {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-top-mv-splide__catch-copy-wrapper {
+  position: absolute;
 }
 
 .p-top-mv-swiper__inner {
