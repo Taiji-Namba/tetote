@@ -57,42 +57,42 @@
       <nav class="c-burger-menu p-burger-menu" id="burger-nav">
         <ul class="p-burger-menu__inner">
           <li class="p-burger-menu__logo-list">
-            <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="p-burger-menu__logo p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+            <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="p-burger-menu__logo p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
           </li>
           <li class="p-burger-menu__item-list">
             <ul class="p-burger-menu__text-item-wrapper">
               <li class="p-burger-menu__text-item">
-                <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/about-us/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/about-us/'); ?>">
                   <p class="p-burger-menu__title">ABOUT US</p>
                   <p class="p-burger-menu__sub-title">TETOTEについて</p>
                 </a>
               </li>
               <li class="p-burger-menu__text-item">
-                <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
                   <p class="p-burger-menu__title">STAFF</p>
                   <p class="p-burger-menu__sub-title">社員について</p>
                 </a>
               </li>
               <li class="p-burger-menu__text-item">
-                <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
                   <p class="p-burger-menu__title">BLOG</p>
                   <p class="p-burger-menu__sub-title">採用ブログ</p>
                 </a>
               </li>
               <li class="p-burger-menu__text-item">
-                <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/benefits/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/benefits/'); ?>">
                   <p class="p-burger-menu__title">BENEFITS</p>
                   <p class="p-burger-menu__sub-title">福利厚生について</p>
                 </a>
               </li>
               <li class="p-burger-menu__text-item">
-                <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/career/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/career/'); ?>">
                   <p class="p-burger-menu__title">CAREER</p>
                   <p class="p-burger-menu__sub-title">研修制度とキャリアパス</p>
                 </a>
               </li>
               <li class="p-burger-menu__text-item">
-                <a class="c-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/faq/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/faq/'); ?>">
                   <p class="p-burger-menu__title">FAQ</p>
                   <p class="p-burger-menu__sub-title">よくある質問</p>
                 </a>
