@@ -18,7 +18,7 @@ $breakpoints: null;
     "tab": "screen and (min-width: 768px)",
     "lg": "screen and (min-width: 820px)",
     "xl": "screen and (min-width: 1024px)",
-    "pc": "screen and (min-width: #{layout-width-inner})",
+    "pc": "screen and (min-width: #{$layout-width-inner})",
     // 解像度
     "twice": "screen and (-webkit-min-device-pixel-ratio: 1.5)",
     "three-times": "screen and (-webkit-min-device-pixel-ratio: 2.5)",
@@ -34,7 +34,7 @@ $breakpoints: null;
     "sp": "screen and (max-width: 767px)",
     "md": "screen and (max-width: 819px)",
     "lg": "screen and (max-width: 1023px)",
-    "tab": "screen and (max-width: #{layout-width-inner - 1px})",
+    "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
     // 解像度
     "twice": "screen and (-webkit-min-device-pixel-ratio: 1.5)",
     "three-times": "screen and (-webkit-min-device-pixel-ratio: 2.5)",
