@@ -8,24 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('#mv_slider')) {
       new Splide('#mv_slider',
         {
-          type: 'fade',   // slide,loop,fade から選択
-          speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
+          type: 'loop',   // slide,loop,fade から選択
           autoplay: true, // 自動実行を有効にする true:有効、false:無効
-          interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
-          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fade,slideの時使用)
-          arrows: true,    // true:矢印ボタンを表示,false:非表示
-          perPage: 1,      // 1ページに何枚のスライドを表示するかを指定
+          arrows: false,    // true:矢印ボタンを表示,false:非表示
+          perPage: 3,      // 1ページに何枚のスライドを表示するかを指定
+          pagination:false, // ページネーションの有無 (デフォルトはtrue)
+          autoScroll: {
+            speed: 0.5,
+            pauseOnHover: false, // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
+            pauseOnFocus: true,
+          },
           breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
             767: {
               perPage: 1,  // 1ページに何枚のスライドを表示するかを指定
             }
           },
-          perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
           focus: 'center', //これを指定すると中央にある画像にフォーカスされる
-          gap: '10px',     // 画像間の余白の設定
-          pauseOnHover: false // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
+          gap: '34px',     // 画像間の余白の設定
         }
-      ).mount();
+      ).mount(window.splide.Extensions);
     }
     if (document.querySelector('#gallery')) {
       new Splide('#gallery',
