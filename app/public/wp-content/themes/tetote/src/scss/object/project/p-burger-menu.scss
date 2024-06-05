@@ -86,7 +86,9 @@
 }
 
 .p-burger-menu__text-item:nth-of-type(3){
-  border-bottom:none;
+  @include mq(sp) {
+    border-bottom:none;
+  }
 }
 
 .p-burger-menu__title{
