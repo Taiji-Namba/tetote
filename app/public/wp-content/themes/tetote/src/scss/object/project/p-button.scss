@@ -1,0 +1,17 @@
+@use "../../foundation" as *;
+
+.p-button{
+  font-size: 1.4rem;
+  color: #fff;
+  border-radius: 0;
+}
+
+.p-button--black {
+  background-color: $txt-color;
+  font-weight: 700;
+}
+
+.p-button--gold {
+  background-color: $accent-color-2;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+}

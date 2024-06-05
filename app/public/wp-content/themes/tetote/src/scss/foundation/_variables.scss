@@ -1,0 +1,71 @@
+@use "sass:math";
+
+// ブレイクポイントの設定
+// ＊＊＊＊＊SP・PCファーストについて、この設定を変更します＊＊＊＊＊
+$break-flg: 1 !default; //0:SPファースト、1：PCファースト
+
+
+// インナー幅
+$layout-width-inner: 1440px;
+
+// ブレークポイント
+$breakpoints: null;
+@if $break-flg == 0 {
+  $breakpoints: (
+    // ディスプレイ幅
+    "xs": "screen and (min-width: 375px)",
+    "sm": "screen and (min-width: 414px)",
+    "tab": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 820px)",
+    "xl": "screen and (min-width: 1024px)",
+    "pc": "screen and (min-width: #{$layout-width-inner})",
+    // 解像度
+    "twice": "screen and (-webkit-min-device-pixel-ratio: 1.5)",
+    "three-times": "screen and (-webkit-min-device-pixel-ratio: 2.5)",
+    // 解像度andディスプレイ幅
+    "wide":
+      "screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1)"
+  );
+} @else {
+  $breakpoints: (
+    // ディスプレイ幅
+    "xxs": "screen and (max-width: 374px)",
+    "xs": "screen and (max-width: 413px)",
+    "sp": "screen and (max-width: 767px)",
+    "md": "screen and (max-width: 819px)",
+    "lg": "screen and (max-width: 1023px)",
+    "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+    "pc": "screen and (min-width: #{$layout-width-inner})",
+    // 解像度
+    "twice": "screen and (-webkit-min-device-pixel-ratio: 1.5)",
+    "three-times": "screen and (-webkit-min-device-pixel-ratio: 2.5)",
+    // 解像度andディスプレイ幅
+    "wide":
+      "screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1)"
+  );
+}
+
+// 余白
+$padding-pc: 2rem; // PC用余白設定
+$padding-tab: 1.6rem; // タブレット用余白設定
+$padding-sp: 1.2rem; // スマホ用余白設定
+
+// フォント
+$font-family-base: 'Noto Sans JP', sans-serif; // ベースフォント設定
+
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// ベースフォントサイズ
+$base-font-size: 1rem;
+$pixel-base-font-size: 16px;
+
+// Color
+$txt-color: #222222;
+$accent-color-1: #988c2c;
+$accent-color-2: #afa86f;
+$bg-sub-color: #faf7f1;
+$color-white:#fff;

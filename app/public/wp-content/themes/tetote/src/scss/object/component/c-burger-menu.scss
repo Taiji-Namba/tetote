@@ -1,0 +1,31 @@
+@use "../../foundation" as *;
+
+.c-burger-menu {
+  width: 100svw;
+  height: 100svh;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:all 0.4s;
+}
+
+.c-burger-menu.is-burger-open {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-burger-menu__anchor {
+  display: inline-block;
+}
+
+.c-burger-menu__button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
