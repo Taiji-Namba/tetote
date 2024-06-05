@@ -1,5 +1,4 @@
 "use strict";
-jQuery(function ($) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var library = sliderSettings.library;
@@ -304,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   // location = 'http://toolwordpressmv.local/contact-thanks/';
 // }, false );
 
-
+jQuery(function ($) {
   // ページ読み込み時の処理
   $(document).ready(function () {
     switchHeaderColor();
