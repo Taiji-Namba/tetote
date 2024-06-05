@@ -1,7 +1,311 @@
 "use strict";
 jQuery(function ($) {
 
-    // ページ読み込み時
+document.addEventListener('DOMContentLoaded', function() {
+  var library = sliderSettings.library;
+  // Splideの読み込み
+  if (library === "splide") {
+    // Splideの読み込み
+    if (document.querySelector('#mv_slider')) {
+      new Splide('#mv_slider',
+        {
+          type: 'fade',   // slide,loop,fade から選択
+          speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
+          autoplay: true, // 自動実行を有効にする true:有効、false:無効
+          interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fade,slideの時使用)
+          arrows: true,    // true:矢印ボタンを表示,false:非表示
+          perPage: 1,      // 1ページに何枚のスライドを表示するかを指定
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            767: {
+              perPage: 1,  // 1ページに何枚のスライドを表示するかを指定
+            }
+          },
+          perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
+          focus: 'center', //これを指定すると中央にある画像にフォーカスされる
+          gap: '10px',     // 画像間の余白の設定
+          pauseOnHover: false // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
+        }
+      ).mount();
+    }
+    if (document.querySelector('#gallery')) {
+      new Splide('#gallery',
+        {
+          type: 'loop',   // slide,loop,fade から選択
+          speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
+          autoplay: true, // 自動実行を有効にする
+          interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
+          arrows: true,    // true:矢印ボタンを表示
+          perPage: 5,      // 1ページに何枚のスライドを表示するかを指定
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            767: {
+              perPage: 2,  // 1ページに何枚のスライドを表示するかを指定
+            }
+          },
+          perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
+          focus: 'center',//これを指定すると中央にある画像にフォーカスされる
+          gap: '10px',     // 画像間の余白の設定
+        }
+      ).mount();
+    }
+    // event
+    if (document.querySelector('#post')) {
+      new Splide('#post',
+        {
+          type: 'loop',   // slide,loop,fade から選択
+          speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
+          autoplay: true, // 自動実行を有効にする
+          interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
+          arrows: true,    // true:矢印ボタンを表示
+          perPage: 3,      // 1ページに何枚のスライドを表示するかを指定
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            767: {
+              perPage: 2,  // 1ページに何枚のスライドを表示するかを指定
+            }
+          },
+          perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
+          focus: 'center',//これを指定すると中央にある画像にフォーカスされる
+          gap: '10px',     // 画像間の余白の設定
+        }
+      ).mount();
+    }
+    // works
+    if (document.querySelector('#works')) {
+      new Splide('#works',
+        {
+          type: 'loop',   // slide,loop,fade から選択
+          speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
+          autoplay: true, // 自動実行を有効にする
+          interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
+          arrows: true,    // true:矢印ボタンを表示
+          perPage: 5,      // 1ページに何枚のスライドを表示するかを指定
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            767: {
+              perPage: 2,  // 1ページに何枚のスライドを表示するかを指定
+            }
+          },
+          perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
+          focus: 'center',//これを指定すると中央にある画像にフォーカスされる
+          gap: '10px',     // 画像間の余白の設定
+        }
+      ).mount();
+    }
+  }
+  if (library === "swiper") {
+    // Swiperの読み込み
+    if (document.querySelector('#mv_slider')) {
+      new Swiper('#mv_slider', {
+        effect: 'slide', //slide:スライド,fade:フェード,cube:立方体の面のように回転しながら表示,
+        loop: true,  // スライダーの終わりまで行ったときの動き。選択肢：true：ループする, false：巻き戻す
+        speed: 3000,  // スライダーの移動時間をミリ秒単位で指定
+        autoplay: {  // 自動実行を有効にする
+          delay: 3000,  // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          disableOnInteraction: false, // ユーザーのスワイプ操作後も自動再生を続ける。選択肢：true：スワイプ操作後に自動再生を停止する, false：スワイプ操作後も自動再生を続ける
+        },
+        pagination: {  // ページネーション設定
+          el: ".swiper-pagination",  // クラス名、idなどのセレクタを指定する
+          clickable: true,  // クリックしたスライドに移動するかどうか、true:クリック可、false：クリック不可
+        },
+        navigation: {  // 矢印ボタンを表示。
+          nextEl: '.swiper-button-next',  // "次へ"ボタンのエレメントを指定するセレクタ
+          prevEl: '.swiper-button-prev',  // "前へ"ボタンのエレメントを指定するセレクタ
+        },
+        slidesPerView: 1,  // 1ページに表示するスライド数
+        spaceBetween: 10,  // 画像間の余白の設定
+        centeredSlides: true,   // これを指定すると中央にある画像にフォーカスされる。選択肢：true：中央にフォーカス, false：中央にフォーカスしない
+        breakpoints: {  // レスポンシブデザインのブレークポイントを指定（指定したpx以上の場合）
+          768: {
+            slidesPerView: 1,  // 1ページに表示するスライド数
+          },
+        },
+      });
+    }
+    if (document.querySelector('#gallery')) {
+      new Swiper('#gallery', {
+        effect: 'slide', //slide:スライド,fade:フェード,cube:立方体の面のように回転しながら表示,
+        loop: true,  // スライダーの終わりまで行ったときに、先頭に巻き戻す。選択肢：true：巻き戻す, false：巻き戻さない
+        speed: 3000,  // スライダーの移動時間をミリ秒単位で指定
+        autoplay: {  // 自動実行を有効にする
+          delay: 3000,  // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          disableOnInteraction: false, // ユーザーのスワイプ操作後も自動再生を続ける。選択肢：true：スワイプ操作後に自動再生を停止する, false：スワイプ操作後も自動再生を続ける
+        },
+        pagination: {  // ページネーション設定
+          el: ".swiper-pagination",  // クラス名、idなどのセレクタを指定する
+          clickable: true,  // クリックしたスライドに移動するかどうか、true:クリック可、false：クリック不可
+        },
+        navigation: {  // 矢印ボタンを表示。
+          nextEl: '.swiper-button-next',  // "次へ"ボタンのエレメントを指定するセレクタ
+          prevEl: '.swiper-button-prev',  // "前へ"ボタンのエレメントを指定するセレクタ
+        },
+        slidesPerView: 4,  // 1ページに表示するスライド数
+        spaceBetween: 10,  // 画像間の余白の設定
+        centeredSlides: true,   // これを指定すると中央にある画像にフォーカスされる。選択肢：true：中央にフォーカス, false：中央にフォーカスしない
+        breakpoints: {  // レスポンシブデザインのブレークポイントを指定（指定したpx以上の場合）
+          768: {
+            slidesPerView: 6,  // 1ページに表示するスライド数
+          },
+        },
+      });
+    }
+    if (document.querySelector('#works')) {
+      new Swiper('#works', {
+        effect: 'slide', //slide:スライド,fade:フェード,cube:立方体の面のように回転しながら表示,
+        loop: true,  // スライダーの終わりまで行ったときの動き。選択肢：true：ループする, false：巻き戻す
+        speed: 1000,  // スライダーの移動時間をミリ秒単位で指定
+        autoplay: {  // 自動実行を有効にする
+          delay: 1000,  // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          disableOnInteraction: false, // ユーザーのスワイプ操作後も自動再生を続ける。選択肢：true：スワイプ操作後に自動再生を停止する, false：スワイプ操作後も自動再生を続ける
+        },
+        pagination: {  // ページネーション設定
+          el: ".swiper-pagination",  // クラス名、idなどのセレクタを指定する
+          clickable: true,  // クリックしたスライドに移動するかどうか、true:クリック可、false：クリック不可
+        },
+        navigation: {  // 矢印ボタンを表示。
+          nextEl: '.swiper-button-next',  // "次へ"ボタンのエレメントを指定するセレクタ
+          prevEl: '.swiper-button-prev',  // "前へ"ボタンのエレメントを指定するセレクタ
+        },
+        slidesPerView: 1,  // 1ページに表示するスライド数
+        spaceBetween: 10,  // 画像間の余白の設定
+        centeredSlides: false,   // これを指定すると中央にある画像にフォーカスされる。選択肢：true：中央にフォーカス, false：中央にフォーカスしない
+        breakpoints: {  // レスポンシブデザインのブレークポイントを指定（指定したpx以上の場合）
+          768: {
+            slidesPerView: 3,  // 1ページに表示するスライド数
+          },
+        },
+      });
+    }
+    if (document.querySelector('#post')) {
+      new Swiper('#post', {
+        effect: 'slide', //slide:スライド,fade:フェード,cube:立方体の面のように回転しながら表示,
+        loop: true,  // スライダーの終わりまで行ったときの動き。選択肢：true：ループする, false：巻き戻す
+        speed: 1000,  // スライダーの移動時間をミリ秒単位で指定
+        autoplay: {  // 自動実行を有効にする
+          delay: 1000,  // スライドが自動的に進むまでの時間をミリ秒単位で指定する
+          disableOnInteraction: false, // ユーザーのスワイプ操作後も自動再生を続ける。選択肢：true：スワイプ操作後に自動再生を停止する, false：スワイプ操作後も自動再生を続ける
+        },
+        pagination: {  // ページネーション設定
+          el: ".swiper-pagination",  // クラス名、idなどのセレクタを指定する
+          clickable: true,  // クリックしたスライドに移動するかどうか、true:クリック可、false：クリック不可
+        },
+        navigation: {  // 矢印ボタンを表示。
+          nextEl: '.swiper-button-next',  // "次へ"ボタンのエレメントを指定するセレクタ
+          prevEl: '.swiper-button-prev',  // "前へ"ボタンのエレメントを指定するセレクタ
+        },
+        slidesPerView: 1,  // 1ページに表示するスライド数
+        spaceBetween: 10,  // 画像間の余白の設定
+        centeredSlides: false,   // これを指定すると中央にある画像にフォーカスされる。選択肢：true：中央にフォーカス, false：中央にフォーカスしない
+        breakpoints: {  // レスポンシブデザインのブレークポイントを指定（指定したpx以上の場合）
+          768: {
+            slidesPerView: 3,  // 1ページに表示するスライド数
+          },
+        },
+      });
+    }
+  }
+  if (library === "slick") {
+        //slick slider
+    if (document.querySelector('#mv_slider')) {
+      $('#mv_slider').slick({
+        // fade: true,  // true:フェード効果を使います, false:スライド効果を使います
+        speed: 3000,  // スライドのアニメーション速度をミリ秒単位で設定します
+        autoplaySpeed: 3000,  // 自動的にスライドする間隔をミリ秒単位で指定します
+        autoplay: true,  // true:自動的にスライドさせる, false:手動でスライドさせる
+        arrows: true,  // true:矢印ナビゲーションを表示します, false:矢印ナビゲーションを表示しません
+        slidesToShow: 1,  // 一度に表示するスライド数を設定します
+        slidesToScroll: 1,  // 一度にスクロールするスライド数を設定します
+        centerMode: false,  // true:アクティブなスライドを中央に表示します, false:左から順にスライドを表示します
+        pauseOnHover: true,  // true:ホバー時に自動再生を一時停止します, false:ホバー時でも自動再生を続行します
+        dots: true,  // ドットの表示
+        responsive: [  // レスポンシブ対応の設定
+          {
+            breakpoint: 768,  // 画面幅が768px未満のときに適用
+            settings: {
+              slidesToShow: 1,  // 一度に表示するスライド数を設定します
+            }
+          }
+        ]
+      });
+    }
+    if (document.querySelector('#gallery')) {
+      $('#gallery').slick({
+        // fade: true,  // true:フェード効果を使います, false:スライド効果を使います
+        speed: 3000,  // スライドのアニメーション速度をミリ秒単位で設定します
+        autoplaySpeed: 3000,  // 自動的にスライドする間隔をミリ秒単位で指定します
+        autoplay: true,  // true:自動的にスライドさせる, false:手動でスライドさせる
+        arrows: true,  // true:矢印ナビゲーションを表示します, false:矢印ナビゲーションを表示しません
+        slidesToShow: 5,  // 一度に表示するスライド数を設定します
+        slidesToScroll: 1,  // 一度にスクロールするスライド数を設定します
+        centerMode: false,  // true:アクティブなスライドを中央に表示します, false:左から順にスライドを表示します
+        pauseOnHover: true,  // true:ホバー時に自動再生を一時停止します, false:ホバー時でも自動再生を続行します
+        dots: true,  // ドットの表示
+        responsive: [  // レスポンシブ対応の設定
+          {
+            breakpoint: 768,  // 画面幅が768px未満のときに適用
+            settings: {
+              slidesToShow: 1,  // 一度に表示するスライド数を設定します
+            }
+          }
+        ]
+      });
+    }
+    if (document.querySelector('#works')) {
+      $('#works').slick({
+        // fade: true,  // true:フェード効果を使います, false:スライド効果を使います
+        speed: 1000,  // スライドのアニメーション速度をミリ秒単位で設定します
+        autoplaySpeed: 1000,  // 自動的にスライドする間隔をミリ秒単位で指定します
+        autoplay: true,  // true:自動的にスライドさせる, false:手動でスライドさせる
+        arrows: true,  // true:矢印ナビゲーションを表示します, false:矢印ナビゲーションを表示しません
+        slidesToShow: 1,  // 一度に表示するスライド数を設定します
+        slidesToScroll: 1,  // 一度にスクロールするスライド数を設定します
+        centerMode: true,  // true:アクティブなスライドを中央に表示します, false:左から順にスライドを表示します
+        pauseOnHover: true,  // true:ホバー時に自動再生を一時停止します, false:ホバー時でも自動再生を続行します
+        dots: true,  // ドットの表示
+        responsive: [  // レスポンシブ対応の設定
+          {
+            breakpoint: 768,  // 画面幅が768px未満のときに適用
+            settings: {
+              slidesToShow: 1,  // 一度に表示するスライド数を設定します
+            }
+          }
+        ]
+      });
+    }
+    if (document.querySelector('#post')) {
+      $('#post').slick({
+        // fade: true,  // true:フェード効果を使います, false:スライド効果を使います
+        speed: 1000,  // スライドのアニメーション速度をミリ秒単位で設定します
+        autoplaySpeed: 1000,  // 自動的にスライドする間隔をミリ秒単位で指定します
+        autoplay: true,  // true:自動的にスライドさせる, false:手動でスライドさせる
+        arrows: true,  // true:矢印ナビゲーションを表示します, false:矢印ナビゲーションを表示しません
+        slidesToShow: 3,  // 一度に表示するスライド数を設定します
+        slidesToScroll: 1,  // 一度にスクロールするスライド数を設定します
+        centerMode: true,  // true:アクティブなスライドを中央に表示します, false:左から順にスライドを表示します
+        pauseOnHover: true,  // true:ホバー時に自動再生を一時停止します, false:ホバー時でも自動再生を続行します
+        dots: true,  // ドットの表示
+        responsive: [  // レスポンシブ対応の設定
+          {
+            breakpoint: 768,  // 画面幅が768px未満のときに適用
+            settings: {
+              slidesToShow: 1,  // 一度に表示するスライド数を設定します
+            }
+          }
+        ]
+      });
+    }
+  }
+});
+
+// お問い合わせフォーム送信完了ページに移動させる場合使用します。
+// document.addEventListener( 'wpcf7mailsent', function( event ) {
+//   location = 'ここに完了ページのURLを記入';
+//   // location = 'http://toolwordpressmv.local/contact-thanks/';
+// }, false );
+
+
+  // ページ読み込み時の処理
   $(document).ready(function () {
     switchHeaderColor();
     setFooterInnerHeight();
@@ -22,51 +326,53 @@ jQuery(function ($) {
   function switchHeaderColor(){
     const topPage = document.querySelector("body.top-page");
     if (topPage !== null) {
-      $(".burger-button__line").addClass("burger-button__line--white");
-      $(".burger-button__label").addClass("burger-button__label--white");
+      $(".p-burger-button__line").addClass("p-burger-button__line--white");
+      $(".p-burger-button__label").addClass("p-burger-button__label--white");
+      $(".p-logo__img--white").addClass("u-block");
+      $(".p-logo__img--black").addClass("u-none");
     } else {
-      $(".burger-button__line").addClass("burger-button__line--black");
-      $(".burger-button__label").addClass("burger-button__label--black");
-      $(".logo__img--white").addClass("none");
-      $(".logo__img--black").addClass("block");
+      $(".p-burger-button__line").addClass("p-burger-button__line--black");
+      $(".p-burger-button__label").addClass("p-burger-button__label--black");
+      $(".p-logo__img--white").addClass("u-none");
+      $(".p-logo__img--black").addClass("u-block");
     }
   };
 
   // 白のヘッダーを表示する
   function displayWhiteHeader(){
-    $(".logo__img--white").addClass("block").removeClass("none");
-    $(".logo__img--black").addClass("none").removeClass("block");
-    $(".burger-button__line")
-      .addClass("burger-button__line--white")
-      .removeClass("burger-button__line--black");
-    $(".burger-button__label")
-      .addClass("burger-button__label--white")
-      .removeClass("burger-button__label--black");
+    $(".p-logo__img--white").addClass("u-block").removeClass("u-none");
+    $(".p-logo__img--black").addClass("u-none").removeClass("u-block");
+    $(".p-burger-button__line")
+      .addClass("p-burger-button__line--white")
+      .removeClass("p-burger-button__line--black");
+    $(".p-burger-button__label")
+      .addClass("p-burger-button__label--white")
+      .removeClass("p-burger-button__label--black");
   };
 
 
   // 黒のヘッダーを表示する
   function displayBlackHeader(){
-    $(".logo__img--white").addClass("none").removeClass("block");
-    $(".logo__img--black").addClass("block").removeClass("none");
-    $(".burger-button__line")
-      .removeClass("burger-button__line--white")
-      .addClass("burger-button__line--black");
-    $(".burger-button__label")
-      .removeClass("burger-button__label--white")
-      .addClass("burger-button__label--black");
+    $(".p-logo__img--white").addClass("u-none").removeClass("u-block");
+    $(".p-logo__img--black").addClass("u-block").removeClass("u-none");
+    $(".p-burger-button__line")
+      .removeClass("p-burger-button__line--white")
+      .addClass("p-burger-button__line--black");
+    $(".p-burger-button__label")
+      .removeClass("p-burger-button__label--white")
+      .addClass("p-burger-button__label--black");
   };
 
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
+    const header = document.querySelector(".p-header");
     const headerHeight = header.offsetHeight; // ヘッダーの高さを取得
     const scrollY = window.scrollY;
     const subPage = document.querySelector("body.sub-page"); // sub-pageクラスを持つbodyを取得
 
     // スクロール位置がヘッダーを超えたとき
     if (scrollY >= headerHeight) {
-      $(header).addClass("header--sticky");
+      $(header).addClass("p-header--sticky");
 
       if (subPage !== null) {
         //下層ページのとき
@@ -77,7 +383,7 @@ jQuery(function ($) {
       }
     } else {
       // スクロール位置がヘッダー未満のとき
-      $(header).removeClass("header--sticky");
+      $(header).removeClass("p-header--sticky");
       if (subPage !== null) {
         subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       } else {
@@ -89,22 +395,22 @@ jQuery(function ($) {
   //ハンバーガーメニューの実装
   // バーガーメニューを開く
   function openBurgerMenu(){
-    $(".burger-button").addClass("is-burger-open");
-    $(".burger-menu").addClass("is-burger-open");
-    $(".burger-menu a").addClass("burger-menu__anchor");
-    $(".burger-button").attr("aria-expanded", "true");
-    $(".burger-button").attr("aria-label", "メニューを開く");
+    $(".c-burger-button").addClass("is-burger-open");
+    $(".c-burger-menu").addClass("is-burger-open");
+    $(".c-burger-menu a").addClass("c-burger-menu__anchor");
+    $(".c-burger-button").attr("aria-expanded", "true");
+    $(".c-burger-button").attr("aria-label", "メニューを開く");
     $("#burger-button-label").textContent = "MENU";
-    $(".header__inner").addClass("is-burger-open");
+    $(".p-header__inner").addClass("is-burger-open");
   };
   // バーガーメニューを閉じる
   function closeBurgerMenu(){
-    $(".burger-button").removeClass("is-burger-open");
-    $(".burger-menu").removeClass("is-burger-open");
-    $(".burger-button").attr("aria-expanded", "false");
-    $(".burger-button").attr("aria-label", "メニューを開く");
+    $(".c-burger-button").removeClass("is-burger-open");
+    $(".c-burger-menu").removeClass("is-burger-open");
+    $(".c-burger-button").attr("aria-expanded", "false");
+    $(".c-burger-button").attr("aria-label", "メニューを開く");
     $("#burger-button-label").textContent = "MENU";
-    $(".header__inner").removeClass("is-burger-open");
+    $(".p-header__inner").removeClass("is-burger-open");
   };
 
   // バーガーメニュー展開時のスクロール禁止
@@ -120,7 +426,7 @@ jQuery(function ($) {
 
   // バーガーメニューを閉じたときにヘッダー色を戻す
   function setHeaderColor() {
-    const headerHeight = $(".header").outerHeight(); // ヘッダーの高さを取得
+    const headerHeight = $(".p-header").outerHeight(); // ヘッダーの高さを取得
     const topPage = document.querySelector("body.top-page");
     if (parseInt($("body").css("top")) >= -headerHeight && topPage !== null){
       displayWhiteHeader();
@@ -147,7 +453,7 @@ jQuery(function ($) {
   };
 
   //バーガーボタンを押したとき
-  $(".burger-button").on("click", function () {
+  $(".c-burger-button").on("click", function () {
     controlScrolling();
     if (!$(this).hasClass("is-burger-open")) { // バーガーメニューを開く時
       openBurgerMenu();
@@ -161,7 +467,7 @@ jQuery(function ($) {
   });
 
   // ハンバーガーメニュー表示時にメニュー以外をクリックしたらスクロール位置を保持したまま閉じる
-  $(".burger-menu").on("click", function (event) {
+  $(".c-burger-menu").on("click", function (event) {
     if (!$(event.target).is("a, button")) {
       controlScrolling();
       closeBurgerMenu();
@@ -175,7 +481,7 @@ jQuery(function ($) {
     if (event.key === "Escape" || event.keyCode === 27) {
       // バーガーメニューが開いていて、かつモーダルが開いていない場合
       if (
-        $(".burger-button").hasClass("is-burger-open") &&
+        $(".c-burger-button").hasClass("is-burger-open") &&
         $("#login-modal-burger.modal-open").length === 0
       ) {
         closeBurgerMenu();
@@ -200,19 +506,19 @@ jQuery(function ($) {
   // フォーカストラップ制御
   let focusTrap = document.getElementById("js-focus-trap");
   focusTrap.addEventListener("focus", (e) => {
-    $(".burger-button").focus();
+    $(".c-burger-button").focus();
   });
 
   // スムーススクロール(ハンバーガメニューを押したときも動作)
   $('a[href^="#"]').click(function () {
-    if ($(this).hasClass("burger-menu__anchor")) {
+    if ($(this).hasClass("c-burger-menu__anchor")) {
       closeBurgerMenu();
       controlScrolling();
       setHeaderColor();
       setHoldenScrollPosition();
     }
 
-    let adjust = $(".gnav").outerHeight(true);
+    let adjust = $(".c-gnav").outerHeight(true);
     if ($(window).width() <= 1439) {
       adjust = 0;
     }
@@ -258,25 +564,25 @@ jQuery(function ($) {
   function setBurgerMenuTextItemWrapper() {
     var windowWidth = $(window).width();
     if (windowWidth >= 768) { // PCの場合
-      let halfHeight = $(".burger-menu__text-item").eq(0).outerHeight(true) + $(".burger-menu__text-item").eq(1).outerHeight(true) + $(".burger-menu__text-item").eq(2).outerHeight(true) + 1; // 最後の1はborderの分
-      $(".burger-menu__text-item-wrapper").height(halfHeight);
+      let halfHeight = $(".p-burger-menu__text-item").eq(0).outerHeight(true) + $(".p-burger-menu__text-item").eq(1).outerHeight(true) + $(".p-burger-menu__text-item").eq(2).outerHeight(true) + 1; // 最後の1はborderの分
+      $(".p-burger-menu__text-item-wrapper").height(halfHeight);
     } else {
-      $(".burger-menu__text-item-wrapper").height("unset");
+      $(".p-burger-menu__text-item-wrapper").height("unset");
     }
   };
 
   // フッターインナーの高さ設定(フッターの要素を重ね合わせを実現するため)
   function setFooterInnerHeight() {
-    let footerImageHeight = $(".footer__image").height();
-    $(".footer__inner").height(footerImageHeight);
+    let footerImageHeight = $(".p-footer__image").height();
+    $(".p-footer__inner").height(footerImageHeight);
   };
 
   //フッターの高さ設定(フッター下の余白をつけるため)
   function setFooterHeight(){
-    let footerWrapperHeight = $(".footer__image").outerHeight() + $(".footer__menu-wrapper").outerHeight();
-    let footerHeight = footerWrapperHeight + $(".footer__wrapper").css("padding-bottom");
-    $(".footer__wrapper").height(footerHeight);
-    $(".footer").height(footerHeight);
+    let footerWrapperHeight = $(".p-footer__image").outerHeight() + $(".p-footer__menu-wrapper").outerHeight();
+    let footerHeight = footerWrapperHeight + $(".p-footer__wrapper").css("padding-bottom");
+    $(".p-footer__wrapper").height(footerHeight);
+    $(".p-footer").height(footerHeight);
   }
 
   // フッターのメインメニューの横幅設定
@@ -285,15 +591,15 @@ jQuery(function ($) {
     var windowWidth = $(window).width();
 
     if (windowWidth >= 1440) { // PCの場合
-      itemsWidth = $(".footer__item").eq(0).outerWidth() + $(".footer__item").eq(1).outerWidth() + $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth();
+      itemsWidth = $(".p-footer__item").eq(0).outerWidth() + $(".p-footer__item").eq(1).outerWidth() + $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth();
     } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
-      itemsWidth = $(".footer__item").eq(2).outerWidth() + $(".footer__item").eq(3).outerWidth() + $(".footer__item").eq(4).outerWidth() + $(".footer__item").eq(6).outerWidth();
+      itemsWidth = $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth() + $(".p-footer__item").eq(6).outerWidth();
     } else {
-      $(".footer__list").width("100%");
+      $(".p-footer__list").width("100%");
     }
     additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
 
     var listWidth = itemsWidth + additionalWidth;
-    $(".footer__list").width(listWidth);
+    $(".p-footer__list").width(listWidth);
   };
 });

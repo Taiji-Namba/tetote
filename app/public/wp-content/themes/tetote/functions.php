@@ -1,20 +1,40 @@
 <?php
-  function my_setup(){
-    add_theme_support('post-thumbnails'); // アイキャッチ画像を有効化
-  }
-  add_action('after_setup_theme', 'my_setup');
+/**
+ * Functions
+ */
 
-  /* CSSとJavaScriptの読み込み */
-  function my_link_loading()
-    {
-      wp_enqueue_style( 'reset-css', 'https://unpkg.com/destyle.css@4.0.1/destyle.min.css');
-      wp_enqueue_style( 'global-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap');
-      wp_enqueue_style( 'style-css', get_template_directory_uri() . '/assets/css/style.css', array('reset-css'));
-      wp_enqueue_script( 'script-js', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), true );
-      if(is_front_page()){
-        wp_enqueue_style( 'front-page-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap', array('global-font'));
-        wp_enqueue_style( 'front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('style-css'));
-        wp_enqueue_script( 'front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array( 'jquery' ), true );
-      }
-    }
-  add_action('wp_enqueue_scripts', 'my_link_loading');
+// 基本設定
+get_template_part('parts/functions-lib/func-base');
+
+// セキュリティー対応
+get_template_part('parts/functions-lib/func-security');
+
+// ショートコードの設定
+get_template_part('parts/functions-lib/func-shortcode');
+
+// URLのショートカット設定
+get_template_part('parts/functions-lib/func-url');
+
+// URLのショートカット設定
+get_template_part('parts/functions-lib/func-utility');
+
+// メインクエリのSP表示件数設定
+// get_template_part('parts/functions-lib/func-posts-edit');
+
+// スクリプト、スタイルシートの設定
+get_template_part('parts/functions-lib/func-enqueue-assets');
+// get_template_part('parts/functions-lib/func-enqueue-assets_noslider'); //スライダーを使用しない場合
+
+// （MV用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-mv');
+
+// （gallery用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-gallery');
+
+// （Works用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-works');
+
+// （Event用）投稿の名称変更
+get_template_part('parts/functions-lib/func-add-posttype-post');
+
+?>
