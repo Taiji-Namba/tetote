@@ -34,12 +34,14 @@ function my_script_init()
   } elseif ($slider_library === 'splide') {
     // JavaScript
     wp_enqueue_script('slider-script', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js', array(), '4.0.7', true);
+    // AutoScroll拡張機能
+    wp_enqueue_script('slider-extension', '//cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js', array('slider-script'), '0.5.3', true);
     // CSS
     wp_enqueue_style('slider-style', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css', array(), '4.0.7', 'all');
   }
 
   // 基本JavaScript
-  wp_enqueue_script('my-script', get_template_directory_uri() . '/assets/js/script.js', array('slider-script'), filemtime(get_theme_file_path('assets/js/script.js')), true);
+  wp_enqueue_script('my-script', get_template_directory_uri() . '/assets/js/script.js', array('slider-extension'), filemtime(get_theme_file_path('assets/js/script.js')), true);
   // リセットCSS
   wp_enqueue_style('reset-css', 'https://unpkg.com/destyle.css@4.0.1/destyle.min.css');
   // 基本CSS
