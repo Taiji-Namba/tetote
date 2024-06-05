@@ -1,0 +1,7 @@
+@use '../../foundation' as *;
+
+.p-top-about-us__inner{
+  width: min($layout-width-inner, 100%);
+  margin-inline: auto;
+  padding-top: 10.1rem;
+}
