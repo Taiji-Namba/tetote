@@ -9,9 +9,9 @@
     );
     get_template_part('parts/common/p-splide', null, $args);
     ?>
-    <div class="p-top-mv-splide__catch-copy-wrapper">
-      <p class="p-top-mv-splide__catch-copy">後悔しないキャリアを作る、</p>
-      <p class="p-top-mv-splide__catch-copy">それこそが、我々の使命だ</p>
+    <div class="p-top-mv-splide__catch-copy">
+      <p class="p-top-mv-splide__text">後悔しないキャリアを作る、</p>
+      <p class="p-top-mv-splide__text">それこそが、我々の使命だ</p>
     </div>
   </div>
 </div>

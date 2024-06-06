@@ -37,6 +37,22 @@
   object-fit: cover;
 }
 
-.p-top-mv-splide__catch-copy-wrapper{
+.p-top-mv-splide__catch-copy{
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.9rem;
+}
+
+.p-top-mv-splide__text{
+  background-color: #fff;
+  color: $txt-color;
+  font-weight: $bold;
+  font-size: 4rem;
+  text-align: center;
+  padding: 0.7rem 1.1rem;
+
+  &:last-child{
+    margin-top: 0.7rem;
+  }
 }

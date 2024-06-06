@@ -1632,8 +1632,23 @@ tbody {
      object-fit: cover;
 }
 
-.p-top-mv-splide__catch-copy-wrapper {
+.p-top-mv-splide__catch-copy {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.9rem;
+}
+
+.p-top-mv-splide__text {
+  background-color: #fff;
+  color: #222222;
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+  padding: 0.7rem 1.1rem;
+}
+.p-top-mv-splide__text:last-child {
+  margin-top: 0.7rem;
 }
 
 .p-top-mv-swiper__inner {
