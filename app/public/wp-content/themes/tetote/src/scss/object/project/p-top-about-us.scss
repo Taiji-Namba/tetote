@@ -5,3 +5,28 @@
   margin-inline: auto;
   padding-top: 10.1rem;
 }
+
+.p-top-about-us__text-wrapper{
+  background-image: url(../images/parts/top/map1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: min(1024px, 100%);
+  margin-inline: auto;
+  margin-top: 10rem;
+
+  @include mq(twice) {
+    background-image: url(../images/parts/top/map1@2x.jpg);
+  }
+}
+
+.p-top-about-us__text{
+  font-size: 3.6rem;
+  font-weight: $bold;
+  text-align: center;
+  line-height: 1.8;
+
+  &:last-child{
+    margin-top: 5.2rem;
+  }
+}
