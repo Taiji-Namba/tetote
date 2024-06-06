@@ -11,7 +11,7 @@
       <p class="p-news__title">2024年度働きやすさランキング一位を取得しました！！</p>
       <p class="p-news__cta">
         VIEW MORE
-        <img class="p-news__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/news-arrow.svg'); ?>" alt="">
+        <img class="p-news__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt="">
       </p>
     </div>
   </a>
