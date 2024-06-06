@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions
  */
@@ -37,4 +38,5 @@ get_template_part('parts/functions-lib/func-add-posttype-works');
 // （Event用）投稿の名称変更
 get_template_part('parts/functions-lib/func-add-posttype-post');
 
-?>
+// （Staff用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-staff');
