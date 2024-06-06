@@ -1,0 +1,75 @@
+@use '../../foundation' as *;
+
+.p-top-about-us__inner{
+  width: min($layout-width-inner, 100%);
+  margin-inline: auto;
+  padding-top: 10.1rem;
+
+  @include mq(tab) {
+    margin-top: 6.6rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 4.1rem;
+  }
+}
+
+.p-top-about-us__text-wrapper{
+  background-image: url(../images/parts/top/map1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: min(1024px, 100%);
+  aspect-ratio: 1024 / 553;
+  margin-inline: auto;
+  margin-top: 10rem;
+  padding-bottom: 4.6rem;
+  
+  @include mq(twice) {
+    background-image: url(../images/parts/top/map1@2x.jpg);
+  }
+  
+  @include mq(tab) {
+    margin-top: 7rem;
+    padding-bottom: 3.9rem;
+    background-size: 80%;
+  }
+  
+  @include mq(sp) {
+    margin-top: 4.8rem;
+    padding-bottom: 0;
+    background-size: calc(320 / 375 * 100%);
+    background-position: center top;
+  }
+}
+
+.p-top-about-us__text{
+  font-size: rclamp(18, 36, 375, 1440);
+  font-weight: $bold;
+  text-align: center;
+  line-height: 1.8;
+
+  @include mq(tab) {
+    line-height: 2.2;
+  }
+
+  @include mq(sp) {
+    line-height: 2.5;
+  }
+
+  @include mq(xxs) {
+    font-size: 1.6rem;
+  }
+
+  &:last-child{
+    margin-top: rclamp(39, 52, 375, 1440);
+  }
+}
+
+.p-top-about-us__button{
+  margin-top: 0.6rem;
+
+  @include mq(sp) {
+    margin-top: 3.9rem;
+  }
+}

@@ -1,5 +1,4 @@
 "use strict";
-jQuery(function ($) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var library = sliderSettings.library;
@@ -9,23 +8,34 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('#mv_slider')) {
       new Splide('#mv_slider',
         {
-          type: 'fade',   // slide,loop,fade から選択
+          type: 'loop',   // slide,loop,fade から選択
           speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
           autoplay: true, // 自動実行を有効にする true:有効、false:無効
           interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
-          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fade,slideの時使用)
-          arrows: true,    // true:矢印ボタンを表示,false:非表示
-          perPage: 1,      // 1ページに何枚のスライドを表示するかを指定
-          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
-            767: {
-              perPage: 1,  // 1ページに何枚のスライドを表示するかを指定
-            }
-          },
+          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
+          arrows: false,    // true:矢印ボタンを表示,false:非表示
+          pagination:false, // ページネーションの有無 (デフォルトはtrue)
+          updateOnMove: true, //is-activeクラスを移動前に更新するか否か
           perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
           focus: 'center', //これを指定すると中央にある画像にフォーカスされる
-          gap: '10px',     // 画像間の余白の設定
-          pauseOnHover: false // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
-        }
+          fixedWidth : '50.6rem', // スライドの固定幅
+          fixedHeight : '39.3rem', // スライドの固定幅
+          gap: '3.4rem',     // 画像間の余白の設定
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            1439: {
+              fixedWidth : '35.1svw',
+              fixedHeight : '27.3svw',
+              gap: '2.4rem',     // 画像間の余白の設定
+            },
+            767: {
+              fixedWidth : '72.3svw',
+              fixedHeight : '56.1svw',
+              gap: '1.6rem',     // 画像間の余白の設定
+            }
+          },
+          pauseOnHover: false, // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
+          pauseOnFocus: true,  // true:スライドにフォーカスしている間は自動再生を一時停止します,false:停止しない
+        },
       ).mount();
     }
     if (document.querySelector('#gallery')) {
@@ -304,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   // location = 'http://toolwordpressmv.local/contact-thanks/';
 // }, false );
 
-
+jQuery(function ($) {
   // ページ読み込み時の処理
   $(document).ready(function () {
     switchHeaderColor();
