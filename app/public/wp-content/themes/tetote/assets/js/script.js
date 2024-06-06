@@ -14,21 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
           interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
           rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
           arrows: false,    // true:矢印ボタンを表示,false:非表示
-          // perPage: 3,      // 1ページに何枚のスライドを表示するかを指定
           pagination:false, // ページネーションの有無 (デフォルトはtrue)
           updateOnMove: true, //is-activeクラスを移動前に更新するか否か
-          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
-            767: {
-              // perPage: 1,  // 1ページに何枚のスライドを表示するかを指定
-            }
-          },
           perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
           focus: 'center', //これを指定すると中央にある画像にフォーカスされる
           fixedWidth : '50.6rem', // スライドの固定幅
           fixedHeight : '39.3rem', // スライドの固定幅
           gap: '3.4rem',     // 画像間の余白の設定
-            pauseOnHover: false, // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
-            pauseOnFocus: true,  // true:スライドにフォーカスしている間は自動再生を一時停止します,false:停止しない
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            1439: {
+              fixedWidth : '35.1svw',
+              fixedHeight : '27.3svw',
+              gap: '2.4rem',     // 画像間の余白の設定
+            },
+            767: {
+              fixedWidth : '72.3svw',
+              fixedHeight : '56.1svw',
+              gap: '1.6rem',     // 画像間の余白の設定
+            }
+          },
+          pauseOnHover: false, // true:マウスがスライダーの上にある間は自動再生を一時停止します,false:停止しない
+          pauseOnFocus: true,  // true:スライドにフォーカスしている間は自動再生を一時停止します,false:停止しない
         },
       ).mount();
     }

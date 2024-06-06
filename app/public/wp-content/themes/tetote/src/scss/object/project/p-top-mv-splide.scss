@@ -5,11 +5,18 @@
 
 .p-top-mv-splide .splide__list {
   height: calc(39.3rem + 3.6rem);
+
+  @include mq(tab) {
+    height: calc((27.3svw + 3.2rem));
+}
+
+@include mq(sp) {
+      height: calc((56.1svw + 2.7rem));
+  }
 }
 
 .p-top-mv-splide .splide__slide {
   display: block;
-  // width: 100%;
   aspect-ratio: 506 / 393;
   width: 50.6rem;
   overflow: hidden;
@@ -22,6 +29,14 @@
 .p-top-mv-splide .splide__slide.is-active {
   transform: translateY(3.6rem);
   transition: transform 3s;
+  
+  @include mq(tab) {
+    transform: translateY(3.2rem);
+  }
+
+  @include mq(sp) {
+  transform: translateY(2.7rem);
+  }
 }
 
 
@@ -48,11 +63,16 @@
   background-color: #fff;
   color: $txt-color;
   font-weight: $bold;
-  font-size: 4rem;
+  font-size: rclamp(24, 40, 375, 1440);
   text-align: center;
+  text-wrap: nowrap;
   padding: 0.7rem 1.1rem;
 
   &:last-child{
     margin-top: 0.7rem;
+  }
+
+  @include mq(xxs) {
+    font-size: 2rem;
   }
 }
