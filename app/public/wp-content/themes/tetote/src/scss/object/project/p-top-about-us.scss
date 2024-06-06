@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center center;
   width: min(1024px, 100%);
+  aspect-ratio: 1024 / 553;
   margin-inline: auto;
   margin-top: 10rem;
 
@@ -29,4 +30,8 @@
   &:last-child{
     margin-top: 5.2rem;
   }
+}
+
+.p-top-about-us__button{
+  margin-top: 0.6rem;
 }
