@@ -4,7 +4,7 @@
       <div class="p-footer__image"></div>
       <div class="p-cta p-footer__cta">
         <p class="p-cta__text">わたしたちと一緒に働く仲間を募集中です。<br>少数精鋭のチームで、<br>あなたも会社も一緒に成長していきましょう。</p>
-        <a class="c-button p-button p-cta__button p-button--gold" href="<?php echo esc_url(home_url() . '/entry/'); ?>">ENTRY<img class="c-arrow p-cta__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/news-arrow.svg'); ?>" alt=""></a>
+        <a class="c-button p-button p-cta__button p-button--gold" href="<?php echo esc_url(home_url() . '/entry/'); ?>">ENTRY<img class="c-arrow p-cta__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt=""></a>
       </div>
 
       <div class="p-footer__menu-wrapper">
