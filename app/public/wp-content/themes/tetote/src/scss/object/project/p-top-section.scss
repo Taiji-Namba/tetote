@@ -38,6 +38,18 @@
   }
 }
 
+.p-top-section__background-title--center{
+  @include mq(tab) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include mq(sp) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .p-top-section__title{
   font-size: rclamp(32, 52, 375, 1440);
   font-weight: $bold;
