@@ -6,9 +6,10 @@ $post_type_label = $post_type_data->labels->name;
 ?>
 <div class="p-top-staff p-top-section">
   <div class="p-top-staff__inner">
-    <!-- 投稿記事のラベルをタイトルにする場合は、以下を使用します -->
-    <h4 class="c-common-title p-top-section__title">人を知る</h4>
-    <p class="p-top-section__background-title">MEMBER</p>
+    <div class="p-top-section__titles">
+      <h4 class="c-common-title p-top-section__title u-first-letter-under-line">人を知る</h4>
+      <p class="p-top-section__background-title">MEMBER</p>
+    </div>
     <p class="c-common-title p-top-section__subtitle">TETOTEの社員がどういった信念を持って働いているのか、<br></br>一日のスケジュールや仕事内容などを紹介します。</p>
     <?php
     $args = array(

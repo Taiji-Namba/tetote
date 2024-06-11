@@ -1,0 +1,46 @@
+@use "../../foundation" as *;
+@use "sass:math";
+
+.p-top-staff{
+  width: min($layout-width-inner, 100%);
+  margin-inline: auto;
+}
+
+.p-top-staff__inner{
+  position: relative;
+  padding-top: 16.3rem;
+}
+
+.p-top-staff .splide{
+  margin-left: $top-ml;
+  position: static;
+}
+
+.p-top-staff .splide__list{
+  height: calc(46.9rem + 3.6rem);
+}
+
+.p-top-staff .p-arrow-button{
+  position: absolute;
+  top: unset;
+  bottom: 1.15rem;
+  transform: translateY(0);
+}
+
+.p-top-staff .p-arrow-button--prev{
+  left: unset;
+  right: calc(math.div(229, 1440) * 100% + 1.8rem);
+  transform: translateX(-100%);
+}
+
+.p-top-staff .p-arrow-button--next{
+  right: calc(math.div(229, 1440) * 100%);
+}
+
+.p-top-staff__button{
+  margin-top: 8rem;
+}
+
+.p-top-staff .splide{
+  margin-top: 5.2rem;
+}

@@ -1,0 +1,30 @@
+@use "../../foundation" as *;
+
+.p-top-section__titles{
+  margin-left: $top-ml;
+  position: relative;
+  display: inline-block;
+}
+
+.p-top-section__background-title{
+  font-size: 13.6rem;
+  font-family: $poppins;
+  color: rgba(#979797, 0.1);
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-top-section__title{
+  font-size: 5.2rem;
+  font-weight: $bold;
+  line-height: 1;
+}
+
+.p-top-section__subtitle{
+  margin-left: $top-ml;
+  line-height: 1;
+  margin-top: 5.2rem;
+}
