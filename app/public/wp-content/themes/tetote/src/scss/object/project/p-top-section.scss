@@ -1,0 +1,61 @@
+@use "../../foundation" as *;
+
+.p-top-section__titles{
+  margin-left: $top-ml-pc;
+  position: relative;
+  display: inline-block;
+
+  @include mq(tab) {
+    margin-left: $top-ml-tab;
+  }
+
+  @include mq(sp) {
+    margin-left: $top-ml-sp;
+  }
+}
+
+.p-top-section__background-title{
+  font-size: rclamp(80, 136, 375, 1440);
+  font-family: $poppins;
+  color: rgba(#979797, 0.1);
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq(tab) {
+    left: 90%;
+  }
+
+  @include mq(sp) {
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  @include mq(xxs) {
+    font-size: 7.2rem;
+  }
+}
+
+.p-top-section__title{
+  font-size: rclamp(32, 52, 375, 1440);
+  font-weight: $bold;
+  line-height: 1;
+}
+
+.p-top-section__subtitle{
+  margin-left: $top-ml-pc;
+  line-height: 1;
+  margin-top: 5.2rem;
+
+  @include mq(tab) {
+    margin-top: 4.8rem;
+    margin-left: $top-ml-tab;
+  }
+
+  @include mq(sp) {
+    margin-top: 4.3rem;
+    margin-left: $top-ml-sp;
+  }
+}

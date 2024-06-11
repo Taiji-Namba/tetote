@@ -1,0 +1,84 @@
+@use "../../foundation" as *;
+@use "sass:math";
+
+.p-top-staff{
+  width: min($layout-width-inner, 100%);
+  margin-inline: auto;
+}
+
+.p-top-staff__inner{
+  position: relative;
+  padding-top: 16.3rem;
+
+  @include mq(tab) {
+    margin-top: 13.2rem;
+  }
+
+
+  @include mq(sp) {
+    margin-top: 9.5rem;
+  }
+}
+
+.p-top-staff .splide{
+  margin-left: $top-ml-pc;
+  position: static;
+
+  @include mq(tab) {
+    margin-left: $top-ml-tab;
+  }
+
+  @include mq(sp) {
+    margin-left: $top-ml-sp;
+  }
+}
+
+.p-top-staff .splide__list{
+  height: calc(46.9rem + 3.6rem);
+}
+
+.p-top-staff .p-arrow-button{
+  position: absolute;
+  top: unset;
+  bottom: 1.15rem;
+  transform: translateY(0);
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.p-top-staff .p-arrow-button--prev{
+  left: unset;
+  right: calc(math.div(229, 1440) * 100% + 1.8rem);
+  transform: translateX(-100%);
+
+  @include mq(tab) {
+    right: calc(math.div(229, 1440) * 100% + 1.8rem - 7%);
+  }
+
+}
+
+.p-top-staff .p-arrow-button--next{
+  right: calc(math.div(229, 1440) * 100%);
+
+    @include mq(tab) {
+      right: calc(math.div(229, 1440) * 100% - 7%);
+    }
+}
+
+.p-top-staff__button{
+  margin-top: 8rem;
+
+  @include mq(tab) {
+    margin-top: 7.2rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 6.4rem;
+  }
+}
+
+.p-top-staff .splide{
+  margin-top: 5.2rem;
+}

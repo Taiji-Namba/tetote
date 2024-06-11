@@ -5,6 +5,8 @@
     <?php get_template_part('parts/project/p-top-fv'); ?>
 
     <?php get_template_part('parts/project/p-top-about-us'); ?>
+
+    <?php get_template_part('parts/project/p-top-staff'); ?>
   </div>
 </main>
 
