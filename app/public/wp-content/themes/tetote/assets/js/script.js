@@ -97,14 +97,22 @@ document.addEventListener('DOMContentLoaded', function() {
             arrow : 'splide__arrow p-arrow-button',
             prev  : 'splide__arrow--prev p-arrow-button--prev',
             next  : 'splide__arrow--next p-arrow-button--next',},
-          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
-            767: {
-            }
-          },
           perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
           fixedWidth:'30rem',
           fixedHeight:'46.9rem',
           gap: '4.3rem',     // 画像間の余白の設定
+          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
+            1439: {
+              fixedWidth:'27rem',
+              fixedHeight:'42.4rem',
+              gap: '3.3rem',
+            },
+            767: {
+              fixedWidth:'24.6rem',
+              fixedHeight:'31.1rem',
+              gap: '2.3rem',
+            }
+          },
         }
       ).mount();
     }

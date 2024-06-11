@@ -73,4 +73,5 @@ $bg-sub-color: #faf7f1;
 $color-white:#fff;
 
 // トップページの共通のmargin-left
-$top-ml: calc(math.div(242, 1440) * 100%);
+$top-ml-pc: calc(math.div(242, 1440) * 100%);
+$top-ml-sp:1.7rem;

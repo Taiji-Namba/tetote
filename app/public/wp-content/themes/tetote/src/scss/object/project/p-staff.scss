@@ -24,7 +24,7 @@
 .p-staff__message-1{
   padding: 0.5rem 0.7rem;
   background-color: $accent-color-2;
-  font-size: 2rem;
+  font-size: rclamp(16, 20, 375, 1440);
   font-weight: $bold;
   line-height: 1;
   display: inline-block;
@@ -34,21 +34,21 @@
   padding: 0.5rem 0.7rem;
   background-color: $accent-color-2;
   margin-top: 0.6rem;
-  font-size: 2rem;
+  font-size: rclamp(16, 20, 375, 1440);
   font-weight: $bold;
   line-height: 1;
   display: inline-block;
 }
 
 .p-staff__brief-introduction{
-  font-size: 1.6rem;
+  font-size: rclamp(12, 16, 375, 1440);
   font-weight: $bold;
   line-height: 1;
   margin-top: 1.6rem;
 }
 
 .p-staff__name{
-  font-size: 2.4rem;
+  font-size: rclamp(20, 24, 375, 1440);
   font-weight: $bold;
   line-height: 1;
   margin-top: 1.6rem;
