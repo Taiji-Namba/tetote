@@ -24,6 +24,10 @@
   margin-left: $top-ml-pc;
   position: static;
 
+  @include mq(tab) {
+    margin-left: $top-ml-tab;
+  }
+
   @include mq(sp) {
     margin-left: $top-ml-sp;
   }

@@ -74,4 +74,5 @@ $color-white:#fff;
 
 // トップページの共通のmargin-left
 $top-ml-pc: calc(math.div(242, 1440) * 100%);
+$top-ml-tab: calc(math.div(242, 1440) * 100% - 3%);
 $top-ml-sp:1.7rem;

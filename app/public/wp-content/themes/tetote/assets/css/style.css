@@ -1976,6 +1976,11 @@ tbody {
   position: relative;
   display: inline-block;
 }
+@media screen and (max-width: 1439px) {
+  .p-top-section__titles {
+    margin-left: 13.8055555556%;
+  }
+}
 @media screen and (max-width: 767px) {
   .p-top-section__titles {
     margin-left: 1.7rem;
@@ -1991,6 +1996,11 @@ tbody {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1439px) {
+  .p-top-section__background-title {
+    left: 90%;
+  }
 }
 @media screen and (max-width: 767px) {
   .p-top-section__background-title {
@@ -2018,6 +2028,7 @@ tbody {
 @media screen and (max-width: 1439px) {
   .p-top-section__subtitle {
     margin-top: 4.8rem;
+    margin-left: 13.8055555556%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2050,6 +2061,11 @@ tbody {
 .p-top-staff .splide {
   margin-left: 16.8055555556%;
   position: static;
+}
+@media screen and (max-width: 1439px) {
+  .p-top-staff .splide {
+    margin-left: 13.8055555556%;
+  }
 }
 @media screen and (max-width: 767px) {
   .p-top-staff .splide {

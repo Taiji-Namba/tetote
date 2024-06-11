@@ -5,6 +5,10 @@
   position: relative;
   display: inline-block;
 
+  @include mq(tab) {
+    margin-left: $top-ml-tab;
+  }
+
   @include mq(sp) {
     margin-left: $top-ml-sp;
   }
@@ -19,6 +23,10 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  @include mq(tab) {
+    left: 90%;
+  }
 
   @include mq(sp) {
     left: 0;
@@ -43,6 +51,7 @@
 
   @include mq(tab) {
     margin-top: 4.8rem;
+    margin-left: $top-ml-tab;
   }
 
   @include mq(sp) {
