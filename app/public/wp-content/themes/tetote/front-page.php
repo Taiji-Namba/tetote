@@ -7,6 +7,8 @@
     <?php get_template_part('parts/project/p-top-about-us'); ?>
 
     <?php get_template_part('parts/project/p-top-staff'); ?>
+
+    <?php get_template_part('parts/project/p-top-benefits'); ?>
   </div>
 </main>
 
