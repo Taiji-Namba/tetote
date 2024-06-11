@@ -49,7 +49,7 @@ function my_script_init()
 
   // トップページのみ追加適用
   if (is_front_page()) {
-    wp_enqueue_style('front-page-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap', array('global-font'));
+    wp_enqueue_style('front-page-font', 'https://fonts.googleapis.com/css2?family=Poppins&display=swap', array());
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('style-css'));
     wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array('jquery'), true);
   }
