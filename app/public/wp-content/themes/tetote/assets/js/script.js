@@ -91,13 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
           interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
           rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
           arrows: true,    // true:矢印ボタンを表示
+          pagination:false, // ページネーションの有無 (デフォルトはtrue)
+          classes: {
+            // 矢印関連のクラスを追加
+            arrow : 'splide__arrow p-arrow-button',
+            prev  : 'splide__arrow--prev p-arrow-button--prev',
+            next  : 'splide__arrow--next p-arrow-button--next',},
           breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
             767: {
             }
           },
           perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
           fixedWidth:'30rem',
-          fixedHeight:'379rem',
+          fixedHeight:'46.9rem',
           gap: '4.3rem',     // 画像間の余白の設定
         }
       ).mount();
