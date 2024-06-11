@@ -1,0 +1,96 @@
+@use '../../foundation' as *;
+@use 'sass:math';
+
+.p-top-benefits__inner{
+  padding-top: 15rem;
+  padding-inline: 1.7rem;
+  padding-bottom: 10.7rem;
+  margin-inline: auto;
+  width: min($layout-width-inner, 100%);
+}
+
+.p-top-benefits__contents{
+  margin-inline: auto;
+  margin-top: 11.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 9.4rem;
+}
+
+.p-top-benefits__item{
+  position: relative;
+  width: 100%;
+}
+
+.p-top-benefits__content{
+  width: min(43rem, 100%);
+}
+
+.p-top-benefits__image{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.p-top-benefits__image--hover{
+  transform: scale(1.1);
+  transition: transform, 0.3s ease-in;
+}
+
+.p-top-benefits__image--career{
+  background-image: url(../images/parts/top/career-image.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/top/career-image@2x.jpg);
+  }
+}
+
+.p-top-benefits__image--benefits{
+  background-image: url(../images/parts/top/benefits-image.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/top/benefits-image@2x.jpg);
+  }
+}
+
+.p-top-benefits__item-sub-title{
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 0;
+  right: rclamp(13, 20, 375, 1440);
+  font-size: 2.4rem;
+  font-family: $viga;
+  letter-spacing: 0.15em;
+}
+
+.p-top-benefits__button{
+  position: absolute;
+  right: rclamp(13, 20, 375, 1440);
+  top: calc(math.div(306,430) * 100%);
+}
+
+.p-top-benefits__button--hover{
+  transform: translateX(75%);
+  transition: transform, 0.3s ease-in;
+}
+
+.p-top-benefits__item-title{
+  font-size: 3.2rem;
+  font-weight: $bold;
+  line-height: 1;
+  padding: 0.5rem 0.7rem;
+  background-color: $accent-color-2;
+  display: inline-block;
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+}
+
+.p-top-benefits__text{
+  margin-top: 3.6rem;
+}
