@@ -1,0 +1,25 @@
+@use "../../foundation" as *;
+
+.p-arrow-button{
+  background-color: transparent;
+  border: 0.1rem solid  $txt-color;
+  width: 5.8rem;
+  height: 5.8rem;
+  opacity: 1;
+}
+
+.p-arrow-button svg{
+  display: none;
+}
+
+.p-arrow-button--prev{
+  background-image: url(../images/common/arrow-prev.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.p-arrow-button--next{
+  background-image: url(../images/common/arrow-next.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
