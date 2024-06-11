@@ -1,0 +1,55 @@
+@use "../../foundation" as *;
+
+.p-staff .splide__slide:nth-of-type(2n){
+  transform: translateY(3.6rem);
+}
+
+.p-staff__card{
+  position: relative;
+  height: 46.9rem;
+}
+
+.p-staff__thumbnail{
+  border: none;
+  border-radius:3rem;
+  object-fit: cover;
+}
+
+.p-staff__texts{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.p-staff__message-1{
+  padding: 0.5rem 0.7rem;
+  background-color: $accent-color-2;
+  font-size: 2rem;
+  font-weight: $bold;
+  line-height: 1;
+  display: inline-block;
+}
+
+.p-staff__message-2{
+  padding: 0.5rem 0.7rem;
+  background-color: $accent-color-2;
+  margin-top: 0.6rem;
+  font-size: 2rem;
+  font-weight: $bold;
+  line-height: 1;
+  display: inline-block;
+}
+
+.p-staff__brief-introduction{
+  font-size: 1.6rem;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: 1.6rem;
+}
+
+.p-staff__name{
+  font-size: 2.4rem;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: 1.6rem;
+}
