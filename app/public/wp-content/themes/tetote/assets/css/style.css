@@ -2067,7 +2067,7 @@ tbody {
   bottom: 1.15rem;
   transform: translateY(0);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .p-top-staff .p-arrow-button {
     display: none;
   }
@@ -2078,9 +2078,19 @@ tbody {
   right: calc(15.9027777778% + 1.8rem);
   transform: translateX(-100%);
 }
+@media screen and (max-width: 1439px) {
+  .p-top-staff .p-arrow-button--prev {
+    right: calc(15.9027777778% + 1.8rem - 7%);
+  }
+}
 
 .p-top-staff .p-arrow-button--next {
   right: 15.9027777778%;
+}
+@media screen and (max-width: 1439px) {
+  .p-top-staff .p-arrow-button--next {
+    right: 8.9027777778%;
+  }
 }
 
 .p-top-staff__button {

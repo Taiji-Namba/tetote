@@ -39,7 +39,7 @@
   bottom: 1.15rem;
   transform: translateY(0);
 
-  @include mq(sp) {
+  @include mq(lg) {
     display: none;
   }
 }
@@ -48,10 +48,19 @@
   left: unset;
   right: calc(math.div(229, 1440) * 100% + 1.8rem);
   transform: translateX(-100%);
+
+  @include mq(tab) {
+    right: calc(math.div(229, 1440) * 100% + 1.8rem - 7%);
+  }
+
 }
 
 .p-top-staff .p-arrow-button--next{
   right: calc(math.div(229, 1440) * 100%);
+
+    @include mq(tab) {
+      right: calc(math.div(229, 1440) * 100% - 7%);
+    }
 }
 
 .p-top-staff__button{
