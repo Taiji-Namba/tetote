@@ -1,7 +1,7 @@
 <div class="p-top-benefits p-top-section">
   <div class="p-top-benefits__inner">
     <div class="p-top-section__titles u-block-center">
-      <h4 class="c-common-title p-top-section__title u-four-letters-under-line">制度・環境を知る</h4>
+      <h4 class="c-common-title p-top-section__title"><span class="u-under-line">制度・環境</span>を知る</h4>
       <p class="p-top-section__background-title p-top-section__background-title--center">BENEFITS</p>
     </div>
     <p class="c-common-title p-top-section__subtitle u-block-center">当社では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
