@@ -1728,6 +1728,16 @@ tbody {
   margin-inline: auto;
   width: min(1440px, 100%);
 }
+@media screen and (max-width: 1439px) {
+  .p-top-benefits__inner {
+    padding-top: 12rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-top-benefits__inner {
+    padding-top: 9.5rem;
+  }
+}
 
 .p-top-benefits__contents {
   margin-inline: auto;
