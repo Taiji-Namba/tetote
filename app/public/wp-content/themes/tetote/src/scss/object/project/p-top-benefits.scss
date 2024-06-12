@@ -1,0 +1,170 @@
+@use '../../foundation' as *;
+@use 'sass:math';
+
+.p-top-benefits__inner{
+  padding-top: 15rem;
+  padding-inline: 1.7rem;
+  padding-bottom: 10.7rem;
+  margin-inline: auto;
+  width: min($layout-width-inner, 100%);
+
+  @include mq(tab) {
+    padding-top: 12rem;
+  }
+
+@include mq(sp) {
+    padding-top: 9.5rem;
+  }
+}
+
+.p-top-benefits__contents{
+  margin-inline: auto;
+  margin-top: 11.4rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 9.4rem;
+
+  @include mq(tab) {
+    margin-top: 8rem;
+    column-gap: 7rem;
+    row-gap: 7rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 5.1rem;
+    row-gap: 3.6rem;
+  }
+}
+
+.p-top-benefits__item{
+  position: relative;
+  width: 100%;
+
+  @include mq(tab) {
+    margin-inline: auto;
+    width: 35rem;
+  }
+
+  @include mq(sp) {
+    width: 25.1rem;
+  }
+}
+
+.p-top-benefits__content{
+  width: min(43rem, 100%);
+}
+
+.p-top-benefits__image{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.p-top-benefits__image--hover{
+  transform: scale(1.1);
+  transition: transform, 0.3s ease-in;
+}
+
+.p-top-benefits__image--career{
+  background-image: url(../images/parts/top/career-image.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/top/career-image@2x.jpg);
+  }
+}
+
+.p-top-benefits__image--benefits{
+  background-image: url(../images/parts/top/benefits-image.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/top/benefits-image@2x.jpg);
+  }
+}
+
+.p-top-benefits__item-sub-title{
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  font-size: 2.4rem;
+  font-family: $viga;
+  letter-spacing: 0.15em;
+
+  @include mq(tab) {
+    font-size: 1.8rem;
+    right: 1.6rem;
+  }
+
+  @include mq(sp) {
+    font-size: 1.4rem;
+    right: 1.3rem;
+  }
+}
+
+.p-top-benefits__button{
+  position: absolute;
+  top: 30.6rem;
+  right: 2rem;
+  width: 5.8rem;
+  height: 5.8rem;
+
+  @include mq(tab) {
+    top: 24rem;
+    right: 1.6rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @include mq(sp) {
+    top: 17rem;
+    right: 1.3rem;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+.p-top-benefits__button--hover{
+  transform: translateX(75%);
+  transition: transform, 0.3s ease-in;
+}
+
+.p-top-benefits__item-title{
+  font-size: 3.2rem;
+  font-weight: $bold;
+  line-height: 1;
+  padding: 0.5rem 0.7rem;
+  background-color: $accent-color-2;
+  display: inline-block;
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+
+  @include mq(tab) {
+    bottom: 0;
+    font-size: 2.8rem;
+  }
+
+  @include mq(sp) {
+    bottom: -1.5rem;
+    font-size: 2.4rem;
+  }
+}
+
+.p-top-benefits__text{
+  margin-top: 2.7rem;
+  line-height: 1.5;
+
+  @include mq(tab) {
+    margin-top: 3.2rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 3.6rem;
+  }
+}

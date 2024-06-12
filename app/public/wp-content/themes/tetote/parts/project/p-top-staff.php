@@ -10,7 +10,7 @@ $post_type_label = $post_type_data->labels->name;
       <h4 class="c-common-title p-top-section__title u-first-letter-under-line">人を知る</h4>
       <p class="p-top-section__background-title">MEMBER</p>
     </div>
-    <p class="c-common-title p-top-section__subtitle">TETOTEの社員がどういった信念を持って働いているのか、<br></br>一日のスケジュールや仕事内容などを紹介します。</p>
+    <p class="c-common-title p-top-section__subtitle">TETOTEの社員がどういった信念を持って働いているのか、<br>一日のスケジュールや仕事内容などを紹介します。</p>
     <?php
     $args = array(
       'post_type' => $post_type,

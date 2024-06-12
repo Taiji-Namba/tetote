@@ -6,6 +6,7 @@
   width: 5.8rem;
   height: 5.8rem;
   opacity: 1;
+  border-radius: 50%;
 }
 
 .p-arrow-button svg{
@@ -22,4 +23,40 @@
   background-image: url(../images/common/arrow-next.svg);
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.p-arrow-button--black{
+  position: relative;
+  background-color: $txt-color;
+  border: none;
+}
+
+.p-arrow-button--black::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color:#fff;
+  mask-image: url(../images/common/arrow-next.svg);
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: unset;
+}
+
+.p-top-benefits .p-arrow-button--black{
+  width: 5.8rem;
+  height: 5.8rem;
+
+  @include mq(tab) {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @include mq(sp) {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
 }

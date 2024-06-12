@@ -564,13 +564,6 @@ jQuery(function ($) {
     return false;
   });
 
-  // モーダルウインドウ(MicroModal使用)
-  MicroModal.init({
-    openClass: "modal-open",
-    disableScroll: true,
-    awaitCloseAnimation: true, // モーダルを閉じる際にアニメーション完了を待つ。(本来なくてもいいが、バーガーメニュー内でのバグ対応のため記述)
-  });
-
   // バグ対応(.modal__containerの中では閉じるボタンを押したときのみモーダルを閉じるようにする)
   document.querySelectorAll(".modal").forEach(function (container) {
     container.addEventListener("click", function (event) {
@@ -625,4 +618,24 @@ jQuery(function ($) {
     var listWidth = itemsWidth + additionalWidth;
     $(".p-footer__list").width(listWidth);
   };
+
+
+  // トップページのBENEFITSセクションのホバーアクション
+  function addBenefitsHover(element){
+    $(element).find(".p-top-benefits__image").addClass("p-top-benefits__image--hover");
+    $(element).find(".p-top-benefits__button").addClass("p-top-benefits__button--hover");
+  }
+
+  function removeBenefitsHover(element){
+    $(element).find(".p-top-benefits__image").removeClass("p-top-benefits__image--hover");
+    $(element).find(".p-top-benefits__button").removeClass("p-top-benefits__button--hover");
+  }
+
+  $(".p-top-benefits__content").mouseover(function (){
+    addBenefitsHover(this);
+  });
+
+  $(".p-top-benefits__content").mouseleave(function (){
+    removeBenefitsHover(this);
+  });
 });

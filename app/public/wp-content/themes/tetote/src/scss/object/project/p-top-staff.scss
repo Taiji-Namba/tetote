@@ -82,3 +82,9 @@
 .p-top-staff .splide{
   margin-top: 5.2rem;
 }
+
+.p-top-staff .p-top-section__subtitle{
+  @include mq(sp) {
+    margin-right: 1.7rem;
+  }
+}
