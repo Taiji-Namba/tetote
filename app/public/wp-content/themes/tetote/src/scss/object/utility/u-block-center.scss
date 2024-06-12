@@ -1,5 +1,11 @@
+@use '../../foundation' as *;
+
 .u-block-center{
   display: block;
   margin-inline: auto;
   text-align: center;
+
+  @include mq(sp) {
+    text-align: left;
+  }
 }
