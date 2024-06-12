@@ -14,13 +14,34 @@
   margin-top: 11.4rem;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 9.4rem;
+
+  @include mq(tab) {
+    margin-top: 8rem;
+    column-gap: 7rem;
+    row-gap: 7rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 5.1rem;
+    row-gap: 3.6rem;
+  }
 }
 
 .p-top-benefits__item{
   position: relative;
   width: 100%;
+
+  @include mq(tab) {
+    margin-inline: auto;
+    width: 35rem;
+  }
+
+  @include mq(sp) {
+    width: 25.1rem;
+  }
 }
 
 .p-top-benefits__content{
@@ -60,16 +81,42 @@
   writing-mode: vertical-rl;
   position: absolute;
   top: 0;
-  right: rclamp(13, 20, 375, 1440);
+  right: 2rem;
   font-size: 2.4rem;
   font-family: $viga;
   letter-spacing: 0.15em;
+
+  @include mq(tab) {
+    font-size: 1.8rem;
+    right: 1.6rem;
+  }
+
+  @include mq(sp) {
+    font-size: 1.4rem;
+    right: 1.3rem;
+  }
 }
 
 .p-top-benefits__button{
   position: absolute;
-  right: rclamp(13, 20, 375, 1440);
-  top: calc(math.div(306,430) * 100%);
+  top: 30.6rem;
+  right: 2rem;
+  width: 5.8rem;
+  height: 5.8rem;
+
+  @include mq(tab) {
+    top: 24rem;
+    right: 1.6rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @include mq(sp) {
+    top: 17rem;
+    right: 1.3rem;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
 }
 
 .p-top-benefits__button--hover{
@@ -89,8 +136,27 @@
   left: 50%;
   transform: translateX(-50%);
   text-wrap: nowrap;
+
+  @include mq(tab) {
+    bottom: 0;
+    font-size: 2.8rem;
+  }
+
+  @include mq(sp) {
+    bottom: -1.5rem;
+    font-size: 2.4rem;
+  }
 }
 
 .p-top-benefits__text{
-  margin-top: 3.6rem;
+  margin-top: 2.7rem;
+  line-height: 1.5;
+
+  @include mq(tab) {
+    margin-top: 3.2rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 3.6rem;
+  }
 }

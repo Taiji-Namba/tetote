@@ -45,3 +45,18 @@
   mask-repeat: no-repeat;
   mask-size: unset;
 }
+
+.p-top-benefits .p-arrow-button--black{
+  width: 5.8rem;
+  height: 5.8rem;
+
+  @include mq(tab) {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @include mq(sp) {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}

@@ -45,8 +45,8 @@
   }
 
   @include mq(sp) {
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    transform: translate(0, -50%);
   }
 }
 
@@ -58,7 +58,7 @@
 
 .p-top-section__subtitle{
   margin-left: $top-ml-pc;
-  line-height: 1;
+  line-height: 1.5;
   margin-top: 5.2rem;
 
   @include mq(tab) {
