@@ -11,6 +11,8 @@
     <?php get_template_part('parts/project/p-top-benefits'); ?>
 
     <?php get_template_part('parts/project/p-top-post'); ?>
+
+    <?php get_template_part('parts/project/p-top-recruitment'); ?>
   </div>
 </main>
 
