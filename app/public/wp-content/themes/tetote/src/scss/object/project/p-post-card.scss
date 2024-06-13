@@ -1,38 +1,75 @@
 @use "../../foundation" as *;
 
-.p-post-card__img {
+.p-post-card{
+  width: 45.2rem;
+  height: 18rem;
+}
+
+.p-post-card__link{
   width: 100%;
-  aspect-ratio: 400 / 300;
+  height: 100%;
+}
+
+.p-post-card__body{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+}
+
+.p-post-card__img{
+  width: 15.6rem;
+  height: 100%;
+  border: none;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .p-post-card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: none;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
-.p-post-card__body {
-  position: relative;
-}
 .p-post-card__info {
+  width: calc(45.2rem - 15.6rem);
+  background-color: #fff;
+  padding: 2rem 2.3rem;
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: prem(8) 0;
+  flex-direction: column;
 }
 
-.p-post-card__category li {
-  padding: prem(5);
-  color: $accent-color-1;
-  border: 1px solid $accent-color-1;
+.p-post-card__category{
+  display: flex;
 }
 
-.p-post-card__new {
-  position: absolute;
-  top:0;
-  left: 0;
-  background-color: $color-white;
-  color: $accent-color-1;
-  padding: prem(5) prem(10);
-  border: 1px solid $accent-color-1;
+.p-post-card__category-img{
+  margin-right: 0.4rem;
+}
+
+.p-post-card__category-name{
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.p-post-card__title{
+  font-size: 1.8rem;
+  font-weight: $bold;
+  line-height: 1.5;
+  text-decoration: underline;
+  flex-grow: 1;
+  margin-top: 2.3rem;
+}
+
+.p-post-card__date{
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 1.3rem;
 }
