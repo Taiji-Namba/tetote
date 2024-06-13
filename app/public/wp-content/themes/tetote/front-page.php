@@ -9,6 +9,8 @@
     <?php get_template_part('parts/project/p-top-staff'); ?>
 
     <?php get_template_part('parts/project/p-top-benefits'); ?>
+
+    <?php get_template_part('parts/project/p-top-post'); ?>
   </div>
 </main>
 
