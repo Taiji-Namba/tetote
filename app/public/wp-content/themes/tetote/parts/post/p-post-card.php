@@ -14,7 +14,7 @@
       <figure class="p-post-card__img">
         <img src="<?php echo $image_url; ?>" alt="<?php echo $thumbAlt; ?>" loading="lazy">
       </figure>
-      <div class="p-post-card__info">
+      <div class="p-post-card__info <?php if (is_archive()) echo 'p-post-card__info--beige'; ?>">
         <?php
         $categories = get_the_category();
         // カテゴリーが複数登録されている場合は1つめを表示するように
