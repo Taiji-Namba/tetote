@@ -31,3 +31,9 @@ get_template_part('parts/functions-lib/func-add-posttype-mv');
 
 // （Staff用）カスタムフィールドの設定
 get_template_part('parts/functions-lib/func-add-posttype-staff');
+
+// ブログ投稿一覧URLの設定
+get_template_part('parts/functions-lib/func-register-post-archive');
+
+// 投稿タイトルが長い際に省略表示できるように
+get_template_part('parts/functions-lib/func-omit-post-title');
