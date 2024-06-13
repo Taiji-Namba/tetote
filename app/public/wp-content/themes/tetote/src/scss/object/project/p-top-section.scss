@@ -14,6 +14,10 @@
   }
 }
 
+.p-top-section__titles--ml0{
+  margin-left: 0;
+}
+
 .p-top-section__background-title{
   font-size: rclamp(80, 136, 375, 1440);
   font-family: $poppins;
@@ -69,5 +73,18 @@
   @include mq(sp) {
     margin-top: 4.3rem;
     margin-left: $top-ml-sp;
+  }
+}
+
+.p-top-section__subtitle--mt73ml0{
+  margin-top: 7.3rem;
+  margin-left: 0;
+
+  @include mq(tab) {
+    margin-top: 5.8rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 4.3rem;
   }
 }

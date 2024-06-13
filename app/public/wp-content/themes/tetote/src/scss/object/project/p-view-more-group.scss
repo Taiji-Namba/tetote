@@ -1,0 +1,16 @@
+@use '../../foundation' as *;
+
+.p-view-more-group{
+  display: flex;
+  align-items: center;
+}
+
+.p-view-more-group__arrow-button{
+  margin-right: 1.3rem;
+}
+
+.p-top-post__view-more{
+  font-family: $viga;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+}
