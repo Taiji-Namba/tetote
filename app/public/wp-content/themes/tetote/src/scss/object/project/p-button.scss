@@ -42,3 +42,12 @@
   right: rclamp(17, 20, 375, 1440);
   width: rclamp(16, 20, 375, 1440);
 }
+
+.p-button__arrow--recruitment{
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+}

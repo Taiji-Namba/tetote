@@ -608,6 +608,15 @@ tbody {
   width: clamp(1.6rem, 1.4591549296rem + 0.3755868545vw, 2rem);
 }
 
+.p-button__arrow--recruitment {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+}
+
 .p-contact__head {
   width: 15.625rem;
 }
@@ -2289,6 +2298,100 @@ tbody {
     right: unset;
     left: 1.7rem;
     bottom: 0;
+  }
+}
+
+.p-top-recruitment {
+  background-color: #faf7f1;
+}
+
+.p-top-recruitment__inner {
+  width: min(1440px, 100%);
+  padding-block: 8.7rem 13.9rem;
+  margin-inline: auto;
+  padding-inline: 1.7rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-top-recruitment__inner {
+    padding-block: 7.7rem 11.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-top-recruitment__inner {
+    padding-block: 6.6rem 8.8rem;
+  }
+}
+
+.p-top-recruitment__list {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+  row-gap: 2.2rem;
+  width: min(95.6rem, 100%);
+  margin-inline: auto;
+  margin-top: 6.4rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-top-recruitment__list {
+    row-gap: 2.05rem;
+    margin-top: 4.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-top-recruitment__list {
+    row-gap: 1.9rem;
+    margin-top: 2.8rem;
+  }
+}
+
+.p-top-recruitment__item {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.p-top-recruitment__item:first-of-type {
+  width: calc(50% - 0.8rem);
+}
+@media screen and (max-width: 767px) {
+  .p-top-recruitment__item:first-of-type {
+    width: 100%;
+  }
+}
+
+.p-top-recruitment__item:nth-of-type(2) {
+  width: calc(50% - 0.8rem);
+}
+@media screen and (max-width: 767px) {
+  .p-top-recruitment__item:nth-of-type(2) {
+    width: 100%;
+  }
+}
+
+.p-top-recruitment__item:last-of-type {
+  width: 100%;
+}
+
+.p-top-recruitment__anchor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 5rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-top-recruitment__anchor {
+    padding-block: 4.1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-top-recruitment__anchor {
+    padding-block: 3.3rem;
   }
 }
 
