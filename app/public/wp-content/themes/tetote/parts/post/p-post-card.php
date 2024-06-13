@@ -27,8 +27,7 @@
         <?php endif; ?>
         <h5 class="p-post-card__title">
           <?php
-          $max_length = 76;
-          omitPostTitle(get_post(), $max_length);
+          the_title();
           ?>
         </h5>
         <div class="p-post-card__date">
