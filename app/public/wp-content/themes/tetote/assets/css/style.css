@@ -1600,6 +1600,10 @@ tbody {
   }
 }
 
+.p-post-card__info--beige {
+  background-color: #faf7f1;
+}
+
 .p-post-card__category {
   display: flex;
 }
