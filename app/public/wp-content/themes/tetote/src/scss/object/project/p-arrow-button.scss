@@ -60,3 +60,25 @@
     height: 4.2rem;
   }
 }
+
+.p-arrow-button--white{
+  position: relative;
+  background-color: #fff;
+  border: 0.1rem solid  $txt-color;
+  border-radius: 50%;
+}
+
+.p-arrow-button--white::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color:$txt-color;
+  mask-image: url(../images/common/arrow-next.svg);
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: unset;
+}
