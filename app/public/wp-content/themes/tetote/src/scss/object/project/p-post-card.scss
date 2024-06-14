@@ -9,6 +9,11 @@
     height: 16.1rem;
   }
 
+  @include mq(lg) {
+    width: 36.4rem;
+    height: 14rem;
+  }
+
   @include mq(sp) {
     width: 34.1rem;
     height: 12.1rem;
@@ -44,6 +49,10 @@
     width: 13.8rem;
   }
 
+  @include mq(lg) {
+    width: 13rem;
+  }
+
   @include mq(sp) {
     width: 12.1rem;
   }
@@ -76,6 +85,11 @@
   @include mq(tab) {
     width: calc(40.1rem - 13.8rem);
     padding: 1.6rem 1.8rem;
+  }
+
+  @include mq(lg) {
+    width: calc(36.4rem - 13rem);
+    padding: 1.3rem 1.6rem;
   }
 
   @include mq(sp) {
