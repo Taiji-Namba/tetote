@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-12 08:38:58+0000\n"
+"PO-Revision-Date: 2024-05-28 04:35:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#: includes/contact-form.php:576
+msgid "Invalid action URL is detected."
+msgstr "不正な action URL を検出しました。"
 
 #: modules/constant-contact/service.php:371
 msgid "This feature is deprecated. You are not recommended to use it."
@@ -78,7 +82,7 @@ msgstr "古い PHP バージョンのサポートは Contact Form 7 の次のメ
 msgid "Contact form not found."
 msgstr "コンタクトフォームが見つかりません。"
 
-#: includes/contact-form-functions.php:263
+#: includes/contact-form-functions.php:263 includes/contact-form.php:575
 msgid "Error:"
 msgstr "エラー:"
 
@@ -117,7 +121,7 @@ msgstr "データの処理方法の詳細はこちらをご覧ください。"
 msgid "This form uses Akismet to reduce spam."
 msgstr "このフォームはスパムを低減するために Akismet を使っています。"
 
-#: includes/contact-form.php:636
+#: includes/contact-form.php:648
 msgid "Contact form"
 msgstr "コンタクトフォーム"
 
@@ -170,7 +174,7 @@ msgid "The request payload format is not supported."
 msgstr "リクエストペイロードがサポートされるフォーマットではありません。"
 
 #. translators: 1: WordPress hook name, 2: version number
-#: includes/functions.php:576
+#: includes/functions.php:577
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s with no alternative available."
 msgstr "フック %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になりました。利用できる代替フックはありません。"
 
@@ -192,7 +196,7 @@ msgstr "入力してください。"
 
 #. translators: 1: PHP function name, 2: version number, 3: alternative
 #. function name
-#: includes/functions.php:527
+#: includes/functions.php:528
 msgid "Function %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "関数 %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
@@ -202,7 +206,7 @@ msgstr "スパム対策"
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: Contact Form 7 version number.
-#: includes/functions.php:611
+#: includes/functions.php:612
 msgid "Function %1$s was called incorrectly. %2$s %3$s"
 msgstr "関数 %1$s が不正に呼び出されました。%2$s %3$s"
 
@@ -468,7 +472,7 @@ msgid "Disallowed words are used."
 msgstr "禁止用語が使用された。"
 
 #. translators: %s: Contact Form 7 version number.
-#: includes/functions.php:603
+#: includes/functions.php:604
 msgid "(This message was added in Contact Form 7 version %s.)"
 msgstr "(このメッセージは Contact Form 7 バージョン %s で追加されました。)"
 
@@ -561,7 +565,7 @@ msgid "Connection established."
 msgstr "接続を確立しました。"
 
 #. translators: 1: response code, 2: message, 3: body, 4: URL
-#: includes/functions.php:650
+#: includes/functions.php:651
 msgid "HTTP Response: %1$s %2$s %3$s from %4$s"
 msgstr "HTTP レスポンス: %1$s %2$s %3$s from %4$s"
 
@@ -753,7 +757,7 @@ msgstr "もし Contact Form 7 を使って便利だと思われたなら、ぜ�
 msgid "It is hard to continue development and support for this plugin without contributions from users like you."
 msgstr "このプラグインの開発とサポートには多大な労力が費やされており、ユーザーのみなさんからの支援なしには継続不可能です。"
 
-#: includes/contact-form.php:543 includes/contact-form.php:1053
+#: includes/contact-form.php:543 includes/contact-form.php:1065
 msgid "This contact form is available only for logged in users."
 msgstr "このコンタクトフォームはログインしたユーザーにのみ利用可能です。"
 
@@ -855,7 +859,7 @@ msgstr "1件の設定エラーを検出しました"
 
 #. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
 #. name
-#: includes/functions.php:565
+#: includes/functions.php:566
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "フック %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
