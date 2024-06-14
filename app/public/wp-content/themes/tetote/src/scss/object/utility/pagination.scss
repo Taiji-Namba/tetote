@@ -11,43 +11,46 @@
   justify-content: center;
 }
 
-.nav-links ul li a,
-.nav-links ul li span{
-  color: $accent-color-1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: prem(16);
-  @include mq('md') {
-    font-size: prem(24);
-  }
-}
-
 .nav-links ul li span.current{
-  color: $txt-color;
+  color: #fff;
+  background-color: $txt-color;
 }
 
 .nav-links ul li{
   position: relative;
-  margin: 0 prem(5);
-  @include mq('md') {
-    margin: 0 prem(10);
-  }
+  margin-inline: 1.6rem;
 }
 
+// ページネーションのページ番号
 .nav-links ul li a,
 .nav-links ul li span {
-  display: block;
-  width: 100%;
-  padding: prem(5);
-  @include mq('md') {
-    padding: prem(10);
+  font-size: 1.4rem;
+  width: 5.8rem;
+  height: 5.8rem;
+  border: 0.1rem solid $txt-color;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+
+  @include mq(tab) {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @include mq(sp) {
+    width: 4.2rem;
+    height: 4.2rem;
   }
 }
 
-.nav-links ul li .nav-links ul .dots{
+.nav-links ul li .dots{
   padding-right: 0;
   padding-left: 0;
+  border:none;
+  width: auto;
 }
 
 
@@ -69,3 +72,9 @@
 // .nav-links ul li a.prev {
 //   transform: translate(-50%, -50%) rotate(-135deg);
 // }
+
+a.page-numbers{
+}
+
+.page-numbers li span {
+}
