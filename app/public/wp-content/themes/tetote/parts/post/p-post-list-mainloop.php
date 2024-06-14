@@ -3,9 +3,9 @@ $post_type = get_query_var('post_type') ? get_query_var('post_type') : 'post';
 $post_type_data = get_post_type_object($post_type);
 $post_type_label = $post_type_data->labels->name;
 ?>
-<main class="archive">
-  <section class="p-post-list archive__items">
-    <div class="p-post-list__wrap">
+<main class="p-archive">
+  <section class="p-post-list p-archive__inner">
+    <div class="p-post-list__wrapper">
       <div class="p-post-list__inner l-inner">
         <ul class="p-post-list__cards">
           <?php if (have_posts()) : ?>
