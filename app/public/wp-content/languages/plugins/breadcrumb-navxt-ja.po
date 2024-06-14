@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Breadcrumb NavXT - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-30 03:52:00+0000\n"
+"PO-Revision-Date: 2024-05-21 12:52:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.0-beta.2\n"
+"X-Generator: GlotPress/4.0.1\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Breadcrumb NavXT - Stable (latest release)\n"
 
@@ -30,6 +30,14 @@ msgstr "より詳細な技術情報の文書を確認する"
 #: class.bcn_admin.php:156
 msgid "Online Documentation"
 msgstr "オンラインのドキュメンテーション"
+
+#: class.bcn_admin.php:155
+msgid "There are several guides, tutorials, and how tos available on the author's website."
+msgstr "作者のサイトには、いくつかのガイド、チュートリアル、ハウツーがあります。"
+
+#: class.bcn_admin.php:154
+msgid "Tutorials and How Tos"
+msgstr "チュートリアルとハウツー"
 
 #: includes/adminKit/class-mtekk_adminkit.php:1114
 msgid "Import settings"
@@ -64,6 +72,14 @@ msgstr "%title%の検索結果ページへ移動する"
 #: class.bcn_breadcrumb.php:88
 msgid "Go to %title%."
 msgstr "%title%へ移動する"
+
+#: class.bcn_admin.php:616
+msgid "Use the parent of the %s as the primary hierarchy, falling back to the hierarchy selected below when the parent hierarchy is exhausted."
+msgstr "%s の親階層を主階層として使用し、親階層を使い果たした場合は、下で選択されている階層にフォールバックします。"
+
+#: breadcrumb-navxt.php:423
+msgid "%s Hierarchy Use Parent First"
+msgstr "%s 階層は親を最初に使用"
 
 #: includes/adminKit/class-mtekk_adminkit.php:712
 msgid "Go to the %s support forum."

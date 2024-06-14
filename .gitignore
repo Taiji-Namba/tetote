@@ -4,5 +4,10 @@
 **/.ssh
 /logs/
 /app/sql
+/app/public/wp-content/**
+/app/public/wp-admin/**
+!/app/public/wp-content/themes/**
+!/app/public/wp-content/uploads/**
+!/app/public/wp-content/plugins/**
+!/app/public/wp-content/languages/**
 /conf/
-/app/public/wp-content/mu-plugins/
