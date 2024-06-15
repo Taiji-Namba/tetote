@@ -1345,6 +1345,20 @@ tbody {
   }
 }
 
+.p-main__inner {
+  padding-bottom: 13.9rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-main__inner {
+    padding-block: 11.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-main__inner {
+    padding-block: 8.8rem;
+  }
+}
+
 .p-news__heading {
   color: #fff;
   background-color: #222222;
