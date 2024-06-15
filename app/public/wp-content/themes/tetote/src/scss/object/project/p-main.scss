@@ -1,0 +1,13 @@
+@use '../../foundation' as *;
+
+.p-main__inner{
+  padding-bottom: 13.9rem;
+
+  @include mq(tab) {
+    padding-block: 11.2rem;
+  }
+
+  @include mq(sp) {
+    padding-block: 8.8rem;
+  }
+}
