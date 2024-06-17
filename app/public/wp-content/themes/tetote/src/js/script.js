@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             767: {
               fixedWidth:'24.6rem',
-              fixedHeight:'31.1rem',
+              fixedHeight:'38.8rem',
               gap: '2.3rem',
             }
           },
