@@ -8,7 +8,7 @@
     margin-top: 11rem;
   }
 
-@include mq(sp) {
+  @include mq(sp) {
     margin-top: 9rem;
   }
 }

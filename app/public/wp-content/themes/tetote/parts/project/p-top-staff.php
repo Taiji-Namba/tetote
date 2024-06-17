@@ -14,7 +14,7 @@ $post_type_label = $post_type_data->labels->name;
     <?php
     $args = array(
       'post_type' => $post_type,
-      'posts_per_page' => 10, // 取得する投稿数を設定（−1は無制限）
+      'posts_per_page' => -1, // 取得する投稿数を設定（−1は無制限）
       'order' => 'DESC', //並び順を指定
       'orderby' => 'date',  // 並び変える項目を設定
     );
