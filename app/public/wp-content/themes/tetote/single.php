@@ -8,13 +8,7 @@ $post_type_label = $post_type_data->labels->name;
   <section class="p-post-article">
     <div class="p-post-article__inner l-inner">
       <h1 class="p-post-article__title"><?php echo $post_type_label; ?></h1>
-      <!-- パンくずリスト -->
-      <?php if (function_exists('bcn_display')) : ?>
-        <div class="p-post-article__breadcrumb c-breadcrumb" typeof="BreadcrumbList" vocab="http://schema.org/">
-          <?php bcn_display(); ?>
-        </div>
-      <?php endif; ?>
-
+      <?php get_template_part('parts/common/p-breadcrumb'); ?>
 
       <div class="p-post-article__wrap">
         <?php if (have_posts()) : ?>
@@ -38,7 +32,9 @@ $post_type_label = $post_type_data->labels->name;
                         <?php foreach ($categories as $category) : ?>
                           <li><?php echo esc_html($category->name); ?></li>
                           <!-- カテゴリのリンクが必要な場合 -->
-                          <!-- <li><a href="<?php //echo esc_url(get_category_link($category->term_id)); ?>"><?php //echo esc_html($category->name); ?></a></li> -->
+                          <!-- <li><a href="<?php //echo esc_url(get_category_link($category->term_id)); 
+                                            ?>"><?php //echo esc_html($category->name); 
+                                                ?></a></li> -->
                         <?php endforeach; ?>
                       </ul>
                     <?php endif; ?>
