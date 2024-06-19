@@ -8,4 +8,6 @@ Template Name: BENEFITS
 
 <?php get_template_part('parts/common/p-eyecatch'); ?>
 
+<?php get_template_part('parts/common/p-breadcrumb'); ?>
+
 <?php get_footer(); ?>
