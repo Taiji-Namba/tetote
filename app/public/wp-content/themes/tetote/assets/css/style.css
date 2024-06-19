@@ -870,6 +870,151 @@ tbody {
   position: absolute;
 }
 
+.p-eyecatch__inner {
+  margin-inline: auto;
+  padding-block: 7.5rem 9.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.p-eyecatch__inner--about-us {
+  background-image: url(../images/parts/eyecatch/about-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--about-us {
+    background-image: url(../images/parts/eyecatch/about-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--about-us {
+    background-image: url(../images/parts/eyecatch/about-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--staff {
+  background-image: url(../images/parts/eyecatch/staff-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--staff {
+    background-image: url(../images/parts/eyecatch/staff-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--staff {
+    background-image: url(../images/parts/eyecatch/staff-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--blog {
+  background-image: url(../images/parts/eyecatch/blog-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--blog {
+    background-image: url(../images/parts/eyecatch/blog-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--blog {
+    background-image: url(../images/parts/eyecatch/blog-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--benefits {
+  background-image: url(../images/parts/eyecatch/benefits-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--benefits {
+    background-image: url(../images/parts/eyecatch/benefits-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--benefits {
+    background-image: url(../images/parts/eyecatch/benefits-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--career {
+  background-image: url(../images/parts/eyecatch/career-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--career {
+    background-image: url(../images/parts/eyecatch/career-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--career {
+    background-image: url(../images/parts/eyecatch/career-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--details {
+  background-image: url(../images/parts/eyecatch/details-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--details {
+    background-image: url(../images/parts/eyecatch/details-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--details {
+    background-image: url(../images/parts/eyecatch/details-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--faq {
+  background-image: url(../images/parts/eyecatch/faq-fv.jpg);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-eyecatch__inner--faq {
+    background-image: url(../images/parts/eyecatch/faq-fv@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-eyecatch__inner--faq {
+    background-image: url(../images/parts/eyecatch/faq-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__headings {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+  width: min(102.4rem, 100%);
+  padding-left: 2.4rem;
+  margin-inline: auto;
+}
+@media screen and (max-width: 767px) {
+  .p-eyecatch__headings {
+    padding-left: 1.6rem;
+  }
+}
+
+.p-eyecatch__title {
+  font-size: clamp(4.8rem, 4.2366197183rem + 1.5023474178vw, 6.4rem);
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  padding: 0.3rem 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.p-eyecatch__subtitle {
+  font-size: clamp(2rem, 1.8591549296rem + 0.3755868545vw, 2.4rem);
+  font-weight: 700;
+  padding: 0.3rem 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.p-eyecatch__text {
+  font-size: clamp(1.4rem, 1.3295774648rem + 0.1877934272vw, 1.6rem);
+  font-weight: 700;
+  color: #988c2c;
+  padding: 0.7rem 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
 .p-footer__wrapper {
   width: 100%;
   padding-bottom: 6.4rem;
