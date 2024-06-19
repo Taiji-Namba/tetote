@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php get_template_part('parts/common/p-eyecatch'); ?>
+
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 
 <?php get_template_part('parts/post/p-post-list-mainloop'); ?>
