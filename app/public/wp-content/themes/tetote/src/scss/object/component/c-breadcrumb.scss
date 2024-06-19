@@ -1,8 +1,13 @@
 @use "../../foundation" as *;
 
 .c-breadcrumb {
-  padding: prem(16) 0;
+  width: min(100%, $layout-width-inner);
+  margin-inline: auto;
 }
-.c-breadcrumb a {
-  color: $accent-color-1;
+
+.c-breadcrumb span{
+  // display: inline-block;
+  // height: 100%;
+  // margin-block: auto;
+  // vertical-align: baseline;
 }
