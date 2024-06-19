@@ -137,11 +137,6 @@ tbody {
   margin-top: 1rem;
 }
 
-.c-breadcrumb {
-  width: min(100%, 1440px);
-  margin-inline: auto;
-}
-
 .c-burger-button {
   cursor: pointer;
   z-index: 1000;
@@ -370,9 +365,19 @@ tbody {
 }
 
 .p-breadcrumb {
-  padding: 2rem 2.4rem;
   background-color: #F0F0F0;
   font-size: 1.4rem;
+}
+
+.p-breadcrumb__inner {
+  width: min(102.4rem, 100%);
+  margin-inline: auto;
+  padding: 2rem 2.4rem;
+}
+@media screen and (max-width: 767px) {
+  .p-breadcrumb__inner {
+    padding-left: 1.6rem;
+  }
 }
 
 .p-burger-button {
