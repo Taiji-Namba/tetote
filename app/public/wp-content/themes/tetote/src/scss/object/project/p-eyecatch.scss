@@ -1,0 +1,132 @@
+@use '../../foundation' as *;
+
+.p-eyecatch {
+}
+
+.p-eyecatch__inner {
+  margin-inline: auto;
+  padding-block: 7.5rem 9.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.p-eyecatch__inner--about-us{
+  background-image: url(../images/parts/eyecatch/about-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/about-fv@2x.jpg);
+  }
+
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/about-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--staff{
+  background-image: url(../images/parts/eyecatch/staff-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/staff-fv@2x.jpg);
+  }
+
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/staff-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--blog{
+  background-image: url(../images/parts/eyecatch/blog-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/blog-fv@2x.jpg);
+  }
+
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/blog-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--benefits{
+  background-image: url(../images/parts/eyecatch/benefits-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/benefits-fv@2x.jpg);
+  }
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/benefits-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--career{
+  background-image: url(../images/parts/eyecatch/career-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/career-fv@2x.jpg);
+  }
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/career-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__inner--details{
+  background-image: url(../images/parts/eyecatch/details-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/details-fv@2x.jpg);
+  }
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/details-fv@2x.jpg);
+  }
+}
+.p-eyecatch__inner--faq{
+  background-image: url(../images/parts/eyecatch/faq-fv.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/eyecatch/faq-fv@2x.jpg);
+  }
+  @include mq(wide) {
+    background-image: url(../images/parts/eyecatch/faq-fv@2x.jpg);
+  }
+}
+
+.p-eyecatch__headings{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+  width: min(102.4rem, 100%);
+  padding-left: 2.4rem;
+  margin-inline: auto;
+
+  @include mq(sp) {
+  padding-left: 1.6rem;
+}
+}
+
+.p-eyecatch__heading{
+}
+
+.p-eyecatch__title {
+  font-size: rclamp(48, 64, 375, 1440);
+  font-family: $viga;
+  padding: 0.3rem 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.p-eyecatch__subtitle {
+  font-size: rclamp(20, 24, 375, 1440);
+  font-weight: $bold;
+  padding: 0.3rem 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.p-eyecatch__text {
+  font-size: rclamp(14, 16, 375, 1440);
+  font-weight: $bold;
+  color: $accent-color-1;
+  padding: 0.7rem 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
