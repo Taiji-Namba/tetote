@@ -37,3 +37,12 @@ get_template_part('parts/functions-lib/func-register-post-archive');
 
 // 投稿タイトルが長い際に省略表示できるように
 get_template_part('parts/functions-lib/func-omit-post-title');
+
+// SEO Simple Packページタイトル上書き
+get_template_part('parts/functions-lib/func-overwrite-ssp-title');
+
+// デフォルトの投稿のパンくずリストをarchive.phpやsingle.phpで表示
+get_template_part('parts/functions-lib/func-add-breadcrumb-about-post');
+
+// 投稿タイプ「staff」アーカイブページのパンくずリスト表示名の設定
+get_template_part('parts/functions-lib/func-change-breadcrumb-staff');
