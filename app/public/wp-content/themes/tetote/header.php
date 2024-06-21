@@ -74,7 +74,7 @@
                 </a>
               </li>
               <li class="p-burger-menu__text-item">
-                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/staff/'); ?>">
+                <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/blog/'); ?>">
                   <p class="p-burger-menu__title">BLOG</p>
                   <p class="p-burger-menu__sub-title">採用ブログ</p>
                 </a>
