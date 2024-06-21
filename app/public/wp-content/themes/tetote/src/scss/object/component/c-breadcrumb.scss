@@ -1,1 +1,12 @@
 @use "../../foundation" as *;
+
+// パンくずの項目が長い場合に三点リーダーで省略
+.c-breadcrumb span[property="item"], .c-breadcrumb span[property="name"] {
+  display: inline-block;
+  padding: 0;
+  max-width: 28rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
