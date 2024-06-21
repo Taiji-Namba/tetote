@@ -1,0 +1,67 @@
+@use '../../foundation' as *;
+
+.p-staff-fv {
+  background-color: $bg-sub-color;
+}
+
+.p-staff-fv__inner {
+  padding-block: 4.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-staff-fv_info {
+
+}
+
+.p-staff-fv__texts {
+
+}
+
+.p-staff-fv__message-1 {
+  font-size: 3.6rem;
+  font-weight: $bold;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+}
+
+.p-staff-fv__message-2 {
+  font-size: 2.4rem;
+  font-weight: $bold;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+  margin-top: 1.8rem;
+}
+
+.p-staff-fv__occupation {
+  font-size: 1.4rem;
+  color: $accent-color-1;
+  font-weight: $bold;
+  margin-top: 3rem;
+}
+
+.p-staff-fv__name {
+  font-size: 2.4rem;
+  font-weight: $bold;
+  display: inline-block;
+  margin-top: 1.2rem;
+}
+
+.p-staff-fv__year-of-entry {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.p-staff-fv__biography{
+  max-width: 60.5rem;
+  line-height: 1.8;
+  margin-top: 1.3rem;
+}
+
+.p-staff-fv__thumbnail {
+  max-width: 36.8rem;
+  aspect-ratio: 286/ 368;
+}
+
