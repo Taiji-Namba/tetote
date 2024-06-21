@@ -46,3 +46,6 @@ get_template_part('parts/functions-lib/func-add-breadcrumb-about-post');
 
 // 投稿タイプ「staff」アーカイブページのパンくずリスト表示名の設定
 get_template_part('parts/functions-lib/func-change-breadcrumb-staff');
+
+// ページ分割投稿におけるページネーションに、number表記とnext表記を両立
+get_template_part('parts/functions-lib/func-add-new-mode-to-wp-link-pages');

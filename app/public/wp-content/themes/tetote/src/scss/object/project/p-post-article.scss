@@ -1,72 +1,85 @@
 @use "../../foundation" as *;
 
-// .p-post-article__breadcrumb{
-//   padding-left: $padding-sp;
-//   padding-right: $padding-sp;
-//   @include mq('md'){
-//     padding-right: $padding-pc;
-//     padding-left: $padding-pc;
-//   }
-// }
-.p-post-article__inner.l-inner {
-  margin-top: prem(32);
+.p-post-article{
+  background-color: $bg-sub-color;
+}
+
+.p-post-article__wrapper{
+  padding-block: 3.4rem 13.9rem;
+}
+
+.p-post-article__inner {
+  padding: 4.1rem 4rem 2.3rem;
+  width: min(80rem, 100%);
+  margin-inline: auto;
+  background-color: #fff;
+  border-radius: 1rem;
+
+  @include mq(tab) {
+    padding-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-inline: 1.6rem;
+  }
 }
 
 .p-post-article__title {
-  font-size: prem(48);
-  color: $accent-color-1;
+  font-size: rclamp(28, 32, 375, 1440);
+  font-weight: $bold;
+  line-height: 1.5;
+  margin-top: 2.5rem;
+  word-wrap: break-word;
 }
 
 .p-post-article__info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 1.9rem;
 }
 
-.p-post-article__category {
+.p-post-article__categories {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.p-post-article__category{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: prem(5);
 }
 
-.p-post-article__category li{
-  padding: prem(5);
-  color: $accent-color-1;
-  border: 1px solid $accent-color-1;
+.p-post-article__category-img{
 }
 
-
-
-.p-post-article__box {
-  margin: 6.4rem auto 0;
+.p-post-article__category-name{
+  margin-left: 0.3rem;
+  font-size: 1.4rem;
 }
 
 .p-post-article__content{
-  padding: prem(20) prem(23) 0;
+  margin-top: 4.5rem;
   background-color: $color-white;
   width: 100%;
 }
 
-.p-post-article__content-wrap {
-  padding-bottom: prem(30);
-  width: 100%;
-  margin: auto;
-}
-
-.p-post-article__title {
-
-}
-
 .p-post-article__contents {
   margin-top: prem(30);
+  font-size:$base-font-size;
+  line-height: 1.8;
 }
 
-.p-post-article__main-img {
-  aspect-ratio: 7 / 4;
+.p-post-article__thumbnail {
+  aspect-ratio: 720 / 411;
+  margin-top: 4.1rem;
 }
 
-.p-post-article__main-img img{
+.p-post-article__thumbnail img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -81,46 +94,60 @@
 .p-post-article__category{
   letter-spacing: 0;
 }
-.p-post-article__data {
-  margin-left: auto;
-  font-size: prem(21);
-  text-align: right;
-  letter-spacing: 0.05em;
+
+.p-post-article__date {
+  font-size: 1.4rem;
+}
+
+.p-post-article__content h1{
+  font-size: rclamp(28, 32, 375, 1440);
+  font-weight: $bold;
+  margin-block: 2.3rem 5rem;
 }
 
 .p-post-article__content h2 {
-  margin: prem(30) 0 prem(15);
-  padding: prem(5) prem(20);
-  color: $color-white;
-  background-color: $accent-color-1;
-  font-size: prem(28);
+  font-size: rclamp(20, 24, 375, 1440);
+  font-weight: $bold;
+  margin-block: 2.3rem 5rem;
 }
 
 .p-post-article__contents h3 {
-  margin: prem(30) 0 prem(15);
-  padding-left: prem(10);
-  color: $accent-color-1;
-  font-size: prem(28);
-  border-left: 0.5em solid $accent-color-1;
+  margin: 1rem 0;
+  font-size: rclamp(18, 22, 375, 1440);
+  font-weight: $bold;
+  border-left: 0.2em solid $txt-color;
+  padding-left: 0.5em;
+  margin-block: 2rem 4.5rem;
 }
 
 .p-post-article__contents h4 {
-  margin: prem(10) 0;
-  font-size: prem(24);
+  margin: 1rem 0;
+  font-size: rclamp(16, 18, 375, 1440);
+  font-weight: $bold;
+  margin-block: 1.8rem 4rem;
 }
 
 .p-post-article__contents h5 {
-  margin: prem(10) 0;
-  padding: prem(2) prem(12.5);
+  margin: 1rem 0;
+  padding: 0.25em 1rem;
   display: inline-block;
-  color: $accent-color-1;
-  font-size: prem(20);
-  border-top: 2px solid $accent-color-1;
-  border-bottom: 2px solid $accent-color-1;
+  color: $txt-color;
+  font-size: 1.6rem;
+  border-top: 2px solid $txt-color;
+  border-bottom: 2px solid $txt-color;
+}
+
+.p-post-article__contents ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.p-post-article__contents ol li {
+  list-style: number;
+  list-style-position: inside;
 }
 
 .p-post-article__contents p {
-  font-size: prem(20);
 }
 
 .p-post-article__contents a {
@@ -128,20 +155,126 @@
   text-decoration: underline;
 }
 
+.p-post-article__contents .wp-block-image{
+  max-width: 80%;
+  margin-inline: auto;
+}
+
 .p-post-article__contents img {
-  margin: prem(10) 0;
+  margin: 1rem 0;
+}
+
+.p-post-article__contents img.alignleft{
+  margin-inline:0 auto;
+  display: block;
+}
+
+.p-post-article__contents img.alignright{
+  margin-inline:auto 0;
+  display: block;
 }
 
 .p-post-article__contents figure {
-  margin: prem(10) 0;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.p-post-article__contents figure.aligncenter{
+  margin-inline: auto;
+}
+
+.p-post-article__contents figure.alignleft{
+  margin-inline: 0 auto;
+}
+
+.p-post-article__contents figure.alignright{
+  margin-inline: auto 0;
+}
+
+.p-post-article__contents .wp-caption {
+  max-width: 80%;
 }
 
 .p-post-article__contents figcaption{
-  margin: prem(10) 0;
-  font-size: prem(12);
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.p-post-article__contents blockquote{
+  background-color: $bg-sub-color;
+  padding: 1em;
+  font-style: italic;
+  margin-block: 1rem;
+}
+
+.p-post-article__contents blockquote::before{
+  display: block;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/common/quotation-start.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 0.5em;
+}
+
+.p-post-article__contents cite::before, .p-post-article__contents cite::after{
+  content: "ー";
+  font-style: italic;
+}
+
+.p-post-article__contents thead{
+  border-top: 0.2rem solid $txt-color;
+}
+
+.p-post-article__contents tbody{
+  border-top: 0.2rem solid $txt-color;
+  border-bottom: 0.2rem solid $txt-color;
+}
+
+.p-post-article__contents tfoot{
+  border-bottom: 0.2rem solid $txt-color;
+}
+
+.p-post-article__contents th, td{
+  padding: 0.5em;
+  min-width: calc(4.5em + 0.5rem * 2);
+}
+
+.p-post-article__contents .wp-block-table thead{
+  border-top: 0.2rem solid $txt-color;
+  border-bottom: none;
 }
 
 
+.p-post-article__contents .wp-block-table tfoot{
+  border-top: none;
+  border-bottom: 0.2rem solid $txt-color;
+}
+
+.p-post-article__contents .wp-block-table th, .p-post-article__contents .wp-block-table td{
+  border: none;
+}
+
+.p-post-article__contents code{
+  background-color: $bg-sub-color;
+  padding: 2rem;
+  margin-block: 1rem;
+  display: block;
+}
+
+.p-post-article__contents input, select, textarea {
+  border: 0.1rem solid $txt-color;
+  border-radius: 0.4rem;
+  padding-inline: 1rem;
+}
+
+.p-post-article__contents input[type="submit"] {
+  background-color: $accent-color-2;
+  color: #fff;
+  border: 0.1rem solid $accent-color-2
+}
 
 // .p-post-article__contents .wp-block-buttons{
 //   margin-top: prem(30);

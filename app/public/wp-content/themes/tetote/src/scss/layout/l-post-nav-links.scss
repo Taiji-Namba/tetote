@@ -1,0 +1,13 @@
+@use '../foundation' as *;
+
+.l-post-nav-links{
+  margin-top: 6rem;
+
+  @include mq(tab) {
+    margin-top: 5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 4.4rem;
+  }
+}

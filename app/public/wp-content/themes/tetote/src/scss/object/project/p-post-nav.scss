@@ -1,0 +1,90 @@
+@use '../../foundation' as *;
+@use 'sass:math';
+
+.p-post-nav{
+  background-color: #F0F0F0;
+}
+
+.p-post-nav__inner{
+  padding: calc(3.1rem - 0.35rem) 5rem;
+  margin-inline: auto;
+  max-width: 102.4rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(lg) {
+    justify-content: center;
+    row-gap: 6rem;
+    padding-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-inline: 1.6rem;
+  }
+}
+
+.p-post-nav__inner::before{
+  position: absolute;
+  content: "";
+  height: calc(math.div(56 , 96) * 100%);
+  width: 0.1rem;
+  background-color: $txt-color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.p-post-nav__previous, .p-post-nav__next {
+  display: flex;
+  max-width: 50%;
+
+  @include mq(lg) {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+
+.p-post-nav__previous a, .p-post-nav__next a{
+  display: flex;
+  align-items: center;
+  column-gap: 2.1rem;
+}
+
+.p-post-nav__img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.p-post-nav__info{
+  line-height: 1.2;
+  max-width: calc(100% - 2.4rem - 2.1rem - 1.6rem);
+}
+
+.p-post-nav__info--mr{
+  margin-right: 1.6rem;
+}
+
+.p-post-nav__info--ml{
+  margin-left: 1.6rem;
+}
+
+.p-post-nav__title{
+  text-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.p-post-nav__date{
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+}
