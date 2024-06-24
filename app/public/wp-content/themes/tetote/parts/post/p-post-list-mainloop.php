@@ -6,7 +6,7 @@ $post_type_label = $post_type_data->labels->name;
 <main class="p-archive p-main">
   <section class="p-post-list p-archive__inner p-main__inner">
     <div class="p-post-list__wrapper">
-      <div class="p-post-list__inner l-inner">
+      <div class="p-post-list__inner">
         <ul class="p-post-list__cards">
           <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
