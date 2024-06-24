@@ -335,6 +335,7 @@ jQuery(function ($) {
     setFooterListWidth();
     setFooterHeight();
     setBurgerMenuTextItemWrapper();
+    addLineNextToH2();
   });
 
   // ウィンドウリサイズ時の処理
@@ -343,6 +344,7 @@ jQuery(function ($) {
     setFooterListWidth();
     setFooterHeight();
     setBurgerMenuTextItemWrapper();
+    addLineNextToH2();
   });
 
   // トップページと下層ページでヘッダー要素の色を分ける
@@ -638,4 +640,13 @@ jQuery(function ($) {
   $(".p-top-benefits__content").mouseleave(function (){
     removeBenefitsHover(this);
   });
+
+  // スタッフ詳細ページのh2の横の黒線
+  function addLineNextToH2() {
+  var $h2 = $(".p-staff-article__contents h2");
+  if ($h2.length === 0) return;
+    var offsetLeft = $h2.offset().left;
+    var widthOfLine = offsetLeft - 16
+    $h2.css('--line-width', widthOfLine + "px");
+  }
 });
