@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="c-main p-main">
-  <div class="p-main__inner">
+  <div class="p-main__inner p-staff">
     <article class="<?php post_class('p-article p-staff-article'); ?>">
       <?php while (have_posts()) : the_post(); ?>
 
@@ -31,7 +31,8 @@
             'post_type' => $post_type,
             'posts_per_page' => 3, // 取得する投稿数を設定（−1は無制限）
             'order' => 'rand', //並び順を指定
-            'orderby' => 'date',  // 並び変える項目を設定
+            'orderby' => 'rand',  // 並び変える基準を指定
+            'post__not_in' => array($post->ID), //指定の投稿データを除外する(←この場合詳細ページで取得されている投稿)
           );
 
           get_template_part('parts/project/p-staff-list', null, $args);
