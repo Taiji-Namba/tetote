@@ -8,7 +8,7 @@ $post_type_label = $post_type_data->labels->name;
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 
 <main>
-  <section <?php post_class('p-post-article'); ?>>
+  <section <?php post_class('p-post-article p-article'); ?>>
     <div class="p-post-article__wrapper">
       <div class="p-post-article__inner">
         <?php if (have_posts()) : ?>
@@ -40,7 +40,7 @@ $post_type_label = $post_type_data->labels->name;
             <?php endif; ?>
             <div class="p-post-article__content">
               <div class="p-post-article__content-inner">
-                <div class="p-post-article__contents">
+                <div class="p-article__contents p-post-article__contents">
                   <?php the_content(); ?>
                   <?php  // ↓複数ページ投稿のページネーション↓
                   $args = array(
