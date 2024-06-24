@@ -6,7 +6,7 @@
 
 
 <main class="c-main p-main">
-  <div class="p-main__inner p-archive__inner">
+  <div class="p-main__inner p-archive__inner p-staff">
     <?php
     $args = array(
       'post_type' => $post_type,
