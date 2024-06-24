@@ -1,0 +1,183 @@
+@use '../../foundation' as *;
+
+.p-article__contents {
+  font-size:$base-font-size;
+  line-height: 1.8;
+}
+
+.p-article__contents h1{
+  font-size: rclamp(28, 32, 375, 1440);
+  font-weight: $bold;
+  margin-block: 2.3rem 5rem;
+}
+
+.p-article__contents h2 {
+  font-size: rclamp(20, 24, 375, 1440);
+  font-weight: $bold;
+  margin-block: 2.3rem 5rem;
+}
+
+.p-article__contents h3 {
+  margin: 1rem 0;
+  font-size: rclamp(18, 22, 375, 1440);
+  font-weight: $bold;
+  border-left: 0.2em solid $txt-color;
+  padding-left: 0.5em;
+  margin-block: 2rem 4.5rem;
+}
+
+.p-article__contents h4 {
+  margin: 1rem 0;
+  font-size: rclamp(16, 18, 375, 1440);
+  font-weight: $bold;
+  margin-block: 1.8rem 4rem;
+}
+
+.p-article__contents h5 {
+  margin: 1rem 0;
+  padding: 0.25em 1rem;
+  display: inline-block;
+  color: $txt-color;
+  font-size: 1.6rem;
+  border-top: 2px solid $txt-color;
+  border-bottom: 2px solid $txt-color;
+}
+
+.p-article__contents ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.p-article__contents ol li {
+  list-style: number;
+  list-style-position: inside;
+}
+
+.p-article__contents p {
+}
+
+.p-article__contents a {
+  color: $accent-color-1;
+  text-decoration: underline;
+}
+
+.p-article__contents .wp-block-image{
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+.p-article__contents img {
+  margin: 1rem 0;
+}
+
+.p-article__contents img.alignleft{
+  margin-inline:0 auto;
+  display: block;
+}
+
+.p-article__contents img.alignright{
+  margin-inline:auto 0;
+  display: block;
+}
+
+.p-article__contents figure {
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.p-article__contents figure.aligncenter{
+  margin-inline: auto;
+}
+
+.p-article__contents figure.alignleft{
+  margin-inline: 0 auto;
+}
+
+.p-article__contents figure.alignright{
+  margin-inline: auto 0;
+}
+
+.p-article__contents .wp-caption {
+  max-width: 80%;
+}
+
+.p-article__contents figcaption{
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.p-article__contents blockquote{
+  background-color: $bg-sub-color;
+  padding: 1em;
+  font-style: italic;
+  margin-block: 1rem;
+}
+
+.p-article__contents blockquote::before{
+  display: block;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/common/quotation-start.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 0.5em;
+}
+
+.p-article__contents cite::before, .p-article__contents cite::after{
+  content: "ー";
+  font-style: italic;
+}
+
+.p-article__contents thead{
+  border-top: 0.2rem solid $txt-color;
+}
+
+.p-article__contents tbody{
+  border-top: 0.2rem solid $txt-color;
+  border-bottom: 0.2rem solid $txt-color;
+}
+
+.p-article__contents tfoot{
+  border-bottom: 0.2rem solid $txt-color;
+}
+
+.p-article__contents th, td{
+  padding: 0.5em;
+  min-width: calc(4.5em + 0.5rem * 2);
+}
+
+.p-article__contents .wp-block-table thead{
+  border-top: 0.2rem solid $txt-color;
+  border-bottom: none;
+}
+
+
+.p-article__contents .wp-block-table tfoot{
+  border-top: none;
+  border-bottom: 0.2rem solid $txt-color;
+}
+
+.p-article__contents .wp-block-table th, .p-article__contents .wp-block-table td{
+  border: none;
+}
+
+.p-article__contents code{
+  background-color: $bg-sub-color;
+  padding: 2rem;
+  margin-block: 1rem;
+  display: block;
+}
+
+.p-article__contents input, select, textarea {
+  border: 0.1rem solid $txt-color;
+  border-radius: 0.4rem;
+  padding-inline: 1rem;
+}
+
+.p-article__contents input[type="submit"] {
+  background-color: $accent-color-2;
+  color: #fff;
+  border: 0.1rem solid $accent-color-2
+}
