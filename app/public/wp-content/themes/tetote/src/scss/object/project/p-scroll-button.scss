@@ -1,0 +1,57 @@
+@use '../../foundation' as *;
+
+.p-scroll-button__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 5rem;
+
+  @include mq(lg) {
+  }
+
+}
+
+.p-scroll-button__item {
+  @include mq(lg) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.p-scroll-button__anchor {
+  font-size: 2rem;
+  font-weight: $bold;
+  color: $txt-color;
+  background-color: $bg-sub-color;
+  border: 0.1rem solid $txt-color;
+  border-radius: 4rem;
+  width: 29.4rem;
+  padding-block: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(xxs) {
+    width: 27rem;
+  }
+
+}
+
+.p-scroll-button__anchor-text{
+  position: relative;
+  display: inline-block;
+}
+
+.p-scroll-button__img {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 2rem);
+  transform: translateY(-50%);
+
+  @include mq(xxs) {
+    left: calc(100% + 1rem);
+  }
+}
+
