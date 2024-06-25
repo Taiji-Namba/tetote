@@ -1,0 +1,33 @@
+@use '../../foundation' as *;
+
+.p-page__title{
+  font-size: rclamp(28, 32, 375, 1440);
+  font-weight: $bold;
+  line-height: 1.5;
+}
+
+.p-page__lede{
+  line-height: 1.5;
+  margin-top: 11.3rem;
+
+  @include mq(tab) {
+    margin-top: 8rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 6rem;
+  }
+}
+
+.p-page__scroll-buttons{
+  margin-top: 7rem;
+
+  @include mq(tab) {
+    margin-top: 6rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 5rem;
+  }
+}
+
