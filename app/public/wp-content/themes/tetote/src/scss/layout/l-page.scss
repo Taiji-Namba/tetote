@@ -1,0 +1,18 @@
+@use '../foundation' as *;
+
+.l-page--common {
+  padding-top: 14.5rem;
+  padding-inline: 2.2rem;
+  max-width: 102.4rem;
+  margin-inline: auto;
+
+  @include mq(tab) {
+    padding-top: 12rem;
+    padding-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-top: 10rem;
+    padding-inline: 1.6rem;
+  }
+}
