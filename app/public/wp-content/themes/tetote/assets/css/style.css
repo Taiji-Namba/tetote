@@ -433,6 +433,12 @@ tbody {
   }
 }
 
+.p-accordion__anchor {
+  text-decoration: underline;
+  color: #988c2c;
+  font-weight: 700;
+}
+
 .p-archive__inner {
   margin-inline: auto;
   margin-top: 13rem;
