@@ -37,7 +37,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-1" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                テキストが入ります。テキストが入ります。テキストが入ります。
+                18歳から49歳まで皆様のご応募、お待ちしています。
             </div>
           </li>
           <li class="c-accordion__inner p-accordion__item">
@@ -60,7 +60,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-3" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                書類面接→人事面談→役員・社長面談となっております。
               </p>
             </div>
           </li>
@@ -72,7 +72,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-4" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                各回、1時間程度です。
               </p>
             </div>
           </li>
@@ -84,7 +84,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-5" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                これまでのご経歴やご自身の想いなどをお聞かせください。
               </p>
             </div>
           </li>
@@ -96,7 +96,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-6" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                人事担当者および、役員・社長になります。
               </p>
             </div>
           </li>
@@ -115,7 +115,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-7" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                テキストが入ります。テキストが入ります。テキストが入ります。
+                必ずご希望を叶えられるとは限りませんが、できる限り望むキャリアパスに添います。
             </div>
           </li>
           <li class="c-accordion__inner p-accordion__item">
@@ -138,7 +138,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-9" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                はい。定期的にキャリアパス面談を行いますので、その際にお聞きします。
               </p>
             </div>
           </li>
@@ -150,7 +150,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-10" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                比較的取りやすい環境かと思います。9:00～18:00のフレックスタイム制で、月平均残業時間は10時間程度です。
               </p>
             </div>
           </li>
@@ -161,8 +161,7 @@ Template Name: FAQ
               </button>
             </h3>
             <div id="accordion-panel-11" class="c-accordion__panel p-accordion__panel">
-              <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              <p class="c-accordion__panel-text p-accordion__panel-text">フレックスタイム制、リフレッシュ休暇などあります。詳しくは<a class="p-accordion__anchor" href="<?php echo esc_url(home_url() . '/benefits/'); ?>">こちら</a>をご覧ください。
               </p>
             </div>
           </li>
@@ -174,7 +173,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-12" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                はい。当社の育児休暇取得率は女性90%、男性30%です。
               </p>
             </div>
           </li>
@@ -192,8 +191,7 @@ Template Name: FAQ
               </button>
             </h3>
             <div id="accordion-panel-13" class="c-accordion__panel p-accordion__panel">
-              <p class="c-accordion__panel-text p-accordion__panel-text">
-                テキストが入ります。テキストが入ります。テキストが入ります。
+              <p class="c-accordion__panel-text p-accordion__panel-text">通勤手当や財形貯蓄制度などを設けております。詳しくは<a class="p-accordion__anchor" href="<?php echo esc_url(home_url() . '/benefits/'); ?>">こちら</a>をご覧ください。
             </div>
           </li>
           <li class="c-accordion__inner p-accordion__item">
@@ -216,7 +214,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-15" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                忘年会や新年会や、有志が集まって社内旅行をすることもあります。
               </p>
             </div>
           </li>
@@ -228,7 +226,7 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-16" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                現在、テニス部やサバゲー部があります。
               </p>
             </div>
           </li>
@@ -240,19 +238,19 @@ Template Name: FAQ
             </h3>
             <div id="accordion-panel-17" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                資格に応じて3万円〜20万円の補助を設けています。
               </p>
             </div>
           </li>
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
               <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-18">
-                <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">年次有給休暇について教えてください</span><span class="p-accordion__icon"></span>
+                <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">年次有給休暇について教えてください。</span><span class="p-accordion__icon"></span>
               </button>
             </h3>
             <div id="accordion-panel-18" class="c-accordion__panel p-accordion__panel">
               <p class="c-accordion__panel-text p-accordion__panel-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                初年度10日、年度途中入社は比例付与です。
               </p>
             </div>
           </li>

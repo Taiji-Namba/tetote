@@ -707,6 +707,5 @@ jQuery(function ($) {
     var qWidth = $q.innerWidth();
     var marginLeft = qWidth + 20;
     $panel.css('--margin-left', marginLeft + "px");
-    console.log("qWidth:" + qWidth);
   };
 });

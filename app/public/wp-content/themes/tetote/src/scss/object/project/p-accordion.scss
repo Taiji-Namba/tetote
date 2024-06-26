@@ -91,3 +91,9 @@
     line-height: 1.5;
   }
 }
+
+.p-accordion__anchor{
+  text-decoration: underline;
+  color: $accent-color-1;
+  font-weight: $bold;
+}
