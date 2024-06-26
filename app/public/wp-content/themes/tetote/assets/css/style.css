@@ -1944,6 +1944,20 @@ tbody {
   }
 }
 
+.p-page-contents__wrapper--mt128 {
+  margin-top: 12.8rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-page-contents__wrapper--mt128 {
+    margin-top: 10rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-page-contents__wrapper--mt128 {
+    margin-top: 8.6rem;
+  }
+}
+
 .p-page-contents__wrapper--mt96 {
   margin-top: 9.6rem;
 }
@@ -1989,20 +2003,18 @@ tbody {
 .p-page-contents__table-row {
   display: flex;
   flex-wrap: wrap;
-  padding-block: 3.6rem;
+  padding-block: 3.15rem;
   min-height: 8.8rem;
   border-bottom: 0.1rem dotted #222222;
   row-gap: 1.6rem;
 }
 
 .p-page-contents__table-heading {
-  vertical-align: middle;
   font-size: 1.6rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.5;
   width: 100%;
   max-width: 23.1rem;
-  margin-block: auto;
 }
 @media screen and (max-width: 1023px) {
   .p-page-contents__table-heading {
@@ -2022,6 +2034,72 @@ tbody {
 @media screen and (max-width: 1023px) {
   .p-page-contents__table-data {
     max-width: 100%;
+  }
+}
+
+.p-page-contents__table-li {
+  list-style-type: "・";
+  margin-left: 1.6rem;
+}
+
+.p-page-contents__voice-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -moz-column-gap: 4.6rem;
+       column-gap: 4.6rem;
+  row-gap: 7.2rem;
+  margin-top: 2.3rem;
+}
+
+.p-page-contents__voice-container {
+  max-width: 46.7rem;
+}
+@media screen and (max-width: 1023px) {
+  .p-page-contents__voice-container {
+    max-width: 100%;
+  }
+}
+
+.p-page-contents__voice-year {
+  color: #988c2c;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.p-page-contents__voice-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 1.3rem;
+}
+
+.p-page-contents__voice-text {
+  margin-top: 2.5rem;
+  line-height: 1.8;
+}
+
+.p-page-contents__voice-image {
+  margin-top: 3.6rem;
+  aspect-ratio: 980/560;
+  background-image: url(../images/parts/benefits/benefits-user-voices.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .p-page-contents__voice-image {
+    background-image: url(../images/parts/benefits/benefits-user-voices@2x.jpg);
+  }
+}
+@media screen and (min-width: 1441px) and (-webkit-max-device-pixel-ratio: 1.1) {
+  .p-page-contents__voice-image {
+    background-image: url(../images/parts/benefits/benefits-user-voices@2x.jpg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-page-contents__voice-image {
+    aspect-ratio: 980/660;
   }
 }
 
