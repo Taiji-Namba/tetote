@@ -1,0 +1,11 @@
+@use '../../foundation' as *;
+
+.c-accordion__trigger {
+  width: 100%;
+  cursor: pointer;
+}
+
+.c-accordion__panel{
+  display: none;
+  overflow: hidden;
+}

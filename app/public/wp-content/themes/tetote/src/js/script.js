@@ -336,6 +336,7 @@ jQuery(function ($) {
     setFooterHeight();
     setBurgerMenuTextItemWrapper();
     addLineNextToH2();
+    setMarginLeftOfPanelText();
   });
 
   // ウィンドウリサイズ時の処理
@@ -345,6 +346,7 @@ jQuery(function ($) {
     setFooterHeight();
     setBurgerMenuTextItemWrapper();
     addLineNextToH2();
+    setMarginLeftOfPanelText();
   });
 
   // トップページと下層ページでヘッダー要素の色を分ける
@@ -649,4 +651,62 @@ jQuery(function ($) {
     var widthOfLine = offsetLeft - 16
     $h2.css('--line-width', widthOfLine + "px");
   }
+
+  // アコーディオンメニュー: 機能
+  $('.p-accordion__trigger').on('click', function() {
+    var $trigger = $(this);
+    var $panel = $('#' + $trigger.attr('aria-controls'));
+    var isOpen = $trigger.attr('aria-expanded') === 'true';
+
+    // クラスの切り替えとaria属性の変更
+    $trigger.attr('aria-expanded', !isOpen);
+    $trigger.toggleClass('is-accordion-open', !isOpen);
+    $panel.toggleClass('is-accordion-open', !isOpen);
+
+    // パネルの高さの自動調整
+    function adjustPanelHeight() {
+      if (!isOpen) {
+        $panel.css('height', 'auto');
+        var height = $panel.height();
+        $panel.css('height', '0');
+        $panel.stop().animate({ height: height }, 300, 'swing', function() {
+          $panel.css('height', 'auto');
+        });
+      } else {
+        $panel.stop().animate({ height: '0' }, 300, 'swing');
+      }
+    }
+
+    // コンテンツの表示/非表示をスライドでトグル
+    $panel.stop().slideToggle({
+      duration: 300,
+      easing: 'swing',
+      start: function() {
+        if (!isOpen) {
+          $panel.show();
+        }
+      },
+      complete: function() {
+        if (isOpen) {
+          $panel.hide();
+        }
+      }
+    });
+
+    adjustPanelHeight();
+  });
+
+  // アコーディオンメニュー: パネルテキストの位置をヘッダータイトルに合わせる
+  function setMarginLeftOfPanelText() {
+    var $panel = $(".p-accordion__panel");
+    var $q = $(".p-accordion__letter-q");
+
+    // $panelが存在無しないときは何もしない
+    if ($panel.length === 0) return;
+
+    var qWidth = $q.innerWidth();
+    var marginLeft = qWidth + 20;
+    $panel.css('--margin-left', marginLeft + "px");
+    console.log("qWidth:" + qWidth);
+  };
 });

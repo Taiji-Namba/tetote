@@ -16,6 +16,18 @@
   }
 }
 
+.p-page-contents__wrapper--mt96 {
+  margin-top: 9.6rem;
+
+  @include mq(tab) {
+    margin-top: 7.9rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 6.9rem;
+  }
+}
+
 .p-page-contents__wrapper--mt88 {
   margin-top: 8.8rem;
 }
