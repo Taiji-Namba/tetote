@@ -16,3 +16,20 @@
     padding-inline: 1.6rem;
   }
 }
+
+.l-page--small{
+  padding-top: 6.6rem;
+  padding-inline: 2.2rem;
+  max-width: 102.4rem;
+  margin-inline: auto;
+
+  @include mq(tab) {
+    padding-top: 5.4rem;
+    padding-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-top: 4.6rem;
+    padding-inline: 1.6rem;
+  }
+}
