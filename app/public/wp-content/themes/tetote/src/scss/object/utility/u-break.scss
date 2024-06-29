@@ -1,0 +1,29 @@
+@use '../../foundation' as *;
+
+.u-break--pc{
+  @include mq(tab) {
+    display: none;
+  }
+}
+
+.u-break--tab-and-pc{
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.u-break--sp{
+  display: none;
+
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+.u-break--xxs{
+  display: none;
+
+  @include mq(xxs) {
+    display: block;
+  }
+}
