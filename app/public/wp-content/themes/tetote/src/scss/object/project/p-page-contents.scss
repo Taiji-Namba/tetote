@@ -62,7 +62,7 @@
   }
 
   @include mq(sp) {
-    margin-top: 5.4rem;
+    margin-top: 4rem;
   }
 }
 
@@ -77,6 +77,10 @@
   min-height: 8.8rem;
   border-bottom: 0.1rem dotted $txt-color;
   row-gap: 1.6rem;
+}
+
+.p-page-contents__table-row:first-of-type{
+  padding-top: 0;
 }
 
 .p-page-contents__table-heading {

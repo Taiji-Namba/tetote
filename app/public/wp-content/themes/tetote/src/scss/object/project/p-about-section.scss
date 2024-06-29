@@ -1,0 +1,57 @@
+@use '../../foundation' as *;
+
+.p-about-us-section {
+
+}
+
+.p-about-us-section__title {
+  font-size: rclamp(26,32, 375, 1440);
+  font-weight: $bold;
+  line-height: 1;
+
+  @include mq(xxs) {
+    line-height: 1.5;
+  }
+}
+
+.p-about-us-section__title--center {
+  display: flex;
+  justify-content: center;
+}
+
+.p-about-us-section__wrapper--mt125 {
+  margin-top: 12.5rem;
+
+  @include mq(tab) {
+    margin-top: 11rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 10rem;
+  }
+}
+
+.p-about-us-section__wrapper--mt111 {
+  margin-top: 11.1rem;
+
+    @include mq(tab) {
+    margin-top: 10.5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 10rem;
+  }
+
+}
+
+.p-about-us-section__wrapper-mt150 {
+  margin-top: 15rem;
+
+  @include mq(tab) {
+    margin-top: 13rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 12rem;
+  }
+}
