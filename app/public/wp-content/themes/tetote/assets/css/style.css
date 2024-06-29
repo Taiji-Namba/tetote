@@ -1261,7 +1261,6 @@ tbody {
 }
 @media screen and (max-width: 767px) {
   .p-ceo-message__ceo-name {
-    width: 40%;
     margin-top: 2.1rem;
     margin-left: auto;
     display: block;
@@ -3041,6 +3040,7 @@ tbody {
 @media screen and (max-width: 767px) {
   .p-services__text-group {
     flex: unset;
+    width: 100%;
   }
 }
 
