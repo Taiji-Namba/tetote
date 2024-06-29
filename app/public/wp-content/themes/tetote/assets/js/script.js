@@ -337,6 +337,7 @@ jQuery(function ($) {
     setBurgerMenuTextItemWrapper();
     addLineNextToH2();
     setMarginLeftOfPanelText();
+    setPositionOfCeoName();
   });
 
   // ウィンドウリサイズ時の処理
@@ -347,6 +348,7 @@ jQuery(function ($) {
     setBurgerMenuTextItemWrapper();
     addLineNextToH2();
     setMarginLeftOfPanelText();
+    setPositionOfCeoName();
   });
 
   // トップページと下層ページでヘッダー要素の色を分ける
@@ -708,4 +710,13 @@ jQuery(function ($) {
     var marginLeft = qWidth + 20;
     $panel.css('--margin-left', marginLeft + "px");
   };
+
+  // 代表メッセージの名前の位置設定
+  function setPositionOfCeoName() {
+    var imgHeight = $(".p-ceo-message__img").outerWidth() * 629 / 484;
+    var namePosition = imgHeight + 20
+    console.log("imgHeight" + imgHeight);
+    console.log("namePosition" + namePosition);
+    $(".p-ceo-message__ceo-name").css('--name-position', namePosition + "px");
+  }
 });
