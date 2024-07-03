@@ -1,15 +1,18 @@
+<?php
+/*
+Template Name: ENTRY-THANKS
+*/
+?>
+
 <?php get_header(); ?>
 
 <!-- Contact -->
 <main class="l-main">
   <section class="p-contact">
-    <div class="p-contact__wrap">
-      <div class="p-contact__inner l-inner">
-        <h1 class="p-contact__title">お問い合わせ</h1>
-        <p class="p-contact__description">お問い合わせ内容を送信しました。<br>お問い合わせ内容を確認後、担当者よりご連絡させていただきます。</p>
-        <div class="p-contact__button">
-          <a href="<?php echo home_url(); ?>" class="c-button">TOPへ戻る</a>
-        </div>
+    <div class="p-contact__wrapper">
+      <div class="p-contact__inner p-contact__inner--pb95">
+        <h1 class="p-contact__title p-contact__title--thanks u-justify-content--center">送信ありがとうございました。</h1>
+        <p class="p-contact__description u-justify-content--center">3営業日以内に人事担当者より連絡させていただきます。</p>
       </div>
     </div>
   </section>
