@@ -8,7 +8,7 @@ Template Name: ENTRY
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 
-<main class="l-main l-main--top">
+<main>
   <section class="p-contact">
     <div class="p-contact__wrapper">
       <div class="p-contact__inner">
