@@ -50,6 +50,8 @@ get_template_part('parts/functions-lib/func-change-breadcrumb-staff');
 // ページ分割投稿におけるページネーションに、number表記とnext表記を両立
 get_template_part('parts/functions-lib/func-add-new-mode-to-wp-link-pages');
 
-
 // サイドバーをウィジェットに登録
 get_template_part('parts/functions-lib/func-register-sidebar');
+
+// Contact Form 7 送信完了時にサンクスページへリダイレクト
+get_template_part('parts/functions-lib/func-add-contactform7-thanks-page');
