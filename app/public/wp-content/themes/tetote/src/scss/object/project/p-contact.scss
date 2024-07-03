@@ -27,6 +27,17 @@
   }
 }
 
+.p-contact__inner--pb95{
+  padding-bottom: 9.5rem;
+  @include mq(tab) {
+    padding-bottom: 8rem;
+  }
+
+  @include mq(sp) {
+      padding-bottom: 7.5rem;
+  }
+}
+
 .p-contact__title-group {
   display: flex;
   justify-content: center;
@@ -64,7 +75,21 @@
   }
 }
 
+.p-contact__title--thanks{
+  font-size: rclamp(22, 32, 375, 1440);
+
+  @include mq(xxs) {
+    font-size: 1.8rem;
+  }
+}
+
 .p-contact__lede {
+  margin-top: 5.1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-contact__description{
   margin-top: 5.1rem;
   line-height: 1.5;
   width: 100%;
