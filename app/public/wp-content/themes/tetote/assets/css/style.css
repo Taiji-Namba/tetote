@@ -1298,6 +1298,20 @@ tbody {
   }
 }
 
+.p-contact__inner--pb95 {
+  padding-bottom: 9.5rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-contact__inner--pb95 {
+    padding-bottom: 8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-contact__inner--pb95 {
+    padding-bottom: 7.5rem;
+  }
+}
+
 .p-contact__title-group {
   display: flex;
   justify-content: center;
@@ -1338,7 +1352,22 @@ tbody {
   }
 }
 
+.p-contact__title--thanks {
+  font-size: clamp(2.2rem, 1.8478873239rem + 0.9389671362vw, 3.2rem);
+}
+@media screen and (max-width: 374px) {
+  .p-contact__title--thanks {
+    font-size: 1.8rem;
+  }
+}
+
 .p-contact__lede {
+  margin-top: 5.1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-contact__description {
   margin-top: 5.1rem;
   line-height: 1.5;
   width: 100%;
