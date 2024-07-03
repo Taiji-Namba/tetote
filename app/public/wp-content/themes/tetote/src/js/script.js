@@ -338,6 +338,7 @@ jQuery(function ($) {
     addLineNextToH2();
     setMarginLeftOfPanelText();
     setPositionOfCeoName();
+    disableSubmit();
   });
 
   // ウィンドウリサイズ時の処理
@@ -719,4 +720,44 @@ jQuery(function ($) {
     console.log("namePosition" + namePosition);
     $(".p-ceo-message__ceo-name").css('--name-position', namePosition + "px");
   }
+
+  //エントリーフォームにて、送信ボタンを押した時のみバリデーションメッセージ表示
+  $(".p-contact__button-submit").click(function () {
+    $(".wpcf7-form-control-wrap").addClass("is-validation-show");
+  });
+
+  // フォームの必須項目を全て入力するまで非活性
+  function disableSubmit() {
+    const $formWrapper = $('#wpcf7-f7-o1');
+    const $form = $formWrapper.find('form');
+    const $submitBtn = $form.find('input[type="submit"]');
+
+    function checkAllFields() {
+        const requiredFields = [
+            { selector: 'input[name="your-name"]', condition: el => el.value.trim() !== "" },
+            { selector: 'input[name="your-name-kana"]', condition: el => el.value.trim() !== "" },
+            { selector: 'input[name="your-email"]', condition: el => el.value.trim() !== "" },
+            { selector: 'input[name="your-tel"]', condition: el => el.value.trim() !== "" },
+            { selector: 'input[name="bday-year"]', condition: el => el.value.trim() !== "" },
+            { selector: 'select[name="bday-month"]', condition: el => el.value !== "選択してください" },
+            { selector: 'select[name="bday-day"]', condition: el => el.value !== "選択してください" },
+            { selector: 'input[name="objective"]', condition: el => $form.find('input[name="objective"]:checked').length > 0 },
+            { selector: 'textarea[name="about-yourself"]', condition: el => el.value.trim() !== "" },
+            { selector: 'input[name="acceptance-505"]', condition: el => el.checked }
+        ];
+
+        const allFilled = requiredFields.every(field => 
+            $form.find(field.selector).toArray().every(field.condition)
+        );
+
+        $submitBtn.prop('disabled', !allFilled);
+    }
+
+    $form.on('change keyup', 'input, textarea, select', checkAllFields);
+    $formWrapper.on('wpcf7mailsent wpcf7invalid', checkAllFields);
+
+    // 初期状態でもチェック
+    checkAllFields();
+  }
+
 });

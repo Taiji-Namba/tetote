@@ -1,74 +1,268 @@
 @use "../../foundation" as *;
+@use 'sass:math';
 
+.p-contact{
+  background-color: $bg-sub-color;
+}
+
+.p-contact__wrapper{
+  padding-block: 3.3rem 5.7rem;
+}
+
+.p-contact__inner{
+  max-width: min(100%, 88rem);
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-inline: auto;
+  padding: 5.8rem 7.1rem 8.1rem;
+
+  @include mq(tab) {
+    padding-inline: 4rem;
+    margin-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-inline: 1.6rem;
+    margin-inline: 1.6rem;
+  }
+}
+
+.p-contact__inner--pb95{
+  padding-bottom: 9.5rem;
+  @include mq(tab) {
+    padding-bottom: 8rem;
+  }
+
+  @include mq(sp) {
+      padding-bottom: 7.5rem;
+  }
+}
+
+.p-contact__title-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include mq(sp) {
+    justify-content: start;
+    // margin-left: 2rem;
+  }
+}
+
+.p-contact__subtitle {
+  font-size: rclamp(18, 24, 375, 1440);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include mq(sp) {
+    justify-content: start;
+  }
+}
+
+.p-contact__title {
+  font-size: rclamp(28, 32, 375, 1440);
+  font-weight: $bold;
+  margin-top: 2.9rem;
+  width: 100%;
+
+  @include mq(sp) {
+    line-height: 1.2;
+  }
+
+  @include mq(xxs) {
+    font-size: 2.6rem;
+  }
+}
+
+.p-contact__title--thanks{
+  font-size: rclamp(22, 32, 375, 1440);
+
+  @include mq(xxs) {
+    font-size: 1.8rem;
+  }
+}
+
+.p-contact__lede {
+  margin-top: 5.1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-contact__description{
+  margin-top: 5.1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-contact__border {
+  margin-top: 9.5rem;
+  width: 100%;
+  height: 0.1rem;
+  content: "";
+  background-color: $accent-color-2;
+
+  @include mq(tab) {
+    margin-top: 8rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 7rem;
+  }
+}
+
+
+
+/* フォーム */
 .p-contact__contents{
+  margin-top: 9.5rem;
 
+  @include mq(tab) {
+    margin-top: 7.8rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 6.8rem;
+  }
 }
 
 .p-contact__content{
-  @include mq('md'){
-    // display: flex;
-    // align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.5rem;
+
+  @include mq(tab) {
+    row-gap: 1.5rem;
   }
+}
+
+.p-contact__content:nth-of-type(n+2):nth-of-type(-n+5), .p-contact__content:nth-of-type(7){
+  margin-top: 2.7rem;
+
+  @include mq(tab) {
+      margin-top: 4rem;
+  }
+}
+
+.p-contact__content:nth-of-type(6), .p-contact__content:nth-of-type(8){
+  margin-top: 4.3rem;
+
+  @include mq(tab) {
+      margin-top: 5.6rem;
+  }
+}
+
+.p-contact__fieldset{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  column-gap: 3.5rem;
+
+  @include mq(tab) {
+    row-gap: 1.5rem;
+  }
+}
+
+.p-contact__fieldset .wpcf7-form-control-wrap{
+  display: flex;
+  width: 16.8rem;
 }
 
 .p-contact__head{
-  width: prem(250);
+  font-weight: $regular;
+  color: #000;
+  flex-basis: 12.8rem;
+  display: flex;
+  align-items: center;
+
+  @include mq(lg) {
+    flex-basis: 100%;
+  }
+}
+
+.p-contact__head--top0{
+  align-items: start;
+}
+
+.p-contact__head--top16{
+  align-items: start;
+  padding-top: 1em;
+}
+
+.p-contact__head--lh-1-point-5{
+  line-height: 1.5;
 }
 
 .p-contact__item{
-  margin-top: prem(6);
+  flex: 1;
 }
 
-.p-contact__item-example {
-  margin-top: prem(6);
-  color: gray;
+.p-contact__item--row-gap-15{
+  // display: flex;
+  // row-gap: 1.5rem;
 }
 
-// 必須
-.p-contact__required{
-  color: red;
-  padding-left: 1em;
+.p-contact__item--bday{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+  max-width: min(100%, 41.3rem);
 }
 
-.p-contact__policy,
-.p-contact__content,
-.p-contact__button {
-  margin: prem(24) 0;
-}
-
-.p-contact__policy-link {
-  color: blue;
-  transition: all 0.3s;
-}
-
-.p-contact__button-wrap{
+.p-contact__bday-wrapper{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include mq(md){
-    flex-direction: row;
-    gap: prem(40);
-  }
-
+  flex-wrap: nowrap;
+  align-items: center;
 }
-.p-contact__button {
-  display: inline-block;
-  text-align: center;
+
+.p-contact__bday-wrapper:first-of-type{
+  grid-row: 1;
+  grid-column: 1 / 2;
+}
+
+.p-contact__bday-wrapper:nth-of-type(2){
+  grid-row: 2;
+  grid-column: 1 / 2;
+}
+
+.p-contact__bday-wrapper:last-of-type{
+  grid-row: 2;
+  grid-column: 2 / 3;
+
+  @include mq(sp) {
+    grid-row: 3;
+    grid-column: 1 / 2;
+  }
+}
+
+.p-contact__item-bday{
+  flex-basis: 16.8rem;
+  min-width: 16.8rem;
+}
+
+.p-contact__bday-label{
+  margin-left: 1rem;
+}
+
+.p-contact__required{
+  color: $accent-color-1;
 }
 
 .p-contact__item-text,
 .p-contact__item-tel,
 .p-contact__item-email,
 .p-contact__item-textarea,
+.p-contact__item-number,
 .p-contact__item-select {
   margin: 0;
-  padding: 0.8em;
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  border-radius: 0;
-  outline: none;
+  padding: 2rem;
+  border: 0.1rem solid $accent-color-2;
+  outline:none;
+  border-radius: 1rem;
   background: none;
-  background-color: transparent;
-  font-size: prem(16);
+  background-color: $bg-sub-color;
   color: inherit;
   font-family: inherit;
   -moz-appearance: none;
@@ -77,43 +271,74 @@
   width: 100%;
 }
 
+.p-contact__item-text::placeholder,
+.p-contact__item-tel::placeholder,
+.p-contact__item-email::placeholder,
+.p-contact__item-textarea::placeholder,
+.p-contact__item-number::placeholder{
+  color:#757575;
+  font-size: 1.6rem;
+}
+
+
 .p-contact__item-text:focus,
 .p-contact__item-tel:focus,
 .p-contact__item-email:focus,
 .p-contact__item-textarea:focus,
+.p-contact__item-number:focus,
 .p-contact__item-select:focus {
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 0.2rem solid #b7a200;
+  outline:none;
   box-shadow: none;
-  outline: none;
 }
 
-.p-contact__item-text {}
-.p-contact__item-tel {}
-.p-contact__item-email {}
-
 .p-contact__item-textarea {
-  height: 200px;
+  height: 24rem;
   resize: none;
   overflow: auto;
-
 }
 .p-contact__item-message {
   white-space: pre-wrap;
 }
 .p-contact__item-select {
-    padding-right: 3em;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALJJREFUeNrslssNgCAQRCmB0ijBEuyEEijBEijBEizBEnAPy0UBWVj8JDvJJB5w3gsXVUoikXwsBrpAPdRCNcOmxi2P2yZ3cIKGU9dOCY0b590pdXhPHOyRyMEDsi4JhVIlSvBYTRGgSNTAQ+pFyyBRC7e5AdchUQt3d1fYIsEGb5Fgh1MktlFwisQwOIeE4/pGuDfhLRLscIrEMHiNxHB4SeIxeMyMPxkenyUSyT9zCDAAj5btZ4c3zaUAAAAASUVORK5CYII=");
-    background-repeat: no-repeat;
-    background-size: 1em;
-    background-position: right 0.5em center;
-    color: inherit;
-}
-.p-contact__item-select:invalid {
-  color: rgba(0, 0, 0, 0.32)
+  font-size: 1.2rem;
+  position: relative;
+  background-image: url(../images/parts/entry/arrow-select.svg);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: right 1.5rem center;
+  color: inherit;
 }
 
+.p-contact__item-select::before, .p-contact__item-select::after{
+  width: 0.849rem;
+  height: 0.1rem;
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+}
+
+.p-contact__item-select::before {
+  transform: translateY(-50%), rotateX(-45deg);
+}
+
+// select要素の矢印を消す
 .p-contact__item-select select::-ms-expand {
   display: none;
+}
+
+.p-contact__item-radio{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.p-contact__item-checkbox{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.1rem;
 }
 
 .p-contact__item-radio input[type="radio"],
@@ -130,71 +355,103 @@
   display: inline-block;
   cursor: pointer;
   position: relative;
-  padding: 0.5em 1em 0.5em 1.5em;
-  color: #333;
-  font-size: prem(16);
-}
-// ラジオボタンとチェックボックスにフォーカスした場合
-//　必要ない場合は削除
-.p-contact__item-radio input[type="radio"]:focus +span,
-.p-contact__item-checkbox input[type="checkbox"]:focus + span{
-  opacity: 0.7;
+  font-size: 1.6rem;
 }
 
+// ラジオボタンのテキスト部分
+.p-contact__item-radio input[type="radio"] +span {
+  padding: 0.25em 0 0.25em calc(1.5em + math.div(12, 16) * 1em);
+}
+
+// チェックボックスのテキスト部分
+.p-contact__item-checkbox input[type="checkbox"] + span {
+  padding: 0.25em 0 0.25em calc(1.5em + math.div(13, 16) * 1em);
+}
+
+// プライバシーポリシーのテキスト部分
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span{
+  font-size: 1.4rem;
+  padding: calc(math.div(14, 2) * 1em), 0 calc(math.div(14, 2) * calc(1em + math.div(14, 6) * 1em)) ;
+}
+
+// プライバシーポリシーの枠
+.p-contact__policy{
+  margin-top: 10rem;
+
+  @include mq(tab) {
+    margin-top: 9rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 8rem;
+  }
+}
+
+// プライバシーポリシーのリンク部分
+.p-contact__policy-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  transition: all 0.3s;
+  
+}
+
+// ラジオボタン・チェックボックスのボタンやチェックボックスの外側部分
 .p-contact__item-radio input[type="radio"] + span::before,
 .p-contact__item-checkbox input[type="checkbox"] + span::before {
 	position: absolute;
 	top: 50%;
 	left: 0;
-	width: 1em;
-	height: 1em;
+	width: 1.5em;
+	height: 1.5em;
 	content: "";
   transform: translateY(-50%);
-  background: white;
-  border: 1px solid black;
-}
-.p-contact__item-checkbox input[type="checkbox"]:checked+span::before {
-  background: #333;
-}
-
-.p-contact__item-radio input[type="radio"]:checked+span::before {
-  background: white;
+  background: $bg-sub-color;
+  border: 0.1px solid $accent-color-2;
 }
 
 .p-contact__item-radio input[type="radio"]+span::before{
   border-radius: 50%;
 }
 
+// プライバシーポリシーのチェックボックスの外側
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::before{
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+// プライバシーポリシーのチェックボックスの内側
 .p-contact__item-radio input[type="radio"]+span::after {
   position: absolute;
   content: "";
-  background: #333;
-  border: 1px solid transparent;
+  background-color: $txt-color;
   border-radius: 50%;
-  height: 0.5em;
-  left: 0.25em;
+  width: 0.625em;
+  height: 0.625em;
+  left: calc(math.div(1.5em, 2));
   opacity: 0;
-  padding: 0.125em;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   transition: all 0.3s ease 0s;
-  width: 0.5em;
 }
 
 .p-contact__item-checkbox input[type="checkbox"]+span::after {
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-  content: "";
-  display: block;
-  height: 0.35em;
-  left: 0.15em;
-  margin-top: -0.1em;
-  opacity: 0;
   position: absolute;
+  content: "";
+  background-color: $txt-color;
+  width: 0.625em;
+  height: 0.625em;
+  left: calc(math.div(1.5em, 2));
+  opacity: 0;
   top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translate(-50%, -50%);
   transition: all 0.3s ease 0s;
-  width: 0.8em;
+}
+
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::after{
+  width: 1rem * math.div(16, 24);
+  height: 1rem * math.div(16, 24);
+  left: calc(math.div(1.6rem, 2));
 }
 
 .p-contact__item-checkbox input[type="checkbox"]:checked+span::after,
@@ -202,43 +459,70 @@
   opacity: 1;
 }
 
-/* button */
-.p-contact__button input[type="submit"],
-.p-contact__button input[type="button"] {
+// ラジオボタンとチェックボックスのフォーカス時の挙動
+.p-contact__item-radio input[type="radio"]:focus + span::before,
+.p-contact__item-checkbox input[type="checkbox"]:focus + span::before {
+  border: 0.2rem solid $accent-color-1;
+}
+
+
+
+/* ボタン */
+.p-contact__button-wrapper{
+  display: grid;
+  place-items: center;
+  margin-top: 6.1rem;
+
+  @include mq(tab) {
+    margin-top: 5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 4rem;
+  }
+}
+
+.p-contact__button {
   display: inline-block;
-  margin: 0;
-  padding: 0.5em 2em;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  background: rgba(0,0,0,0.32);
-  color: #333;
-  appearance: button;
-  cursor: pointer;
-  font-size: prem(16);
-  border-radius: 0;
-  // border: 1px solid #333;
-  border: none;
+  text-align: center;
+  position: relative;
   transition: all 0.3s;
 }
 
-.p-contact__button input[type="submit"]:hover,
-.p-contact__button input[type="button"]:hover,
-.p-contact__button input[type="submit"]:focus,
-.p-contact__button input[type="button"]:focus {
-  outline: none;
-  opacity: 0.7;
+.p-contact__button input[type="submit"]{
+  display: inline-block;
+  cursor: pointer;
+  padding: 1.25em 6em;
+  font-size: 1.6rem;
+  border: 0.1rem solid $txt-color;
+  border-radius: 0;
 }
 
-.p-contact__item-radio{}
-.p-contact__item-checkbox{}
+.p-contact__button input[type="submit"]:not(:disabled):hover{
+  background-color: $accent-color-2;
+  color: #fff;
+  border: 0.1rem solid $accent-color-2;
+  transition: all 0.3s;
+}
 
-.p-contact__item,
-.p-contact__button-submit
- {
-  min-width: prem(150);
+/* Contact Form 7 デフォルトスタイルを変更 */
+// ラジオボタンが右にずれるのを阻止するため、デフォルトmarginをリセット
+.wpcf7-list-item{
+  margin: unset;
 }
 
 //送信ボタンを中央にするため、loadingアニメーションの位置を調整
 .wpcf7-spinner {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// デフォルトではバリデーションメッセージを非表示&送信ボタンを押したときだけ表示
+.wpcf7-form-control-wrap > .wpcf7-not-valid-tip {
+  display: none;
+  margin-top: 10px;
+}
+.wpcf7-form-control-wrap.is-validation-show > .wpcf7-not-valid-tip {
+  display: block;
 }
