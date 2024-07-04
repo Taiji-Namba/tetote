@@ -1,4 +1,4 @@
-<div class="c-fv p-fv">
+<section class="c-fv p-fv">
   <div class="c-fv__slide-container c-fv-slide p-fv-slide">
     <div class="c-fv-slide__picture p-fv-slide__picture"></div>
     <div class="c-fv-slide__picture p-fv-slide__picture"></div>
@@ -15,4 +15,4 @@
       </p>
     </div>
   </a>
-</div>
+</section>
