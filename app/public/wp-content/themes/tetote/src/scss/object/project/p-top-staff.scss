@@ -42,10 +42,16 @@
   top: unset;
   bottom: 1.15rem;
   transform: translateY(0);
+  scale: 1;
 
   @include mq(lg) {
     display: none;
   }
+}
+
+.p-top-staff .p-arrow-button:hover{
+  scale: 1.2;
+  transition: scale 0.3s;
 }
 
 .p-top-staff .p-arrow-button--prev{
@@ -56,15 +62,19 @@
   @include mq(tab) {
     right: calc(math.div(229, 1440) * 100% + 1.8rem - 7%);
   }
+}
 
+.p-top-staff .p-arrow-button--prev:hover{
+  transform: translateX(calc(math.div(-100, 1.2) * 1%)); // 元にtranslateX(-100%)を設定しているので、scaleすると、scale後の大きさに合わせてtranslateされてしまう。そのため、hover時のtranslateを「-100%/1.2」にすることで位置ズレを防いでいる。
+  transition: 0.3s;
 }
 
 .p-top-staff .p-arrow-button--next{
   right: calc(math.div(229, 1440) * 100%);
 
-    @include mq(tab) {
-      right: calc(math.div(229, 1440) * 100% - 7%);
-    }
+  @include mq(tab) {
+    right: calc(math.div(229, 1440) * 100% - 7%);
+  }
 }
 
 .p-top-staff__button{

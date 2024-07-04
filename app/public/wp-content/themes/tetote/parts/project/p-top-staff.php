@@ -21,7 +21,7 @@ $post_type_label = $post_type_data->labels->name;
 
     get_template_part('parts/common/p-splide-staff', null, $args);
     ?>
-    <a class="c-button p-button p-button__view-more p-top-staff__button" href="<?php echo esc_url(home_url() . '/staff/'); ?>">VIEW MORE<img class="c-arrow p-button__arrow--view-more" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt=""></a>
+    <a class="c-button p-button p-button__view-more p-top-staff__button p-hover-action--slide" href="<?php echo esc_url(home_url() . '/staff/'); ?>">VIEW MORE</a>
   </div>
 </div>
 <?php

@@ -74,7 +74,11 @@
 // }
 
 a.page-numbers{
+  scale: 1;
+  transition: 0.3s;
 }
 
-.page-numbers li span {
+a.page-numbers:hover{
+  scale: 1.2;
+  transition: 0.3s;
 }
