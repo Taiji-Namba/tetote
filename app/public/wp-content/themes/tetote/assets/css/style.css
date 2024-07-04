@@ -2115,6 +2115,7 @@ tbody {
 @media screen and (max-width: 1439px) {
   .p-footer__menu-wrapper {
     padding-inline: 2rem;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 767px) {
