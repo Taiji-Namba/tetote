@@ -1,13 +1,13 @@
 @use "../../foundation" as *;
 
-.p-header.top-page-header{
+.p-header--top-page{
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
 }
 
-.p-header.sub-page-header{
+.p-header--sub-page{
   position: static;
   background-color: #fff;
 }
@@ -39,7 +39,7 @@
   width: 100%;
   animation: slideDown 0.3s ease-in-out;
   background-color: #fff;
-  transition: background-color 0.3s ease-in-out, visibility 0.3s ease-in-out; // スクロール後、一番上に戻した際にヘッダー下部に白線がちらつくことの防止。
+  // transition: background-color 0.3s ease-in-out, visibility 0.3s ease-in-out; // スクロール後、一番上に戻した際にヘッダー下部に白線がちらつくことの防止。
 }
 
 .p-header__inner.is-burger-open{
