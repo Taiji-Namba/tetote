@@ -356,22 +356,20 @@ jQuery(function ($) {
   function switchHeaderColor(){
     const topPage = document.querySelector("body.top-page");
     if (topPage !== null) {
+      $(".p-header__logo").addClass("p-header__logo--white");
+      $(".p-header__logo").removeClass("p-header__logo--black");
       $(".p-burger-button__line").addClass("p-burger-button__line--white");
       $(".p-burger-button__label").addClass("p-burger-button__label--white");
-      $(".p-logo__img--white").addClass("u-block");
-      $(".p-logo__img--black").addClass("u-none");
     } else {
+      $(".p-header__logo").addClass("p-header__logo--black");
       $(".p-burger-button__line").addClass("p-burger-button__line--black");
       $(".p-burger-button__label").addClass("p-burger-button__label--black");
-      $(".p-logo__img--white").addClass("u-none");
-      $(".p-logo__img--black").addClass("u-block");
     }
   };
 
-  // 白のヘッダーを表示する
-  function displayWhiteHeader(){
-    $(".p-logo__img--white").addClass("u-block").removeClass("u-none");
-    $(".p-logo__img--black").addClass("u-none").removeClass("u-block");
+  // ヘッダーのロゴとバーガーボタンを白に切り替える
+  function changeHeaderToWhite(){
+    $(".p-header__logo").addClass("p-header__logo--white").removeClass("p-header__logo--black");
     $(".p-burger-button__line")
       .addClass("p-burger-button__line--white")
       .removeClass("p-burger-button__line--black");
@@ -381,10 +379,9 @@ jQuery(function ($) {
   };
 
 
-  // 黒のヘッダーを表示する
-  function displayBlackHeader(){
-    $(".p-logo__img--white").addClass("u-none").removeClass("u-block");
-    $(".p-logo__img--black").addClass("u-block").removeClass("u-none");
+  // ヘッダーのロゴとバーガーボタンを黒に切り替える
+  function changeHeaderToBlack(){
+    $(".p-header__logo").addClass("p-header__logo--black").removeClass("p-header__logo--white");
     $(".p-burger-button__line")
       .removeClass("p-burger-button__line--white")
       .addClass("p-burger-button__line--black");
@@ -404,10 +401,10 @@ jQuery(function ($) {
       const topFvHeight = document.querySelector(".p-fv").offsetHeight; // トップページFVの高さを取得
       if (scrollY >= topFvHeight) {
         $(header).addClass("p-header--sticky");
-        displayBlackHeader();
+        changeHeaderToBlack();
       } else {
         $(header).removeClass("p-header--sticky");
-        displayWhiteHeader();
+        changeHeaderToWhite();
       }
     } else { // 下層ページのとき
       const headerHeight = header.offsetHeight; // ヘッダーの高さを取得
@@ -458,9 +455,9 @@ jQuery(function ($) {
     const headerHeight = $(".p-header").outerHeight(); // ヘッダーの高さを取得
     const topPage = document.querySelector("body.top-page");
     if (parseInt($("body").css("top")) >= -headerHeight && topPage !== null){
-      displayWhiteHeader();
+      changeHeaderToWhite();
     } else {
-      displayBlackHeader();
+      changeHeaderToBlack();
     }
   };
 
@@ -486,7 +483,7 @@ jQuery(function ($) {
     controlScrolling();
     if (!$(this).hasClass("is-burger-open")) { // バーガーメニューを開く時
       openBurgerMenu();
-      displayBlackHeader();
+      changeHeaderToBlack();
       holdScrollPosition();
     } else { // バーガーメニューを閉じる時
       closeBurgerMenu();

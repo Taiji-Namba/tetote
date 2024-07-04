@@ -21,11 +21,11 @@
   <div id="page" class="l-site">
     <header <?php if (is_front_page()) : ?> class="l-header p-header p-header--top-page" <?php else : ?> class="l-header p-header p-header--sub-page" ; <?php endif; ?>>
       <div class="p-header__inner">
-        <a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-logo p-header__logo">
-          <img class="p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
+        <a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-logo p-header__logo <?php echo esc_html('p-header__logo--top-page') ?>">
           <?php if (is_front_page()) : ?>
-            <img class="p-logo__img p-logo__img--white" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-white.svg'); ?>" alt="「TETOTE」のロゴ">
+            <h1 class="p-header--top-page__h1">TETOTE.co.ltd RECRUITING</h1>
           <?php else : ?>
+            <img class="p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">
           <?php endif; ?>
         </a>
 
