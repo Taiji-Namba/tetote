@@ -19,7 +19,7 @@
 <body <?php body_class(is_front_page() ? 'top-page' : 'sub-page'); ?>>
   <?php wp_body_open(); ?>
   <div id="page" class="l-site">
-    <header <?php if (is_front_page()) : ?> class="l-header p-header top-page-header" <?php else : ?> class="l-header p-header sub-page-header" ; <?php endif; ?>>
+    <header <?php if (is_front_page()) : ?> class="l-header p-header p-header--top-page" <?php else : ?> class="l-header p-header p-header--sub-page" ; <?php endif; ?>>
       <div class="p-header__inner">
         <a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-logo p-header__logo">
           <img class="p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ">

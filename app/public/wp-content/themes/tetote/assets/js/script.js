@@ -396,28 +396,27 @@ jQuery(function ($) {
   // ヘッダーをスクロールに合わせてにゅっと追従&色変更
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".p-header");
-    const headerHeight = header.offsetHeight; // ヘッダーの高さを取得
     const scrollY = window.scrollY;
-    const subPage = document.querySelector("body.sub-page"); // sub-pageクラスを持つbodyを取得
+    const topPage = document.querySelector("body.top-page"); // トップページのbodyを取得
+    const subPage = document.querySelector("body.sub-page"); // 下層ページのbodyを取得
 
-    // スクロール位置がヘッダーを超えたとき
-    if (scrollY >= headerHeight) {
-      $(header).addClass("p-header--sticky");
-
-      if (subPage !== null) {
-        //下層ページのとき
-        subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定 (トップページのヘッダーはページ表示時にabsoluteで、下層ページのヘッダーはページ表示時にstaticなことに由来する余白調整)
-      } else {
-        // トップページのとき
+    if (topPage !== null) { // トップページのとき
+      const topFvHeight = document.querySelector(".p-fv").offsetHeight; // トップページFVの高さを取得
+      if (scrollY >= topFvHeight) {
+        $(header).addClass("p-header--sticky");
         displayBlackHeader();
-      }
-    } else {
-      // スクロール位置がヘッダー未満のとき
-      $(header).removeClass("p-header--sticky");
-      if (subPage !== null) {
-        subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       } else {
+        $(header).removeClass("p-header--sticky");
         displayWhiteHeader();
+      }
+    } else { // 下層ページのとき
+      const headerHeight = header.offsetHeight; // ヘッダーの高さを取得
+      if (scrollY >= headerHeight) {
+        $(header).addClass("p-header--sticky");
+        subPage.style.marginTop = headerHeight + "px"; // コンテンツにヘッダーの高さ分の余白を設定 (トップページのヘッダーはposition:absoluteで、下層ページのヘッダーはpositio:staticなため)
+      } else {
+        $(header).removeClass("p-header--sticky");
+        subPage.style.marginTop = "0"; // コンテンツの余白をリセット
       }
     }
   });
