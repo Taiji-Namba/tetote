@@ -1,4 +1,4 @@
-<div class="p-top-benefits p-top-section">
+<section class="p-top-benefits p-top-section">
   <div class="p-top-benefits__inner">
     <div class="p-top-section__titles u-block-center">
       <h4 class="c-common-title p-top-section__title"><span class="u-under-line">制度・環境</span>を知る</h4>
@@ -26,4 +26,4 @@
       </a>
     </div>
   </div>
-</div>
+</section>

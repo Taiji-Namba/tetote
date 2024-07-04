@@ -4,7 +4,7 @@ $post_type = 'staff';
 $post_type_data = get_post_type_object($post_type);
 $post_type_label = $post_type_data->labels->name;
 ?>
-<div class="p-top-staff p-top-section">
+<section class="p-top-staff p-top-section">
   <div class="p-top-staff__inner">
     <div class="p-top-section__titles">
       <h4 class="c-common-title p-top-section__title u-first-letter-under-line">人を知る</h4>
@@ -23,6 +23,6 @@ $post_type_label = $post_type_data->labels->name;
     ?>
     <a class="c-button p-button p-button__view-more p-top-staff__button p-hover-action--slide" href="<?php echo esc_url(home_url() . '/staff/'); ?>">VIEW MORE</a>
   </div>
-</div>
+</section>
 <?php
 ?>
