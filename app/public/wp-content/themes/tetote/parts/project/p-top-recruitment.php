@@ -6,9 +6,9 @@
     </div>
     <p class="c-common-title p-top-section__subtitle u-block-center">募集要項（職種、業務内容、応募条件、選考フロー）とよくある質問・会社概要などをまとめています。</p>
     <ul class="p-top-recruitment__list">
-      <li class="p-top-recruitment__item"><a href="<?php echo esc_url(home_url() . '/details/'); ?>" class="p-top-recruitment__anchor">募集要項<img class="c-arrow p-button__arrow--recruitment" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt=""></a></li>
-      <li class="p-top-recruitment__item"><a href="<?php echo esc_url(home_url() . '/faq/'); ?>" class="p-top-recruitment__anchor">よくある質問<img class="c-arrow p-button__arrow--recruitment" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt=""></a></li>
-      <li class="p-top-recruitment__item"><a href="<?php echo esc_url(home_url() . '/about-us/'); ?>" class="p-top-recruitment__anchor">会社概要<img class="c-arrow p-button__arrow--recruitment" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt=""></a></li>
+      <li class="p-top-recruitment__item"><a href="<?php echo esc_url(home_url() . '/details/'); ?>" class="p-top-recruitment__anchor p-hover-action--slide">募集要項</a></li>
+      <li class="p-top-recruitment__item"><a href="<?php echo esc_url(home_url() . '/faq/'); ?>" class="p-top-recruitment__anchor p-hover-action--slide">よくある質問</a></li>
+      <li class="p-top-recruitment__item"><a href="<?php echo esc_url(home_url() . '/about-us/'); ?>" class="p-top-recruitment__anchor p-hover-action--slide">会社概要</a></li>
     </ul>
   </div>
 </div>
