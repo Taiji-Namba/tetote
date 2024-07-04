@@ -62,52 +62,6 @@
   }
 }
 
-.p-cta__text {
-  font-size: rclamp(14, 16, 375, 1440);
-  font-weight: bold;
-  line-height: 1.5;
-  text-align: center;
-
-  @include mq(tab) {
-    line-height: 2;
-  }
-
-  @include mq(sp) {
-    font-size: 1.2rem;
-    line-height: 2.5;
-  }
-}
-
-.p-cta__button {
-  position: relative;
-  width: rclamp(200, 556, 375, 1440);
-  height: rclamp(54, 70, 375, 1440);
-  margin-top: 3.1rem;
-  color: $txt-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-
-  @include mq(tab) {
-    margin-top: 2.7rem;
-  }
-
-  @include mq(sp) {
-    margin-top: 2.4rem;
-  }
-}
-
-.p-cta__arrow {
-  vertical-align: middle;
-  width: 1.6rem;
-  height: 1.6rem;
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
-}
-
 .p-footer__menu-wrapper {
   background-color: $bg-sub-color;
   width: min(131.2rem, 100%);
