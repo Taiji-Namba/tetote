@@ -4073,7 +4073,7 @@ tbody {
   bottom: 1.4rem;
   left: 50%;
   transform: translateX(-50%);
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 @media screen and (max-width: 1439px) {
   .p-top-benefits__item-title {
@@ -4362,6 +4362,7 @@ tbody {
   padding-block: 8.7rem 13.9rem;
   margin-inline: auto;
   padding-inline: 1.7rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 1439px) {
   .p-top-recruitment__inner {
