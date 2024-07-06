@@ -10,3 +10,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.c-breadcrumb a[property="item"]:hover {
+  color: $accent-color-1;
+}
+
+.c-breadcrumb a[property="item"]:hover span {
+  text-decoration: underline 1px;
+}

@@ -239,6 +239,15 @@ tbody {
   text-overflow: ellipsis;
 }
 
+.c-breadcrumb a[property=item]:hover {
+  color: #988c2c;
+}
+
+.c-breadcrumb a[property=item]:hover span {
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+}
+
 .c-burger-button {
   cursor: pointer;
   z-index: 1000;
