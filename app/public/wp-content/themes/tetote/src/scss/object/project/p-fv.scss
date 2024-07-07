@@ -59,7 +59,6 @@
   left: calc(66 / 1440 * 100% + 0.5rem);
   bottom: calc(38 / 823 * 100%);
   width: min(126.3rem, 90%);
-  height: 6.2rem;
   display: flex;
 
   @include mq(pc) {
