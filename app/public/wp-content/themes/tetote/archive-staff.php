@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<?php get_template_part('parts/common/p-eyecatch'); ?>
+<?php
+$args = ['class' => 'staff', 'title' => 'STAFF', 'subtitle' => '社員について', 'text' => '弊社社員のリアルな声を紹介しています。'];
+get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 

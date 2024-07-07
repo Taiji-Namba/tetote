@@ -6,7 +6,9 @@ Template Name: FAQ
 
 <?php get_header(); ?>
 
-<?php get_template_part('parts/common/p-eyecatch'); ?>
+<?php
+$args = ['class' => 'faq', 'title' => 'FAQ', 'subtitle' => 'よくある質問', 'text' => '皆様からよく頂くご質問にお答えします。'];
+get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 

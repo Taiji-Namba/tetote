@@ -6,7 +6,9 @@ Template Name: ABOUT US
 
 <?php get_header(); ?>
 
-<?php get_template_part('parts/common/p-eyecatch'); ?>
+<?php
+$args = ['class' => 'about-us', 'title' => 'ABOUT US', 'subtitle' => 'TETOTEについて', 'text' => '私たちの理念を紹介をします。'];
+get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 

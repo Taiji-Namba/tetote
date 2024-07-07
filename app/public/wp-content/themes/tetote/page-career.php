@@ -6,7 +6,9 @@ Template Name: CAREER
 
 <?php get_header(); ?>
 
-<?php get_template_part('parts/common/p-eyecatch'); ?>
+<?php
+$args = ['class' => 'career', 'title' => 'CAREER', 'subtitle' => '研修制度とキャリアパス', 'text' => 'キャリアパスを支える充実した、研修制度'];
+get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 

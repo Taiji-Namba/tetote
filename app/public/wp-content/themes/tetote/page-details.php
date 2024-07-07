@@ -6,7 +6,9 @@ Template Name: DETAILS
 
 <?php get_header(); ?>
 
-<?php get_template_part('parts/common/p-eyecatch'); ?>
+<?php
+$args = ['class' => 'details', 'title' => 'DETAILS', 'subtitle' => 'TETOTEについて', 'text' => '私たちの理念を紹介をします。'];
+get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
 
