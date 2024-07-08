@@ -2596,7 +2596,11 @@ tbody {
   font-family: Viga, "Noto Sans JP", sans-serif;
   min-width: 9.5rem;
   line-height: 1;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  -moz-column-gap: 0.6rem;
+       column-gap: 0.6rem;
 }
 @media screen and (max-width: 767px) {
   .p-news__cta {
@@ -2604,9 +2608,8 @@ tbody {
   }
 }
 
-.p-news__arrow {
-  vertical-align: middle;
-  margin-left: 0.6rem;
+.p-news__cta-text {
+  height: 0.88lh;
 }
 
 .p-page-contents__wrapper--mt97 {

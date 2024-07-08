@@ -26,7 +26,7 @@
         wp_reset_postdata(); ?>
       </p>
       <p class="p-news__cta">
-        <span>VIEW MORE</span>
+        <span class="p-news__cta-text">VIEW MORE</span>
         <img class="p-news__arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow.svg'); ?>" alt="">
       </p>
     </div>
