@@ -38,7 +38,7 @@ $post_type_label = $post_type_data->labels->name;
                 <?php the_post_thumbnail('large'); ?>
               </figure>
             <?php endif; ?>
-            <div class="p-post-article__content">
+            <section class="p-post-article__content">
               <div class="p-post-article__content-inner">
                 <div class="p-article__contents p-post-article__contents">
                   <?php the_content(); ?>
@@ -53,7 +53,7 @@ $post_type_label = $post_type_data->labels->name;
                   wp_link_pages($args); ?>
                 </div>
               </div>
-            </div>
+            </section>
           <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
@@ -62,7 +62,7 @@ $post_type_label = $post_type_data->labels->name;
   </section>
 
   <!-- 前後の投稿リンク -->
-  <?php get_template_part('parts/post/p-post-adjacent-link'); ?>
+  <?php get_template_part('parts/post/p-post-nav'); ?>
 
 </main>
 <?php get_footer(); ?>
