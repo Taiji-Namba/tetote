@@ -4,9 +4,8 @@
   color: #fff;
   background-color: $txt-color;
   font-family: Viga, "Noto Sans JP", sans-serif;
-  font-size: rclamp(12, 24, 375, 1440);
+  font-size: rclamp(10, 24, 375, 1440);
   width: 14.8%;
-  padding-block:1.8rem;
   border: 0.1rem solid $txt-color;
   border-radius: 5rem 0 0 5rem;
   display: flex;
@@ -18,7 +17,6 @@
 .p-news__text {
   background-color: #fff;
   width: 85.2%;
-  height: 100%;
   border: 0.1rem solid $txt-color;
   border-radius: 0 5rem 5rem 0;
   padding-block:2.2rem;
@@ -28,7 +26,7 @@
   padding-left: calc(90 / (1263 - 187) * 100%);
 
   @include mq(sp) {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
   }
 }
 
@@ -37,6 +35,10 @@
   font-size: rclamp(12, 16, 375, 1440);
   line-height: 1;
   padding-right: 2.4rem;
+
+  @include mq(sp) {
+    line-height: 1.2;
+  }
 }
 
 .p-news__cta {
@@ -46,7 +48,7 @@
   font-family: Viga, "Noto Sans JP", sans-serif;
   min-width: 9.5rem;
   line-height: 1;
-  
+
   display: flex;
   align-items: center;
   justify-content: flex-end;
