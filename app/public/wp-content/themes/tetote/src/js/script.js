@@ -270,7 +270,7 @@ jQuery(function ($) {
   });
 
   // ハンバーガーメニュー展開時のクリック挙動(今回はヘッダーをバーガーメニューから分離させているため、.c-headerも対象に)
-  $(".c-burger-menu, .c-header").on("click", function (event) {
+  $(".c-burger-menu, .c-header:has(.is-burger-open)").on("click", function (event) {
     const $clickedElement = $(event.target);
 
     // aタグまたはbuttonをクリックした場合
@@ -362,8 +362,8 @@ jQuery(function ($) {
         speed = 500;
       }
 
-      // ヘッダーあるいはバーガーメニューのリンクの時
-      if ($(this).closest('.c-header').length > 0) { // 親要素のどこかに.c-headerを持つ場合
+      // ヘッダー(バーガーメニュー展開時)およびバーガーメニューをクリック時
+      if ($(this).closest('.c-header:has(.is-burger-open)').length > 0) { // .c-headerが子孫要素に.is-burger-openを持つ場合
         controlScrolling();
         closeBurgerMenu();
         setHeaderColor();
