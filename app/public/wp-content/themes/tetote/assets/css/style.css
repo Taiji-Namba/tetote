@@ -1278,6 +1278,16 @@ tbody {
 .p-contact__wrapper {
   padding-block: 3.3rem 5.7rem;
 }
+@media screen and (max-width: 1439px) {
+  .p-contact__wrapper {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-contact__wrapper {
+    padding-inline: 1.6rem;
+  }
+}
 
 .p-contact__inner {
   max-width: min(100%, 88rem);
@@ -1289,13 +1299,11 @@ tbody {
 @media screen and (max-width: 1439px) {
   .p-contact__inner {
     padding-inline: 4rem;
-    margin-inline: 2rem;
   }
 }
 @media screen and (max-width: 767px) {
   .p-contact__inner {
     padding-inline: 1.6rem;
-    margin-inline: 1.6rem;
   }
 }
 

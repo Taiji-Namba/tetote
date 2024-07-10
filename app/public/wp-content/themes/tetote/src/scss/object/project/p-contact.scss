@@ -7,6 +7,14 @@
 
 .p-contact__wrapper{
   padding-block: 3.3rem 5.7rem;
+
+  @include mq(tab) {
+    padding-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-inline: 1.6rem;
+  }
 }
 
 .p-contact__inner{
@@ -18,12 +26,10 @@
 
   @include mq(tab) {
     padding-inline: 4rem;
-    margin-inline: 2rem;
   }
 
   @include mq(sp) {
     padding-inline: 1.6rem;
-    margin-inline: 1.6rem;
   }
 }
 
