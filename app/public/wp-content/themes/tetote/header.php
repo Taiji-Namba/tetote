@@ -7,21 +7,15 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(is_front_page() ? 'top-page' : 'sub-page'); ?>>
   <?php wp_body_open(); ?>
   <div id="page" class="l-site">
-    <header <?php if (is_front_page()) : ?> class="c-header l-header p-header p-header--top-page" <?php else : ?> class="c-header l-header p-header p-header--sub-page" ; <?php endif; ?>>
+    <header class="c-header l-header p-header <?php echo is_front_page() ? 'p-header--top-page' : 'p-header--sub-page'; ?>">
       <div class="p-header__inner">
-        <a href="<?php echo esc_url(home_url() . '/'); ?>" class="p-logo p-header__logo <?php echo esc_html('p-header__logo--top-page') ?>">
+        <a href="<?php echo esc_url(home_url() . '/'); ?>" class="p-logo p-header__logo">
           <?php if (is_front_page()) : ?>
             <h1 class="p-header--top-page__h1">TETOTE.co.ltd RECRUITING</h1>
           <?php else : ?>
