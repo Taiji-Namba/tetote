@@ -62,6 +62,10 @@
 }
 
 .p-header__logo {
+  mask-image: url(../images/common/logo-black.svg);
+  mask-size: contain;
+  mask-position: center center;
+  mask-repeat: no-repeat;
   width: 25.1rem;
   aspect-ratio: 251 / 66;
 
@@ -72,13 +76,6 @@
   @include mq(sp) {
     width: 15.1rem;
   }
-}
-
-.p-header__logo--top-page{
-  mask-image: url(../images/common/logo-black.svg);
-  mask-size: contain;
-  mask-position: center center;
-  mask-repeat: no-repeat;
 }
 
 .p-header__logo--white{

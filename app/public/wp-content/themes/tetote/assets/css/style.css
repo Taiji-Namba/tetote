@@ -2466,6 +2466,14 @@ tbody {
   }
 }
 .p-header__logo {
+  -webkit-mask-image: url(../images/common/logo-black.svg);
+          mask-image: url(../images/common/logo-black.svg);
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   width: 25.1rem;
   aspect-ratio: 251/66;
 }
@@ -2478,17 +2486,6 @@ tbody {
   .p-header__logo {
     width: 15.1rem;
   }
-}
-
-.p-header__logo--top-page {
-  -webkit-mask-image: url(../images/common/logo-black.svg);
-          mask-image: url(../images/common/logo-black.svg);
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
 }
 
 .p-header__logo--white {
