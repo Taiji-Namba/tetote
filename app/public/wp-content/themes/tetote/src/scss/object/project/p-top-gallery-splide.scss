@@ -1,9 +1,9 @@
 @use "../../foundation" as *;
-.p-top-mv-splide__inner {
+.p-top-gallery-splide__inner {
   position: relative;
 }
 
-.p-top-mv-splide .splide__list {
+.p-top-gallery-splide .splide__list {
   height: calc(39.3rem + 3.6rem);
 
   @include mq(tab) {
@@ -15,7 +15,7 @@
   }
 }
 
-.p-top-mv-splide .splide__slide {
+.p-top-gallery-splide .splide__slide {
   display: block;
   aspect-ratio: 506 / 393;
   width: 50.6rem;
@@ -26,7 +26,7 @@
   transition: transform 3s;
 }
 
-.p-top-mv-splide .splide__slide.is-active {
+.p-top-gallery-splide .splide__slide.is-active {
   transform: translateY(3.6rem);
   transition: transform 3s;
   
@@ -40,26 +40,26 @@
 }
 
 
-.p-top-mv-splide .splide__slide picture {
+.p-top-gallery-splide .splide__slide picture {
   height: inherit;
   height: 100%;
 }
 
-.p-top-mv-splide .splide__slide img {
+.p-top-gallery-splide .splide__slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.p-top-mv-splide__catch-copy{
+.p-top-gallery-splide__catch-copy-wrapper{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0.9rem;
 }
 
-.p-top-mv-splide__text{
+.p-top-gallery-splide__catch-copy{
   background-color: #fff;
   color: $txt-color;
   font-weight: $bold;

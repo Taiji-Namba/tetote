@@ -26,8 +26,8 @@ get_template_part('parts/functions-lib/func-utility');
 get_template_part('parts/functions-lib/func-enqueue-assets');
 // get_template_part('parts/functions-lib/func-enqueue-assets_noslider'); //スライダーを使用しない場合
 
-// （MV用）カスタムフィールドの設定
-get_template_part('parts/functions-lib/func-add-posttype-mv');
+// （ギャラリー用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-gallery');
 
 // （Staff用）カスタムフィールドの設定
 get_template_part('parts/functions-lib/func-add-posttype-staff');

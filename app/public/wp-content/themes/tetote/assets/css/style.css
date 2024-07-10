@@ -4082,125 +4082,25 @@ tbody {
   }
 }
 
-.p-top-gallery__inner {
-  margin: 5% 5% 0 5%;
-}
-
-.p-top-gallery .splide__slide {
-  display: block;
-  width: 100%;
-  aspect-ratio: 600/300;
-}
-
-.p-top-gallery .splide__slide picture {
-  height: inherit;
-  height: 100%;
-}
-
-.p-top-gallery .splide__slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.p-top-gallery .swiper-slide {
-  display: block;
-  width: 100%;
-  aspect-ratio: 600/300;
-}
-
-.p-top-gallery .swiper-slide picture {
-  height: inherit;
-  height: 100%;
-}
-
-.p-top-gallery .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.p-top-gallery .slick-track {
-  display: block;
-  width: 100%;
-}
-
-.p-top-gallery .slick-slide {
-  display: block;
-  width: 100%;
-  aspect-ratio: 600/300;
-  margin: 0 5px;
-}
-
-.p-top-gallery .slick-slide picture {
-  height: inherit;
-  height: 100%;
-}
-
-.p-top-gallery .slick-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.p-top-mv-slick {
-  background: black;
-}
-
-.p-top-mv-slick__inner {
-  margin: 5% 5% 0 5%;
-}
-
-.p-top-mv-slick .slick-track {
-  display: block;
-  width: 100%;
-}
-
-.p-top-mv-slick .slick-slide {
-  display: block;
-  width: 100%;
-  aspect-ratio: 600/300;
-  margin: 0 5px;
-}
-
-.p-top-mv-slick .slick-slide picture {
-  height: inherit;
-  height: 100%;
-}
-
-.p-top-mv-slick .slick-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.p-top-mv-splide__inner {
+.p-top-gallery-splide__inner {
   position: relative;
 }
 
-.p-top-mv-splide .splide__list {
+.p-top-gallery-splide .splide__list {
   height: 42.9rem;
 }
 @media screen and (max-width: 1439px) {
-  .p-top-mv-splide .splide__list {
+  .p-top-gallery-splide .splide__list {
     height: calc(27.3svw + 3.2rem);
   }
 }
 @media screen and (max-width: 767px) {
-  .p-top-mv-splide .splide__list {
+  .p-top-gallery-splide .splide__list {
     height: calc(56.1svw + 2.7rem);
   }
 }
 
-.p-top-mv-splide .splide__slide {
+.p-top-gallery-splide .splide__slide {
   display: block;
   aspect-ratio: 506/393;
   width: 50.6rem;
@@ -4211,27 +4111,27 @@ tbody {
   transition: transform 3s;
 }
 
-.p-top-mv-splide .splide__slide.is-active {
+.p-top-gallery-splide .splide__slide.is-active {
   transform: translateY(3.6rem);
   transition: transform 3s;
 }
 @media screen and (max-width: 1439px) {
-  .p-top-mv-splide .splide__slide.is-active {
+  .p-top-gallery-splide .splide__slide.is-active {
     transform: translateY(3.2rem);
   }
 }
 @media screen and (max-width: 767px) {
-  .p-top-mv-splide .splide__slide.is-active {
+  .p-top-gallery-splide .splide__slide.is-active {
     transform: translateY(2.7rem);
   }
 }
 
-.p-top-mv-splide .splide__slide picture {
+.p-top-gallery-splide .splide__slide picture {
   height: inherit;
   height: 100%;
 }
 
-.p-top-mv-splide .splide__slide img {
+.p-top-gallery-splide .splide__slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -4239,14 +4139,14 @@ tbody {
      object-fit: cover;
 }
 
-.p-top-mv-splide__catch-copy {
+.p-top-gallery-splide__catch-copy-wrapper {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0.9rem;
 }
 
-.p-top-mv-splide__text {
+.p-top-gallery-splide__catch-copy {
   background-color: #fff;
   color: #222222;
   font-weight: 700;
@@ -4255,41 +4155,13 @@ tbody {
   text-wrap: nowrap;
   padding: 0.7rem 1.1rem;
 }
-.p-top-mv-splide__text:last-child {
+.p-top-gallery-splide__catch-copy:last-child {
   margin-top: 0.7rem;
 }
 @media screen and (max-width: 374px) {
-  .p-top-mv-splide__text {
+  .p-top-gallery-splide__catch-copy {
     font-size: 2rem;
   }
-}
-
-.p-top-mv-swiper__inner {
-  margin: 5% 5% 0 5%;
-}
-
-.p-top-mv-swiper .swiper-slide {
-  display: block;
-  width: 100%;
-  aspect-ratio: 600/300;
-}
-
-.p-top-mv-swiper .swiper-slide picture {
-  height: inherit;
-  height: 100%;
-}
-
-.p-top-mv-swiper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.p-top-mv-swiper .swiper-button-prev,
-.p-top-mv-swiper .swiper-button-next {
-  text-rendering: initial;
 }
 
 .p-top-post {

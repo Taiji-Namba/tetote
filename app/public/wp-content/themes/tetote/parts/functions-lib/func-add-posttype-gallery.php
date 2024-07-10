@@ -1,25 +1,34 @@
 <?php
+
 /**
- * galleryのカスタム投稿を設定
+ * Galleryのカスタム投稿を設定
  */
 add_action('init', 'my_add_custom_post_gallery');
 function my_add_custom_post_gallery()
 {
-  // gallery
+  // 投稿タイプ'gallery_slider'を登録
   register_post_type(
-    'gallery',
+    'gallery_slider', // 新しい投稿タイプの名前
     array(
-      'label' => 'ギャラリー',
-      'labels' => array(
-        'name' => 'ギャラリー',
-        'all_items' => 'ギャラリー',
+      'label' => 'ギャラリー', // 管理画面に表示される投稿タイプの名前
+      'labels' => array( // 投稿タイプの詳細な表示名の設定
+        'name' => 'ギャラリー', // 投稿タイプの複数形の名前を設定
+        'all_items' => 'ギャラリー', // 全投稿一覧のリンクのテキスト
       ),
-      'public' => true,
-      'has_archive' => false,
-      'menu_position' => 12,   //メニュー表示位置
-      'supports' => array(
-        'title',
+      'public' => false, // この投稿タイプを公開するかどうか（公開する場合はtrue, 非公開の場合はfalse）
+      'show_ui' => true,  // 管理画面にこの投稿タイプのメニューを表示するかどうか
+      'show_in_rest' => true, // ブロックエディタを有効にする
+      'has_archive' => false, // この投稿タイプにアーカイブページを作成するかどうか
+      'menu_position' => 11, // 管理画面メニュー上での表示位置
+      'menu_icon' => 'dashicons-format-gallery',
+      'supports' => array( // この投稿タイプがサポートする機能
+        'title', // タイトルをサポート
+        // 'editor', // 本文エディタを有効にします。
+        // 'author', // 投稿者ボックスを有効にします。
+        // 'thumbnail', // アイキャッチ画像を有効にします。
+        // 'excerpt', // 投稿抜粋を有効にします。
+        // 'comments' // コメントを有効にします。
       ),
-    )
+    ),
   );
 }
