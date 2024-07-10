@@ -492,9 +492,19 @@ jQuery(function ($) {
     }
   });
 
-  // ハンバーガーメニュー表示時にメニュー以外をクリックしたらスクロール位置を保持したまま閉じる
-  $(".c-burger-menu").on("click", function (event) {
-    if (!$(event.target).is("a, button")) {
+  // ハンバーガーメニュー展開時のクリック挙動(今回はヘッダーをバーガーメニューから分離させているため、.c-headerも対象に)
+  $(".c-burger-menu, .c-header").on("click", function (event) {
+    const $clickedElement = $(event.target);
+
+    // aタグまたはbuttonをクリックした場合
+    if ($clickedElement.is("a, button") || $clickedElement.closest("a, button").length > 0) {
+      // aやbuttonのデフォルトの動作を許可
+    } else {
+      // それ以外の要素をクリックした場合
+      event.preventDefault(); // デフォルトの動作を防止
+      event.stopPropagation(); // イベントの伝播を停止
+
+      // スクロール位置を保持したままバーガーメニューを閉じる&ヘッダー色設定
       controlScrolling();
       closeBurgerMenu();
       setHeaderColor();
@@ -535,36 +545,58 @@ jQuery(function ($) {
     $(".c-burger-button").focus();
   });
 
-  // スムーススクロール(ハンバーガメニューを押したときも動作)
-  $('a[href^="#"]').click(function () {
-    if ($(this).hasClass("c-burger-menu__anchor")) {
-      closeBurgerMenu();
-      controlScrolling();
-      setHeaderColor();
-      setHoldenScrollPosition();
-    }
 
-    let adjust = $(".c-gnav").outerHeight(true);
-    if ($(window).width() <= 1439) {
-      adjust = 0;
-    }
-    let speed = 300;
-    let href = $(this).attr("href");
-    let target = $(href == "#" || href == "" ? "html" : href);
+  // スムーススクロール(「#」がついていなくても動くように)
+  $(document).on('click', 'a[href^="//"]', function (e) {
+    e.preventDefault();
 
-    let position = target.position().top - adjust;
+    const href = $(this).attr("href");
+    const currentProtocol = window.location.protocol;
+    const fullLinkUrl = currentProtocol + href;
 
-    if (
-      navigator.userAgent.indexOf("Safari") != -1 &&
-      navigator.userAgent.indexOf("Chrome") == -1
-    ) {
-      speed = 500;
+    // 先に#付きリンクを踏んでいる場合でも、スムーススクロールを作動させるため処理
+    let strippedFullLinkUrl = fullLinkUrl.split('#')[0]; // 'fullLinkUrl'から'#以降の文字列'を削除する
+    let strippedLocationHref = location.href.split('#')[0]; // 'location.href'から'#以降の文字列'を削除する
+
+    // ページ遷移しないリンクの時
+    if (strippedFullLinkUrl === strippedLocationHref){
+    let target;
+    let adjust;
+
+      // #のないリンクの時
+      if (fullLinkUrl === strippedLocationHref) {
+        target = $("html");
+        adjust = 0;
+      }
+
+      // #から始まるリンクの時
+      else if (fullLinkUrl.startsWith(strippedLocationHref + '#')){
+        const id = href.split('#')[1]; // #以降を切り取り、const idに代入
+        target = $('#' + id); // そのidを持つ要素をtargetに設定
+        const headerHeight = $("header").outerHeight();
+        adjust = headerHeight + 30;
+      }
+
+      let position = target.position().top - adjust;
+      let speed = 300;
+
       // Safariのスクロールアニメーションの速度を調整
+      if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1) {
+        speed = 500;
+      }
+
+      // ヘッダーあるいはバーガーメニューのリンクの時
+      if ($(this).closest('.c-header').length > 0) { // 親要素のどこかに.c-headerを持つ場合
+        controlScrolling();
+        closeBurgerMenu();
+        setHeaderColor();
+        setHoldenScrollPosition();
+      }
+
+      $("body,html").animate({ scrollTop: position }, speed, "linear");
+      } else {// ページ遷移するリンクの時
+      window.location.href = fullLinkUrl;
     }
-
-    $("body,html").animate({ scrollTop: position }, speed, "linear");
-
-    return false;
   });
 
   // バグ対応(.modal__containerの中では閉じるボタンを押したときのみモーダルを閉じるようにする)
