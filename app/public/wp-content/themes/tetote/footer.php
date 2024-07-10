@@ -9,9 +9,9 @@
 
       <div class="p-footer__menu-wrapper">
         <div class="p-footer__menus">
-          <a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-footer__logo"><img class="p-footer__img p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+          <a href="<?php echo esc_url(home_url() . '/'); ?>" class="p-footer__logo"><img class="p-footer__img p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
           <ul class="p-footer__list">
-            <li class="p-footer__item"><a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-footer__anchor">ホーム</a></li>
+            <li class="p-footer__item"><a href="<?php echo esc_url(home_url() . '/'); ?>" class="p-footer__anchor">ホーム</a></li>
             <li class="p-footer__item"><a href="<?php echo esc_url(home_url() . '/about-us/'); ?>" class="p-footer__anchor">TETOTEについて</a></li>
             <li class="p-footer__item"><a href="<?php echo esc_url(home_url() . '/staff/'); ?>" class="p-footer__anchor">人を知る</a></li>
             <li class="p-footer__item"><a href="<?php echo esc_url(home_url() . '/career/'); ?>" class="p-footer__anchor">研修制度とキャリアパス</a></li>
