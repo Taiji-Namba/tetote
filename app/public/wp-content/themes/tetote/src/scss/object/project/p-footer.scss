@@ -163,7 +163,7 @@
   position: absolute;
   left: 0;
   bottom: 0.6rem;
-  text-wrap: nowrap;
+  white-space: nowrap;
 
   @include mq(tab) {
     left: 50%;

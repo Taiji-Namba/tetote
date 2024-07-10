@@ -65,7 +65,7 @@
   font-weight: $bold;
   font-size: rclamp(24, 40, 375, 1440);
   text-align: center;
-  text-wrap: nowrap;
+  white-space: nowrap;
   padding: 0.7rem 1.1rem;
 
   &:last-child{
