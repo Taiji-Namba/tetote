@@ -19,7 +19,7 @@
 <body <?php body_class(is_front_page() ? 'top-page' : 'sub-page'); ?>>
   <?php wp_body_open(); ?>
   <div id="page" class="l-site">
-    <header <?php if (is_front_page()) : ?> class="c-header l-header p-header p-header--top-page" <?php else : ?> class="c-header l-header p-header p-header--sub-page" ; <?php endif; ?>>
+    <header class="c-header l-header p-header <?php echo is_front_page() ? 'p-header--top-page' : 'p-header--sub-page'; ?>">
       <div class="p-header__inner">
         <a href="<?php echo esc_url(home_url() . '/'); ?>" class="p-logo p-header__logo">
           <?php if (is_front_page()) : ?>
