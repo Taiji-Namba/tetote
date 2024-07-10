@@ -339,12 +339,28 @@
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+
+  @include mq(tab) {
+    row-gap: 2rem;
+  }
+
+  @include mq(sp) {
+    row-gap: 3rem;
+  }
 }
 
 .p-contact__item-checkbox{
   display: flex;
   flex-direction: column;
   row-gap: 2.1rem;
+
+  @include mq(tab) {
+    row-gap: 2.6rem;
+  }
+
+  @include mq(sp) {
+    row-gap: 3.5rem;
+  }
 }
 
 .p-contact__item-radio input[type="radio"],

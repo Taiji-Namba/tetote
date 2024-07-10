@@ -1632,11 +1632,31 @@ tbody {
   flex-direction: column;
   row-gap: 1.5rem;
 }
+@media screen and (max-width: 1439px) {
+  .p-contact__item-radio {
+    row-gap: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-contact__item-radio {
+    row-gap: 3rem;
+  }
+}
 
 .p-contact__item-checkbox {
   display: flex;
   flex-direction: column;
   row-gap: 2.1rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-contact__item-checkbox {
+    row-gap: 2.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-contact__item-checkbox {
+    row-gap: 3.5rem;
+  }
 }
 
 .p-contact__item-radio input[type=radio],
