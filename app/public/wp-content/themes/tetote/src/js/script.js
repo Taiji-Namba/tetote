@@ -229,12 +229,16 @@ jQuery(function ($) {
 
   // バーガーメニューを閉じたときにヘッダー色を戻す
   function setHeaderColor() {
+    const fvHeight = $(".p-fv").outerHeight(); // トップページFVの高さを取得
     const headerHeight = $(".p-header").outerHeight(); // ヘッダーの高さを取得
     const topPage = document.querySelector("body.top-page");
-    if (parseInt($("body").css("top")) >= -headerHeight && topPage !== null){
-      changeHeaderToWhite();
-    } else {
-      changeHeaderToBlack();
+
+    if (topPage !== null){ // トップページのときのみ
+      if (parseInt($("body").css("top")) >= -fvHeight){
+        changeHeaderToWhite();
+      } else {
+        changeHeaderToBlack();
+      }
     }
   };
 
