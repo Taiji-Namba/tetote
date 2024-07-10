@@ -19,9 +19,9 @@
 <body <?php body_class(is_front_page() ? 'top-page' : 'sub-page'); ?>>
   <?php wp_body_open(); ?>
   <div id="page" class="l-site">
-    <header <?php if (is_front_page()) : ?> class="l-header p-header p-header--top-page" <?php else : ?> class="l-header p-header p-header--sub-page" ; <?php endif; ?>>
+    <header <?php if (is_front_page()) : ?> class="c-header l-header p-header p-header--top-page" <?php else : ?> class="c-header l-header p-header p-header--sub-page" ; <?php endif; ?>>
       <div class="p-header__inner">
-        <a href="<?php echo esc_url(home_url() . '/#'); ?>" class="p-logo p-header__logo <?php echo esc_html('p-header__logo--top-page') ?>">
+        <a href="<?php echo esc_url(home_url() . '/'); ?>" class="p-logo p-header__logo <?php echo esc_html('p-header__logo--top-page') ?>">
           <?php if (is_front_page()) : ?>
             <h1 class="p-header--top-page__h1">TETOTE.co.ltd RECRUITING</h1>
           <?php else : ?>
@@ -57,7 +57,7 @@
       <nav class="c-burger-menu p-burger-menu" id="burger-nav">
         <ul class="p-burger-menu__inner">
           <li class="p-burger-menu__logo-list">
-            <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/#'); ?>"><img class="p-burger-menu__logo p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
+            <a class="p-burger-menu__anchor" href="<?php echo esc_url(home_url() . '/'); ?>"><img class="p-burger-menu__logo p-logo__img p-logo__img--black" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/logo-black.svg'); ?>" alt="「TETOTE」のロゴ"></a>
           </li>
           <li class="p-burger-menu__item-list">
             <ul class="p-burger-menu__text-item-wrapper">

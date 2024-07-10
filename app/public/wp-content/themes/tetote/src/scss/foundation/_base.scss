@@ -13,10 +13,6 @@ html {
   font-size: 62.5%;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: $font-family-base;
   font-size: $base-font-size;
