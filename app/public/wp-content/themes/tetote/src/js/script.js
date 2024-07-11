@@ -274,22 +274,24 @@ jQuery(function ($) {
   });
 
   // ハンバーガーメニュー展開時のクリック挙動(今回はヘッダーをバーガーメニューから分離させているため、.c-headerも対象に)
-  $(".c-burger-menu, .c-header:has(.is-burger-open)").on("click", function (event) {
-    const $clickedElement = $(event.target);
+  $(".c-burger-menu, .c-header").on("click", function (event) {
+    if ($(".c-burger-button").hasClass("is-burger-open")) {
+      const $clickedElement = $(event.target);
 
-    // aタグまたはbuttonをクリックした場合
-    if ($clickedElement.is("a, button") || $clickedElement.closest("a, button").length > 0) {
-      // aやbuttonのデフォルトの動作を許可
-    } else {
-      // それ以外の要素をクリックした場合
-      event.preventDefault(); // デフォルトの動作を防止
-      event.stopPropagation(); // イベントの伝播を停止
+      // aタグまたはbuttonをクリックした場合
+      if ($clickedElement.is("a, button") || $clickedElement.closest("a, button").length > 0) {
+        // aやbuttonのデフォルトの動作を許可
+      } else {
+        // それ以外の要素をクリックした場合
+        event.preventDefault(); // デフォルトの動作を防止
+        event.stopPropagation(); // イベントの伝播を停止
 
-      // スクロール位置を保持したままバーガーメニューを閉じる&ヘッダー色設定
-      controlScrolling();
-      closeBurgerMenu();
-      setHeaderColor();
-      setHoldenScrollPosition();
+        // スクロール位置を保持したままバーガーメニューを閉じる&ヘッダー色設定
+        controlScrolling();
+        closeBurgerMenu();
+        setHeaderColor();
+        setHoldenScrollPosition();
+      }
     }
   });
 
