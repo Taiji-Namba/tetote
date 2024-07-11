@@ -335,6 +335,7 @@
   display: none;
 }
 
+// ラジオボタン群
 .p-contact__item-radio{
   display: flex;
   flex-direction: column;
@@ -349,6 +350,7 @@
   }
 }
 
+// チェックボックス群
 .p-contact__item-checkbox{
   display: flex;
   flex-direction: column;
@@ -363,6 +365,7 @@
   }
 }
 
+// デフォルトのラジオボタンとチェックボックスを不可視化
 .p-contact__item-radio input[type="radio"],
 .p-contact__item-checkbox input[type="checkbox"]{
   // タブキーでもカーソルが当たるようdisplay:none;ではなく、opacity:0,position: absoluteで対応
@@ -372,6 +375,7 @@
   transform: translateY(-50%);
 }
 
+// デフォルトのラジオボタンとチェックボックスの選択肢のテキスト部分
 .p-contact__item-radio input[type="radio"] +span,
 .p-contact__item-checkbox input[type="checkbox"] +span {
   display: inline-block;
@@ -390,13 +394,67 @@
   padding: 0.25em 0 0.25em calc(1.5em + math.div(13, 16) * 1em);
 }
 
-// プライバシーポリシーのテキスト部分
-.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span{
-  font-size: 1.4rem;
-  padding: calc(math.div(14, 2) * 1em), 0 calc(math.div(14, 2) * calc(1em + math.div(14, 6) * 1em)) ;
+// ラジオボタンとチェックボックスのボタンやチェックボックスの外側部分
+.p-contact__item-radio input[type="radio"] + span::before,
+.p-contact__item-checkbox input[type="checkbox"] + span::before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1.5em;
+	height: 1.5em;
+	content: "";
+  transform: translateY(-50%);
+  background: $bg-sub-color;
+  border: 0.1px solid $accent-color-2;
 }
 
-// プライバシーポリシーの枠
+// ラジオボタンとチェックボックスのボタンやチェックボックスの内側部分
+.p-contact__item-checkbox input[type="checkbox"]:checked+span::after,
+.p-contact__item-radio input[type="radio"]:checked+span::after {
+  opacity: 1;
+}
+
+// ラジオボタンの外側部分
+.p-contact__item-radio input[type="radio"]+span::before{
+  border-radius: 50%;
+}
+
+// ラジオボタンの内側部分
+.p-contact__item-radio input[type="radio"]+span::after {
+  position: absolute;
+  content: "";
+  background-color: $txt-color;
+  border-radius: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  left: calc(math.div(1.5em, 2));
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease 0s;
+}
+
+// チェックボックスの内側部分
+.p-contact__item-checkbox input[type="checkbox"]+span::after {
+  position: absolute;
+  content: "";
+  background-color: $txt-color;
+  width: 0.625em;
+  height: 0.625em;
+  left: calc(math.div(1.5em, 2));
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease 0s;
+}
+
+// ラジオボタンとチェックボックスのフォーカス時の挙動
+.p-contact__item-radio input[type="radio"]:focus + span::before,
+.p-contact__item-checkbox input[type="checkbox"]:focus + span::before {
+  border: 0.2rem solid $accent-color-1;
+}
+
+// プライバシーポリシーのブロック
 .p-contact__policy{
   margin-top: 10rem;
 
@@ -415,25 +473,12 @@
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   transition: all 0.3s;
-  
 }
 
-// ラジオボタン・チェックボックスのボタンやチェックボックスの外側部分
-.p-contact__item-radio input[type="radio"] + span::before,
-.p-contact__item-checkbox input[type="checkbox"] + span::before {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 1.5em;
-	height: 1.5em;
-	content: "";
-  transform: translateY(-50%);
-  background: $bg-sub-color;
-  border: 0.1px solid $accent-color-2;
-}
-
-.p-contact__item-radio input[type="radio"]+span::before{
-  border-radius: 50%;
+// プライバシーポリシーのテキスト部分
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span{
+  font-size: 1.4rem;
+  padding: calc(math.div(14, 2) * 1em), 0 calc(math.div(14, 2) * calc(1em + math.div(14, 6) * 1em)) ;
 }
 
 // プライバシーポリシーのチェックボックスの外側
@@ -443,50 +488,11 @@
 }
 
 // プライバシーポリシーのチェックボックスの内側
-.p-contact__item-radio input[type="radio"]+span::after {
-  position: absolute;
-  content: "";
-  background-color: $txt-color;
-  border-radius: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  left: calc(math.div(1.5em, 2));
-  opacity: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease 0s;
-}
-
-.p-contact__item-checkbox input[type="checkbox"]+span::after {
-  position: absolute;
-  content: "";
-  background-color: $txt-color;
-  width: 0.625em;
-  height: 0.625em;
-  left: calc(math.div(1.5em, 2));
-  opacity: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease 0s;
-}
-
 .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::after{
-  width: 1rem * math.div(16, 24);
-  height: 1rem * math.div(16, 24);
-  left: calc(math.div(1.6rem, 2));
+  width: calc(0.5em + 0.1rem);
+  height: calc(0.5em + 0.1rem);
+  left: calc(0.5em + 0.1rem);
 }
-
-.p-contact__item-checkbox input[type="checkbox"]:checked+span::after,
-.p-contact__item-radio input[type="radio"]:checked+span::after {
-  opacity: 1;
-}
-
-// ラジオボタンとチェックボックスのフォーカス時の挙動
-.p-contact__item-radio input[type="radio"]:focus + span::before,
-.p-contact__item-checkbox input[type="checkbox"]:focus + span::before {
-  border: 0.2rem solid $accent-color-1;
-}
-
 
 
 /* ボタン */

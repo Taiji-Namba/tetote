@@ -1685,32 +1685,6 @@ tbody {
   padding: 0.25em 0 0.25em 2.3125em;
 }
 
-.p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span {
-  font-size: 1.4rem;
-  padding: 7em, 0 23.3333333333em;
-}
-
-.p-contact__policy {
-  margin-top: 10rem;
-}
-@media screen and (max-width: 1439px) {
-  .p-contact__policy {
-    margin-top: 9rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .p-contact__policy {
-    margin-top: 8rem;
-  }
-}
-
-.p-contact__policy-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
-  transition: all 0.3s;
-}
-
 .p-contact__item-radio input[type=radio] + span::before,
 .p-contact__item-checkbox input[type=checkbox] + span::before {
   position: absolute;
@@ -1724,13 +1698,13 @@ tbody {
   border: 0.1px solid #afa86f;
 }
 
-.p-contact__item-radio input[type=radio] + span::before {
-  border-radius: 50%;
+.p-contact__item-checkbox input[type=checkbox]:checked + span::after,
+.p-contact__item-radio input[type=radio]:checked + span::after {
+  opacity: 1;
 }
 
-.p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span::before {
-  width: 1.6rem;
-  height: 1.6rem;
+.p-contact__item-radio input[type=radio] + span::before {
+  border-radius: 50%;
 }
 
 .p-contact__item-radio input[type=radio] + span::after {
@@ -1760,20 +1734,46 @@ tbody {
   transition: all 0.3s ease 0s;
 }
 
-.p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span::after {
-  width: 0.6666666667rem;
-  height: 0.6666666667rem;
-  left: 0.8rem;
-}
-
-.p-contact__item-checkbox input[type=checkbox]:checked + span::after,
-.p-contact__item-radio input[type=radio]:checked + span::after {
-  opacity: 1;
-}
-
 .p-contact__item-radio input[type=radio]:focus + span::before,
 .p-contact__item-checkbox input[type=checkbox]:focus + span::before {
   border: 0.2rem solid #988c2c;
+}
+
+.p-contact__policy {
+  margin-top: 10rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-contact__policy {
+    margin-top: 9rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-contact__policy {
+    margin-top: 8rem;
+  }
+}
+
+.p-contact__policy-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  transition: all 0.3s;
+}
+
+.p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span {
+  font-size: 1.4rem;
+  padding: 7em, 0 23.3333333333em;
+}
+
+.p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span::before {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span::after {
+  width: calc(0.5em + 0.1rem);
+  height: calc(0.5em + 0.1rem);
+  left: calc(0.5em + 0.1rem);
 }
 
 /* ボタン */
