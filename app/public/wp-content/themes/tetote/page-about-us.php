@@ -124,7 +124,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
             </tr>
             <tr class="p-page-contents__table-row">
               <th class="p-page-contents__table-heading">電話番号</th>
-              <td class="p-page-contents__table-data">03-1234-5678</td>
+              <td class="p-page-contents__table-data tel"><a href="#">03-1234-5678</a></td>
             </tr>
             <tr class="p-page-contents__table-row">
               <th class="p-page-contents__table-heading">ウェブサイトURL</th>
@@ -132,7 +132,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
             </tr>
             <tr class="p-page-contents__table-row">
               <th class="p-page-contents__table-heading">メールアドレス</th>
-              <td class="p-page-contents__table-data">tetote@tetote.co.jp</td>
+              <td class="p-page-contents__table-data email"><a href="#">tetote@tetote.co.jp</a></td>
             </tr>
             <tr class="p-page-contents__table-row">
               <th class="p-page-contents__table-heading">設立年月</th>
