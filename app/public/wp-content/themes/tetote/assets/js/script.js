@@ -250,7 +250,7 @@ jQuery(function ($) {
   };
 
   // バーガーメニューを閉じる時に、fixedを解除して元のスクロール位置に戻る
-  function setHoldenScrollPosition(){
+  function setHeldScrollPosition(){
     $("body").removeClass("fixed").css({ top: 0 });
     window.scroll({
       top: scrollpos,
@@ -269,7 +269,7 @@ jQuery(function ($) {
     } else { // バーガーメニューを閉じる時
       closeBurgerMenu();
       setHeaderColor();
-      setHoldenScrollPosition();
+      setHeldScrollPosition();
     }
   });
 
@@ -290,7 +290,7 @@ jQuery(function ($) {
         controlScrolling();
         closeBurgerMenu();
         setHeaderColor();
-        setHoldenScrollPosition();
+        setHeldScrollPosition();
       }
     }
   });
@@ -306,7 +306,7 @@ jQuery(function ($) {
         closeBurgerMenu();
         controlScrolling();
         setHeaderColor();
-        setHoldenScrollPosition();
+        setHeldScrollPosition();
         // バーガー展開時にモーダルを閉じる際、バーガーは閉じない
       } else if ($(".modal.modal-open").length > 0) {
         {
@@ -373,7 +373,7 @@ jQuery(function ($) {
         controlScrolling();
         closeBurgerMenu();
         setHeaderColor();
-        setHoldenScrollPosition();
+        setHeldScrollPosition();
       }
 
       $("body,html").animate({ scrollTop: position }, speed, "linear");
