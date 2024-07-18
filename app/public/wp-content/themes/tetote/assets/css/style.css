@@ -342,12 +342,26 @@ tbody {
   margin-inline: auto;
 }
 
+.p-404 {
+  background-color: #faf7f1;
+}
+
+.p-404__inner {
+  padding-block: 10rem;
+}
+
 .p-404__title {
   text-align: center;
 }
 
 .p-404__button {
   text-align: center;
+  margin-top: 4rem;
+}
+
+.p-404__button .p-button {
+  background-color: #222222;
+  padding: 2rem 4rem;
 }
 
 .p-about-us-section__title {

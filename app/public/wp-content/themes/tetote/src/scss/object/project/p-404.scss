@@ -1,9 +1,22 @@
 @use "../../foundation" as *;
 
+.p-404{
+  background-color: $bg-sub-color;
+}
+
+.p-404__inner{
+  padding-block: 10rem;
+}
+
 .p-404__title{
   text-align: center;
 }
 .p-404__button{
   text-align: center;
+  margin-top: 4rem;
+}
 
+.p-404__button .p-button{
+  background-color: $txt-color;
+  padding: 2rem 4rem;
 }
