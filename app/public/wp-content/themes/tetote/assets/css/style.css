@@ -812,6 +812,7 @@ tbody {
 .p-breadcrumb {
   background-color: #F0F0F0;
   font-size: 1.4rem;
+  line-height: 1;
 }
 
 .p-breadcrumb__inner {
@@ -1254,11 +1255,11 @@ tbody {
   line-height: 2;
 }
 
-.p-ceo-message__text:first-child {
+.p-ceo-message__text--mt44 {
   margin-top: 4.4rem;
 }
 
-.p-ceo-message__text:not(:first-child) {
+.p-ceo-message__text--mt31 {
   margin-top: 3.1rem;
 }
 
@@ -2046,6 +2047,12 @@ tbody {
   padding: 0.3rem 1rem;
   background-color: #fff;
   display: inline-block;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .p-eyecatch__title {
+    line-height: 1.5;
+  }
 }
 
 .p-eyecatch__subtitle {
@@ -2054,6 +2061,12 @@ tbody {
   padding: 0.3rem 1rem;
   background-color: #fff;
   display: inline-block;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .p-eyecatch__subtitle {
+    line-height: 1.5;
+  }
 }
 
 .p-eyecatch__text {
@@ -2063,6 +2076,12 @@ tbody {
   padding: 0.7rem 1rem;
   background-color: #fff;
   display: inline-block;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .p-eyecatch__text {
+    line-height: 1.5;
+  }
 }
 
 .p-footer__wrapper {
@@ -2711,7 +2730,7 @@ tbody {
   justify-content: flex-start;
   flex-wrap: wrap;
   border-spacing: 0;
-  margin-top: 8.5rem;
+  margin-top: 7.7rem;
 }
 @media screen and (max-width: 1439px) {
   .p-page-contents__table {
@@ -2727,14 +2746,10 @@ tbody {
 .p-page-contents__table-row {
   display: flex;
   flex-wrap: wrap;
-  padding-block: 3.15rem;
+  padding-block: calc(3.6rem - 0.25em);
   min-height: 8.8rem;
   border-bottom: 0.1rem dotted #222222;
   row-gap: 1.6rem;
-}
-
-.p-page-contents__table-row:first-of-type {
-  padding-top: 0;
 }
 
 .p-page-contents__table-heading {
@@ -3393,12 +3408,7 @@ tbody {
 }
 
 .p-services__content:last-child {
-  padding-block: 6rem;
-}
-@media screen and (max-width: 767px) {
-  .p-services__content:last-child {
-    padding-bottom: 0;
-  }
+  padding-block: 6rem 0;
 }
 
 .p-services__border {
@@ -3528,9 +3538,19 @@ tbody {
   margin-top: 4rem;
 }
 
+.p-services__large-text--1line {
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .p-services__large-text--1line {
+    line-height: 1.5;
+  }
+}
+
 .p-services__explanatory-text {
   line-height: 1.5;
   margin-top: 4rem;
+  max-width: min(43rem, 100%);
 }
 
 .p-sidebar {
