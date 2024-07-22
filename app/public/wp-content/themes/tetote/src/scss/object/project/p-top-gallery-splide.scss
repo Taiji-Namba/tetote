@@ -64,6 +64,7 @@
   color: $txt-color;
   font-weight: $bold;
   font-size: rclamp(24, 40, 375, 1440);
+  line-height: 1.45;
   text-align: center;
   white-space: nowrap;
   padding: 0.7rem 1.1rem;
