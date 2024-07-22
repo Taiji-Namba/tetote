@@ -421,19 +421,19 @@ jQuery(function ($) {
 
   // フッターのメインメニューの横幅設定
   function setFooterListWidth() {
-    var itemsWidth, additionalWidth;
+    var totalWidthOfItem, additionalWidth;
     var windowWidth = $(window).width();
 
     if (windowWidth >= 1440) { // PCの場合
-      itemsWidth = $(".p-footer__item").eq(0).outerWidth() + $(".p-footer__item").eq(1).outerWidth() + $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth();
+      totalWidthOfItem = $(".p-footer__item").eq(0).outerWidth() + $(".p-footer__item").eq(1).outerWidth() + $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth();
     } else if (windowWidth >= 768 && windowWidth <= 1439) { // タブレットの場合
-      itemsWidth = $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth() + $(".p-footer__item").eq(6).outerWidth();
+      totalWidthOfItem = $(".p-footer__item").eq(2).outerWidth() + $(".p-footer__item").eq(3).outerWidth() + $(".p-footer__item").eq(4).outerWidth() + $(".p-footer__item").eq(6).outerWidth();
     } else {
       $(".p-footer__list").width("100%");
     }
     additionalWidth = 2.2 * 4 * 10; // 8.8remをピクセルに変換 (1rem = 10px)
 
-    var listWidth = itemsWidth + additionalWidth;
+    var listWidth = totalWidthOfItem + additionalWidth;
     $(".p-footer__list").width(listWidth);
   };
 
