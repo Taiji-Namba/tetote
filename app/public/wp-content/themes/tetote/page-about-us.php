@@ -15,7 +15,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
 <main class="c-main p-main p-page">
   <div class="c-main__inner p-main__inner l-page--small">
     <section class="p-about-us-section p-what-we-value">
-      <h2 class="p-about-us-section__title p-about-us-section__title--center">私たちが大切にしていること</h2>
+      <h2 class="p-about-us-section__title p-about-us-section__title--center">私達が大切にしていること</h2>
       <ul class="p-what-we-value__list">
         <li class="p-what-we-value__item">
           <h3 class="p-what-we-value__heading"><span class="p-what-we-value__number">1</span><span class="p-what-we-value__title">飽くなき探求心で、革新を創り出す</span></h3>
@@ -51,10 +51,10 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
               それを全力でサポートできる、<br>
               それがTETOTEの強みです。
             </p>
-            <p class="p-ceo-message__text">TETOTEは、ITコンサルティングとコンサル導入企業への営業を専門とする会社です。設立以来、私たちは「お客様の課題解決に真摯に取り組み、共に成長する」という理念を掲げ、お客様とパートナーと共に歩んできました。</p>
-            <p class="p-ceo-message__text">お客様のニーズを深く理解し、最適なソリューションを提供することで、数多くの課題解決を支援してきました。その結果、お客様との深い信頼関係を築き、共に成長することができています。</p>
-            <p class="p-ceo-message__text">TETOTEは、個々の能力や個性を尊重し、多様な人材が活躍できる環境づくりに力を入れています。年齢、性別、国籍、経験などに関係なく、意欲と向上心のある人材を歓迎します。</p>
-            <p class="p-ceo-message__text">私たちと共に、未来を創造していきましょう。</p>
+            <p class="p-ceo-message__text p-ceo-message__text--mt44">TETOTEは、ITコンサルティングとコンサル導入企業への営業を専門とする会社です。設立以来、私たちは「お客様の課題解決に真摯に取り組み、共に成長する」という理念を掲げ、お客様とパートナーと共に歩んできました。</p>
+            <p class="p-ceo-message__text p-ceo-message__text--mt31">お客様のニーズを深く理解し、最適なソリューションを提供することで、数多くの課題解決を支援してきました。その結果、お客様との深い信頼関係を築き、共に成長することができています。</p>
+            <p class="p-ceo-message__text p-ceo-message__text--mt31">TETOTEは、個々の能力や個性を尊重し、多様な人材が活躍できる環境づくりに力を入れています。年齢、性別、国籍、経験などに関係なく、意欲と向上心のある人材を歓迎します。</p>
+            <p class="p-ceo-message__text p-ceo-message__text--mt31">私たちと共に、未来を創造していきましょう。</p>
             <img class="p-ceo-message__ceo-name" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/parts/about-us/ceo-name.svg'); ?>" alt="田中浩二郎">
           </div>
         </div>
@@ -70,7 +70,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
             <div class="p-services__image p-services__image--consulting"></div>
             <div class="p-services__text-group p-services__text-group--first">
               <h3 class="p-services__heading">コンサルティング事業</h3>
-              <p class="p-services__large-text">お客様と伴走し、<br class="u-break--sp" />売上に直接貢献できる</p>
+              <p class="p-services__large-text p-services__large-text--1line">お客様と伴走し、<br class="u-break--sp" />売上に直接貢献できる</p>
               <p class="p-services__explanatory-text">営業との連携で、人と組織の成長・変革に向けた計画立案・サービス実施、さらにフォローまで。コンサルタントとして一気通貫で携わります。</p>
             </div>
           </div>

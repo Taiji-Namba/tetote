@@ -55,7 +55,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   border-spacing: 0;
-  margin-top: 8.5rem;
+  margin-top: calc(11.3rem - 3.6rem);
 
   @include mq(tab) {
     margin-top: 6.6rem;
@@ -73,14 +73,10 @@
 .p-page-contents__table-row {
   display: flex;
   flex-wrap: wrap;
-  padding-block: 3.15rem;
+  padding-block: calc(3.6rem - 0.25em);
   min-height: 8.8rem;
   border-bottom: 0.1rem dotted $txt-color;
   row-gap: 1.6rem;
-}
-
-.p-page-contents__table-row:first-of-type{
-  padding-top: 0;
 }
 
 .p-page-contents__table-heading {

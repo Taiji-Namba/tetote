@@ -53,11 +53,7 @@
 }
 
 .p-services__content:last-child{
-  padding-block: 6rem;
-
-  @include mq(sp) {
-    padding-bottom: 0;
-  }
+  padding-block: 6rem 0;
 }
 
 .p-services__border{
@@ -180,8 +176,17 @@
   margin-top: 4rem;
 }
 
+.p-services__large-text--1line {
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
+}
+
 .p-services__explanatory-text {
   line-height: 1.5;
   margin-top: 4rem;
+  max-width: min(43rem, 100%);
 }
 
