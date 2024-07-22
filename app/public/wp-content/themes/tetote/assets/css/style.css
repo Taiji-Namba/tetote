@@ -2239,6 +2239,7 @@ tbody {
 
 .p-footer__copy-right {
   font-size: 1.2rem;
+  font-family: Viga, "Noto Sans JP", sans-serif;
   color: #999999;
   position: absolute;
   left: 0;
@@ -2252,6 +2253,7 @@ tbody {
     bottom: 0;
   }
 }
+
 .p-footer__sns-list {
   position: absolute;
   right: 0;
@@ -3942,7 +3944,7 @@ tbody {
   padding-inline: 1.7rem;
   padding-bottom: 10.7rem;
   margin-inline: auto;
-  width: min(1440px, 100%);
+  width: min(1024px, 100%);
 }
 @media screen and (max-width: 1439px) {
   .p-top-benefits__inner {
@@ -4192,6 +4194,7 @@ tbody {
   color: #222222;
   font-weight: 700;
   font-size: clamp(2.4rem, 1.8366197183rem + 1.5023474178vw, 4rem);
+  line-height: 1.45;
   text-align: center;
   white-space: nowrap;
   padding: 0.7rem 1.1rem;
@@ -4232,9 +4235,12 @@ tbody {
 }
 
 .p-top-post__view-more {
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
   position: absolute;
-  top: 9rem;
-  right: 2rem;
+  top: 8.4rem;
+  right: 3.7rem;
 }
 @media screen and (max-width: 767px) {
   .p-top-post__view-more {
@@ -4328,6 +4334,7 @@ tbody {
   justify-content: center;
   align-items: center;
   padding-block: 5rem;
+  line-height: 1;
 }
 @media screen and (max-width: 1439px) {
   .p-top-recruitment__anchor {
@@ -4432,7 +4439,6 @@ tbody {
 
 .p-top-section__subtitle {
   margin-left: 16.8055555556%;
-  line-height: 1.5;
   margin-top: 5.2rem;
 }
 @media screen and (max-width: 1439px) {
@@ -4448,6 +4454,19 @@ tbody {
   }
 }
 
+.p-top-section__subtitle--1line {
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .p-top-section__subtitle--1line {
+    line-height: 1.5;
+  }
+}
+
+.p-top-section__subtitle--multi-line {
+  line-height: 1.5;
+}
+
 .p-top-section__subtitle--mt73ml0 {
   margin-top: 7.3rem;
   margin-left: 0;
@@ -4460,6 +4479,15 @@ tbody {
 @media screen and (max-width: 767px) {
   .p-top-section__subtitle--mt73ml0 {
     margin-top: 4.3rem;
+  }
+}
+
+.p-top-section__subtitle--ml24 {
+  padding-left: 4.7rem;
+}
+@media screen and (max-width: 1023px) {
+  .p-top-section__subtitle--ml24 {
+    padding-left: unset;
   }
 }
 
@@ -4670,12 +4698,6 @@ tbody {
 .p-view-more-group__arrow-button:hover {
   scale: 1.2;
   transition: 0.3s;
-}
-
-.p-top-post__view-more {
-  font-family: Viga, "Noto Sans JP", sans-serif;
-  text-decoration: underline;
-  text-decoration-thickness: 0.2rem;
 }
 
 .p-what-we-value__list {
