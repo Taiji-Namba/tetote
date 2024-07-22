@@ -159,6 +159,7 @@
 
 .p-footer__copy-right {
   font-size: 1.2rem;
+  font-family: $viga;
   color: #999999;
   position: absolute;
   left: 0;
@@ -169,10 +170,6 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-}
-
-  @include mq(sp) {
-
   }
 }
 
