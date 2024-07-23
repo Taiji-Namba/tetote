@@ -2897,20 +2897,6 @@ tbody {
   }
 }
 
-.p-page__scroll-buttons {
-  margin-top: 7rem;
-}
-@media screen and (max-width: 1439px) {
-  .p-page__scroll-buttons {
-    margin-top: 6rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .p-page__scroll-buttons {
-    margin-top: 5rem;
-  }
-}
-
 .p-pager-list {
   display: flex;
   justify-content: space-between;
@@ -3340,7 +3326,19 @@ tbody {
   align-items: center;
   flex-wrap: wrap;
   row-gap: 5rem;
+  margin-top: 7rem;
 }
+@media screen and (max-width: 1439px) {
+  .p-scroll-button__list {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-scroll-button__list {
+    margin-top: 5rem;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .p-scroll-button__item {
     width: 100%;
@@ -3357,10 +3355,11 @@ tbody {
   border: 0.1rem solid #222222;
   border-radius: 4rem;
   width: 29.4rem;
-  padding-block: 1.8rem;
+  padding-block: 1.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1;
 }
 @media screen and (max-width: 374px) {
   .p-scroll-button__anchor {
@@ -3377,7 +3376,7 @@ tbody {
   position: absolute;
   top: 50%;
   left: calc(100% + 2rem);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 374px) {
   .p-scroll-button__img {

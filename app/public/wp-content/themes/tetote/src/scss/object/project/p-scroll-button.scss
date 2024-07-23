@@ -6,8 +6,14 @@
   align-items: center;
   flex-wrap: wrap;
   row-gap: 5rem;
+  margin-top: 7rem;
 
-  @include mq(lg) {
+  @include mq(tab) {
+    margin-top: 6rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 5rem;
   }
 
 }
@@ -28,10 +34,11 @@
   border: 0.1rem solid $txt-color;
   border-radius: 4rem;
   width: 29.4rem;
-  padding-block: 1.8rem;
+  padding-block: 1.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1;
 
   @include mq(xxs) {
     width: 27rem;
@@ -48,7 +55,7 @@
   position: absolute;
   top: 50%;
   left: calc(100% + 2rem);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 
   @include mq(xxs) {
     left: calc(100% + 1rem);

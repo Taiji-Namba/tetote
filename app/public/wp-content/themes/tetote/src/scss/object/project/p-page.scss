@@ -27,16 +27,3 @@
     margin-top: 6rem;
   }
 }
-
-.p-page__scroll-buttons{
-  margin-top: 7rem;
-
-  @include mq(tab) {
-    margin-top: 6rem;
-  }
-
-  @include mq(sp) {
-    margin-top: 5rem;
-  }
-}
-
