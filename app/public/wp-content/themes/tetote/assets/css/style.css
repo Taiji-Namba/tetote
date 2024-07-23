@@ -3333,6 +3333,13 @@ tbody {
     margin-top: 6rem;
   }
 }
+@media screen and (max-width: 1023px) {
+  .p-scroll-button__list {
+    justify-content: center;
+    -moz-column-gap: 10%;
+         column-gap: 10%;
+  }
+}
 @media screen and (max-width: 767px) {
   .p-scroll-button__list {
     margin-top: 5rem;
@@ -3340,6 +3347,11 @@ tbody {
 }
 
 @media screen and (max-width: 1023px) {
+  .p-scroll-button__item {
+    flex-basis: fit-content;
+  }
+}
+@media screen and (max-width: 767px) {
   .p-scroll-button__item {
     width: 100%;
     display: flex;

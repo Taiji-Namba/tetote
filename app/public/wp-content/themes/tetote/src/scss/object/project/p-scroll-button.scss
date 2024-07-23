@@ -12,6 +12,11 @@
     margin-top: 6rem;
   }
 
+  @include mq(lg){
+    justify-content: center;
+    column-gap: 10%;
+  }
+
   @include mq(sp) {
     margin-top: 5rem;
   }
@@ -20,6 +25,10 @@
 
 .p-scroll-button__item {
   @include mq(lg) {
+    flex-basis: fit-content;
+  }
+
+  @include mq(sp) {
     width: 100%;
     display: flex;
     justify-content: center;
