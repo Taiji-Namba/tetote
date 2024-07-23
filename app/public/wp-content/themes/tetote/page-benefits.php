@@ -7,7 +7,7 @@ Template Name: BENEFITS
 <?php get_header(); ?>
 
 <?php
-$args = ['class' => 'benefits', 'title' => 'BENEFITS', 'subtitle' => '募集要項', 'text' => 'TETOTEは幅広く仲間を募集しています。'];
+$args = ['class' => 'benefits', 'title' => 'BENEFITS', 'subtitle' => '福利厚生について', 'text' => '充実した福利厚生制度を設けています。'];
 get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
