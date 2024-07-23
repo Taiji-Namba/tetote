@@ -1,5 +1,10 @@
 @use '../../foundation' as *;
 
+.p-accordion{
+  --title-margin-inline:2.1rem;
+  --q-width:1.6rem;
+}
+
 .p-accordion__item {
   border-bottom: 1px solid $accent-color-2;
   line-height: 1;
@@ -51,13 +56,14 @@
   font-weight: $bold;
   font-family: $viga;
   color: $accent-color-1;
+  width: var(--q-width);
 }
 
 .p-accordion__title{
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  padding-inline: 2.1rem;
+  margin-inline: var(--title-margin-inline);
 }
 
 .p-accordion__icon {
@@ -94,10 +100,11 @@
 }
 
 .p-accordion__panel{
-  margin-inline: var(--margin-left, 3.4rem) 3.5rem;
+  
 }
 
 .p-accordion__panel-text{
+  margin-inline: calc(var(--q-width) + var(--title-margin-inline) - 0.1rem) 3.5rem;
   padding-bottom: 3.35rem;
   line-height: 1;
 

@@ -113,7 +113,6 @@ jQuery(function ($) {
     setFooterHeight();
     setBurgerMenuTextItemWrapper();
     addLineNextToH2();
-    setMarginLeftOfPanelText();
     setPositionOfCeoName();
     disableSubmit();
   });
@@ -125,7 +124,6 @@ jQuery(function ($) {
     setFooterHeight();
     setBurgerMenuTextItemWrapper();
     addLineNextToH2();
-    setMarginLeftOfPanelText();
     setPositionOfCeoName();
   });
 
@@ -509,19 +507,6 @@ jQuery(function ($) {
 
     adjustPanelHeight();
   });
-
-  // アコーディオンメニュー: パネルテキストの位置をヘッダータイトルに合わせる
-  function setMarginLeftOfPanelText() {
-    var $panel = $(".p-accordion__panel");
-    var $q = $(".p-accordion__letter-q");
-
-    // $panelが存在無しないときは何もしない
-    if ($panel.length === 0) return;
-
-    var qWidth = $q.innerWidth();
-    var marginLeft = qWidth + 20;
-    $panel.css('--margin-left', marginLeft + "px");
-  };
 
   // 代表メッセージの名前の位置設定
   function setPositionOfCeoName() {
