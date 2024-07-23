@@ -33,7 +33,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <ul class="c-accordion p-accordion l-accordion">
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
-              <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-1">
+              <button class="c-accordion__trigger p-accordion__trigger p-accordion__trigger--first" aria-expanded="false" aria-controls="accordion-panel-1">
                 <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">応募資格はありますか？</span><span class="p-accordion__icon"></span>
               </button>
             </h3>
@@ -111,7 +111,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <ul class="c-accordion p-accordion l-accordion">
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
-              <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-7">
+              <button class="c-accordion__trigger p-accordion__trigger p-accordion__trigger--first" aria-expanded="false" aria-controls="accordion-panel-7">
                 <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">自分の希望するキャリアパスに進むことはできますか？</span><span class="p-accordion__icon"></span>
               </button>
             </h3>
@@ -188,7 +188,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <ul class="c-accordion p-accordion l-accordion">
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
-              <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-13">
+              <button class="c-accordion__trigger p-accordion__trigger p-accordion__trigger--first" aria-expanded="false" aria-controls="accordion-panel-13">
                 <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">どのような福利厚生制度がありますか？</span><span class="p-accordion__icon"></span>
               </button>
             </h3>
