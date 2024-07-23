@@ -169,6 +169,7 @@
   }
 }
 
+// fieldsetの子要素のセレクトボックス
 .p-contact__fieldset .wpcf7-form-control-wrap{
   display: flex;
   width: 16.8rem;
@@ -454,7 +455,8 @@
   border: 0.2rem solid $accent-color-1;
 }
 
-// プライバシーポリシーのブロック
+/* プライバシーポリシー */
+// プライバシーポリシーを囲むブロック
 .p-contact__policy{
   margin-top: 10rem;
 
@@ -465,6 +467,11 @@
   @include mq(sp) {
     margin-top: 8rem;
   }
+}
+
+// プライバシーポリシーの内容部分
+.p-contact__policy span[data-name="acceptance-505"]{
+  text-align: center;
 }
 
 // プライバシーポリシーのリンク部分

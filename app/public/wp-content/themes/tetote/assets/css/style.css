@@ -1796,6 +1796,7 @@ tbody {
   border: 0.2rem solid #988c2c;
 }
 
+/* プライバシーポリシー */
 .p-contact__policy {
   margin-top: 10rem;
 }
@@ -1808,6 +1809,10 @@ tbody {
   .p-contact__policy {
     margin-top: 8rem;
   }
+}
+
+.p-contact__policy span[data-name=acceptance-505] {
+  text-align: center;
 }
 
 .p-contact__policy-link:hover {
