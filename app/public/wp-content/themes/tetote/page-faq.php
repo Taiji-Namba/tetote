@@ -14,7 +14,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <main class="c-main p-main p-page">
   <div class="c-main__inner p-main__inner l-page--common">
-    <div class="p-page__scroll-buttons p-scroll-button">
+    <div class="p-scroll-button">
       <ul class="p-scroll-button__list">
         <li class="p-scroll-button__item">
           <a href="<?php echo esc_url(home_url()) . '/faq/#entry-and-selection'; ?>" class="c-button p-button p-scroll-button__anchor"><span class="p-scroll-button__anchor-text">応募・選考について<img class="p-scroll-button__img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow03.svg'); ?>" alt="ボタンの矢印"></span></a>
