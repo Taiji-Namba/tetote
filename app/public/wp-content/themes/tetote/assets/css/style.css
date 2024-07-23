@@ -646,6 +646,12 @@ tbody {
   font-size: clamp(2rem, 1.8591549296rem + 0.3755868545vw, 2.4rem);
   font-weight: 700;
   margin-block: 2.3rem 5rem;
+  line-height: 1;
+}
+@media screen and (max-width: 1023px) {
+  .p-article__contents h2 {
+    line-height: 1.5;
+  }
 }
 
 .p-article__contents h3 {
@@ -675,8 +681,21 @@ tbody {
 }
 
 .p-article__contents ul li {
-  list-style: disc;
-  list-style-position: inside;
+  list-style: none;
+  margin-left: 1.55em;
+  position: relative;
+}
+
+.p-article__contents ul li::before {
+  content: "•"; /* Unicode文字コードで黒い丸（•）を表示 */
+  color: currentColor;
+  font-size: 1.8em;
+  width: 1em;
+  text-align: right;
+  position: absolute;
+  left: -1.2em;
+  top: 45%;
+  transform: translateY(-50%);
 }
 
 .p-article__contents ol li {
@@ -2922,9 +2941,14 @@ tbody {
 .p-post-article__title {
   font-size: clamp(2.8rem, 2.6591549296rem + 0.3755868545vw, 3.2rem);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1;
   margin-top: 2.5rem;
   word-wrap: break-word;
+}
+@media screen and (max-width: 1023px) {
+  .p-post-article__title {
+    line-height: 1.5;
+  }
 }
 
 .p-post-article__info {
@@ -2934,6 +2958,7 @@ tbody {
   row-gap: 2rem;
   -moz-column-gap: 1.9rem;
        column-gap: 1.9rem;
+  line-height: 1;
 }
 
 .p-post-article__categories {
@@ -3210,7 +3235,7 @@ tbody {
 }
 
 .p-post-nav__inner {
-  padding: 2.75rem 5rem;
+  padding: 3.1rem 5rem;
   margin-inline: auto;
   max-width: 102.4rem;
   position: relative;
@@ -3273,7 +3298,7 @@ tbody {
 }
 
 .p-post-nav__info {
-  line-height: 1.2;
+  line-height: 1;
   max-width: calc(100% - 2.4rem - 2.1rem - 1.6rem);
 }
 
