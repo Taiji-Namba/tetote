@@ -3,12 +3,21 @@
 .p-page__title{
   font-size: rclamp(28, 32, 375, 1440);
   font-weight: $bold;
+
+  line-height: 1;
+
+  @include mq(lg){
   line-height: 1.5;
+  }
 }
 
 .p-page__lede{
-  line-height: 1.5;
+  line-height: 1;
   margin-top: 11.3rem;
+
+  @include mq(lg){
+    line-height: 1.5;
+  }
 
   @include mq(tab) {
     margin-top: 8rem;

@@ -1134,20 +1134,21 @@ tbody {
 }
 
 .p-career__career-path-text {
+  line-height: 1;
   margin-top: 3.7rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .p-career__career-path-text {
     line-height: 1.5;
   }
 }
 
 .p-career__training {
-  margin-top: 8.9em;
+  margin-top: 8.9rem;
 }
 @media screen and (max-width: 1439px) {
   .p-career__training {
-    margin-top: 8px;
+    margin-top: 8rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2868,12 +2869,22 @@ tbody {
 .p-page__title {
   font-size: clamp(2.8rem, 2.6591549296rem + 0.3755868545vw, 3.2rem);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1;
+}
+@media screen and (max-width: 1023px) {
+  .p-page__title {
+    line-height: 1.5;
+  }
 }
 
 .p-page__lede {
-  line-height: 1.5;
+  line-height: 1;
   margin-top: 11.3rem;
+}
+@media screen and (max-width: 1023px) {
+  .p-page__lede {
+    line-height: 1.5;
+  }
 }
 @media screen and (max-width: 1439px) {
   .p-page__lede {
