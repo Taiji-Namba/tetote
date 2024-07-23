@@ -6,21 +6,23 @@
   align-items: center;
   flex-wrap: wrap;
   row-gap: 5rem;
+
+  @include mq(lg){
+    justify-content: center;
+    column-gap: 10%;
+  }
+}
+
+.p-scroll-button__list--mt70{
   margin-top: 7rem;
 
   @include mq(tab) {
     margin-top: 6rem;
   }
 
-  @include mq(lg){
-    justify-content: center;
-    column-gap: 10%;
-  }
-
   @include mq(sp) {
     margin-top: 5rem;
   }
-
 }
 
 .p-scroll-button__item {

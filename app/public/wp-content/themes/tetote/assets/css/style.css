@@ -3326,12 +3326,6 @@ tbody {
   align-items: center;
   flex-wrap: wrap;
   row-gap: 5rem;
-  margin-top: 7rem;
-}
-@media screen and (max-width: 1439px) {
-  .p-scroll-button__list {
-    margin-top: 6rem;
-  }
 }
 @media screen and (max-width: 1023px) {
   .p-scroll-button__list {
@@ -3340,8 +3334,17 @@ tbody {
          column-gap: 10%;
   }
 }
+
+.p-scroll-button__list--mt70 {
+  margin-top: 7rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-scroll-button__list--mt70 {
+    margin-top: 6rem;
+  }
+}
 @media screen and (max-width: 767px) {
-  .p-scroll-button__list {
+  .p-scroll-button__list--mt70 {
     margin-top: 5rem;
   }
 }
