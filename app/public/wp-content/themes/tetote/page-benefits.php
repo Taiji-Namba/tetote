@@ -20,7 +20,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <tbody class="p-page-contents__table-body">
           <tr class="p-page-contents__table-row">
             <th class="p-page-contents__table-heading">手当</th>
-            <td class="p-page-contents__table-data">
+            <td class="p-page-contents__table-data u-line-height--1point5">
               <ul>
                 <li class="p-page-contents__table-li">通勤手当（上限月5万円）</li>
                 <li class="p-page-contents__table-li">時間外割増手当</li>
@@ -31,10 +31,6 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
           </tr>
           <tr class="p-page-contents__table-row">
             <th class="p-page-contents__table-heading">制度</th>
-            <td class="p-page-contents__table-data">正社員</td>
-          </tr>
-          <tr class="p-page-contents__table-row">
-            <th class="p-page-contents__table-heading">業務内容</th>
             <td class="p-page-contents__table-data">財形貯蓄</td>
           </tr>
           <tr class="p-page-contents__table-row">
@@ -43,7 +39,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
           </tr>
           <tr class="p-page-contents__table-row">
             <th class="p-page-contents__table-heading">施設</th>
-            <td class="p-page-contents__table-data">
+            <td class="p-page-contents__table-data u-line-height--1point5">
               <ul>
                 <li class="p-page-contents__table-li">社員向けジム</li>
                 <li class="p-page-contents__table-li">社内託児所</li>
@@ -52,7 +48,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
           </tr>
           <tr class="p-page-contents__table-row">
             <th class="p-page-contents__table-heading">休暇・休日</th>
-            <td class="p-page-contents__table-data">
+            <td class="p-page-contents__table-data u-line-height--1point5">
               <ul>
                 <li class="p-page-contents__table-li">完全週休2日制</li>
                 <li class="p-page-contents__table-li">年次有給休暇（初年度10日／年度途中入社は比例付与）</li>

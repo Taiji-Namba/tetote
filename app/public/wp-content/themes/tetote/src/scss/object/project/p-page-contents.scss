@@ -47,6 +47,7 @@
 .p-page-contents__category {
   font-size: rclamp(28, 32, 375, 1440);
   font-weight: $bold;
+  line-height: 1;
 }
 
 .p-page-contents__table {
@@ -73,16 +74,16 @@
 .p-page-contents__table-row {
   display: flex;
   flex-wrap: wrap;
-  padding-block: calc(3.6rem - 0.25em);
+  padding-block: calc(3.6rem - 0.05rem);
   min-height: 8.8rem;
   border-bottom: 0.1rem dotted $txt-color;
   row-gap: 1.6rem;
+  line-height: 1;
 }
 
 .p-page-contents__table-heading {
   font-size: 1.6rem;
   font-weight: $bold;
-  line-height: 1.5;
   width: 100%;
   max-width: 23.1rem;
 
@@ -92,7 +93,6 @@
 }
 
 .p-page-contents__table-data {
-  line-height: 1.5;
   max-width: calc(98rem - 23.1rem);
   display: flex;
   align-items: center;

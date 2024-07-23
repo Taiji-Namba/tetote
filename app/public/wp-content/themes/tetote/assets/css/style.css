@@ -2741,6 +2741,7 @@ tbody {
 .p-page-contents__category {
   font-size: clamp(2.8rem, 2.6591549296rem + 0.3755868545vw, 3.2rem);
   font-weight: 700;
+  line-height: 1;
 }
 
 .p-page-contents__table {
@@ -2765,16 +2766,16 @@ tbody {
 .p-page-contents__table-row {
   display: flex;
   flex-wrap: wrap;
-  padding-block: calc(3.6rem - 0.25em);
+  padding-block: 3.55rem;
   min-height: 8.8rem;
   border-bottom: 0.1rem dotted #222222;
   row-gap: 1.6rem;
+  line-height: 1;
 }
 
 .p-page-contents__table-heading {
   font-size: 1.6rem;
   font-weight: 700;
-  line-height: 1.5;
   width: 100%;
   max-width: 23.1rem;
 }
@@ -2785,7 +2786,6 @@ tbody {
 }
 
 .p-page-contents__table-data {
-  line-height: 1.5;
   max-width: 74.9rem;
   display: flex;
   align-items: center;
@@ -5056,6 +5056,10 @@ a.page-numbers:hover {
 
 .u-letter-gold1 {
   color: #988c2c;
+}
+
+.u-line-height--1point5 {
+  line-height: 1.5;
 }
 
 .u-none {
