@@ -1946,6 +1946,7 @@ tbody {
   align-items: center;
   line-height: 1;
   position: relative;
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 1439px) {
   .p-cta__button {
