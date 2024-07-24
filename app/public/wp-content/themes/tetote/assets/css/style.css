@@ -2457,6 +2457,7 @@ tbody {
   white-space: nowrap;
   color: #fff;
   text-align: center;
+  line-height: 1;
   padding-block: 1.7rem;
   width: min(51.5rem, 80%);
   clip-path: polygon(0 0, 100% 0, 94.1747572816% 100%, 0 100%);
@@ -2472,6 +2473,8 @@ tbody {
     font-size: 1.2rem;
     width: 22.8rem;
     padding-block: 0.9rem;
+    text-align: left;
+    padding-left: 1em;
   }
 }
 
