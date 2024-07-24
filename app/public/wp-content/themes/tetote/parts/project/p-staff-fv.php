@@ -3,16 +3,8 @@
       <div class="p-staff-fv__info">
         <div class="p-staff-fv__texts">
           <div class="p-staff-fv__heading-wrapper">
-            <?php
-            $page_title = get_the_title();
-            $message = get_field('staff_message_1');
 
-            if ($page_title === 'NISHIMURA') {
-              $message = trim($message, '「」');
-            }
-            ?>
-
-            <h1 class="p-staff-fv__message-1"><?php echo $message; ?></h1>
+            <h1 class="p-staff-fv__message-1"><?php the_field('staff_message_1'); ?></h1>
 
           </div>
           <div class="p-staff-fv__heading-wrapper">
