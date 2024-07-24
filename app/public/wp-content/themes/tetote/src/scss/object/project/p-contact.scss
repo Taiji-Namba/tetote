@@ -86,6 +86,7 @@
 
 .p-contact__title--thanks{
   font-size: rclamp(22, 32, 375, 1440);
+  margin-top: 0;
 
   @include mq(xxs) {
     font-size: 1.8rem;
