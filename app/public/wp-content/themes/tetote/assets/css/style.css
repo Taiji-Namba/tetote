@@ -1668,10 +1668,6 @@ tbody {
   overflow: auto;
 }
 
-.p-contact__item-message {
-  white-space: pre-wrap;
-}
-
 .p-contact__item-select {
   font-size: 1.2rem;
   position: relative;
