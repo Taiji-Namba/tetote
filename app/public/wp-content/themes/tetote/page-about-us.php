@@ -115,7 +115,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
             </tr>
             <tr class="p-page-contents__table-row">
               <th class="p-page-contents__table-heading">事業内容</th>
-              <td class="p-page-contents__table-data">
+              <td class="p-page-contents__table-data u-line-height--1point5">
                 <ul>
                   <li class="p-page-contents__table-li">ITコンサルティング</li>
                   <li class="p-page-contents__table-li">コンサル導入企業への営業</li>
