@@ -2481,6 +2481,7 @@ tbody {
   bottom: 4.617253949%;
   width: min(126.3rem, 90%);
   display: flex;
+  min-height: 4.8rem;
 }
 @media screen and (min-width: 1440px) {
   .p-fv__news {

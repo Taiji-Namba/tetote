@@ -60,6 +60,7 @@
   bottom: calc(38 / 823 * 100%);
   width: min(126.3rem, 90%);
   display: flex;
+  min-height: 4.8rem;
 
   @include mq(pc) {
     left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% + 0.5rem);
