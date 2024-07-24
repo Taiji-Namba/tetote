@@ -869,7 +869,6 @@ tbody {
 
 .p-burger-button {
   width: 5.2rem;
-  height: 5.2rem;
 }
 @media screen and (max-width: 1439px) {
   .p-burger-button {
@@ -884,6 +883,16 @@ tbody {
 
 .p-burger-button__icon {
   height: 3rem;
+}
+@media screen and (max-width: 1439px) {
+  .p-burger-button__icon {
+    height: 2.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-burger-button__icon {
+    height: 1.8rem;
+  }
 }
 
 .p-burger-button__line {
@@ -904,12 +913,12 @@ tbody {
 }
 
 .p-burger-button__line:nth-of-type(2) {
-  top: 1.5rem;
+  top: 50%;
   transform: translateY(-50%);
 }
 
 .p-burger-button__line:nth-of-type(3) {
-  top: 3rem;
+  top: 100%;
   transform: translateY(-50%);
 }
 
