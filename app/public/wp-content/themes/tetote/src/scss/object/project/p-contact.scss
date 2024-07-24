@@ -471,7 +471,7 @@
 /* プライバシーポリシー */
 // プライバシーポリシーを囲むブロック
 .p-contact__policy{
-  margin-top: 10rem;
+  margin-top: 9.8rem;
 
   @include mq(tab) {
     margin-top: 9rem;
@@ -495,16 +495,19 @@
   transition: all 0.3s;
 }
 
-// プライバシーポリシーのテキスト部分
+// プライバシーポリシーのテキストとボタンを囲むspan
 .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span{
+  line-height: calc(math.div(20,14));
   font-size: 1.4rem;
-  padding: calc(math.div(14, 2) * 1em), 0 calc(math.div(14, 2) * calc(1em + math.div(14, 6) * 1em)) ;
+  // padding: calc(math.div(14, 2) * 1em), 0 calc(math.div(14, 2) * calc(1em + math.div(14, 6) * 1em)) ;
+  padding: 0 0 0 calc(1em + 0.6rem + 0.1rem);
+  
 }
 
 // プライバシーポリシーのチェックボックスの外側
 .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::before{
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 // プライバシーポリシーのチェックボックスの内側
@@ -519,7 +522,7 @@
 .p-contact__button-wrapper{
   display: grid;
   place-items: center;
-  margin-top: 6.1rem;
+  margin-top: 5.9rem;
 
   @include mq(tab) {
     margin-top: 5rem;
@@ -540,10 +543,11 @@
 .p-contact__button input[type="submit"]{
   display: inline-block;
   cursor: pointer;
-  padding: 1.25em 6em;
+  padding: calc(1.25em - 0.1rem) calc(6em - 0.1rem);
   font-size: 1.6rem;
   border: 0.1rem solid $txt-color;
   border-radius: 0;
+  line-height: 1;
 }
 
 .p-contact__button input[type="submit"]:not(:disabled):hover{
