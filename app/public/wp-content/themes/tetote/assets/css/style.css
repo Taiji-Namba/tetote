@@ -1332,6 +1332,7 @@ tbody {
 
 .p-contact {
   background-color: #faf7f1;
+  --form-auto-line-height:2.3rem;
 }
 
 .p-contact__wrapper {
@@ -1396,6 +1397,7 @@ tbody {
   width: 100%;
   display: flex;
   justify-content: center;
+  line-height: 1;
 }
 @media screen and (max-width: 767px) {
   .p-contact__subtitle {
@@ -1408,6 +1410,7 @@ tbody {
   font-weight: 700;
   margin-top: 2.9rem;
   width: 100%;
+  line-height: 1;
 }
 @media screen and (max-width: 767px) {
   .p-contact__title {
@@ -1528,6 +1531,7 @@ tbody {
   flex-basis: 12.8rem;
   display: flex;
   align-items: center;
+  line-height: var(--form-auto-line-height);
 }
 @media screen and (max-width: 1023px) {
   .p-contact__head {
@@ -1605,11 +1609,19 @@ tbody {
 .p-contact__item-text,
 .p-contact__item-tel,
 .p-contact__item-email,
+.p-contact__item-number,
+.p-contact__item-select {
+  min-height: 5.6rem;
+  padding: 1.5rem 2rem;
+}
+
+.p-contact__item-text,
+.p-contact__item-tel,
+.p-contact__item-email,
 .p-contact__item-textarea,
 .p-contact__item-number,
 .p-contact__item-select {
   margin: 0;
-  padding: 2rem;
   border: 0.1rem solid #afa86f;
   outline: none;
   border-radius: 1rem;
@@ -1621,6 +1633,7 @@ tbody {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
+  line-height: 1;
 }
 
 .p-contact__item-text::-moz-placeholder, .p-contact__item-tel::-moz-placeholder, .p-contact__item-email::-moz-placeholder, .p-contact__item-textarea::-moz-placeholder, .p-contact__item-number::-moz-placeholder {
@@ -1650,6 +1663,7 @@ tbody {
 
 .p-contact__item-textarea {
   height: 24rem;
+  padding: 2rem;
   resize: none;
   overflow: auto;
 }
@@ -1732,14 +1746,15 @@ tbody {
   cursor: pointer;
   position: relative;
   font-size: 1.6rem;
+  line-height: var(--form-auto-line-height);
 }
 
 .p-contact__item-radio input[type=radio] + span {
-  padding: 0.25em 0 0.25em 2.25em;
+  padding: 0.05rem 0 0.05rem 2.25em;
 }
 
 .p-contact__item-checkbox input[type=checkbox] + span {
-  padding: 0.25em 0 0.25em 2.3125em;
+  padding: 0.05rem 0 0.05rem 2.3125em;
 }
 
 .p-contact__item-radio input[type=radio] + span::before,
@@ -1838,7 +1853,7 @@ tbody {
   left: calc(0.5em + 0.1rem);
 }
 
-/* ボタン */
+/* 送信ボタン */
 .p-contact__button-wrapper {
   display: grid;
   place-items: center;
