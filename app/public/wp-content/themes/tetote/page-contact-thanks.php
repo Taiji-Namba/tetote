@@ -6,7 +6,8 @@ Template Name: ENTRY-THANKS
 
 <?php get_header(); ?>
 
-<!-- Contact -->
+<?php get_template_part('parts/common/p-breadcrumb'); ?>
+
 <main class="l-main">
   <section class="p-contact">
     <div class="p-contact__wrapper">
