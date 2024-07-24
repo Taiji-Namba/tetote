@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-05-28 04:35:57+0000\n"
+"PO-Revision-Date: 2024-07-17 08:16:16+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#: modules/checkbox.php:218
+msgid "Too many items are selected."
+msgstr "選択された項目が多すぎます。"
 
 #: includes/contact-form.php:576
 msgid "Invalid action URL is detected."
@@ -27,7 +31,7 @@ msgstr "https://contactform7.com/ja/2024/02/02/we-end-the-constant-contact-integ
 msgid "Warning:"
 msgstr "警告:"
 
-#: modules/checkbox.php:285 modules/select.php:217
+#: modules/checkbox.php:299 modules/select.php:217
 msgid "Undefined value was submitted through this field."
 msgstr "未定義の値がこの項目を通じて送信されました。"
 
@@ -83,6 +87,7 @@ msgid "Contact form not found."
 msgstr "コンタクトフォームが見つかりません。"
 
 #: includes/contact-form-functions.php:263 includes/contact-form.php:575
+#: includes/js/index.js:1
 msgid "Error:"
 msgstr "エラー:"
 
@@ -174,7 +179,7 @@ msgid "The request payload format is not supported."
 msgstr "リクエストペイロードがサポートされるフォーマットではありません。"
 
 #. translators: 1: WordPress hook name, 2: version number
-#: includes/functions.php:577
+#: includes/functions.php:575
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s with no alternative available."
 msgstr "フック %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になりました。利用できる代替フックはありません。"
 
@@ -196,7 +201,7 @@ msgstr "入力してください。"
 
 #. translators: 1: PHP function name, 2: version number, 3: alternative
 #. function name
-#: includes/functions.php:528
+#: includes/functions.php:526
 msgid "Function %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "関数 %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
@@ -206,7 +211,7 @@ msgstr "スパム対策"
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: Contact Form 7 version number.
-#: includes/functions.php:612
+#: includes/functions.php:610
 msgid "Function %1$s was called incorrectly. %2$s %3$s"
 msgstr "関数 %1$s が不正に呼び出されました。%2$s %3$s"
 
@@ -472,7 +477,7 @@ msgid "Disallowed words are used."
 msgstr "禁止用語が使用された。"
 
 #. translators: %s: Contact Form 7 version number.
-#: includes/functions.php:604
+#: includes/functions.php:602
 msgid "(This message was added in Contact Form 7 version %s.)"
 msgstr "(このメッセージは Contact Form 7 バージョン %s で追加されました。)"
 
@@ -505,7 +510,7 @@ msgstr "%1$sと%2$s"
 msgid "Additional settings"
 msgstr "その他の機能"
 
-#: modules/constant-contact/service.php:352 modules/recaptcha/service.php:256
+#: modules/constant-contact/service.php:352 modules/recaptcha/service.php:260
 #: modules/sendinblue/service.php:123 modules/sendinblue/service.php:131
 #: modules/stripe/service.php:141
 msgid "Error"
@@ -519,7 +524,7 @@ msgstr "添付ファイルの合計容量が大きすぎる。"
 msgid "Unavailable HTML elements are used in the form template."
 msgstr "フォームテンプレートで使用できない HTML 要素が使われている。"
 
-#: modules/recaptcha/service.php:284
+#: modules/recaptcha/service.php:288
 msgid "reCAPTCHA is active on this site."
 msgstr "reCAPTCHA はこのサイト上で有効化されています。"
 
@@ -565,19 +570,19 @@ msgid "Connection established."
 msgstr "接続を確立しました。"
 
 #. translators: 1: response code, 2: message, 3: body, 4: URL
-#: includes/functions.php:651
+#: includes/functions.php:649
 msgid "HTTP Response: %1$s %2$s %3$s from %4$s"
 msgstr "HTTP レスポンス: %1$s %2$s %3$s from %4$s"
 
-#: modules/recaptcha/service.php:356 modules/stripe/service.php:253
+#: modules/recaptcha/service.php:360 modules/stripe/service.php:253
 msgid "Save Changes"
 msgstr "変更を保存"
 
-#: modules/recaptcha/service.php:270
+#: modules/recaptcha/service.php:274
 msgid "reCAPTCHA protects you against spam and other types of automated abuse. With Contact Form 7&#8217;s reCAPTCHA integration module, you can block abusive form submissions by spam bots."
 msgstr "reCAPTCHA はスパムやその他の自動化された嫌がらせからあなたを守ります。Contact Form 7 の reCAPTCHA インテグレーションモジュールを使えば、スパムボットによる不正なフォーム送信を遮断できます。"
 
-#: modules/recaptcha/recaptcha.php:261 modules/recaptcha/service.php:277
+#: modules/recaptcha/recaptcha.php:261 modules/recaptcha/service.php:281
 msgid "reCAPTCHA (v3)"
 msgstr "reCAPTCHA (v3)"
 
@@ -589,7 +594,7 @@ msgstr "reCAPTCHA v3 と v2 の API キーはそれぞれ別のものです。v2
 msgid "Connect to the Constant Contact API"
 msgstr "Constant Contact API に接続"
 
-#: modules/recaptcha/service.php:351 modules/stripe/service.php:249
+#: modules/recaptcha/service.php:355 modules/stripe/service.php:249
 msgctxt "API keys"
 msgid "Remove Keys"
 msgstr "キーを削除"
@@ -610,7 +615,7 @@ msgstr "App シークレット"
 msgid "API Key"
 msgstr "API キー"
 
-#: modules/constant-contact/service.php:401 modules/recaptcha/service.php:294
+#: modules/constant-contact/service.php:401 modules/recaptcha/service.php:298
 #: modules/stripe/service.php:183
 msgid "Setup Integration"
 msgstr "インテグレーションのセットアップ"
@@ -859,7 +864,7 @@ msgstr "1件の設定エラーを検出しました"
 
 #. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
 #. name
-#: includes/functions.php:566
+#: includes/functions.php:564
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "フック %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
@@ -986,24 +991,24 @@ msgid "You are not allowed to validate configuration."
 msgstr "設定検証を行う権限がありません。"
 
 #: admin/includes/welcome-panel.php:64 admin/includes/welcome-panel.php:160
-#: modules/recaptcha/recaptcha.php:260 modules/recaptcha/service.php:276
+#: modules/recaptcha/recaptcha.php:260 modules/recaptcha/service.php:280
 msgid "https://contactform7.com/recaptcha/"
 msgstr "https://contactform7.com/recaptcha/"
 
-#: modules/recaptcha/service.php:327 modules/stripe/service.php:228
+#: modules/recaptcha/service.php:331 modules/stripe/service.php:228
 msgid "Secret Key"
 msgstr "シークレットキー"
 
-#: modules/recaptcha/service.php:310
+#: modules/recaptcha/service.php:314
 msgid "Site Key"
 msgstr "サイトキー"
 
-#: modules/recaptcha/service.php:262 modules/sendinblue/service.php:139
+#: modules/recaptcha/service.php:266 modules/sendinblue/service.php:139
 #: modules/stripe/service.php:149
 msgid "Settings saved."
 msgstr "設定を保存しました。"
 
-#: modules/recaptcha/service.php:257 modules/sendinblue/service.php:132
+#: modules/recaptcha/service.php:261 modules/sendinblue/service.php:132
 #: modules/stripe/service.php:142
 msgid "Invalid key values."
 msgstr "不正なキー値。"
@@ -1319,34 +1324,34 @@ msgstr "日付が最小制約日より小さい"
 msgid "Date format that the sender entered is invalid"
 msgstr "入力された日付の形式が正しくない"
 
-#: modules/checkbox.php:420 modules/date.php:265 modules/number.php:289
+#: modules/checkbox.php:434 modules/date.php:265 modules/number.php:289
 #: modules/select.php:301 modules/text.php:321 modules/textarea.php:205
 msgid "To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab."
 msgstr "この項目に入力された値をメールの項目で使用するには、対応するメールタグ (%s) をメールタブ上の項目に挿入する必要があります。"
 
-#: modules/checkbox.php:390
+#: modules/checkbox.php:404
 msgid "Make checkboxes exclusive"
 msgstr "チェックボックスを排他化する"
 
-#: modules/checkbox.php:388
+#: modules/checkbox.php:402
 msgid "Wrap each item with label element"
 msgstr "個々の項目を label 要素で囲む"
 
-#: modules/checkbox.php:387
+#: modules/checkbox.php:401
 msgid "Put a label first, a checkbox last"
 msgstr "ラベルを前に、チェックボックスを後に配置する"
 
-#: modules/checkbox.php:386 modules/select.php:270
+#: modules/checkbox.php:400 modules/select.php:270
 msgid "One option per line."
 msgstr "一行に一オプションを入力。"
 
-#: modules/checkbox.php:369 modules/date.php:208 modules/file.php:165
+#: modules/checkbox.php:383 modules/date.php:208 modules/file.php:165
 #: modules/number.php:232 modules/select.php:254 modules/text.php:252
 #: modules/textarea.php:165
 msgid "Required field"
 msgstr "必須項目"
 
-#: modules/checkbox.php:365 modules/checkbox.php:368 modules/date.php:204
+#: modules/checkbox.php:379 modules/checkbox.php:382 modules/date.php:204
 #: modules/date.php:207 modules/file.php:161 modules/file.php:164
 #: modules/number.php:223 modules/number.php:226 modules/select.php:250
 #: modules/select.php:253 modules/text.php:248 modules/text.php:251
@@ -1354,27 +1359,27 @@ msgstr "必須項目"
 msgid "Field type"
 msgstr "項目タイプ"
 
-#: modules/checkbox.php:354 modules/select.php:240
+#: modules/checkbox.php:368 modules/select.php:240
 msgid "Checkboxes, radio buttons and menus"
 msgstr "チェックボックス、ラジオボタン、メニュー"
 
-#: modules/checkbox.php:354 modules/select.php:240
+#: modules/checkbox.php:368 modules/select.php:240
 msgid "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
 msgstr "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
 
-#: modules/checkbox.php:351
+#: modules/checkbox.php:365
 msgid "Generate a form-tag for a group of radio buttons. For more details, see %s."
 msgstr "一連のラジオボタンのためのフォームタグを生成します。詳しくは%sを参照。"
 
-#: modules/checkbox.php:349
+#: modules/checkbox.php:363
 msgid "Generate a form-tag for a group of checkboxes. For more details, see %s."
 msgstr "一連のチェックボックスのためのフォームタグを生成します。詳しくは%sを参照。"
 
-#: modules/checkbox.php:336
+#: modules/checkbox.php:350
 msgid "radio buttons"
 msgstr "ラジオボタン"
 
-#: modules/checkbox.php:334
+#: modules/checkbox.php:348
 msgid "checkboxes"
 msgstr "チェックボックス"
 
@@ -1419,14 +1424,14 @@ msgstr "入力されたコードが正しくありません。"
 msgid "The code that sender entered does not match the CAPTCHA"
 msgstr "入力されたコードが CAPTCHA に適合していない"
 
-#: modules/acceptance.php:303 modules/checkbox.php:415 modules/date.php:260
+#: modules/acceptance.php:303 modules/checkbox.php:429 modules/date.php:260
 #: modules/file.php:204 modules/number.php:284 modules/quiz.php:249
 #: modules/really-simple-captcha.php:337 modules/select.php:296
 #: modules/submit.php:88 modules/text.php:316 modules/textarea.php:200
 msgid "Insert Tag"
 msgstr "タグを挿入"
 
-#: modules/acceptance.php:290 modules/checkbox.php:402 modules/date.php:248
+#: modules/acceptance.php:290 modules/checkbox.php:416 modules/date.php:248
 #: modules/file.php:191 modules/number.php:272 modules/quiz.php:236
 #: modules/really-simple-captcha.php:310 modules/really-simple-captcha.php:325
 #: modules/select.php:283 modules/submit.php:75 modules/text.php:303
@@ -1434,7 +1439,7 @@ msgstr "タグを挿入"
 msgid "Class attribute"
 msgstr "クラス属性"
 
-#: modules/acceptance.php:285 modules/checkbox.php:397 modules/date.php:243
+#: modules/acceptance.php:285 modules/checkbox.php:411 modules/date.php:243
 #: modules/file.php:186 modules/number.php:267 modules/quiz.php:231
 #: modules/really-simple-captcha.php:305 modules/really-simple-captcha.php:320
 #: modules/select.php:278 modules/submit.php:70 modules/text.php:298
@@ -1443,12 +1448,12 @@ msgid "Id attribute"
 msgstr "ID 属性"
 
 #: modules/acceptance.php:275 modules/acceptance.php:278
-#: modules/checkbox.php:381 modules/checkbox.php:384 modules/select.php:265
+#: modules/checkbox.php:395 modules/checkbox.php:398 modules/select.php:265
 #: modules/select.php:268
 msgid "Options"
 msgstr "オプション"
 
-#: modules/acceptance.php:265 modules/checkbox.php:376 modules/date.php:214
+#: modules/acceptance.php:265 modules/checkbox.php:390 modules/date.php:214
 #: modules/file.php:171 modules/number.php:238 modules/quiz.php:215
 #: modules/really-simple-captcha.php:295 modules/select.php:260
 #: modules/text.php:258 modules/textarea.php:171
