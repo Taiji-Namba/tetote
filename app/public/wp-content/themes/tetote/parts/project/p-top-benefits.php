@@ -4,7 +4,7 @@
       <h4 class="c-common-title p-top-section__title"><span class="u-under-line">制度・環境</span>を知る</h4>
       <p class="p-top-section__background-title p-top-section__background-title--center">BENEFITS</p>
     </div>
-    <p class="c-common-title p-top-section__subtitle u-block-center">当社では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
+    <p class="c-common-title p-top-section__subtitle p-top-section__subtitle--1line p-top-section__subtitle--ml24 u-block-center">当社では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
     <div class="p-top-benefits__contents">
       <a href="<?php echo esc_url(home_url() . '/career/'); ?>" class="p-top-benefits__content">
         <div class="p-top-benefits__item">

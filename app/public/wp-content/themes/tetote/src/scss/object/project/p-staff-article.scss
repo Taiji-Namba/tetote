@@ -16,6 +16,11 @@
 
 .p-staff-article__contents h2{
   position: relative;
+  line-height: 1;
+
+  @include mq(lg){
+    line-height: 1.5;
+  }
 }
 
 .p-staff-article__contents h2:first-child {
@@ -38,6 +43,10 @@
 
 }
 
+.p-staff-article__contents p{
+  margin-top: 2.3rem;
+}
+
 .p-staff-article__main-contents{
   width: 71rem;
 
@@ -47,7 +56,6 @@
 }
 
 .p-staff-article__index {
-
   max-width: calc((102.4rem - 2.4rem * 2 - 71rem));
 
   @include mq(lg) {
@@ -63,8 +71,14 @@
   }
 
   // 以下easy-table-of-contentsのスタイル指定
+
   & div.ez-toc-widget-sticky-container, div.ez-toc-widget-sticky-container li {
   line-height: 1.5;
+  }
+
+  // リンク部分
+  & .ez-toc-link{
+    font-size: 1.4rem;
   }
 
   // li間の余白

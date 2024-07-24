@@ -33,6 +33,7 @@
   align-items: center;
   line-height: 1;
   position: relative;
+  font-size: 1.6rem;
 
   @include mq(tab) {
     margin-top: 2.7rem;

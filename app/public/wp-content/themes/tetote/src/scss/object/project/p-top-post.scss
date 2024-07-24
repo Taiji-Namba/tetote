@@ -25,9 +25,12 @@
 }
 
 .p-top-post__view-more{
+  font-family: $viga;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
   position: absolute;
-  top: calc(8.7rem + 0.3rem);
-  right: 2rem;
+  top: 8.4rem;
+  right: 3.7rem;
 
   @include mq(sp) {
     top: unset;

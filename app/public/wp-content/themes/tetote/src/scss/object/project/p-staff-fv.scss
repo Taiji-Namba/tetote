@@ -24,6 +24,7 @@
 }
 
 .p-staff-fv__texts {
+  line-height: 1;
 }
 
 .p-staff-fv__message-1 {
@@ -52,6 +53,7 @@
   color: $accent-color-1;
   font-weight: $bold;
   margin-top: 3rem;
+  line-height: 1;
 }
 
 .p-staff-fv__name {
@@ -59,11 +61,13 @@
   font-weight: $bold;
   display: inline-block;
   margin-top: 1.2rem;
+  line-height: 1;
 }
 
 .p-staff-fv__year-of-entry {
   display: inline-block;
   margin-left: 2rem;
+  line-height: 1;
 }
 
 .p-staff-fv__biography{
@@ -81,7 +85,7 @@
 }
 
 .p-staff-fv__thumbnail {
-  max-width: 36.8rem;
+  max-width: 28.6rem;
   aspect-ratio: 286/ 368;
 
   @include mq(tab) {
@@ -91,6 +95,9 @@
   @include mq(sp) {
     max-width: 70%;
   }
+}
 
+.p-staff-fv__img{
+  height: 100%;
 }
 

@@ -112,6 +112,11 @@
   padding: 0.3rem 1rem;
   background-color: #fff;
   display: inline-block;
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
 }
 
 .p-eyecatch__subtitle {
@@ -120,6 +125,11 @@
   padding: 0.3rem 1rem;
   background-color: #fff;
   display: inline-block;
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
 }
 
 .p-eyecatch__text {
@@ -129,4 +139,9 @@
   padding: 0.7rem 1rem;
   background-color: #fff;
   display: inline-block;
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
 }

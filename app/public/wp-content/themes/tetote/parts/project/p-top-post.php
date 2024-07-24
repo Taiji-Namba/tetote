@@ -9,7 +9,7 @@ $post_type_label = $post_type_data->labels->name;
       <h4 class="c-common-title p-top-section__title">採用ブログ</h4>
       <p class="p-top-section__background-title">BLOG</p>
     </div>
-    <p class="c-common-title p-top-section__subtitle p-top-section__subtitle--mt73ml0">採用情報やイベント情報、社員の紹介など、<br>
+    <p class="c-common-title p-top-section__subtitle p-top-section__subtitle--multi-line p-top-section__subtitle--mt73ml0">採用情報やイベント情報、社員の紹介など、<br>
       日々の現場の様子をご紹介します。</p>
     <?php
     $args = array(

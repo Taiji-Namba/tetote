@@ -7,13 +7,30 @@
   flex-wrap: wrap;
   row-gap: 5rem;
 
-  @include mq(lg) {
+  @include mq(lg){
+    justify-content: center;
+    column-gap: 10%;
+  }
+}
+
+.p-scroll-button__list--mt70{
+  margin-top: 7rem;
+
+  @include mq(tab) {
+    margin-top: 6rem;
   }
 
+  @include mq(sp) {
+    margin-top: 5rem;
+  }
 }
 
 .p-scroll-button__item {
   @include mq(lg) {
+    flex-basis: fit-content;
+  }
+
+  @include mq(sp) {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -28,10 +45,11 @@
   border: 0.1rem solid $txt-color;
   border-radius: 4rem;
   width: 29.4rem;
-  padding-block: 1.8rem;
+  padding-block: 1.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1;
 
   @include mq(xxs) {
     width: 27rem;
@@ -48,7 +66,7 @@
   position: absolute;
   top: 50%;
   left: calc(100% + 2rem);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 
   @include mq(xxs) {
     left: calc(100% + 1rem);

@@ -10,18 +10,19 @@
 }
 
 .p-career__career-path-text{
+  line-height: 1;
   margin-top: 3.7rem;
 
-  @include mq(sp) {
+  @include mq(lg) {
     line-height: 1.5;
   }
 }
 
 .p-career__training {
-  margin-top: 8.9em;
+  margin-top: 8.9rem;
 
   @include mq(tab) {
-    margin-top: 8px;
+    margin-top: 8rem;
   }
 
   @include mq(sp) {

@@ -15,6 +15,12 @@
   font-size: rclamp(20, 24, 375, 1440);
   font-weight: $bold;
   margin-block: 2.3rem 5rem;
+
+  line-height: 1;
+
+  @include mq(lg){
+    line-height: 1.5;
+  }
 }
 
 .p-article__contents h3 {
@@ -44,8 +50,22 @@
 }
 
 .p-article__contents ul li {
-  list-style: disc;
-  list-style-position: inside;
+  list-style: none;
+  // list-style-position: inside;
+  margin-left: 1.55em;
+  position: relative;
+}
+
+.p-article__contents ul li::before{
+  content: "\2022";  /* Unicode文字コードで黒い丸（•）を表示 */
+  color: currentColor;
+  font-size: 1.8em;
+  width: 1em;
+  text-align: right;
+  position: absolute;
+  left: -1.2em;
+  top: 45%;
+  transform: translateY(-50%);
 }
 
 .p-article__contents ol li {

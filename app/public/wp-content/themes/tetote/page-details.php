@@ -7,7 +7,7 @@ Template Name: DETAILS
 <?php get_header(); ?>
 
 <?php
-$args = ['class' => 'details', 'title' => 'DETAILS', 'subtitle' => 'TETOTEについて', 'text' => '私たちの理念を紹介をします。'];
+$args = ['class' => 'details', 'title' => 'DETAILS', 'subtitle' => '募集要項', 'text' => 'TETOTEは幅広く仲間を募集しています。'];
 get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <?php get_template_part('parts/common/p-breadcrumb'); ?>
@@ -16,8 +16,8 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
   <div class="c-main__inner p-main__inner l-page--common">
     <h2 class="p-page__title">あなたが輝ける場所が、ここにはある</h2>
     <p class="p-page__lede">TETOTEでは、コンサルタントを中心に、様々な職種を募集しています。</p>
-    <div class="p-page__scroll-buttons p-scroll-button">
-      <ul class="p-scroll-button__list">
+    <div class="p-scroll-button">
+      <ul class="p-scroll-button__list p-scroll-button__list--mt70">
         <li class="p-scroll-button__item">
           <a href="<?php echo esc_url(home_url()) . '/details/#consultant'; ?>" class="c-button p-button p-scroll-button__anchor"><span class="p-scroll-button__anchor-text">コンサルタント<img class="p-scroll-button__img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow03.svg'); ?>" alt="ボタンの矢印"></span></a>
         </li>

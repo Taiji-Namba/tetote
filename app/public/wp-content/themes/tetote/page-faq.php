@@ -14,7 +14,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
 
 <main class="c-main p-main p-page">
   <div class="c-main__inner p-main__inner l-page--common">
-    <div class="p-page__scroll-buttons p-scroll-button">
+    <div class="p-scroll-button">
       <ul class="p-scroll-button__list">
         <li class="p-scroll-button__item">
           <a href="<?php echo esc_url(home_url()) . '/faq/#entry-and-selection'; ?>" class="c-button p-button p-scroll-button__anchor"><span class="p-scroll-button__anchor-text">応募・選考について<img class="p-scroll-button__img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/arrow03.svg'); ?>" alt="ボタンの矢印"></span></a>
@@ -33,7 +33,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <ul class="c-accordion p-accordion l-accordion">
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
-              <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-1">
+              <button class="c-accordion__trigger p-accordion__trigger p-accordion__trigger--first" aria-expanded="false" aria-controls="accordion-panel-1">
                 <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">応募資格はありますか？</span><span class="p-accordion__icon"></span>
               </button>
             </h3>
@@ -111,7 +111,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <ul class="c-accordion p-accordion l-accordion">
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
-              <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-7">
+              <button class="c-accordion__trigger p-accordion__trigger p-accordion__trigger--first" aria-expanded="false" aria-controls="accordion-panel-7">
                 <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">自分の希望するキャリアパスに進むことはできますか？</span><span class="p-accordion__icon"></span>
               </button>
             </h3>
@@ -188,7 +188,7 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         <ul class="c-accordion p-accordion l-accordion">
           <li class="c-accordion__inner p-accordion__item">
             <h3 class="c-accordion__header p-accordion__header">
-              <button class="c-accordion__trigger p-accordion__trigger" aria-expanded="false" aria-controls="accordion-panel-13">
+              <button class="c-accordion__trigger p-accordion__trigger p-accordion__trigger--first" aria-expanded="false" aria-controls="accordion-panel-13">
                 <span class="p-accordion__letter-q">Q</span><span class="p-accordion__title">どのような福利厚生制度がありますか？</span><span class="p-accordion__icon"></span>
               </button>
             </h3>

@@ -38,6 +38,6 @@ get_template_part('parts/common/p-eyecatch', null, $args); ?>
         TETOTE は、最新の知識やスキルを習得し、常に成長し続けるコンサルタントを育成します。</p>
     </section>
   </div>
-</main>.
+</main>
 
 <?php get_footer(); ?>

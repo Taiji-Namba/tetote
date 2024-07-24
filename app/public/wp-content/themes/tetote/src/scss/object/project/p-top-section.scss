@@ -62,7 +62,7 @@
 
 .p-top-section__subtitle{
   margin-left: $top-ml-pc;
-  line-height: 1.5;
+  
   margin-top: 5.2rem;
 
   @include mq(tab) {
@@ -76,6 +76,18 @@
   }
 }
 
+.p-top-section__subtitle--1line {
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
+}
+
+.p-top-section__subtitle--multi-line{
+  line-height: 1.5;
+}
+
 .p-top-section__subtitle--mt73ml0{
   margin-top: 7.3rem;
   margin-left: 0;
@@ -86,5 +98,13 @@
 
   @include mq(sp) {
     margin-top: 4.3rem;
+  }
+}
+
+.p-top-section__subtitle--ml24{
+  padding-left: 4.7rem;
+
+  @include mq(lg){
+    padding-left: unset;
   }
 }
