@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="l-main">
+<main>
   <div class="p-404">
     <div class="p-404__inner l-inner">
       <h2 class="p-404__title c-common-title">お探しのページは見つかりませんでした。</h2>
