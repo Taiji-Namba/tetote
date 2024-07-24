@@ -1,19 +1,27 @@
 @use "../../foundation" as *;
 
 .p-staff .splide__slide:nth-of-type(2n){
-  transform: translateY(3.6rem);
+  transform: translateY($translateY-of-the-staff-splide__slide--pc);
+  
+  @include mq(tab){
+    transform: translateY($translateY-of-the-staff-splide__slide--tab);
+  }
+
+  @include mq(sp) {
+    transform: translateY($translateY-of-the-staff-splide__slide--sp);
+  }
 }
 
 .p-staff__card{
   position: relative;
-  height: 46.9rem;
+  height: $staff-card-height-pc;
 
   @include mq(tab) {
-    height: 42.4rem;
+    height: $staff-card-height-tab;
   }
 
   @include mq(sp) {
-    height: 38.8rem;
+    height: $staff-card-height-sp;
   }
 }
 
