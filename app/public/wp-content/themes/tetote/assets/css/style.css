@@ -1425,6 +1425,7 @@ tbody {
 
 .p-contact__title--thanks {
   font-size: clamp(2.2rem, 1.8478873239rem + 0.9389671362vw, 3.2rem);
+  margin-top: 0;
 }
 @media screen and (max-width: 374px) {
   .p-contact__title--thanks {
