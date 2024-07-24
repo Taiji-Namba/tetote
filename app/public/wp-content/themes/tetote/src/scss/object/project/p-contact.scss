@@ -499,15 +499,14 @@
 .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span{
   line-height: calc(math.div(20,14));
   font-size: 1.4rem;
-  // padding: calc(math.div(14, 2) * 1em), 0 calc(math.div(14, 2) * calc(1em + math.div(14, 6) * 1em)) ;
   padding: 0 0 0 calc(1em + 0.6rem + 0.1rem);
   
 }
 
 // プライバシーポリシーのチェックボックスの外側
 .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::before{
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 // プライバシーポリシーのチェックボックスの内側
