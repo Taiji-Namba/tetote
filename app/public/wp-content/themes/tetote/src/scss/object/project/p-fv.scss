@@ -1,4 +1,5 @@
 @use '../../foundation' as *;
+@use 'sass:math';
 
 .p-fv__heading {
   font-family: Viga, "Noto Sans JP", sans-serif;
@@ -38,6 +39,7 @@
   white-space: nowrap;
   color: #fff;
   text-align: center;
+  line-height: 1;
   padding-block: 1.7rem;
   width: min(51.5rem, 80%);
   clip-path: polygon(0 0, 100% 0, calc(485 / 515 * 100%) 100%, 0 100%);
@@ -51,6 +53,8 @@
     font-size: 1.2rem;
     width: 22.8rem;
     padding-block: 0.9rem;
+    text-align: left;
+    padding-left: 1em;
   }
 }
 
@@ -60,12 +64,21 @@
   bottom: calc(38 / 823 * 100%);
   width: min(126.3rem, 90%);
   display: flex;
+  min-height: 4.8rem;
 
   @include mq(pc) {
     left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% + 0.5rem);
   }
 
+  @include mq(tab){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @include mq(sp) {
+    width: calc(math.div(351,375) * 100%);
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 1rem;
   }
 }

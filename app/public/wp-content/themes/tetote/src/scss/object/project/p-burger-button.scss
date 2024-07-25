@@ -2,7 +2,6 @@
 
 .p-burger-button{
   width: 5.2rem;
-  height: 5.2rem;
 
   @include mq(tab) {
     width: 4rem;
@@ -13,8 +12,22 @@
   }
 }
 
+.p-burger-button.is-burger-open{
+  @include mq(sp) {
+    transform: translate(0.4rem, 0.25rem);
+  }
+}
+
 .p-burger-button__icon {
   height: 3rem;
+
+  @include mq(tab){
+    height: 2.4rem;
+  }
+
+  @include mq(sp) {
+    height: 1.8rem;
+  }
 }
 
 .p-burger-button__line {
@@ -33,12 +46,14 @@
   top: 0;
   transform: translateY(-50%);
 }
+
 .p-burger-button__line:nth-of-type(2) {
-  top: 1.5rem;
+  top: 50%;
   transform: translateY(-50%);
 }
+
 .p-burger-button__line:nth-of-type(3) {
-  top: 3rem;
+  top: 100%;
   transform: translateY(-50%);
 }
 

@@ -10,10 +10,12 @@
 
   @include mq(tab) {
     padding-top: 12rem;
+    padding-bottom: 9.2rem;
   }
 
-@include mq(sp) {
+  @include mq(sp) {
     padding-top: 9.5rem;
+    padding-bottom: 7.8rem;
   }
 }
 
@@ -148,11 +150,13 @@
   @include mq(tab) {
     bottom: 0;
     font-size: 2.8rem;
+    padding: 0.6rem 0.7rem;
   }
 
   @include mq(sp) {
     bottom: -1.5rem;
     font-size: 2.4rem;
+    padding: 0.7rem;
   }
 }
 

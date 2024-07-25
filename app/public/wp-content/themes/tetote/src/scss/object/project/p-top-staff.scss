@@ -11,30 +11,41 @@
   padding-top: 16.3rem;
 
   @include mq(tab) {
-    margin-top: 13.2rem;
+    padding-top: 13.2rem;
   }
 
 
   @include mq(sp) {
-    margin-top: 9.5rem;
+    padding-top: 9.5rem;
   }
 }
 
 .p-top-staff .splide{
   margin-left: $top-ml-pc;
+  margin-top: 5.2rem;
   position: static;
 
   @include mq(tab) {
     margin-left: $top-ml-tab;
+    margin-top: 5.1rem;
   }
 
   @include mq(sp) {
-    margin-left: $top-ml-sp;
+    margin-left: calc($top-ml-sp + 0.9rem);
+    margin-top: 5rem;
   }
 }
 
 .p-top-staff .splide__list{
-  height: calc(46.9rem + 3.6rem);
+  height: calc($staff-card-height-pc + $translateY-of-the-staff-splide__slide--pc);
+
+  @include mq(tab){
+    height: calc($staff-card-height-tab + $translateY-of-the-staff-splide__slide--tab);
+  }
+
+  @include mq(sp) {
+    height: calc($staff-card-height-sp + $translateY-of-the-staff-splide__slide--sp);
+  }
 }
 
 .p-top-staff .p-arrow-button{
@@ -87,10 +98,6 @@
   @include mq(sp) {
     margin-top: 6.4rem;
   }
-}
-
-.p-top-staff .splide{
-  margin-top: 5.2rem;
 }
 
 .p-top-staff .p-top-section__subtitle{

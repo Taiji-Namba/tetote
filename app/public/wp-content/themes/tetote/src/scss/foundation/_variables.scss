@@ -76,3 +76,13 @@ $color-white:#fff;
 $top-ml-pc: calc(math.div(242, 1440) * 100%);
 $top-ml-tab: calc(math.div(242, 1440) * 100% - 3%);
 $top-ml-sp:1.7rem;
+
+// スタッフのスライダーに関する変数
+$translateY-of-the-staff-splide__slide--pc: 3.6rem;
+$translateY-of-the-staff-splide__slide--tab: 3rem;
+$translateY-of-the-staff-splide__slide--sp: 2.5rem;
+
+// スタッフのカードに関する変数
+$staff-card-height-pc:46.9rem;
+$staff-card-height-tab:42.4rem;
+$staff-card-height-sp:38.8rem;

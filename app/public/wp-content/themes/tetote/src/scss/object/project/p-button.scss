@@ -23,7 +23,7 @@
   font-weight: $regular;
   line-height: 1;
   width: rclamp(277, 355, 375, 1440);
-  padding-block: rclamp(23, 30 , 375, 1440);
+  padding-block: rclamp(22, 29 , 375, 1440);
   border: solid 0.1rem $txt-color;
   display: flex;
   justify-content:center;
@@ -44,7 +44,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: rclamp(17, 20, 375, 1440);
+  right: rclamp(16, 20, 375, 1440);
   width: rclamp(16, 20, 375, 1440);
   mask-image: url(../images/common/arrow.svg);
   mask-position: center center;

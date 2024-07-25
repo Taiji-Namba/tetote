@@ -1,4 +1,5 @@
 @use '../../foundation' as *;
+@use 'sass:math';
 
 .p-news__heading {
   color: #fff;
@@ -12,11 +13,15 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+
+  @include mq(sp) {
+    width: calc(math.div(52,351) * 100% - 0.1rem); // border分の0.1rem
+  }
 }
 
 .p-news__text {
   background-color: #fff;
-  width: 85.2%;
+  width: calc(100% - 14.8%);
   border: 0.1rem solid $txt-color;
   border-radius: 0 5rem 5rem 0;
   padding-block:2.2rem;
@@ -27,6 +32,7 @@
 
   @include mq(sp) {
     padding: 0.9rem 1rem;
+    width: calc(100% - math.div(52,351) * 100% + 0.1rem); // border分の0.1rem
   }
 }
 
