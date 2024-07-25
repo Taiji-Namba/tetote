@@ -44,6 +44,10 @@
   font-weight: $bold;
   line-height: 1;
   display: inline-block;
+
+  @include mq(sp) {
+    padding: 0.7rem;
+  }
 }
 
 .p-staff__message-2{
@@ -54,6 +58,10 @@
   font-weight: $bold;
   line-height: 1;
   display: inline-block;
+
+  @include mq(sp) {
+    padding: 0.7rem;
+  }
 }
 
 .p-staff__brief-introduction{
@@ -61,6 +69,14 @@
   font-weight: $bold;
   line-height: 1;
   margin-top: 1.6rem;
+
+  @include mq(tab){
+    margin-top: 1.45rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 1.3rem;
+  }
 }
 
 .p-staff__name{
@@ -68,6 +84,14 @@
   font-weight: $bold;
   line-height: 1;
   margin-top: 1.6rem;
+
+  @include mq(tab){
+    margin-top: 1.5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 1.4rem;
+  }
 }
 
 .p-staff__list{
