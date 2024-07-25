@@ -38,6 +38,10 @@
   line-height: 1;
   padding: 0.5em calc(math.div(2.1, 2.4) * 1em);
   border-radius: 1rem;
+
+  @include mq(xxs) {
+    line-height: 1.5;
+  }
 }
 
 .p-career__career-training-heading:not(:first-child){

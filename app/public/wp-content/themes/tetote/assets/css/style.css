@@ -1202,6 +1202,11 @@ tbody {
   padding: 0.5em 0.875em;
   border-radius: 1rem;
 }
+@media screen and (max-width: 374px) {
+  .p-career__career-training-heading {
+    line-height: 1.5;
+  }
+}
 
 .p-career__career-training-text {
   margin-top: 5rem;
