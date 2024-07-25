@@ -2108,12 +2108,12 @@ tbody {
   flex-direction: column;
   row-gap: 1.8rem;
   width: min(102.4rem, 100%);
-  padding-left: 2.4rem;
+  padding-inline: 2.4rem;
   margin-inline: auto;
 }
 @media screen and (max-width: 767px) {
   .p-eyecatch__headings {
-    padding-left: 1.6rem;
+    padding-inline: 1.6rem;
   }
 }
 
