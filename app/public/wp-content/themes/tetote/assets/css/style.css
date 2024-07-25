@@ -2834,6 +2834,11 @@ tbody {
   font-weight: 700;
   line-height: 1;
 }
+@media screen and (max-width: 767px) {
+  .p-page-contents__category {
+    line-height: 1.5;
+  }
+}
 
 .p-page-contents__table {
   margin-inline: auto;
