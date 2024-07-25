@@ -94,7 +94,7 @@
 
   @include mq(sp) {
     width: calc(34.1rem - 12.1rem);
-    padding: 0.9rem 0.7rem 0.5rem 1.8rem;
+    padding: 0.8rem 0.7rem 0.5rem 1.8rem;
   }
 
   @include mq(xxs) {
@@ -108,15 +108,35 @@
 
 .p-post-card__category{
   display: flex;
+  align-items: center;
 }
 
 .p-post-card__category-img{
   margin-right: 0.4rem;
+  height: 1.4rem;
+
+  @include mq(tab){
+    aspect-ratio: 13 /14;
+    transform: scaleY(1.077);
+  }
+  
+  @include mq(sp) {
+    aspect-ratio: 12 /14;
+    transform: scaleY(1.167);
+  }
 }
 
 .p-post-card__category-name{
   font-size: 1.4rem;
   line-height: 1;
+
+  @include mq(tab){
+    font-size: 1.3rem;
+  }
+
+  @include mq(sp) {
+    font-size: 1.2rem;
+  }
 }
 
 .p-post-card__title{
