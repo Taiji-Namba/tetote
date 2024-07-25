@@ -12,6 +12,12 @@
   }
 }
 
+.p-burger-button.is-burger-open{
+  @include mq(sp) {
+    transform: translate(0.4rem, 0.25rem);
+  }
+}
+
 .p-burger-button__icon {
   height: 3rem;
 
