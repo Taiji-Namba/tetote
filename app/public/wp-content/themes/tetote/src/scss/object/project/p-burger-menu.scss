@@ -17,7 +17,7 @@
   }
 
   @include mq(sp) {
-    top: 9.1rem;
+    top: 9rem;
     left: 0;
     transform: translate(0,0);
   }
@@ -97,7 +97,7 @@
   padding-block: 2.3rem;
 
   @include mq(sp) {
-  padding-block: 1.3rem;
+  padding-block: 1.25rem;
   }
 }
 
