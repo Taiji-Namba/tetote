@@ -4,14 +4,9 @@
   width: 45.2rem;
   height: 18rem;
 
-  @include mq(tab) {
-    width: 40.1rem;
-    height: 16.1rem;
-  }
-
   @include mq(lg) {
     width: 36.4rem;
-    height: 14rem;
+    height: 16rem;
   }
 
   @include mq(sp) {
@@ -22,6 +17,26 @@
   @include mq(xxs) {
     width: min(28.6rem, 100%);
     height: 12.8rem;
+  }
+}
+
+.p-post-card:nth-of-type(odd){
+  @include mq(lg){
+    justify-self: end;
+  }
+
+  @include mq(sp) {
+    justify-self: center;
+  }
+}
+
+.p-post-card:nth-of-type(even){
+  @include mq(lg){
+    justify-self: start;
+  }
+  
+  @include mq(sp) {
+    justify-self: center;
   }
 }
 
@@ -44,10 +59,6 @@
   border: none;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-
-  @include mq(tab) {
-    width: 13.8rem;
-  }
 
   @include mq(lg) {
     width: 13rem;
@@ -82,11 +93,6 @@
   display: flex;
   flex-direction: column;
 
-  @include mq(tab) {
-    width: calc(40.1rem - 13.8rem);
-    padding: 1.6rem 1.8rem;
-  }
-
   @include mq(lg) {
     width: calc(36.4rem - 13rem);
     padding: 1.3rem 1.6rem;
@@ -115,7 +121,7 @@
   margin-right: 0.4rem;
   height: 1.4rem;
 
-  @include mq(tab){
+  @include mq(lg){
     aspect-ratio: 13 /14;
     transform: scaleY(1.077);
   }
@@ -130,7 +136,7 @@
   font-size: 1.4rem;
   line-height: 1;
 
-  @include mq(tab){
+  @include mq(lg){
     font-size: 1.3rem;
   }
 
@@ -151,7 +157,7 @@
   -webkit-line-clamp: 3;
   line-clamp: 3;
 
-  @include mq(tab) {
+  @include mq(lg) {
     font-size: 1.6rem;
     margin-top: 1.6rem;
   }
@@ -167,7 +173,7 @@
   line-height: 1;
   margin-top: 1.3rem;
 
-  @include mq(tab) {
+  @include mq(lg) {
     margin-top: 1.2rem;
   }
 

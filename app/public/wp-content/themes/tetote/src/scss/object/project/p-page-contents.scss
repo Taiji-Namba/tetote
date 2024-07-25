@@ -48,6 +48,10 @@
   font-size: rclamp(28, 32, 375, 1440);
   font-weight: $bold;
   line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
 }
 
 .p-page-contents__table {

@@ -28,15 +28,16 @@
   grid-template-columns: repeat(2, 1fr);
 
   @include mq(lg) {
-    column-gap: 1.2rem;
-  }
-  
-  @include mq(md) {
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+    column-gap: 2rem;
   }
 
+  @include mq(md) {
+    column-gap: 1.5rem;
+  }
+  
   @include mq(sp) {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 0.9rem;
   }
 }
