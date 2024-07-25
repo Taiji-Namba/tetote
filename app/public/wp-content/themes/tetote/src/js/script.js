@@ -518,8 +518,6 @@ jQuery(function ($) {
   function setPositionOfCeoName() {
     var imgHeight = $(".p-ceo-message__img").outerWidth() * 629 / 484;
     var namePosition = imgHeight + 20
-    console.log("imgHeight" + imgHeight);
-    console.log("namePosition" + namePosition);
     $(".p-ceo-message__ceo-name").css('--name-position', namePosition + "px");
   }
 
