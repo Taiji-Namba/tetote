@@ -1871,6 +1871,14 @@ tbody {
   left: calc(0.5em + 0.1rem);
 }
 
+::-webkit-full-page-media, :future, :root .p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span::before {
+  transform: translateY(-60%);
+}
+
+::-webkit-full-page-media, :future, :root .p-contact__policy .p-contact__item-checkbox input[type=checkbox] + span::after {
+  transform: translate(-50%, -70%);
+}
+
 /* 送信ボタン */
 .p-contact__button-wrapper {
   display: grid;

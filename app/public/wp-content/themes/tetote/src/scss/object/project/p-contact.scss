@@ -500,7 +500,6 @@
   line-height: calc(math.div(20,14));
   font-size: 1.4rem;
   padding: 0 0 0 calc(1em + 0.6rem + 0.1rem);
-  
 }
 
 // プライバシーポリシーのチェックボックスの外側
@@ -516,6 +515,15 @@
   left: calc(0.5em + 0.1rem);
 }
 
+// Safariでのプライバシーポリシーのチェックボックスの外側
+::-webkit-full-page-media, :future, :root .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::before{
+  transform: translateY(-60%);
+}
+
+// Safariでのプライバシーポリシーのチェックボックスの内側
+::-webkit-full-page-media, :future, :root .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::after{
+  transform: translate(-50%, -70%);
+}
 
 /* 送信ボタン */
 .p-contact__button-wrapper{
