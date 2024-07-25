@@ -411,10 +411,16 @@ jQuery(function ($) {
 
   //フッターの高さ設定(フッター下の余白をつけるため)
   function setFooterHeight(){
-    let footerWrapperHeight = $(".p-footer__image").outerHeight() + $(".p-footer__menu-wrapper").outerHeight();
-    let footerHeight = footerWrapperHeight + $(".p-footer__wrapper").css("padding-bottom");
-    $(".p-footer__wrapper").height(footerHeight);
-    $(".p-footer").height(footerHeight);
+    var windowWidth = $(window).width();
+    if (windowWidth >= 1440) { // PCの場合
+      let footerWrapperHeight = $(".p-footer__image").outerHeight() + $(".p-footer__menu-wrapper").outerHeight();
+      let footerHeight = footerWrapperHeight + $(".p-footer__wrapper").css("padding-bottom");
+      $(".p-footer__wrapper").height(footerHeight);
+      $(".p-footer").height(footerHeight);
+    } else { // タブレット・スマホの場合
+      $(".p-footer__wrapper").height("auto");
+      $(".p-footer").height("auto");
+    }
   }
 
   // フッターのメインメニューの横幅設定
