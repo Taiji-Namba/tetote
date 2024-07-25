@@ -77,12 +77,16 @@
   padding-bottom: 6.1rem;
 
   @include mq(tab) {
+    padding-top: 18rem;
     padding-inline: 2rem;
+    padding-bottom: 4rem;
     border-radius: 0;
   }
 
   @include mq(sp) {
+    padding-top: 16.9rem;
     padding-inline: 1.6rem;
+    padding-bottom: 2.4rem;
   }
 }
 
