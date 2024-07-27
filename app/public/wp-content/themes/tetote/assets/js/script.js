@@ -328,30 +328,31 @@ jQuery(function ($) {
 
 
   // スムーススクロール(「#」がついていなくても動くように)
-  $(document).on('click', 'a[href^="//"]', function (e) {
+  $(document).on('click', 'a', function(e) {
     e.preventDefault();
 
     const href = $(this).attr("href");
-    const currentProtocol = window.location.protocol;
-    const fullLinkUrl = currentProtocol + href;
+    const currentProtocol = window.location.protocol; // 「https:」の部分
+    const ProtocolAddedLinkUrl = currentProtocol + href; // ローカル環境対応のための定数
 
-    // 先に#付きリンクを踏んでいる場合でも、スムーススクロールを作動させるため処理
-    let strippedFullLinkUrl = fullLinkUrl.split('#')[0]; // 'fullLinkUrl'から'#以降の文字列'を削除する
-    let strippedLocationHref = location.href.split('#')[0]; // 'location.href'から'#以降の文字列'を削除する
+    // 先に#付きリンクを踏んでいる場合でも、スムーススクロールを作動させるための処理
+    let strippedProtocolAddedLinkUrl = ProtocolAddedLinkUrl.split('#')[0]; // 'ProtocolAddedLinkUrl'から'#以降の文字列'を削除する
+    let strippedLocationHref = location.href.split('#')[0]; // 現在のページの完全なパスから'#以降の文字列'を削除する
+    let strippedHref = href.split('#')[0]; // hrefから'#以降の文字列'を削除する
 
     // ページ遷移しないリンクの時
-    if (strippedFullLinkUrl === strippedLocationHref){
+    if (strippedProtocolAddedLinkUrl === strippedLocationHref || href === strippedLocationHref || strippedHref === strippedLocationHref){
     let target;
     let adjust;
 
       // #のないリンクの時
-      if (fullLinkUrl === strippedLocationHref) {
+      if (ProtocolAddedLinkUrl === strippedLocationHref || href === strippedLocationHref) {
         target = $("html");
         adjust = 0;
       }
 
       // #から始まるリンクの時
-      else if (fullLinkUrl.startsWith(strippedLocationHref + '#')){
+      else if (ProtocolAddedLinkUrl.startsWith(strippedLocationHref + '#') || href.startsWith(strippedLocationHref + '#')){
         const id = href.split('#')[1]; // #以降を切り取り、const idに代入
         target = $('#' + id); // そのidを持つ要素をtargetに設定
         const headerHeight = $("header").outerHeight();
@@ -376,7 +377,7 @@ jQuery(function ($) {
 
       $("body,html").animate({ scrollTop: position }, speed, "linear");
       } else {// ページ遷移するリンクの時
-      window.location.href = fullLinkUrl;
+      window.location.href = href;
     }
   });
 
