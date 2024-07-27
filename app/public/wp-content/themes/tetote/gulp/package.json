@@ -23,6 +23,5 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^8.0.0",
     "sass": "^1.57.1"
-  },
-  "dependencies": {}
+  }
 }
