@@ -127,13 +127,13 @@ tbody {
 }
 @media screen and (max-width: 1439px) {
   .l-page--common {
-    padding-top: 12rem;
+    padding-top: 10rem;
     padding-inline: 2rem;
   }
 }
 @media screen and (max-width: 767px) {
   .l-page--common {
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-inline: 1.6rem;
   }
 }
