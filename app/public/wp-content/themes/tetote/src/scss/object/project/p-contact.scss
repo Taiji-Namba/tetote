@@ -585,3 +585,8 @@
 .wpcf7-form-control-wrap.is-validation-show > .wpcf7-not-valid-tip {
   display: block;
 }
+
+// エラーメッセージ
+.wpcf7-not-valid-tip{
+  color: #cf3737;
+}
