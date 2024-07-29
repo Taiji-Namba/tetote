@@ -1434,7 +1434,7 @@ tbody {
 }
 @media screen and (max-width: 767px) {
   .p-contact__title {
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 374px) {
