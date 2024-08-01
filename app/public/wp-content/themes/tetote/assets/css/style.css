@@ -215,14 +215,25 @@ tbody {
   overflow: hidden;
 }
 
-.c-breadcrumb span[property=item], .c-breadcrumb span[property=name] {
+.c-breadcrumb__inner {
+  display: flex;
+  -moz-column-gap: 0.4rem;
+       column-gap: 0.4rem;
+}
+
+.c-breadcrumb span[property=itemListElement] {
+  vertical-align: top;
+  display: inline-flex;
+}
+
+.c-breadcrumb span[property=item], .c-breadcrumb span[property=name], .c-breadcrumb a[property=item], .c-breadcrumb a[property=name] {
   display: inline-block;
   padding: 0;
   max-width: 28rem;
-  vertical-align: middle;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 1em;
 }
 
 .c-breadcrumb a[property=item]:hover {
@@ -232,6 +243,10 @@ tbody {
 .c-breadcrumb a[property=item]:hover span {
   -webkit-text-decoration: underline 1px;
           text-decoration: underline 1px;
+}
+
+.c-breadcrumb .breadcrumb-separator {
+  transform: translateY(-5%);
 }
 
 .c-burger-button {
