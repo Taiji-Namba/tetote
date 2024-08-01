@@ -3437,6 +3437,12 @@ tbody {
   align-items: center;
   -moz-column-gap: 2.1rem;
        column-gap: 2.1rem;
+  flex: fit-content;
+}
+@media screen and (max-width: 1023px) {
+  .p-post-nav__previous a, .p-post-nav__next a {
+    justify-content: center;
+  }
 }
 
 .p-post-nav__next.no-previous {

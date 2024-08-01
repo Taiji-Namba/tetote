@@ -56,6 +56,11 @@
   display: flex;
   align-items: center;
   column-gap: 2.1rem;
+  flex: fit-content;
+
+  @include mq(lg){
+    justify-content: center;
+  }
 }
 
 .p-post-nav__next.no-previous {
