@@ -3439,6 +3439,15 @@ tbody {
        column-gap: 2.1rem;
 }
 
+.p-post-nav__next:not(:has(+ .p-post-nav__previous)) {
+  margin-left: 50%;
+}
+@media screen and (max-width: 1023px) {
+  .p-post-nav__next:not(:has(+ .p-post-nav__previous)) {
+    margin-left: inherit;
+  }
+}
+
 .p-post-nav__img {
   width: 2.4rem;
   height: 2.4rem;
