@@ -3798,7 +3798,7 @@ tbody {
   height: 0.1rem;
   width: var(--line-width, 0);
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1023px) {
   .p-staff-article__contents h2::before {
     display: none;
   }
