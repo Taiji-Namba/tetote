@@ -7,12 +7,12 @@
   margin-inline: auto;
 
   @include mq(tab) {
-    padding-top: 12rem;
+    padding-top: 10rem;
     padding-inline: 2rem;
   }
 
   @include mq(sp) {
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-inline: 1.6rem;
   }
 }

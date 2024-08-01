@@ -37,7 +37,7 @@
   height: 0.1rem;
   width: var(--line-width, 0);
 
-  @include mq(tab) {
+  @include mq(lg) {
     display: none;
   }
 

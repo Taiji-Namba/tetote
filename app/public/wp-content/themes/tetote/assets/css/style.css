@@ -127,13 +127,13 @@ tbody {
 }
 @media screen and (max-width: 1439px) {
   .l-page--common {
-    padding-top: 12rem;
+    padding-top: 10rem;
     padding-inline: 2rem;
   }
 }
 @media screen and (max-width: 767px) {
   .l-page--common {
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-inline: 1.6rem;
   }
 }
@@ -215,14 +215,25 @@ tbody {
   overflow: hidden;
 }
 
-.c-breadcrumb span[property=item], .c-breadcrumb span[property=name] {
+.c-breadcrumb__inner {
+  display: flex;
+  -moz-column-gap: 0.4rem;
+       column-gap: 0.4rem;
+}
+
+.c-breadcrumb span[property=itemListElement] {
+  vertical-align: top;
+  display: inline-flex;
+}
+
+.c-breadcrumb span[property=item], .c-breadcrumb span[property=name], .c-breadcrumb a[property=item], .c-breadcrumb a[property=name] {
   display: inline-block;
   padding: 0;
   max-width: 28rem;
-  vertical-align: middle;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 1em;
 }
 
 .c-breadcrumb a[property=item]:hover {
@@ -232,6 +243,10 @@ tbody {
 .c-breadcrumb a[property=item]:hover span {
   -webkit-text-decoration: underline 1px;
           text-decoration: underline 1px;
+}
+
+.c-breadcrumb .breadcrumb-separator {
+  transform: translateY(-5%);
 }
 
 .c-burger-button {
@@ -703,21 +718,8 @@ tbody {
 }
 
 .p-article__contents ul li {
-  list-style: none;
-  margin-left: 1.55em;
-  position: relative;
-}
-
-.p-article__contents ul li::before {
-  content: "•"; /* Unicode文字コードで黒い丸（•）を表示 */
-  color: currentColor;
-  font-size: 1.8em;
-  width: 1em;
-  text-align: right;
-  position: absolute;
-  left: -1.2em;
-  top: 45%;
-  transform: translateY(-50%);
+  list-style-type: "・";
+  list-style-position: inside;
 }
 
 .p-article__contents ol li {
@@ -1434,7 +1436,7 @@ tbody {
 }
 @media screen and (max-width: 767px) {
   .p-contact__title {
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 374px) {
@@ -1938,6 +1940,20 @@ tbody {
 
 .wpcf7-form-control-wrap.is-validation-show > .wpcf7-not-valid-tip {
   display: block;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  border: none;
+  text-align: center;
+}
+
+.wpcf7-not-valid-tip,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output,
+.wpcf7 form.spam .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  color: #dc554e;
 }
 
 /*****************************************
@@ -3782,7 +3798,7 @@ tbody {
   height: 0.1rem;
   width: var(--line-width, 0);
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1023px) {
   .p-staff-article__contents h2::before {
     display: none;
   }

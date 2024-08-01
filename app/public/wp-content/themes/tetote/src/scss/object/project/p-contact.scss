@@ -76,7 +76,7 @@
   line-height: 1;
 
   @include mq(sp) {
-    line-height: 1.2;
+    line-height: 1.5;
   }
 
   @include mq(xxs) {
@@ -584,4 +584,20 @@
 }
 .wpcf7-form-control-wrap.is-validation-show > .wpcf7-not-valid-tip {
   display: block;
+}
+
+// 送信ボタン下のレスポンスメッセージ
+.wpcf7 form .wpcf7-response-output{
+  border: none;
+  text-align: center;
+}
+
+// 入力項目横のエラーメッセージ&送信ボタン下のレスポンスメッセージ(エラー時)
+.wpcf7-not-valid-tip,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output,
+.wpcf7 form.spam .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output{
+  color: #dc554e;
 }
