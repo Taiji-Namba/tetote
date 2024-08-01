@@ -115,6 +115,7 @@ jQuery(function ($) {
     addLineNextToH2();
     setPositionOfCeoName();
     disableSubmit();
+    checkPreviousPostLink()
   });
 
   // ウィンドウリサイズ時の処理
@@ -559,6 +560,15 @@ jQuery(function ($) {
 
     // 初期状態でもチェック
     checkAllFields();
+  }
+
+  // 前後投稿リンクの「前」がないかどうかのチェック
+  function checkPreviousPostLink(){
+    $('.p-post-nav__next').each(function() {
+      if (!$(this).prev('.p-post-nav__previous').length) {
+        $(this).addClass('no-previous');
+      }
+    });
   }
 
 });

@@ -3439,11 +3439,11 @@ tbody {
        column-gap: 2.1rem;
 }
 
-.p-post-nav__next:not(:has(+ .p-post-nav__previous)) {
+.p-post-nav__next.no-previous {
   margin-left: 50%;
 }
 @media screen and (max-width: 1023px) {
-  .p-post-nav__next:not(:has(+ .p-post-nav__previous)) {
+  .p-post-nav__next.no-previous {
     margin-left: inherit;
   }
 }
