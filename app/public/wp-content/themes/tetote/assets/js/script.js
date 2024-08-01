@@ -115,7 +115,7 @@ jQuery(function ($) {
     addLineNextToH2();
     setPositionOfCeoName();
     disableSubmit();
-    checkPreviousPostLink()
+    checkPreviousPostLink();
   });
 
   // ウィンドウリサイズ時の処理
