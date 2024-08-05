@@ -1,0 +1,11 @@
+@use "../../foundation" as *;
+
+.u-first-letter-under-line::first-letter{
+  text-decoration:underline;
+  text-underline-offset: 0.15em;
+}
+
+.u-under-line{
+  text-decoration:underline;
+  text-underline-offset: 0.15em;
+}

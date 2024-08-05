@@ -1,0 +1,129 @@
+@use "../../foundation" as *;
+
+.p-staff .splide__slide:nth-of-type(2n){
+  transform: translateY($translateY-of-the-staff-splide__slide--pc);
+  
+  @include mq(tab){
+    transform: translateY($translateY-of-the-staff-splide__slide--tab);
+  }
+
+  @include mq(sp) {
+    transform: translateY($translateY-of-the-staff-splide__slide--sp);
+  }
+}
+
+.p-staff__card{
+  position: relative;
+  height: $staff-card-height-pc;
+
+  @include mq(tab) {
+    height: $staff-card-height-tab;
+  }
+
+  @include mq(sp) {
+    height: $staff-card-height-sp;
+  }
+}
+
+.p-staff__thumbnail{
+  border: none;
+  border-radius:3rem;
+  object-fit: cover;
+}
+
+.p-staff__texts{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.p-staff__message-1{
+  padding: 0.5rem 0.7rem;
+  background-color: $accent-color-2;
+  font-size: rclamp(16, 20, 375, 1440);
+  font-weight: $bold;
+  line-height: 1;
+  display: inline-block;
+
+  @include mq(sp) {
+    padding: 0.7rem;
+  }
+}
+
+.p-staff__message-2{
+  padding: 0.5rem 0.7rem;
+  background-color: $accent-color-2;
+  margin-top: 0.6rem;
+  font-size: rclamp(16, 20, 375, 1440);
+  font-weight: $bold;
+  line-height: 1;
+  display: inline-block;
+
+  @include mq(sp) {
+    padding: 0.7rem;
+  }
+}
+
+.p-staff__brief-introduction{
+  font-size: rclamp(12, 16, 375, 1440);
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: 1.6rem;
+
+  @include mq(tab){
+    margin-top: 1.45rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 1.3rem;
+  }
+}
+
+.p-staff__name{
+  font-size: rclamp(20, 24, 375, 1440);
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: 1.6rem;
+
+  @include mq(tab){
+    margin-top: 1.5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 1.4rem;
+  }
+}
+
+.p-staff__list{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4.3rem;
+  row-gap: 4.8rem;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-inline: 1.9rem;
+  width: min(102.4rem,100%);
+
+  @include mq(tab) {
+    column-gap: 6rem;
+    justify-content: center;
+  }
+
+  @include mq(sp) {
+    column-gap: 2.3rem;
+    row-gap: 8rem;
+  }
+}
+
+.p-staff__item{
+  @include mq(tab) {
+    width: 27rem;
+    height:42.4rem ;
+  }
+
+  @include mq(sp) {
+    width: 24.6rem;
+    height:38.8rem ;
+  }
+
+}

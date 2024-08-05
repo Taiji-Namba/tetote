@@ -1,0 +1,84 @@
+@use "../../foundation" as *;
+
+.pagination{
+  width: 100%;
+  @include mq('md'){
+  }
+}
+
+.nav-links ul{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links ul li span.current{
+  color: #fff;
+  background-color: $txt-color;
+}
+
+.nav-links ul li{
+  position: relative;
+  margin-inline: 1.6rem;
+}
+
+// ページネーションのページ番号
+.nav-links ul li a,
+.nav-links ul li span {
+  font-size: 1.4rem;
+  width: 5.8rem;
+  height: 5.8rem;
+  border: 0.1rem solid $txt-color;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+
+  @include mq(tab) {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @include mq(sp) {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+.nav-links ul li .dots{
+  padding-right: 0;
+  padding-left: 0;
+  border:none;
+  width: auto;
+}
+
+
+// .nav-links ul li a.prev,
+// .nav-links ul li a.next {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   border-right: 1px solid $accent-color-1;
+//   border-top: 1px solid $accent-color-1;
+//   width: prem(20);
+//   height: prem(20);
+// }
+
+// .nav-links ul li a.next {
+//   transform: translate(-50%, -50%) rotate(45deg);
+// }
+
+// .nav-links ul li a.prev {
+//   transform: translate(-50%, -50%) rotate(-135deg);
+// }
+
+a.page-numbers{
+  scale: 1;
+  transition: 0.3s;
+}
+
+a.page-numbers:hover{
+  scale: 1.2;
+  transition: 0.3s;
+}

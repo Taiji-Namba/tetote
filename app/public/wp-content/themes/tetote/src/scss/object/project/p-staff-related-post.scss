@@ -1,0 +1,27 @@
+@use '../../foundation' as *;
+
+.p-staff-related-post__inner{
+  max-width: 102.4rem;
+  margin-inline: auto;
+  margin-top: 6.6rem;
+}
+
+.p-staff-related-post__title{
+  font-size: rclamp(24, 32, 375, 1440);
+  font-weight: $bold;
+  line-height: 1.8;
+  display: flex;
+  justify-content: center;
+}
+
+.p-staff-related-post__list-wrapper{
+  margin-top: 5rem;
+
+  @include mq(tab) {
+    margin-top: 4.2rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 3.6rem;
+  }
+}

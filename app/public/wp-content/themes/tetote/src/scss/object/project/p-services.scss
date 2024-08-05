@@ -1,0 +1,192 @@
+@use '../../foundation' as *;
+
+.p-services {
+
+}
+
+.p-services__lede {
+  line-height: 1.5;
+  margin-top: 4.4rem;
+
+  @include mq(tab) {
+    margin-top: 3.5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 2.7rem;
+  }
+}
+
+.p-services__contents{
+  margin-top: 3.1rem;
+
+  @include mq(sp) {
+    margin-top: 0;
+  }
+}
+
+.p-services__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 4.9rem;
+
+  @include mq(sp) {
+    justify-content: start;
+  }
+}
+
+.p-services__content:first-of-type{
+  column-gap: 4.7rem;
+
+  @include mq(lg) {
+    column-gap: 3rem;
+  }
+}
+
+.p-services__content:not(:first-of-type){
+  column-gap: 4.2rem;
+
+  @include mq(lg) {
+    column-gap: 3rem;
+  }
+}
+
+.p-services__content:last-child{
+  padding-block: 6rem 0;
+}
+
+.p-services__border{
+  height: 0.1rem;
+  background-color: $accent-color-2;
+
+  margin-inline: -2.2rem;
+
+  @include mq(tab) {
+    margin-inline: -2rem;
+  }
+
+  @include mq(sp) {
+    margin-inline: -1.6rem;
+  }
+}
+
+.p-services__image {
+  flex-basis: min(100%, 46.2rem);
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include mq(lg) {
+    flex-basis: min(100%, 40%);
+  }
+
+  @include mq(sp) {
+    aspect-ratio: 450 / 260;
+    flex-basis: 90%;
+  }
+}
+
+
+.p-services__image--consulting{
+  background-image: url(../images/parts/about-us/consulting.jpg);
+  flex-basis: min(100%, 45.7rem);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/about-us/consulting@2x.jpg);
+  }
+
+  @include mq(lg) {
+    flex-basis: min(100%, 40%);
+  }
+
+  @include mq(sp) {
+    aspect-ratio: 450 / 260;
+    flex-basis: 90%;
+  }
+}
+
+.p-services__image__solution-sales{
+  background-image: url(../images/parts/about-us/solution-sales.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/about-us/solution-sales@2x.jpg);
+  }
+}
+
+
+.p-services__image--system-engineering{
+  background-image: url(../images/parts/about-us/engineer.jpg);
+
+  @include mq(twice) {
+    background-image: url(../images/parts/about-us/engineer@2x.jpg);
+  }
+}
+
+
+
+.p-services__text-group {
+  width: min(100%, 45.6rem);
+
+  @include mq(lg) {
+    flex: 1;
+  }
+
+  @include mq(sp) {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+.p-services__text-group--first{
+  margin-top: 2.2rem;
+  margin-bottom: 3.1rem;
+
+  @include mq(lg) {
+    margin-left: unset;
+  }
+}
+
+
+.p-services__text-group--second {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.p-services__text-group--third{
+  margin-top: 1.1rem;
+
+  @include mq(sp) {
+    margin-top: 2.2rem;
+  }
+}
+
+.p-services__heading {
+  font-size: rclamp(26, 32, 375, 1440);
+  color: $accent-color-1;
+  font-weight: $bold;
+  line-height: 1;
+}
+
+.p-services__large-text {
+  font-size: rclamp(20, 24, 375, 1440);
+  font-weight: $bold;
+  line-height: 1.5;
+  margin-top: 4rem;
+}
+
+.p-services__large-text--1line {
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
+}
+
+.p-services__explanatory-text {
+  line-height: 1.5;
+  margin-top: 4rem;
+  max-width: min(43rem, 100%);
+}
+

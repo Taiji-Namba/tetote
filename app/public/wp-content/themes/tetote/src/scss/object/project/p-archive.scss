@@ -1,0 +1,14 @@
+@use '../../foundation' as *;
+
+.p-archive__inner{
+  margin-inline: auto;
+  margin-top: 13rem;
+
+  @include mq(tab) {
+    margin-top: 11rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 9rem;
+  }
+}

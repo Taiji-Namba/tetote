@@ -1,0 +1,59 @@
+@use "../../foundation" as *;
+
+.p-button{
+  font-size: 1.4rem;
+  color: #fff;
+  border-radius: 0;
+}
+
+.p-button--black {
+  background-color: $txt-color;
+  font-weight: 700;
+}
+
+.p-button--gold {
+  background-color: $accent-color-2;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+}
+
+.p-button__view-more{
+  color: $txt-color;
+  font-family: $viga;
+  font-size: rclamp(16, 20, 375, 1440);
+  font-weight: $regular;
+  line-height: 1;
+  width: rclamp(277, 355, 375, 1440);
+  padding-block: rclamp(22, 29 , 375, 1440);
+  border: solid 0.1rem $txt-color;
+  display: flex;
+  justify-content:center;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  transition: 0.6s;
+
+  @include mq(xxs) {
+    width: 80%;
+  }
+}
+
+.p-button__view-more::before{
+  content: "";
+  width: rclamp(16,20,375,1440);
+  height: rclamp(16, 20, 375, 1440);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: rclamp(16, 20, 375, 1440);
+  width: rclamp(16, 20, 375, 1440);
+  mask-image: url(../images/common/arrow.svg);
+  mask-position: center center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  background-color: $txt-color;
+}
+
+.p-button__view-more:hover::before{
+  background-color: #fff;
+  transition: 0.6s ease-in;
+}

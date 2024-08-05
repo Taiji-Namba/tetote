@@ -1,0 +1,83 @@
+@use '../../foundation' as *;
+
+.p-what-we-value {
+
+}
+
+.p-what-we-value__list {
+  margin-top: 8.6rem;
+
+  @include mq(tab) {
+    margin-top: 7rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 6rem;
+  }
+
+}
+
+.p-what-we-value__item {
+  border-radius: 1rem;
+  background-color: $bg-sub-color;
+  padding: 3rem 8rem;
+
+  @include mq(tab) {
+    padding-inline: 4rem;
+  }
+
+  @include mq(sp) {
+      padding-inline: 2rem;
+  }
+}
+
+.p-what-we-value__item:not(:first-child){
+  margin-top: 3.5rem;
+}
+
+.p-what-we-value__heading {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 2.1rem;
+  align-items: center;
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
+}
+
+.p-what-we-value__number {
+  font-size: 1.8rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 0.1rem solid $txt-color;
+
+  @include mq(tab) {
+    font-size: 1.7rem;
+  }
+
+  @include mq(sp) {
+    font-size: 1.6rem;
+  }
+}
+
+.p-what-we-value__title{
+  font-size: 2rem;
+  font-weight: $bold;
+  display: inline-block;
+  flex: 1;
+
+  @include mq(xxs) {
+    font-size: 1.8rem;
+  }
+}
+
+.p-what-we-value__text {
+  line-height: 1.5;
+  margin-top: 2.1rem;
+}

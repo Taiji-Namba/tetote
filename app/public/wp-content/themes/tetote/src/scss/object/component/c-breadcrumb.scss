@@ -1,0 +1,35 @@
+@use "../../foundation" as *;
+
+.c-breadcrumb__inner{
+  display: flex;
+  column-gap: 0.4rem;
+}
+
+.c-breadcrumb span[property="itemListElement"]{
+  vertical-align: top;
+  display: inline-flex;
+}
+
+// パンくずの項目が長い場合に三点リーダーで省略&Y軸位置と高さを親要素に合わせる
+.c-breadcrumb span[property="item"], .c-breadcrumb span[property="name"], .c-breadcrumb a[property="item"], .c-breadcrumb a[property="name"] {
+  display: inline-block;
+  padding: 0;
+  max-width: 28rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 1em;
+}
+
+.c-breadcrumb a[property="item"]:hover {
+  color: $accent-color-1;
+}
+
+.c-breadcrumb a[property="item"]:hover span {
+  text-decoration: underline 1px;
+}
+
+// アイテム間の区切りの「>」
+.c-breadcrumb .breadcrumb-separator{
+  transform: translateY(-5%); // 文字を真ん中に寄せる
+}

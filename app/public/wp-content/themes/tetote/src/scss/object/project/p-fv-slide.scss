@@ -1,0 +1,51 @@
+@use '../../foundation' as *;
+
+.p-fv-slide__picture {
+  animation: fv-slider 12s linear infinite;
+
+  &:nth-child(1) {
+    background-image: url(../images/parts/fv/fv01.jpg);
+    animation-delay: -2s;
+
+    @include mq(twice) {
+      background-image: url(../images/parts/fv/fv01@2x.jpg);
+    }
+
+    @include mq(sp) {
+      background-position: 70% center;
+      animation-delay: 4s;
+    }
+  }
+  &:nth-child(2) {
+    background-image: url(../images/parts/fv/fv02.jpg);
+    animation-delay: 4s;
+
+    @include mq(twice) {
+      background-image: url(../images/parts/fv/fv02@2x.jpg);
+    }
+
+    @include mq(sp) {
+      animation-delay: -2s;
+    }
+  }
+}
+
+// 2枚のスライドが交互にふわっと入れ替わる
+// 全体で12秒の場合、それぞれ6秒ずつ。それぞれのフェードアウトとフェードインを1秒重ねる。
+@keyframes fv-slider {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

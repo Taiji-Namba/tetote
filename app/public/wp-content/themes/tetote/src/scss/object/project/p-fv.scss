@@ -1,0 +1,84 @@
+@use '../../foundation' as *;
+@use 'sass:math';
+
+.p-fv__heading {
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: rclamp(48, 96, 375, 1440);
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(#000, 0.25);
+  line-height: 1.2;
+  position: absolute;
+  left: calc(66 / 1440 * 100%);
+  top: calc(286 / 823 * 100%);
+
+  @include mq(pc) {
+    left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100%);
+  }
+
+  @include mq(tab) {
+    top: calc(286 / 823 * 100% + 10%);
+  }
+
+  @include mq(sp) {
+    left: 1.2rem;
+    top: calc(414 / 667 * 100%);
+  }
+
+  @include mq(xxs) {
+    font-size: 4.4rem;
+  }
+}
+
+.p-fv__text {
+  position: absolute;
+  left: 0;
+  bottom: calc(163 / 823 * 100%);
+  background-color: $txt-color;
+  font-size: rclamp(12, 24, 375, 1440);
+  font-weight: bold;
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  padding-block: 1.7rem;
+  width: min(51.5rem, 80%);
+  clip-path: polygon(0 0, 100% 0, calc(485 / 515 * 100%) 100%, 0 100%);
+
+  @include mq(pc) {
+    left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% - 6.6rem);
+  }
+
+  @include mq(sp) {
+    bottom: calc(89 / 667 * 100%);
+    font-size: 1.2rem;
+    width: 22.8rem;
+    padding-block: 0.9rem;
+    text-align: left;
+    padding-left: 1em;
+  }
+}
+
+.p-fv__news {
+  position: absolute;
+  left: calc(66 / 1440 * 100% + 0.5rem);
+  bottom: calc(38 / 823 * 100%);
+  width: min(126.3rem, 90%);
+  display: flex;
+  min-height: 4.8rem;
+
+  @include mq(pc) {
+    left: calc(((100svw - 1440px) / 2) + 66 / 1440 * 100% + 0.5rem);
+  }
+
+  @include mq(tab){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include mq(sp) {
+    width: calc(math.div(351,375) * 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+  }
+}

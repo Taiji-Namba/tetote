@@ -1,0 +1,141 @@
+@use "../../foundation" as *;
+
+.p-burger-menu__inner {
+  position: absolute;
+  top: 50%;
+  left: calc(406 / 1440 * 100% - 1.2rem);
+  transform: translateY(-50%);
+  width: min(calc(90.3rem + 2.4rem), 100%);
+  padding-inline: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq(tab) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
+
+  @include mq(sp) {
+    top: 9rem;
+    left: 0;
+    transform: translate(0,0);
+  }
+}
+
+.p-burger-menu__logo-list{
+  display: flex;
+  align-items: center;
+  padding-right: 6.3rem;
+  border-right: 0.05rem solid $accent-color-2;
+
+  @include mq(tab) {
+    display: none;
+  }
+}
+
+.p-burger-menu__anchor{
+  display: block;
+}
+
+.p-burger-menu__text-item-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  column-gap: 3rem;
+  width: 100%;
+
+  @include mq(tab) {
+  }
+}
+
+.p-burger-menu__logo {
+  display: block;
+}
+
+.p-burger-menu__item-list{
+  margin-left: 6.3rem;
+  width: min(52.6rem, 100%);
+
+  @include mq(tab) {
+    margin-left: 0;
+  }
+}
+
+.p-burger-menu__text-item-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  column-gap: 3rem;
+  width: 100%;
+
+  @include mq(tab) {
+  }
+}
+
+.p-burger-menu__text-item {
+  text-align: left;
+  border-top: 0.1rem solid $accent-color-2;
+  width: calc((100% - 3rem) / 2);
+
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+
+.p-burger-menu__text-item:nth-of-type(3), .p-burger-menu__text-item:last-child{
+  border-bottom: 0.1rem solid $accent-color-2;
+}
+
+.p-burger-menu__text-item:nth-of-type(3){
+  @include mq(sp) {
+    border-bottom:none;
+  }
+}
+
+.p-burger-menu__text-item .p-burger-menu__anchor{
+  padding-block: 2.3rem;
+
+  @include mq(sp) {
+  padding-block: 1.25rem;
+  }
+}
+
+.p-burger-menu__title{
+  font-size: 3.2rem;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  line-height: 1;
+
+  @include mq(sp) {
+    font-size: 1.8rem;
+  }
+}
+.p-burger-menu__sub-title{
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 1.1rem;
+
+  @include mq(sp) {
+    font-size: 1.2rem;
+    margin-top: 0.9rem;
+  }
+
+}
+
+.p-burger-menu__button-item-wrapper{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(sp) {
+    margin-top: 5.3rem;
+    flex-wrap: wrap;
+    row-gap: 1.3rem;
+  }
+}
+
+.p-burger-menu__button{
+  width: 24.8rem;
+  height: 4.2rem;
+}

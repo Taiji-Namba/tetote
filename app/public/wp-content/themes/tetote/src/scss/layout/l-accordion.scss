@@ -1,0 +1,13 @@
+@use '../foundation' as *;
+
+.l-accordion{
+  margin-top: 11.3rem;
+
+  @include mq(tab) {
+    margin-top: 10rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 8rem;
+  }
+}

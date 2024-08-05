@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - SiteGuard WP Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-08 12:27:19+0000\n"
+"PO-Revision-Date: 2024-05-29 04:45:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"X-Generator: GlotPress/4.0.1\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - SiteGuard WP Plugin - Stable (latest release)\n"
 
@@ -16,6 +16,7 @@ msgid "Changelog: %1$s%2$s"
 msgstr "変更履歴: %1$s%2$s"
 
 #. Author URI of the plugin
+#: siteguard.php
 msgid "https://www.eg-secure.co.jp/"
 msgstr "https://www.eg-secure.co.jp/"
 
@@ -41,7 +42,7 @@ msgstr "除外プラグイン　追加"
 
 #: admin/siteguard-menu-author-query.php:114
 msgid "Please specify the plugin. To specify more than one, separate them with new line. "
-msgstr "除外するプラグイン名を入力します。複数指定する場合は、改行で区切ってください。"
+msgstr "プラグインを指定してください。複数指定するには、改行で区切ります。"
 
 #: admin/siteguard-menu-author-query.php:112
 msgid "Exclude Plugins"
@@ -71,7 +72,7 @@ msgstr "画像ファイルの書き込みに失敗しました。"
 
 #: admin/siteguard-menu-rename-login.php:169
 msgid "Do not redirect from admin page to login page. "
-msgstr "管理者ページからログインページへリダイレクトしない"
+msgstr "管理画面からログイン画面にリダイレクトしない。"
 
 #: admin/siteguard-menu-author-query.php:104
 #: admin/siteguard-menu-rename-login.php:166
@@ -203,16 +204,19 @@ msgid "https://www.jp-secure.com/siteguard_wp_plugin_en/"
 msgstr "https://www.jp-secure.com/siteguard_wp_plugin/"
 
 #. Author of the plugin
+#: siteguard.php
 msgid "JP-Secure"
 msgstr "ジェイピー・セキュア"
 
 #. Description of the plugin
+#: siteguard.php
 msgid "Only installing SiteGuard WP Plugin on WordPress, its security can be improved. SiteGurad WP Plugin is the plugin specialized for the protection against the attack to the management page and login. It also have the function to create the exclude rule for WAF (SiteGuard Server Edition, to use it, WAF should be installed on the Web server.)"
 msgstr ""
 "WordPressにSiteGuard WP Pluginをインストールするだけで、セキュリティが向上します。SiteGurad WP Pluginは、管理画面やログインへの攻撃対策に特化したプラグインです。\n"
 "またWAFの除外ルールを作成する機能も備えています(SiteGuard Server Editionを使用するにはWebサーバーにWAFをインストールする必要があります)"
 
 #. Plugin Name of the plugin
+#: siteguard.php
 msgid "SiteGuard WP Plugin"
 msgstr "SiteGuard WP Plugin"
 
@@ -226,7 +230,7 @@ msgstr "新しいログインページURL"
 
 #: siteguard.php:203
 msgid " Please bookmark "
-msgstr "　"
+msgstr "ブックマークしてください"
 
 #: siteguard.php:201
 msgid "Login page URL was changed."
@@ -286,13 +290,13 @@ msgstr "あなたのWordPressサイトで、実行可能な更新があります
 
 #: classes/siteguard-updates-notify.php:65
 msgid "Please solve the problem that can not be accessed wp-cron.php. Might be access control."
-msgstr "wp-cron.phpにアクセスできない問題を解決してください。アクセス制御が関係している可能性があります。"
+msgstr "wp-cron.php にアクセスできない問題を解決してください。アクセス制限されている可能性があります。"
 
 #: classes/siteguard-updates-notify.php:54
 msgid "DISABLE_WP_CRON is defined true. This function can't be used."
 msgstr "DISABLE_WP_CRONがtrueと定義されています。この機能は使用できません。"
 
-#: classes/siteguard-rename-login.php:173
+#: classes/siteguard-rename-login.php:179
 msgid ""
 "Please bookmark following of the new login URL.\n"
 "\n"
@@ -308,7 +312,7 @@ msgstr ""
 "--\n"
 "SiteGuard WP Plugin"
 
-#: classes/siteguard-rename-login.php:172
+#: classes/siteguard-rename-login.php:178
 msgid "WordPress: Login page URL was changed"
 msgstr "WordPress: ログインページURLが変更されました"
 
@@ -746,6 +750,7 @@ msgid "SiteGuard WP Plugin Page"
 msgstr "このページ"
 
 #. Plugin URI of the plugin
+#: siteguard.php
 msgid "http://www.jp-secure.com/cont/products/siteguard_wp_plugin/index_en.html"
 msgstr "https://www.jp-secure.com/siteguard_wp_plugin/"
 
@@ -851,7 +856,7 @@ msgstr "有効"
 #: admin/siteguard-menu-updates-notify.php:84
 #: admin/siteguard-menu-waf-tuning-support.php:239
 msgid "."
-msgstr " にあります。"
+msgstr "。"
 
 #: admin/siteguard-menu-admin-filter.php:85
 #: admin/siteguard-menu-author-query.php:75 admin/siteguard-menu-captcha.php:82

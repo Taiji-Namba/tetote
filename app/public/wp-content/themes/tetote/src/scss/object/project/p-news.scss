@@ -1,0 +1,73 @@
+@use '../../foundation' as *;
+@use 'sass:math';
+
+.p-news__heading {
+  color: #fff;
+  background-color: $txt-color;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  font-size: rclamp(10, 24, 375, 1440);
+  width: 14.8%;
+  border: 0.1rem solid $txt-color;
+  border-radius: 5rem 0 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  @include mq(sp) {
+    width: calc(math.div(52,351) * 100% - 0.1rem); // border分の0.1rem
+  }
+}
+
+.p-news__text {
+  background-color: #fff;
+  width: calc(100% - 14.8%);
+  border: 0.1rem solid $txt-color;
+  border-radius: 0 5rem 5rem 0;
+  padding-block:2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: calc(90 / (1263 - 187) * 100%);
+
+  @include mq(sp) {
+    padding: 0.9rem 1rem;
+    width: calc(100% - math.div(52,351) * 100% + 0.1rem); // border分の0.1rem
+  }
+}
+
+.p-news__title {
+  color: $txt-color;
+  font-size: rclamp(12, 16, 375, 1440);
+  line-height: 1;
+  padding-right: 2.4rem;
+
+  @include mq(sp) {
+    line-height: 1.2;
+  }
+}
+
+.p-news__cta {
+  margin-right: calc(47 / (1263 - 187) * 100%);
+  font-size: rclamp(12, 14, 375, 1440);
+  font-weight: bold;
+  font-family: Viga, "Noto Sans JP", sans-serif;
+  min-width: 9.5rem;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 0.6rem;
+
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.p-news__cta-text {
+  height: 0.88lh;
+}
+
+.p-news__arrow {
+}

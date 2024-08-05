@@ -1,0 +1,6 @@
+@use '../../foundation' as *;
+
+.u-justify-content--center{
+  display: flex;
+  justify-content: center;
+}

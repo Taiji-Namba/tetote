@@ -1,0 +1,103 @@
+@use '../../foundation' as *;
+
+.p-staff-fv {
+  background-color: $bg-sub-color;
+}
+
+.p-staff-fv__inner {
+  padding-block: 4.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 3rem;
+
+  @include mq(sp) {
+    justify-content: center;
+  }
+}
+
+.p-staff-fv__info {
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+
+.p-staff-fv__texts {
+  line-height: 1;
+}
+
+.p-staff-fv__message-1 {
+  font-size: rclamp(28, 36, 375, 1440);
+  font-weight: $bold;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+  display: inline-block;
+
+  @include mq(xxs) {
+    font-size: 2.4rem;
+  }
+}
+
+.p-staff-fv__message-2 {
+  font-size: rclamp(18, 24, 375, 1440);
+  font-weight: $bold;
+  background-color: #fff;
+  padding: 0.3rem 1rem;
+  margin-top: 1.8rem;
+  display: inline-block;
+}
+
+.p-staff-fv__occupation {
+  font-size: 1.4rem;
+  color: $accent-color-1;
+  font-weight: $bold;
+  margin-top: 3rem;
+  line-height: 1;
+}
+
+.p-staff-fv__name {
+  font-size: 2.4rem;
+  font-weight: $bold;
+  display: inline-block;
+  margin-top: 1.2rem;
+  line-height: 1;
+}
+
+.p-staff-fv__year-of-entry {
+  display: inline-block;
+  margin-left: 2rem;
+  line-height: 1;
+}
+
+.p-staff-fv__biography{
+  max-width: 60.5rem;
+  line-height: 1.8;
+  margin-top: 1.3rem;
+
+  @include mq(lg) {
+    max-width: 40rem;
+  }
+
+  @include mq(md) {
+    max-width: 38rem;
+  }
+}
+
+.p-staff-fv__thumbnail {
+  max-width: 28.6rem;
+  aspect-ratio: 286/ 368;
+
+  @include mq(tab) {
+    max-width: 34rem;
+  }
+
+  @include mq(sp) {
+    max-width: 70%;
+  }
+}
+
+.p-staff-fv__img{
+  height: 100%;
+}
+

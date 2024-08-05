@@ -1,0 +1,603 @@
+@use "../../foundation" as *;
+@use 'sass:math';
+
+.p-contact{
+  background-color: $bg-sub-color;
+  --form-auto-line-height:2.3rem;
+}
+
+.p-contact__wrapper{
+  padding-block: 3.3rem 5.7rem;
+
+  @include mq(tab) {
+    padding-inline: 2rem;
+  }
+
+  @include mq(sp) {
+    padding-inline: 1.6rem;
+  }
+}
+
+.p-contact__inner{
+  max-width: min(100%, 88rem);
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-inline: auto;
+  padding: 5.8rem 7.1rem 8.1rem;
+
+  @include mq(tab) {
+    padding-inline: 4rem;
+  }
+
+  @include mq(sp) {
+    padding-inline: 1.6rem;
+  }
+}
+
+.p-contact__inner--pb95{
+  padding-bottom: 9.5rem;
+  @include mq(tab) {
+    padding-bottom: 8rem;
+  }
+
+  @include mq(sp) {
+      padding-bottom: 7.5rem;
+  }
+}
+
+.p-contact__title-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include mq(sp) {
+    justify-content: start;
+    // margin-left: 2rem;
+  }
+}
+
+.p-contact__subtitle {
+  font-size: rclamp(18, 24, 375, 1440);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+
+  @include mq(sp) {
+    justify-content: start;
+  }
+}
+
+.p-contact__title {
+  font-size: rclamp(28, 32, 375, 1440);
+  font-weight: $bold;
+  margin-top: 2.9rem;
+  width: 100%;
+  line-height: 1;
+
+  @include mq(sp) {
+    line-height: 1.5;
+  }
+
+  @include mq(xxs) {
+    font-size: 2.6rem;
+  }
+}
+
+.p-contact__title--thanks{
+  font-size: rclamp(22, 32, 375, 1440);
+  margin-top: 0;
+
+  @include mq(xxs) {
+    font-size: 1.8rem;
+  }
+}
+
+.p-contact__lede {
+  margin-top: 5.1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-contact__description{
+  margin-top: 5.1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-contact__border {
+  margin-top: 9.5rem;
+  width: 100%;
+  height: 0;
+  content: "";
+  border-top: 0.1rem dashed $accent-color-2;
+
+  @include mq(tab) {
+    margin-top: 8rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 7rem;
+  }
+}
+
+
+
+/* フォーム */
+.p-contact__contents{
+  margin-top: 9.5rem;
+
+  @include mq(tab) {
+    margin-top: 7.8rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 6.8rem;
+  }
+}
+
+.p-contact__content{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.5rem;
+
+  @include mq(tab) {
+    row-gap: 1.5rem;
+  }
+}
+
+.p-contact__content:nth-of-type(n+2):nth-of-type(-n+5), .p-contact__content:nth-of-type(7){
+  margin-top: 2.7rem;
+
+  @include mq(tab) {
+      margin-top: 4rem;
+  }
+}
+
+.p-contact__content:nth-of-type(6), .p-contact__content:nth-of-type(8){
+  margin-top: 4.3rem;
+
+  @include mq(tab) {
+      margin-top: 5.6rem;
+  }
+}
+
+.p-contact__fieldset{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  column-gap: 3.5rem;
+
+  @include mq(tab) {
+    row-gap: 1.5rem;
+  }
+}
+
+// fieldsetの子要素のセレクトボックス
+.p-contact__fieldset .wpcf7-form-control-wrap{
+  display: flex;
+  width: 16.8rem;
+}
+
+.p-contact__head{
+  font-weight: $regular;
+  color: #000;
+  flex-basis: 12.8rem;
+  display: flex;
+  align-items: center;
+  line-height: var(--form-auto-line-height);
+
+  @include mq(lg) {
+    flex-basis: 100%;
+  }
+}
+
+.p-contact__head--top0{
+  align-items: start;
+}
+
+.p-contact__head--top16{
+  align-items: start;
+  padding-top: 1em;
+}
+
+.p-contact__head--lh-1-point-5{
+  line-height: 1.5;
+}
+
+.p-contact__item{
+  flex: 1;
+}
+
+.p-contact__item--row-gap-15{
+  // display: flex;
+  // row-gap: 1.5rem;
+}
+
+.p-contact__item--bday{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+  max-width: min(100%, 41.3rem);
+}
+
+.p-contact__bday-wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.p-contact__bday-wrapper:first-of-type{
+  grid-row: 1;
+  grid-column: 1 / 2;
+}
+
+.p-contact__bday-wrapper:nth-of-type(2){
+  grid-row: 2;
+  grid-column: 1 / 2;
+}
+
+.p-contact__bday-wrapper:last-of-type{
+  grid-row: 2;
+  grid-column: 2 / 3;
+
+  @include mq(sp) {
+    grid-row: 3;
+    grid-column: 1 / 2;
+  }
+}
+
+.p-contact__item-bday{
+  flex-basis: 16.8rem;
+  min-width: 16.8rem;
+}
+
+.p-contact__bday-label{
+  margin-left: 1rem;
+}
+
+.p-contact__required{
+  color: $accent-color-1;
+}
+
+.p-contact__item-text,
+.p-contact__item-tel,
+.p-contact__item-email,
+.p-contact__item-number,
+.p-contact__item-select{
+  min-height: 5.6rem;
+  padding: 1.5rem 2rem;
+}
+
+.p-contact__item-text,
+.p-contact__item-tel,
+.p-contact__item-email,
+.p-contact__item-textarea,
+.p-contact__item-number,
+.p-contact__item-select {
+  margin: 0;
+  border: 0.1rem solid $accent-color-2;
+  outline:none;
+  border-radius: 1rem;
+  background: none;
+  background-color: $bg-sub-color;
+  color: inherit;
+  font-family: inherit;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  line-height: 1;
+}
+
+.p-contact__item-text::placeholder,
+.p-contact__item-tel::placeholder,
+.p-contact__item-email::placeholder,
+.p-contact__item-textarea::placeholder,
+.p-contact__item-number::placeholder{
+  color:#757575;
+  font-size: 1.6rem;
+}
+
+.p-contact__item-text:focus,
+.p-contact__item-tel:focus,
+.p-contact__item-email:focus,
+.p-contact__item-textarea:focus,
+.p-contact__item-number:focus,
+.p-contact__item-select:focus {
+  border: 0.2rem solid #b7a200;
+  outline:none;
+  box-shadow: none;
+}
+
+.p-contact__item-textarea {
+  height: 24rem;
+  padding: 2rem;
+  resize: none;
+  overflow: auto;
+}
+
+.p-contact__item-select {
+  font-size: 1.2rem;
+  position: relative;
+  background-image: url(../images/parts/entry/arrow-select.svg);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: right 1.5rem center;
+  color: inherit;
+}
+
+.p-contact__item-select::before, .p-contact__item-select::after{
+  width: 0.849rem;
+  height: 0.1rem;
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+}
+
+.p-contact__item-select::before {
+  transform: translateY(-50%), rotateX(-45deg);
+}
+
+// select要素の矢印を消す
+.p-contact__item-select select::-ms-expand {
+  display: none;
+}
+
+// ラジオボタン群
+.p-contact__item-radio{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  @include mq(tab) {
+    row-gap: 2rem;
+  }
+
+  @include mq(sp) {
+    row-gap: 3rem;
+  }
+}
+
+// チェックボックス群
+.p-contact__item-checkbox{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.1rem;
+
+  @include mq(tab) {
+    row-gap: 2.6rem;
+  }
+
+  @include mq(sp) {
+    row-gap: 3.5rem;
+  }
+}
+
+// デフォルトのラジオボタンとチェックボックスを不可視化
+.p-contact__item-radio input[type="radio"],
+.p-contact__item-checkbox input[type="checkbox"]{
+  // タブキーでもカーソルが当たるようdisplay:none;ではなく、opacity:0,position: absoluteで対応
+  opacity: 0;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+// デフォルトのラジオボタンとチェックボックスの選択肢のテキスト部分
+.p-contact__item-radio input[type="radio"] +span,
+.p-contact__item-checkbox input[type="checkbox"] +span {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: var(--form-auto-line-height);
+}
+
+// ラジオボタンのテキストとボタンを囲むspan
+.p-contact__item-radio input[type="radio"] +span {
+  padding: 0.05rem 0 0.05rem calc(1.5em + math.div(12, 16) * 1em);
+}
+
+// チェックボックスのテキストとボタンを囲むspan
+.p-contact__item-checkbox input[type="checkbox"] + span {
+  padding: 0.05rem 0 0.05rem calc(1.5em + math.div(13, 16) * 1em);
+}
+
+// ラジオボタンとチェックボックスのボタンやチェックボックスの外側部分
+.p-contact__item-radio input[type="radio"] + span::before,
+.p-contact__item-checkbox input[type="checkbox"] + span::before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1.5em;
+	height: 1.5em;
+	content: "";
+  transform: translateY(-50%);
+  background: $bg-sub-color;
+  border: 0.1px solid $accent-color-2;
+}
+
+// ラジオボタンとチェックボックスのボタンやチェックボックスの内側部分
+.p-contact__item-checkbox input[type="checkbox"]:checked+span::after,
+.p-contact__item-radio input[type="radio"]:checked+span::after {
+  opacity: 1;
+}
+
+// ラジオボタンの外側部分
+.p-contact__item-radio input[type="radio"]+span::before{
+  border-radius: 50%;
+}
+
+// ラジオボタンの内側部分
+.p-contact__item-radio input[type="radio"]+span::after {
+  position: absolute;
+  content: "";
+  background-color: $txt-color;
+  border-radius: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  left: calc(math.div(1.5em, 2));
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease 0s;
+}
+
+// チェックボックスの内側部分
+.p-contact__item-checkbox input[type="checkbox"]+span::after {
+  position: absolute;
+  content: "";
+  background-color: $txt-color;
+  width: 0.625em;
+  height: 0.625em;
+  left: calc(math.div(1.5em, 2));
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease 0s;
+}
+
+// ラジオボタンとチェックボックスのフォーカス時の挙動
+.p-contact__item-radio input[type="radio"]:focus + span::before,
+.p-contact__item-checkbox input[type="checkbox"]:focus + span::before {
+  border: 0.2rem solid $accent-color-1;
+}
+
+/* プライバシーポリシー */
+// プライバシーポリシーを囲むブロック
+.p-contact__policy{
+  margin-top: 9.8rem;
+
+  @include mq(tab) {
+    margin-top: 9rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 8rem;
+  }
+}
+
+// プライバシーポリシーの内容部分
+.p-contact__policy span[data-name="acceptance-505"]{
+  text-align: center;
+}
+
+// プライバシーポリシーのリンク部分
+.p-contact__policy-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  transition: all 0.3s;
+}
+
+// プライバシーポリシーのテキストとボタンを囲むspan
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span{
+  line-height: calc(math.div(20,14));
+  font-size: 1.4rem;
+  padding: 0 0 0 calc(1em + 0.6rem + 0.1rem);
+}
+
+// プライバシーポリシーのチェックボックスの外側
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::before{
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+// プライバシーポリシーのチェックボックスの内側
+.p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::after{
+  width: calc(0.5em + 0.1rem);
+  height: calc(0.5em + 0.1rem);
+  left: calc(0.5em + 0.1rem);
+}
+
+// Safariでのプライバシーポリシーのチェックボックスの外側
+::-webkit-full-page-media, :future, :root .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::before{
+  transform: translateY(-60%);
+}
+
+// Safariでのプライバシーポリシーのチェックボックスの内側
+::-webkit-full-page-media, :future, :root .p-contact__policy .p-contact__item-checkbox input[type="checkbox"] + span::after{
+  transform: translate(-50%, -70%);
+}
+
+/* 送信ボタン */
+.p-contact__button-wrapper{
+  display: grid;
+  place-items: center;
+  margin-top: 5.9rem;
+
+  @include mq(tab) {
+    margin-top: 5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 4rem;
+  }
+}
+
+.p-contact__button {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.p-contact__button input[type="submit"]{
+  display: inline-block;
+  cursor: pointer;
+  padding: calc(1.25em - 0.1rem) calc(6em - 0.1rem);
+  font-size: 1.6rem;
+  border: 0.1rem solid $txt-color;
+  border-radius: 0;
+  line-height: 1;
+}
+
+.p-contact__button input[type="submit"]:not(:disabled):hover{
+  background-color: $accent-color-2;
+  color: #fff;
+  border: 0.1rem solid $accent-color-2;
+  transition: all 0.3s;
+}
+
+/* Contact Form 7 デフォルトスタイルを変更 */
+// ラジオボタンが右にずれるのを阻止するため、デフォルトmarginをリセット
+.wpcf7-list-item{
+  margin: unset;
+}
+
+//送信ボタンを中央にするため、loadingアニメーションの位置を調整
+.wpcf7-spinner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// デフォルトではバリデーションメッセージを非表示&送信ボタンを押したときだけ表示
+.wpcf7-form-control-wrap > .wpcf7-not-valid-tip {
+  display: none;
+  margin-top: 10px;
+}
+.wpcf7-form-control-wrap.is-validation-show > .wpcf7-not-valid-tip {
+  display: block;
+}
+
+// 送信ボタン下のレスポンスメッセージ
+.wpcf7 form .wpcf7-response-output{
+  border: none;
+  text-align: center;
+}
+
+// 入力項目横のエラーメッセージ&送信ボタン下のレスポンスメッセージ(エラー時)
+.wpcf7-not-valid-tip,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output,
+.wpcf7 form.spam .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output{
+  color: #dc554e;
+}

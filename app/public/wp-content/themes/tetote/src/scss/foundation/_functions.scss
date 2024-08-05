@@ -1,0 +1,49 @@
+@use "sass:math";
+@use "variables" as *;
+
+/*****************************************
+ * 数値から単位を取り除く
+ * 参考
+ * https://css-tricks.com/snippets/sass/
+******************************************/
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+/*****************************************
+ * px→remの計算
+ * 参考
+ * https: //webdou.net/sass-rem/
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+@function prem($pixels) {
+  @return math.div($pixels, strip-unit($pixel-base-font-size)) * 1rem;
+}
+
+/*****************************************
+ * vwの計算
+ * 参考
+ * https://webdou.net/sass-vw/
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+@function vw($screen-size, $pixels) {
+  @return math.div($pixels, $screen-size) * 100vw;
+}
+
+/*****************************************
+ * rem単位のclamp関数の定義
+******************************************/
+@function rclamp($min, $max, $minViewport, $maxViewport) {
+  $vwScale: math.div(($max - $min) , ($maxViewport - $minViewport));  // vw単位でのスケールを計算
+  $baseOffset: $min - $minViewport * $vwScale;  // 基準となる最小値からのオフセットを計算
+
+  $minRem: math.div($min , 10);  // 最小値をremに変換
+  $maxRem: math.div($max , 10);  // 最大値をremに変換
+  $baseOffsetRem: math.div($baseOffset , 10);  // オフセットをremに変換
+  $vwScaleRem: $vwScale * 100;  // vwスケールを調整
+
+  @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
+}

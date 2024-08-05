@@ -1,0 +1,43 @@
+@use "../../foundation" as *;
+
+.p-post-list {
+  position: relative;
+  width: min(95.6rem, 100%);
+}
+
+.p-post-list__wrapper {
+  margin-inline: auto;
+}
+
+.p-post-list__wrapper--mt61{
+  margin-top: 6.1rem;
+
+  @include mq(tab) {
+    margin-top: 5rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 4.3rem;
+  }
+}
+
+.p-post-list__cards {
+  display: grid;
+  column-gap: 5.2rem;
+  row-gap: 2.3rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include mq(lg) {
+    column-gap: 2rem;
+  }
+
+  @include mq(md) {
+    column-gap: 1.5rem;
+  }
+  
+  @include mq(sp) {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0.9rem;
+  }
+}

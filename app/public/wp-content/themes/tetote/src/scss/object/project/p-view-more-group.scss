@@ -1,0 +1,17 @@
+@use '../../foundation' as *;
+
+.p-view-more-group{
+  display: flex;
+  align-items: center;
+}
+
+.p-view-more-group__arrow-button{
+  margin-right: 1.3rem;
+  scale: 1;
+  transition: 0.3s;
+}
+
+.p-view-more-group__arrow-button:hover{
+  scale: 1.2;
+  transition: 0.3s;
+}

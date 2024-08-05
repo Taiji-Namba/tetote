@@ -1,0 +1,92 @@
+@use "../../foundation" as *;
+
+.p-header--top-page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.p-header--sub-page{
+  position: static;
+  background-color: #fff;
+}
+
+.p-header__inner{
+  margin: 0 auto;
+  width: min(100%, $layout-width-inner);
+  padding: 2.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(tab) {
+    padding: 1.6rem 2rem;
+  }
+  @include mq(sp) {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+.p-header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+  width: 100%;
+  animation: slideDown 0.3s ease-in-out;
+  background-color: #fff;
+  // transition: background-color 0.3s ease-in-out, visibility 0.3s ease-in-out; // スクロール後、一番上に戻した際にヘッダー下部に白線がちらつくことの防止。
+}
+
+.p-header__inner.is-burger-open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  transition:all 0.4s;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.p-header__logo {
+  mask-image: url(../images/common/logo-black.svg);
+  mask-size: contain;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  width: 25.1rem;
+  aspect-ratio: 251 / 66;
+
+  @include mq(tab) {
+    width: 20rem;
+  }
+
+  @include mq(sp) {
+    width: 15.1rem;
+  }
+}
+
+.p-header__logo--white{
+  background-color: #fff;
+}
+
+.p-header__logo--black{
+  background-color: $txt-color;
+}
+
+.p-header--top-page__h1{
+  height: 100%;
+  opacity: 0;
+}

@@ -1,0 +1,91 @@
+@use "../../foundation" as *;
+.p-top-gallery-splide__inner {
+  position: relative;
+}
+
+.p-top-gallery-splide .splide__list {
+  height: calc(39.3rem + 3.6rem);
+
+  @include mq(tab) {
+    height: calc((27.3svw + 3.2rem));
+}
+
+@include mq(sp) {
+      height: calc((56.1svw + 2.7rem));
+  }
+}
+
+.p-top-gallery-splide .splide__slide {
+  display: block;
+  aspect-ratio: 506 / 393;
+  width: 50.6rem;
+  overflow: hidden;
+  border: none;
+  border-radius: 6rem;
+  transform: translateY(0);
+  transition: transform 3s;
+}
+
+.p-top-gallery-splide .splide__slide.is-active {
+  transform: translateY(3.6rem);
+  transition: transform 3s;
+
+  @include mq(tab) {
+    transform: translateY(3.2rem);
+  }
+
+  @include mq(sp) {
+  transform: translateY(2.7rem);
+  }
+}
+
+.p-top-gallery-splide .splide__slide picture {
+  height: inherit;
+  height: 100%;
+}
+
+.p-top-gallery-splide .splide__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-top-gallery-splide__catch-copy-wrapper{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.9rem;
+
+  @include mq(sp) {
+    bottom: -3.05rem;
+  }
+}
+
+.p-top-gallery-splide__catch-copy{
+  background-color: #fff;
+  color: $txt-color;
+  font-weight: $bold;
+  font-size: rclamp(24, 40, 375, 1440);
+  line-height: 1.45;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.7rem 1.1rem;
+
+  @include mq(sp) {
+    line-height: 1.458;
+  }
+
+  &:last-child{
+    margin-top: 0.7rem;
+
+    @include mq(sp) {
+      margin-top: 0.8rem;
+    }
+  }
+
+
+  @include mq(xxs) {
+    font-size: 2rem;
+  }
+}

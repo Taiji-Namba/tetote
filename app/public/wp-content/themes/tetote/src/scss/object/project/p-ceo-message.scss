@@ -1,0 +1,124 @@
+@use '../../foundation' as *;
+
+.p-ceo-message {
+
+}
+
+.p-ceo-message__container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.7rem;
+  margin-top: 10.9rem;
+  justify-content: space-between;
+
+  @include mq(tab) {
+    margin-top: 8rem;
+  }
+
+  @include mq(lg) {
+    position: relative;
+  }
+
+  @include mq(sp) {
+    margin-top: 7rem;
+    margin-inline: calc(50% - 50vi);
+    justify-content: center;
+    position: unset;
+  }
+}
+
+.p-ceo-message__img {
+  aspect-ratio: 484 / 629;
+  width: min(100%, 48.4rem);
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+
+  @include mq(lg) {
+    width: 40%;
+  }
+
+  @include mq(sp) {
+    width: 100%;
+    aspect-ratio: 484 / 520;
+    object-fit: cover;
+    mask-image:linear-gradient(to bottom, #fff 50%, transparent 100%);
+    z-index: 0;
+  }
+}
+
+.p-ceo-message__text-group {
+  max-width: 47.9rem;
+
+  @include mq(lg) {
+    max-width: calc(60% - 1.7rem);
+  }
+
+  @include mq(sp) {
+    max-width: 100%;
+    margin-top: -14rem;
+    z-index: 3;
+    margin-inline: 1.6rem;
+  }
+
+  @include mq(xxs) {
+    margin-top: -12rem;
+  }
+}
+
+.p-ceo-message__catchphrase {
+  font-size: rclamp(24, 32, 375, 1440);
+  font-weight: $bold;
+  line-height: 1.5;
+  margin-left: -8rem;
+  margin-top: 1.8rem;
+
+  @include mq(lg) {
+    margin-left: -6rem;
+  }
+
+  @include mq(sp) {
+    margin-left: unset;
+    text-shadow: 0 0 0.125em #fff;
+  }
+
+  @include mq(xxs) {
+    font-size: 2rem;
+  }
+
+}
+
+.p-ceo-message__text {
+  line-height: 2;
+}
+
+.p-ceo-message__text--mt44{
+  margin-top: 4.4rem;
+}
+
+.p-ceo-message__text--mt31{
+  margin-top: 3.1rem;
+}
+
+.p-ceo-message__ceo-name{
+  margin-top: 2.1rem;
+  vertical-align: middle;
+  height: auto;
+
+  @include mq(lg) {
+    margin-top: unset;
+    position: absolute;
+    left: 0;
+    top: var(--name-position, 60%);
+    width: 14rem;
+  }
+
+  @include mq(sp) {
+    margin-top: 2.1rem;
+    margin-left: auto;
+    display: block;
+    position: unset;
+    left: unset;
+    top: unset;
+  }
+}

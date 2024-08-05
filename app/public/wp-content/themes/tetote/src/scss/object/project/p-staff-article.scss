@@ -1,0 +1,116 @@
+@use '../../foundation' as *;
+
+.p-staff-article__contents-inner{
+  padding-block: 10.1rem 2.3rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(tab) {
+    padding-top: 8rem;
+  }
+
+  @include mq(sp) {
+    padding-top: 6rem;
+  }
+}
+
+.p-staff-article__contents h2{
+  position: relative;
+  line-height: 1;
+
+  @include mq(lg){
+    line-height: 1.5;
+  }
+}
+
+.p-staff-article__contents h2:first-child {
+  margin-top: 0;
+}
+
+.p-staff-article__contents h2::before{
+  position: absolute;
+  left: -1.6rem;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  content: "";
+  background-color: $txt-color;
+  height: 0.1rem;
+  width: var(--line-width, 0);
+
+  @include mq(lg) {
+    display: none;
+  }
+
+}
+
+.p-staff-article__contents p{
+  margin-top: 2.3rem;
+}
+
+.p-staff-article__main-contents{
+  width: 71rem;
+
+  @include mq(lg) {
+    width: 100%;
+  }
+}
+
+.p-staff-article__index {
+  max-width: calc((102.4rem - 2.4rem * 2 - 71rem));
+
+  @include mq(lg) {
+    display: none;
+  }
+
+  & h3 {
+    font-size: 1.4rem;
+    color: #666;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // 以下easy-table-of-contentsのスタイル指定
+
+  & div.ez-toc-widget-sticky-container, div.ez-toc-widget-sticky-container li {
+  line-height: 1.5;
+  }
+
+  // リンク部分
+  & .ez-toc-link{
+    font-size: 1.4rem;
+  }
+
+  // li間の余白
+  & div.ez-toc-widget-sticky-container .ez-toc-widget-sticky-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    padding: 1.3rem 0 0;
+  }
+
+  // アクティブなアンカーの背景色
+  & .ez-toc-widget-sticky-container ul.ez-toc-widget-sticky-list li.active {
+    background-color: transparent !important;
+  }
+
+  // アンカーの設定
+  & .ez-toc-widget-sticky-container ul li a {
+    color: #999;
+    font-weight: $bold;
+    text-decoration: none;
+    padding-left: 0;
+  }
+
+  // アンカーのホバーアクション
+  & .ez-toc-widget-sticky-container ul li a:hover {
+    color: $accent-color-1;
+    text-decoration: underline;
+    text-underline-offset:0.25em;
+  }
+
+  // アクティブなアンカー
+  & .ez-toc-widget-sticky-container li.active>a {
+    color: $txt-color;
+  }
+}

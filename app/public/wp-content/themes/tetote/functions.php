@@ -1,20 +1,57 @@
 <?php
-  function my_setup(){
-    add_theme_support('post-thumbnails'); // アイキャッチ画像を有効化
-  }
-  add_action('after_setup_theme', 'my_setup');
 
-  /* CSSとJavaScriptの読み込み */
-  function my_link_loading()
-    {
-      wp_enqueue_style( 'reset-css', 'https://unpkg.com/destyle.css@4.0.1/destyle.min.css');
-      wp_enqueue_style( 'global-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap');
-      wp_enqueue_style( 'style-css', get_template_directory_uri() . '/assets/css/style.css', array('reset-css'));
-      wp_enqueue_script( 'script-js', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), true );
-      if(is_front_page()){
-        wp_enqueue_style( 'front-page-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Viga&display=swap', array('global-font'));
-        wp_enqueue_style( 'front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('style-css'));
-        wp_enqueue_script( 'front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array( 'jquery' ), true );
-      }
-    }
-  add_action('wp_enqueue_scripts', 'my_link_loading');
+/**
+ * Functions
+ */
+
+// 基本設定
+get_template_part('parts/functions-lib/func-base');
+
+// セキュリティー対応
+get_template_part('parts/functions-lib/func-security');
+
+// ショートコードの設定
+get_template_part('parts/functions-lib/func-shortcode');
+
+// URLのショートカット設定
+get_template_part('parts/functions-lib/func-url');
+
+// URLのショートカット設定
+get_template_part('parts/functions-lib/func-utility');
+
+// メインクエリのSP表示件数設定
+// get_template_part('parts/functions-lib/func-posts-edit');
+
+// スクリプト、スタイルシートの設定
+get_template_part('parts/functions-lib/func-enqueue-assets');
+// get_template_part('parts/functions-lib/func-enqueue-assets_noslider'); //スライダーを使用しない場合
+
+// （ギャラリー用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-gallery');
+
+// （Staff用）カスタムフィールドの設定
+get_template_part('parts/functions-lib/func-add-posttype-staff');
+
+// ブログ投稿一覧URLの設定
+get_template_part('parts/functions-lib/func-register-post-archive');
+
+// 投稿タイトルが長い際に省略表示できるように
+get_template_part('parts/functions-lib/func-omit-post-title');
+
+// SEO Simple Packページタイトル上書き
+get_template_part('parts/functions-lib/func-overwrite-ssp-title');
+
+// デフォルトの投稿のパンくずリストをarchive.phpやsingle.phpで表示
+get_template_part('parts/functions-lib/func-add-breadcrumb-about-post');
+
+// 投稿タイプ「staff」アーカイブページのパンくずリスト表示名の設定
+get_template_part('parts/functions-lib/func-change-breadcrumb-staff');
+
+// ページ分割投稿におけるページネーションに、number表記とnext表記を両立
+get_template_part('parts/functions-lib/func-add-new-mode-to-wp-link-pages');
+
+// サイドバーをウィジェットに登録
+get_template_part('parts/functions-lib/func-register-sidebar');
+
+// Contact Form 7 送信完了時にサンクスページへリダイレクト
+get_template_part('parts/functions-lib/func-add-contactform7-thanks-page');
