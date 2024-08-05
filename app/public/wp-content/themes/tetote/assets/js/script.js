@@ -38,28 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
       ).mount();
     }
-    // BLOG
-    if (document.querySelector('#post')) {
-      new Splide('#post',
-        {
-          type: 'loop',   // slide,loop,fade から選択
-          speed: 3000,    // スライダーの移動時間をミリ秒単位で指定
-          autoplay: true, // 自動実行を有効にする
-          interval: 3000, // スライドが自動的に進むまでの時間をミリ秒単位で指定する
-          rewind: true,    // true:スライダーの終わりまで行ったときに、先頭に巻き戻す(type:fadeの時使用)
-          arrows: true,    // true:矢印ボタンを表示
-          perPage: 3,      // 1ページに何枚のスライドを表示するかを指定
-          breakpoints: {   // レスポンシブデザインのブレークポイントを指定（指定したpx以下の場合）
-            767: {
-              perPage: 2,  // 1ページに何枚のスライドを表示するかを指定
-            }
-          },
-          perMove: 1,      // 1度の移動で、何枚のスライドを移動するかを指定
-          focus: 'center',//これを指定すると中央にある画像にフォーカスされる
-          gap: '10px',     // 画像間の余白の設定
-        }
-      ).mount();
-    }
     // staff
     if (document.querySelector('#staff')) {
       new Splide('#staff',
